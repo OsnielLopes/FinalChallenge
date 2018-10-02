@@ -12,6 +12,32 @@
 		49AE2B1E2163DD4F00055136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* Main.storyboard */; };
 		49AE2B202163DD5200055136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1F2163DD5200055136 /* Assets.xcassets */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
+		BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
+		BD974A0D2163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F52163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift */; };
+		BD974A0E2163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F62163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift */; };
+		BD974A0F2163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F72163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift */; };
+		BD974A102163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F82163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift */; };
+		BD974A112163F73C00612838 /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F92163F73C00612838 /* Author+CoreDataClass.swift */; };
+		BD974A122163F73C00612838 /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FA2163F73C00612838 /* Author+CoreDataProperties.swift */; };
+		BD974A132163F73C00612838 /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FB2163F73C00612838 /* MoodInput+CoreDataClass.swift */; };
+		BD974A142163F73C00612838 /* MoodInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FC2163F73C00612838 /* MoodInput+CoreDataProperties.swift */; };
+		BD974A152163F73C00612838 /* DissertationQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FD2163F73C00612838 /* DissertationQuestion+CoreDataClass.swift */; };
+		BD974A162163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FE2163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift */; };
+		BD974A172163F73C00612838 /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FF2163F73C00612838 /* Question+CoreDataClass.swift */; };
+		BD974A182163F73C00612838 /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A002163F73C00612838 /* Question+CoreDataProperties.swift */; };
+		BD974A192163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A012163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift */; };
+		BD974A1A2163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A022163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift */; };
+		BD974A1B2163F73C00612838 /* DissertationAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A032163F73C00612838 /* DissertationAnswer+CoreDataClass.swift */; };
+		BD974A1C2163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A042163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift */; };
+		BD974A1D2163F73C00612838 /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A052163F73C00612838 /* MoodType+CoreDataClass.swift */; };
+		BD974A1E2163F73C00612838 /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A062163F73C00612838 /* MoodType+CoreDataProperties.swift */; };
+		BD974A1F2163F73C00612838 /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A072163F73C00612838 /* Answer+CoreDataClass.swift */; };
+		BD974A202163F73C00612838 /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A082163F73C00612838 /* Answer+CoreDataProperties.swift */; };
+		BD974A212163F73C00612838 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A092163F73C00612838 /* Category+CoreDataClass.swift */; };
+		BD974A222163F73C00612838 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A0A2163F73C00612838 /* Category+CoreDataProperties.swift */; };
+		BD974A232163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A0B2163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift */; };
+		BD974A242163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A0C2163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift */; };
+		BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +48,32 @@
 		49AE2B1F2163DD5200055136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49AE2B222163DD5200055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AE2B242163DD5200055136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalChallengeDatabase.xcdatamodel; sourceTree = "<group>"; };
+		BD9749F52163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxQuestion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD9749F62163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxQuestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD9749F72163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxAnswer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD9749F82163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxAnswer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD9749F92163F73C00612838 /* Author+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD9749FA2163F73C00612838 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD9749FB2163F73C00612838 /* MoodInput+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodInput+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD9749FC2163F73C00612838 /* MoodInput+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodInput+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD9749FD2163F73C00612838 /* DissertationQuestion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DissertationQuestion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD9749FE2163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DissertationQuestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD9749FF2163F73C00612838 /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD974A002163F73C00612838 /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD974A012163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxAnswer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD974A022163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxAnswer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD974A032163F73C00612838 /* DissertationAnswer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DissertationAnswer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD974A042163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DissertationAnswer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD974A052163F73C00612838 /* MoodType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD974A062163F73C00612838 /* MoodType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD974A072163F73C00612838 /* Answer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD974A082163F73C00612838 /* Answer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD974A092163F73C00612838 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD974A0A2163F73C00612838 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD974A0B2163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxQuestion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD974A0C2163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxQuestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +106,8 @@
 		49AE2B172163DD4F00055136 /* FinalChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				BD974A282163FD4C00612838 /* Managers */,
+				BD974A252163F74B00612838 /* Models */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
 				49AE2B1A2163DD4F00055136 /* ViewController.swift */,
 				49AE2B1C2163DD4F00055136 /* Main.storyboard */,
@@ -62,6 +116,46 @@
 				49AE2B242163DD5200055136 /* Info.plist */,
 			);
 			path = FinalChallenge;
+			sourceTree = "<group>";
+		};
+		BD974A252163F74B00612838 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD9749F52163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift */,
+				BD9749F62163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift */,
+				BD9749F72163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift */,
+				BD9749F82163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift */,
+				BD9749F92163F73C00612838 /* Author+CoreDataClass.swift */,
+				BD9749FA2163F73C00612838 /* Author+CoreDataProperties.swift */,
+				BD9749FB2163F73C00612838 /* MoodInput+CoreDataClass.swift */,
+				BD9749FC2163F73C00612838 /* MoodInput+CoreDataProperties.swift */,
+				BD9749FD2163F73C00612838 /* DissertationQuestion+CoreDataClass.swift */,
+				BD9749FE2163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift */,
+				BD9749FF2163F73C00612838 /* Question+CoreDataClass.swift */,
+				BD974A002163F73C00612838 /* Question+CoreDataProperties.swift */,
+				BD974A012163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift */,
+				BD974A022163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift */,
+				BD974A032163F73C00612838 /* DissertationAnswer+CoreDataClass.swift */,
+				BD974A042163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift */,
+				BD974A052163F73C00612838 /* MoodType+CoreDataClass.swift */,
+				BD974A062163F73C00612838 /* MoodType+CoreDataProperties.swift */,
+				BD974A072163F73C00612838 /* Answer+CoreDataClass.swift */,
+				BD974A082163F73C00612838 /* Answer+CoreDataProperties.swift */,
+				BD974A092163F73C00612838 /* Category+CoreDataClass.swift */,
+				BD974A0A2163F73C00612838 /* Category+CoreDataProperties.swift */,
+				BD974A0B2163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift */,
+				BD974A0C2163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift */,
+				BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD974A282163FD4C00612838 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A262163FD4600612838 /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +229,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD974A102163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
+				BD974A212163F73C00612838 /* Category+CoreDataClass.swift in Sources */,
+				BD974A0F2163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift in Sources */,
+				BD974A122163F73C00612838 /* Author+CoreDataProperties.swift in Sources */,
+				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
+				BD974A152163F73C00612838 /* DissertationQuestion+CoreDataClass.swift in Sources */,
+				BD974A1E2163F73C00612838 /* MoodType+CoreDataProperties.swift in Sources */,
+				BD974A142163F73C00612838 /* MoodInput+CoreDataProperties.swift in Sources */,
 				49AE2B1B2163DD4F00055136 /* ViewController.swift in Sources */,
+				BD974A1A2163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
+				BD974A1C2163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift in Sources */,
+				BD974A242163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
+				BD974A162163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift in Sources */,
+				BD974A112163F73C00612838 /* Author+CoreDataClass.swift in Sources */,
+				BD974A232163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift in Sources */,
+				BD974A172163F73C00612838 /* Question+CoreDataClass.swift in Sources */,
+				BD974A1D2163F73C00612838 /* MoodType+CoreDataClass.swift in Sources */,
+				BD974A0D2163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift in Sources */,
+				BD974A132163F73C00612838 /* MoodInput+CoreDataClass.swift in Sources */,
+				BD974A222163F73C00612838 /* Category+CoreDataProperties.swift in Sources */,
+				BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */,
+				BD974A0E2163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
+				BD974A192163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift in Sources */,
+				BD974A182163F73C00612838 /* Question+CoreDataProperties.swift in Sources */,
+				BD974A202163F73C00612838 /* Answer+CoreDataProperties.swift in Sources */,
+				BD974A1B2163F73C00612838 /* DissertationAnswer+CoreDataClass.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
+				BD974A1F2163F73C00612838 /* Answer+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +456,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */,
+			);
+			currentVersion = BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */;
+			path = FinalChallengeDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49AE2B0D2163DD4F00055136 /* Project object */;
 }
