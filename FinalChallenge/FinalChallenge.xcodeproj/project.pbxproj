@@ -35,6 +35,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454DF7A721655BDB0091E792 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				454DF7A921655E110091E792 /* Daily Questions */,
+				49AE2B1A2163DD4F00055136 /* ViewController.swift */,
+				49AE2B1C2163DD4F00055136 /* Main.storyboard */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		454DF7A821655D200091E792 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49AE2B242163DD5200055136 /* Info.plist */,
+				49AE2B1F2163DD5200055136 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		454DF7A921655E110091E792 /* Daily Questions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Daily Questions";
+			sourceTree = "<group>";
+		};
 		49AE2B0C2163DD4F00055136 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
-				49AE2B1A2163DD4F00055136 /* ViewController.swift */,
-				49AE2B1C2163DD4F00055136 /* Main.storyboard */,
-				49AE2B1F2163DD5200055136 /* Assets.xcassets */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
-				49AE2B242163DD5200055136 /* Info.plist */,
+				454DF7A821655D200091E792 /* Resources */,
+				454DF7A721655BDB0091E792 /* Source */,
 			);
 			path = FinalChallenge;
 			sourceTree = "<group>";
@@ -283,8 +307,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
-				INFOPLIST_FILE = FinalChallenge/Info.plist;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,8 +325,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
-				INFOPLIST_FILE = FinalChallenge/Info.plist;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
