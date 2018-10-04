@@ -38,6 +38,8 @@
 		BD974A232163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A0B2163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift */; };
 		BD974A242163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A0C2163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift */; };
 		BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
+		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
+		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		BD974A0B2163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxQuestion+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BD974A0C2163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxQuestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
+		BD974A38216681F100612838 /* QuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +110,9 @@
 		49AE2B172163DD4F00055136 /* FinalChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				BD974A282163FD4C00612838 /* Managers */,
 				BD974A252163F74B00612838 /* Models */,
+				BD974A282163FD4C00612838 /* Managers */,
+				BD974A3521654B4100612838 /* Data Access Objects */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
 				49AE2B1A2163DD4F00055136 /* ViewController.swift */,
 				49AE2B1C2163DD4F00055136 /* Main.storyboard */,
@@ -121,30 +126,13 @@
 		BD974A252163F74B00612838 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BD9749F52163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift */,
-				BD9749F62163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift */,
-				BD9749F72163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift */,
-				BD9749F82163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift */,
+				BD974A3A2166A04D00612838 /* Question */,
+				BD974A3B2166A05E00612838 /* Answer */,
+				BD974A3C2166A07000612838 /* Mood */,
 				BD9749F92163F73C00612838 /* Author+CoreDataClass.swift */,
 				BD9749FA2163F73C00612838 /* Author+CoreDataProperties.swift */,
-				BD9749FB2163F73C00612838 /* MoodInput+CoreDataClass.swift */,
-				BD9749FC2163F73C00612838 /* MoodInput+CoreDataProperties.swift */,
-				BD9749FD2163F73C00612838 /* DissertationQuestion+CoreDataClass.swift */,
-				BD9749FE2163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift */,
-				BD9749FF2163F73C00612838 /* Question+CoreDataClass.swift */,
-				BD974A002163F73C00612838 /* Question+CoreDataProperties.swift */,
-				BD974A012163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift */,
-				BD974A022163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift */,
-				BD974A032163F73C00612838 /* DissertationAnswer+CoreDataClass.swift */,
-				BD974A042163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift */,
-				BD974A052163F73C00612838 /* MoodType+CoreDataClass.swift */,
-				BD974A062163F73C00612838 /* MoodType+CoreDataProperties.swift */,
-				BD974A072163F73C00612838 /* Answer+CoreDataClass.swift */,
-				BD974A082163F73C00612838 /* Answer+CoreDataProperties.swift */,
 				BD974A092163F73C00612838 /* Category+CoreDataClass.swift */,
 				BD974A0A2163F73C00612838 /* Category+CoreDataProperties.swift */,
-				BD974A0B2163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift */,
-				BD974A0C2163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift */,
 				BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */,
 			);
 			path = Models;
@@ -156,6 +144,56 @@
 				BD974A262163FD4600612838 /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		BD974A3521654B4100612838 /* Data Access Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A3621654E3800612838 /* DataAccessError.swift */,
+				BD974A38216681F100612838 /* QuestionDAO.swift */,
+			);
+			path = "Data Access Objects";
+			sourceTree = "<group>";
+		};
+		BD974A3A2166A04D00612838 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				BD9749F52163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift */,
+				BD9749F62163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift */,
+				BD9749FD2163F73C00612838 /* DissertationQuestion+CoreDataClass.swift */,
+				BD9749FE2163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift */,
+				BD9749FF2163F73C00612838 /* Question+CoreDataClass.swift */,
+				BD974A002163F73C00612838 /* Question+CoreDataProperties.swift */,
+				BD974A0B2163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift */,
+				BD974A0C2163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		BD974A3B2166A05E00612838 /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				BD9749F72163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift */,
+				BD9749F82163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift */,
+				BD974A012163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift */,
+				BD974A022163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift */,
+				BD974A032163F73C00612838 /* DissertationAnswer+CoreDataClass.swift */,
+				BD974A042163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift */,
+				BD974A072163F73C00612838 /* Answer+CoreDataClass.swift */,
+				BD974A082163F73C00612838 /* Answer+CoreDataProperties.swift */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
+		BD974A3C2166A07000612838 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				BD9749FB2163F73C00612838 /* MoodInput+CoreDataClass.swift */,
+				BD9749FC2163F73C00612838 /* MoodInput+CoreDataProperties.swift */,
+				BD974A052163F73C00612838 /* MoodType+CoreDataClass.swift */,
+				BD974A062163F73C00612838 /* MoodType+CoreDataProperties.swift */,
+			);
+			path = Mood;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +271,7 @@
 				BD974A212163F73C00612838 /* Category+CoreDataClass.swift in Sources */,
 				BD974A0F2163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				BD974A122163F73C00612838 /* Author+CoreDataProperties.swift in Sources */,
+				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD974A152163F73C00612838 /* DissertationQuestion+CoreDataClass.swift in Sources */,
 				BD974A1E2163F73C00612838 /* MoodType+CoreDataProperties.swift in Sources */,
@@ -240,6 +279,7 @@
 				49AE2B1B2163DD4F00055136 /* ViewController.swift in Sources */,
 				BD974A1A2163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				BD974A1C2163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift in Sources */,
+				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
 				BD974A242163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
 				BD974A162163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD974A112163F73C00612838 /* Author+CoreDataClass.swift in Sources */,
@@ -403,7 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,7 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

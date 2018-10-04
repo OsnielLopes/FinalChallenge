@@ -12,7 +12,7 @@ import CoreData
 class CoreDataManager {
     
     static let shared = CoreDataManager()
-    
+        
     private init() { }
     
     var persistentContainer: NSPersistentContainer = {
