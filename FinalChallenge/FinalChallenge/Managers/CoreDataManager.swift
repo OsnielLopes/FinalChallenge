@@ -37,4 +37,18 @@ class CoreDataManager {
         }
     }
     
+    func fetch(_ fetchRequest: NSFetchRequest<NSFetchRequestResult>) -> [Any]? {
+        do {
+            return try self.persistentContainer.viewContext.fetch(fetchRequest)
+        } catch {
+            print("There was and error fetching " + String(describing: fetchRequest.entityName))
+        }
+        return nil
+    }
+    
+    func create<T: NSManagedObject>(object: T.Type) -> T? {
+        let className = String(describing: T.self)
+        return NSEntityDescription.insertNewObject(forEntityName: className, into: CoreDataManager.shared.persistentContainer.viewContext) as? T
+    }
+    
 }

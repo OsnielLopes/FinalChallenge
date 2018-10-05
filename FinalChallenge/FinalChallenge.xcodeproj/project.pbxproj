@@ -40,6 +40,7 @@
 		BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
+		BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
 		BD974A38216681F100612838 /* QuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDAO.swift; sourceTree = "<group>"; };
+		BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				BD974A3621654E3800612838 /* DataAccessError.swift */,
-				BD974A38216681F100612838 /* QuestionDAO.swift */,
+				BD974A3D2167CDE300612838 /* QuestionDAO */,
 			);
 			path = "Data Access Objects";
 			sourceTree = "<group>";
@@ -194,6 +196,15 @@
 				BD974A062163F73C00612838 /* MoodType+CoreDataProperties.swift */,
 			);
 			path = Mood;
+			sourceTree = "<group>";
+		};
+		BD974A3D2167CDE300612838 /* QuestionDAO */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A38216681F100612838 /* QuestionDAO.swift */,
+				BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */,
+			);
+			path = QuestionDAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 				BD974A132163F73C00612838 /* MoodInput+CoreDataClass.swift in Sources */,
 				BD974A222163F73C00612838 /* Category+CoreDataProperties.swift in Sources */,
 				BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */,
+				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
 				BD974A0E2163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
 				BD974A192163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD974A182163F73C00612838 /* Question+CoreDataProperties.swift in Sources */,

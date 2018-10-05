@@ -1,34 +1,30 @@
 //
-//  Question.swift
+//  DissertativeQuestionDAO.swift
 //  FinalChallenge
 //
-//  Created by Guilherme Paciulli on 04/10/18.
+//  Created by Guilherme Paciulli on 05/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 
 import Foundation
-import CoreData
 
-class QuestionDAO {
+class DissertativeQuestionDAO {
     
-    static let shared = QuestionDAO()
+    static let shared = DissertativeQuestionDAO()
     
-    private init() {}
+    private init() { }
     
-    func fetchAll(completion: @escaping ([Question]?, DataAccessError?) -> (Void)) {
-        do {
-            if let questions = try CoreDataManager.shared.persistentContainer.viewContext.fetch(Question.fetchRequest()) as? [Question] {
-                completion(questions, nil)
-            }
-        } catch {
+    func fetchAll(completion: @escaping ([DissertationQuestion]?, DataAccessError?) -> (Void)) {
+        if let questions = CoreDataManager.shared.fetch(DissertationQuestion.fetchRequest()) as? [DissertationQuestion] {
+            completion(questions, nil)
+        } else {
             completion(nil, DataAccessError(message: "There was a problem fetching all questions."))
         }
-        
     }
     
     func create(questionText: String, category: Category, author: Author, completion: @escaping (Question?, DataAccessError?) -> (Void)) {
         
-        if let newQuestion = NSEntityDescription.insertNewObject(forEntityName: "Question", into: CoreDataManager.shared.persistentContainer.viewContext) as? Question {
+        if let newQuestion = CoreDataManager.shared.create(object: DissertationQuestion.self) {
             
             newQuestion.questionText = questionText
             newQuestion.category = category
@@ -41,7 +37,7 @@ class QuestionDAO {
         
     }
     
-    func update(question: Question, questionText: String? = nil, category: Category? = nil, author: Author? = nil, completion: @escaping (Question?, DataAccessError?) -> (Void)) {
+    func update(question: DissertationQuestion, questionText: String? = nil, category: Category? = nil, author: Author? = nil, completion: @escaping (Question?, DataAccessError?) -> (Void)) {
         
         if let updatedQuestionText = questionText {
             question.questionText = updatedQuestionText
@@ -57,13 +53,10 @@ class QuestionDAO {
             question.questionAuthor = updatedAuthor
         }
         
+        CoreDataManager.shared.saveContext()
+        
+        completion(question, nil)
         
     }
-    
-    func destroy(object: NSManagedObject, completion: @escaping (NSManagedObject?, DataAccessError?) -> (Void)) {
-        
-    }
-    
-    
     
 }
