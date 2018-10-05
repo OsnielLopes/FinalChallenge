@@ -33,5 +33,10 @@ protocol DailyQuestionInteractorOutputProtocol: class {
 // MARK: - View
 
 protocol DailyQuestionPresenterOutputProtocol: class {
-
+    //var with properties that will be presented on viewController
+    //Example:
+    //    var enteredName: String? { get }
+    //    var enteredEmail: String? { get }
+    //    var enteredPhone: String? { get }
+    //    var enteredAddress: String? { get }
 }
