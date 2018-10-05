@@ -41,6 +41,8 @@
 		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
 		BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
+		BD974A432167DB9D00612838 /* QuestionDAOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A422167DB9D00612838 /* QuestionDAOHelper.swift */; };
+		BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
 		BD974A38216681F100612838 /* QuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDAO.swift; sourceTree = "<group>"; };
 		BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAO.swift; sourceTree = "<group>"; };
+		BD974A422167DB9D00612838 /* QuestionDAOHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDAOHelper.swift; sourceTree = "<group>"; };
+		BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxQuestionDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +205,10 @@
 		BD974A3D2167CDE300612838 /* QuestionDAO */ = {
 			isa = PBXGroup;
 			children = (
+				BD974A422167DB9D00612838 /* QuestionDAOHelper.swift */,
 				BD974A38216681F100612838 /* QuestionDAO.swift */,
 				BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */,
+				BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */,
 			);
 			path = QuestionDAO;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BD974A102163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				BD974A212163F73C00612838 /* Category+CoreDataClass.swift in Sources */,
 				BD974A0F2163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift in Sources */,
@@ -296,6 +303,7 @@
 				BD974A112163F73C00612838 /* Author+CoreDataClass.swift in Sources */,
 				BD974A232163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A172163F73C00612838 /* Question+CoreDataClass.swift in Sources */,
+				BD974A432167DB9D00612838 /* QuestionDAOHelper.swift in Sources */,
 				BD974A1D2163F73C00612838 /* MoodType+CoreDataClass.swift in Sources */,
 				BD974A0D2163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A132163F73C00612838 /* MoodInput+CoreDataClass.swift in Sources */,

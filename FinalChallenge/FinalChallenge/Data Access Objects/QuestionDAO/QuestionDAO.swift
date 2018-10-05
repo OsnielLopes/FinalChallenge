@@ -9,24 +9,18 @@
 import Foundation
 import CoreData
 
-class QuestionDAO {
+class QuestionDAO: QuestionDAOHelper{
     
     static let shared = QuestionDAO()
         
-    private init() {}
+    private override init() {}
     
     func fetchAll(completion: @escaping ([Question]?, DataAccessError?) -> (Void)) {
-        if let questions = CoreDataManager.shared.fetch(Question.fetchRequest()) as? [Question] {
-            completion(questions, nil)
-        } else {
-            completion(nil, DataAccessError(message: "There was a problem fetching all questions."))
-        }
+        self.fetchAllInternal(completion: completion)
     }
     
-    func delete(question: Question, completion: @escaping (NSManagedObject?, DataAccessError?) -> (Void)) {
-        question.category?.removeFromQuestions(question)
-        CoreDataManager.shared.persistentContainer.viewContext.delete(question)
-        CoreDataManager.shared.saveContext()
+    func delete(question: Question, completion: @escaping (Question?, DataAccessError?) -> (Void)) {
+        self.deleteInternal(question: question, completion: completion)
     }
     
 }
