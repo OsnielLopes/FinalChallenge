@@ -1,8 +1,8 @@
 //
-//  DissertativeQuestionDAO.swift
+//  CheckboxQuestionDAOTests.swift
 //  FinalChallengeTests
 //
-//  Created by Guilherme Paciulli on 05/10/18.
+//  Created by Guilherme Paciulli on 08/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import CoreData
 
 @testable import FinalChallenge
 
-class DissertativeQuestionDAOTests: XCTestCase {
-    
-    var questions: [DissertationQuestion]!
+class CheckboxQuestionDAOTests: XCTestCase {
     
     var category: Category!
     
     var author: Author!
+    
+    var questions: [CheckboxQuestion]!
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle(for: type(of: self))] )!
@@ -41,7 +41,7 @@ class DissertativeQuestionDAOTests: XCTestCase {
         }
         return container
     }()
-    
+
     func generateData() {
         let auth = NSEntityDescription.insertNewObject(forEntityName: "Author", into: self.mockPersistantContainer.viewContext) as! Author
         auth.name = "System"
@@ -50,17 +50,18 @@ class DissertativeQuestionDAOTests: XCTestCase {
         let cat = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! Category
         cat.name = "Família"
         self.category = cat
-
+        
         self.questions = []
         for i in 0...5 {
-            let c = NSEntityDescription.insertNewObject(forEntityName: "DissertationQuestion", into: self.mockPersistantContainer.viewContext) as! DissertationQuestion
+            let c = NSEntityDescription.insertNewObject(forEntityName: "CheckboxQuestion", into: self.mockPersistantContainer.viewContext) as! CheckboxQuestion
             c.category = cat
             c.questionAuthor = auth
             c.questionText = "How are you? \(i)"
-        
+            c.options = ["Good", "Bad"]
+            
             self.questions.append(c)
         }
-
+        
         cat.addToQuestions(NSSet.init(array: self.questions))
         auth.addToCreatedQuestions(NSSet.init(array: self.questions))
         
@@ -69,10 +70,10 @@ class DissertativeQuestionDAOTests: XCTestCase {
     
     func flushData() {
         self.questions = []
-        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "DissertationQuestion")
-        let all = try! self.mockPersistantContainer.viewContext.fetch(request) as! [DissertationQuestion]
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "CheckboxQuestion")
+        let all = try! self.mockPersistantContainer.viewContext.fetch(request) as! [CheckboxQuestion]
         for i in all {
-            CoreDataManager.shared.persistentContainer.viewContext.delete(i)
+            self.mockPersistantContainer.viewContext.delete(i)
         }
         self.mockPersistantContainer.viewContext.delete(self.category)
         self.mockPersistantContainer.viewContext.delete(self.author)
@@ -88,39 +89,38 @@ class DissertativeQuestionDAOTests: XCTestCase {
         self.generateData()
         CoreDataManager.shared.persistentContainer = self.mockPersistantContainer
     }
-    
+
     override func tearDown() {
         self.flushData()
         super.tearDown()
     }
-    
-    func testIfCreatesDissertationQuestion() {
-        DissertativeQuestionDAO.shared.create(questionText: "Como você vai?", category: self.category, author: self.author, completion: {dissertationQuestion, err in
-            XCTAssertNil(err)
-            XCTAssertNotNil(dissertationQuestion)
-        })
-    }
-    
-    func testIfFetchesCategries() {
-        DissertativeQuestionDAO.shared.fetchAll(completion: { dissertativeQuestions, err in
-            XCTAssertNil(err)
-            XCTAssertNotNil(dissertativeQuestions)
-            XCTAssert(dissertativeQuestions!.count == 6)
-        })
-    }
-    
-    func testIfDeletesCategory() {
-        DissertativeQuestionDAO.shared.delete(question: self.questions[0], completion: { err in
-            XCTAssertNil(err)
-        })
-    }
-    
-    func testIfUpdatesCategory() {
-        DissertativeQuestionDAO.shared.update(question: self.questions[0], questionText: "Como você foi?", completion: { question, err in
+
+    func testIfCreatesCheckboxQuestion() {
+        CheckboxQuestionDAO.shared.create(questionText: "How are you?", category: self.category, author: self.author, options: ["Good", "Bad"], completion: { question, err in
             XCTAssertNil(err)
             XCTAssertNotNil(question)
-            XCTAssertEqual(self.questions[0].questionText, question!.questionText)
         })
     }
     
+    func testIfFetchesAllCheckboxQuestions() {
+        CheckboxQuestionDAO.shared.fetchAll(completion: { questions, err in
+            XCTAssertNil(err)
+            XCTAssertNotNil(questions)
+            XCTAssert(questions!.count == 6)
+        })
+    }
+    
+    func testIfUpdatesCheckboxQuestion() {
+        CheckboxQuestionDAO.shared.update(question: self.questions[0], options: ["Only good"], completion: { (question, err) in
+            XCTAssertNil(err)
+            XCTAssertNotNil(question)
+            XCTAssert(self.questions![0].options![0] == "Only good")
+        })
+    }
+    
+    func testIfDeletesCheckboxQuestion() {
+        CheckboxQuestionDAO.shared.delete(question: self.questions[0], completion: { (err) in
+            XCTAssertNil(err)
+        })
+    }
 }
