@@ -67,7 +67,6 @@
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
 		BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
 		BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
-		BD974A4D2167F01800612838 /* FinalChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A4C2167F01800612838 /* FinalChallengeTests.swift */; };
 		BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */; };
 		BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
 		BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
@@ -128,7 +127,6 @@
 		BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAO.swift; sourceTree = "<group>"; };
 		BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxQuestionDAO.swift; sourceTree = "<group>"; };
 		BD974A4A2167F01800612838 /* FinalChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD974A4C2167F01800612838 /* FinalChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalChallengeTests.swift; sourceTree = "<group>"; };
 		BD974A4E2167F01800612838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAOTests.swift; sourceTree = "<group>"; };
 		BD974A742167F4F700612838 /* CategoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 		BD974A4B2167F01800612838 /* FinalChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD974A4C2167F01800612838 /* FinalChallengeTests.swift */,
 				BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */,
 				BD974A782167F86900612838 /* CategoryDAOTests.swift */,
 				BD974A4E2167F01800612838 /* Info.plist */,
@@ -431,7 +428,6 @@
 				BD974A732167F13000612838 /* CoreDataManager.swift in Sources */,
 				BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
 				BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */,
-				BD974A4D2167F01800612838 /* FinalChallengeTests.swift in Sources */,
 				BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */,
 				BD290C09216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD290BFF216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,

@@ -41,7 +41,7 @@ class CategoryDAOTests: XCTestCase {
     func generateData() {
         self.createdCategories = []
         for i in 0...5 {
-            let c = NSEntityDescription.insertNewObject(forEntityName: "Category", into: mockPersistantContainer.viewContext) as! Category
+            let c = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! Category
             c.name = "Category\(i)"
             c.questions = NSSet(array: [])
             self.createdCategories.append(c)

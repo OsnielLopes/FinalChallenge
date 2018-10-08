@@ -43,11 +43,11 @@ class DissertativeQuestionDAOTests: XCTestCase {
     }()
     
     func generateData() {
-        let auth = NSEntityDescription.insertNewObject(forEntityName: "Author", into: CoreDataManager.shared.persistentContainer.viewContext) as! Author
+        let auth = NSEntityDescription.insertNewObject(forEntityName: "Author", into: self.mockPersistantContainer.viewContext) as! Author
         auth.name = "System"
         self.author = auth
         
-        let cat = NSEntityDescription.insertNewObject(forEntityName: "Category", into: CoreDataManager.shared.persistentContainer.viewContext) as! Category
+        let cat = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! Category
         cat.name = "Família"
         self.category = cat
 
@@ -64,21 +64,23 @@ class DissertativeQuestionDAOTests: XCTestCase {
         cat.addToQuestions(NSSet.init(array: self.createdDissertationQuestions))
         auth.addToCreatedQuestions(NSSet.init(array: self.createdDissertationQuestions))
         
-        CoreDataManager.shared.saveContext()
+        try! self.mockPersistantContainer.viewContext.save()
     }
     
     func flushData() {
         self.createdDissertationQuestions = []
-        let all = try! CoreDataManager.shared.persistentContainer.viewContext.fetch(DissertationQuestion.fetchRequest()) as! [DissertationQuestion]
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "DissertationQuestion")
+        let all = try! self.mockPersistantContainer.viewContext.fetch(request) as! [DissertationQuestion]
         for i in all {
             CoreDataManager.shared.persistentContainer.viewContext.delete(i)
         }
-        CoreDataManager.shared.persistentContainer.viewContext.delete(self.category)
-        CoreDataManager.shared.persistentContainer.viewContext.delete(self.author)
+        self.mockPersistantContainer.viewContext.delete(self.category)
+        self.mockPersistantContainer.viewContext.delete(self.author)
         
         self.category = nil
         self.author = nil
-        CoreDataManager.shared.saveContext()
+        
+        try! self.mockPersistantContainer.viewContext.save()
     }
     
     override func setUp() {
