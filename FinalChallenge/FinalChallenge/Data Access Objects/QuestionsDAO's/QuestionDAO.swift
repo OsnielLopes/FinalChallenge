@@ -16,7 +16,7 @@ class QuestionDAO {
     private init() {}
     
     func fetchAll(completion: @escaping ([Question]?, DataAccessError?) -> (Void)) {
-        if let allQuestions = CoreDataManager.shared.fetch(Question.fetchRequest()) as? [Question] {
+        if let allQuestions = CoreDataManager.shared.fetch(Question.self) as? [Question] {
             completion(allQuestions, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when fetching all Question"))

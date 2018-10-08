@@ -9,6 +9,8 @@
 import XCTest
 import CoreData
 
+@testable import FinalChallenge
+
 class CategoryDAOTests: XCTestCase {
     
     var createdCategories: [Category]!
@@ -17,18 +19,18 @@ class CategoryDAOTests: XCTestCase {
         let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle(for: type(of: self))] )!
         return managedObjectModel
     }()
-    
+
     lazy var mockPersistantContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "PersistentTodoList", managedObjectModel: self.managedObjectModel)
+        let container = NSPersistentContainer(name: "FinalChallengeDatabase", managedObjectModel: self.managedObjectModel)
         let description = NSPersistentStoreDescription()
         description.type = NSInMemoryStoreType
         description.shouldAddStoreAsynchronously = false
-        
+
         container.persistentStoreDescriptions = [description]
         container.loadPersistentStores { (description, error) in
             precondition( description.type == NSInMemoryStoreType )
-            
+
             if let error = error {
                 fatalError("Create an in-mem coordinator failed \(error)")
             }
@@ -39,27 +41,28 @@ class CategoryDAOTests: XCTestCase {
     func generateData() {
         self.createdCategories = []
         for i in 0...5 {
-            let c = NSEntityDescription.insertNewObject(forEntityName: "Category", into: CoreDataManager.shared.persistentContainer.viewContext) as! Category
+            let c = NSEntityDescription.insertNewObject(forEntityName: "Category", into: mockPersistantContainer.viewContext) as! Category
             c.name = "Category\(i)"
             c.questions = NSSet(array: [])
             self.createdCategories.append(c)
         }
-        CoreDataManager.shared.saveContext()
+        try! self.mockPersistantContainer.viewContext.save()
     }
     
     func flushData() {
         self.createdCategories = []
-        let all = try! CoreDataManager.shared.persistentContainer.viewContext.fetch(Category.fetchRequest()) as! [Category]
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Category")
+        let all = try! self.mockPersistantContainer.viewContext.fetch(request) as! [Category]
         for i in all {
-            CoreDataManager.shared.persistentContainer.viewContext.delete(i)
+            self.mockPersistantContainer.viewContext.delete(i)
         }
-        CoreDataManager.shared.saveContext()
+        try! self.mockPersistantContainer.viewContext.save()
     }
     
     override func setUp() {
         super.setUp()
-        CoreDataManager.shared.persistentContainer = self.mockPersistantContainer
         self.generateData()
+        CoreDataManager.shared.persistentContainer = self.mockPersistantContainer
     }
 
     override func tearDown() {
@@ -74,7 +77,7 @@ class CategoryDAOTests: XCTestCase {
         })
     }
     
-    func testIfFetchesCategries() {
+    func testIfFetchesCategories() {
         CategoryDAO.shared.fetchAll(completion: { categories, err in
             XCTAssertNil(err)
             XCTAssertNotNil(categories)

@@ -9,6 +9,8 @@
 import XCTest
 import CoreData
 
+@testable import FinalChallenge
+
 class DissertativeQuestionDAOTests: XCTestCase {
     
     var createdDissertationQuestions: [DissertationQuestion]!
@@ -24,7 +26,7 @@ class DissertativeQuestionDAOTests: XCTestCase {
     
     lazy var mockPersistantContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "PersistentTodoList", managedObjectModel: self.managedObjectModel)
+        let container = NSPersistentContainer(name: "FinalChallengeDatabase", managedObjectModel: self.managedObjectModel)
         let description = NSPersistentStoreDescription()
         description.type = NSInMemoryStoreType
         description.shouldAddStoreAsynchronously = false
@@ -41,12 +43,27 @@ class DissertativeQuestionDAOTests: XCTestCase {
     }()
     
     func generateData() {
+        let auth = NSEntityDescription.insertNewObject(forEntityName: "Author", into: CoreDataManager.shared.persistentContainer.viewContext) as! Author
+        auth.name = "System"
+        self.author = auth
+        
+        let cat = NSEntityDescription.insertNewObject(forEntityName: "Category", into: CoreDataManager.shared.persistentContainer.viewContext) as! Category
+        cat.name = "Família"
+        self.category = cat
+
         self.createdDissertationQuestions = []
         for i in 0...5 {
-            let c = NSEntityDescription.insertNewObject(forEntityName: "DissertationQuestion", into: CoreDataManager.shared.persistentContainer.viewContext) as! DissertationQuestion
-            
+            let c = NSEntityDescription.insertNewObject(forEntityName: "DissertationQuestion", into: self.mockPersistantContainer.viewContext) as! DissertationQuestion
+            c.category = cat
+            c.questionAuthor = auth
+            c.questionText = "How are you? \(i)"
+        
             self.createdDissertationQuestions.append(c)
         }
+
+        cat.addToQuestions(NSSet.init(array: self.createdDissertationQuestions))
+        auth.addToCreatedQuestions(NSSet.init(array: self.createdDissertationQuestions))
+        
         CoreDataManager.shared.saveContext()
     }
     
@@ -56,13 +73,18 @@ class DissertativeQuestionDAOTests: XCTestCase {
         for i in all {
             CoreDataManager.shared.persistentContainer.viewContext.delete(i)
         }
+        CoreDataManager.shared.persistentContainer.viewContext.delete(self.category)
+        CoreDataManager.shared.persistentContainer.viewContext.delete(self.author)
+        
+        self.category = nil
+        self.author = nil
         CoreDataManager.shared.saveContext()
     }
     
     override func setUp() {
         super.setUp()
-        CoreDataManager.shared.persistentContainer = self.mockPersistantContainer
         self.generateData()
+        CoreDataManager.shared.persistentContainer = self.mockPersistantContainer
     }
     
     override func tearDown() {

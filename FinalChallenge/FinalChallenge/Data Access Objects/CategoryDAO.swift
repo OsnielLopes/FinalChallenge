@@ -17,7 +17,7 @@ class CategoryDAO {
     
     func fetchAll(completion: @escaping ([Category]?, DataAccessError?) -> (Void)) {
         
-        if let allCategories = CoreDataManager.shared.fetch(Category.fetchRequest()) as? [Category] {
+        if let allCategories = CoreDataManager.shared.fetch(Category.self) as? [Category] {
             completion(allCategories, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when fetching all categories"))
@@ -50,6 +50,8 @@ class CategoryDAO {
         if let updatedQuestions = questions {
             category.questions = NSSet(array: updatedQuestions)
         }
+        
+        CoreDataManager.shared.saveContext()
         
         completion(category, nil)
         

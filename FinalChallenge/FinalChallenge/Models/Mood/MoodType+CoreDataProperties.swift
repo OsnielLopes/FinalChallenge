@@ -2,7 +2,7 @@
 //  MoodType+CoreDataProperties.swift
 //  FinalChallenge
 //
-//  Created by Guilherme Paciulli on 02/10/18.
+//  Created by Guilherme Paciulli on 08/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 //
@@ -17,8 +17,8 @@ extension MoodType {
         return NSFetchRequest<MoodType>(entityName: "MoodType")
     }
 
-    @NSManaged public var typeText: String?
     @NSManaged public var typeIcon: String?
+    @NSManaged public var typeText: String?
     @NSManaged public var insertedMoods: NSSet?
 
 }

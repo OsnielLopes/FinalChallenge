@@ -15,7 +15,7 @@ class CheckboxQuestionDAO {
     private init() { }
     
     func fetchAll(completion: @escaping ([CheckboxQuestion]?, DataAccessError?) -> (Void)) {
-        if let allQuestions = CoreDataManager.shared.fetch(CheckboxQuestion.fetchRequest()) as? [CheckboxQuestion] {
+        if let allQuestions = CoreDataManager.shared.fetch(CheckboxQuestion.self) as? [CheckboxQuestion] {
             completion(allQuestions, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when fetching all CheckboxQuestion"))

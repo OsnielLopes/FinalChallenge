@@ -2,7 +2,7 @@
 //  Question+CoreDataProperties.swift
 //  FinalChallenge
 //
-//  Created by Guilherme Paciulli on 02/10/18.
+//  Created by Guilherme Paciulli on 08/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 //
@@ -18,9 +18,9 @@ extension Question {
     }
 
     @NSManaged public var questionText: String?
+    @NSManaged public var answers: NSSet?
     @NSManaged public var category: Category?
     @NSManaged public var questionAuthor: Author?
-    @NSManaged public var answers: NSSet?
 
 }
 

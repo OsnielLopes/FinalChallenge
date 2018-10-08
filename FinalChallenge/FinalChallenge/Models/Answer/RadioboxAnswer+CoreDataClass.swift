@@ -2,7 +2,7 @@
 //  RadioboxAnswer+CoreDataClass.swift
 //  FinalChallenge
 //
-//  Created by Guilherme Paciulli on 02/10/18.
+//  Created by Guilherme Paciulli on 08/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 //

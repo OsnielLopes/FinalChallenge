@@ -37,11 +37,13 @@ class CoreDataManager {
         }
     }
     
-    func fetch(_ fetchRequest: NSFetchRequest<NSFetchRequestResult>) -> [Any]? {
+    func fetch<T: NSManagedObject>(_ fetchRequest: T.Type) -> [Any]? {
         do {
-            return try self.persistentContainer.viewContext.fetch(fetchRequest)
+            let entityName = String(describing: T.self)
+            let request = NSFetchRequest<T>(entityName: entityName)
+            return try self.persistentContainer.viewContext.fetch(request)
         } catch {
-            print("There was and error fetching " + String(describing: fetchRequest.entityName))
+            print("There was and error fetching " + String(describing: T.self))
         }
         return nil
     }
