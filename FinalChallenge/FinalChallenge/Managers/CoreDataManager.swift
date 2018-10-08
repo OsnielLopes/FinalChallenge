@@ -46,9 +46,15 @@ class CoreDataManager {
         return nil
     }
     
-    func create<T: NSManagedObject>(object: T.Type) -> T? {
+    func create<T: NSManagedObject>(type: T.Type) -> NSManagedObject {
         let className = String(describing: T.self)
-        return NSEntityDescription.insertNewObject(forEntityName: className, into: CoreDataManager.shared.persistentContainer.viewContext) as? T
+        let entity = NSEntityDescription.insertNewObject(forEntityName: className, into: CoreDataManager.shared.persistentContainer.viewContext)
+        return entity
+    }
+    
+    func delete(_ entity: NSManagedObject) {
+        self.persistentContainer.viewContext.delete(entity)
+        self.saveContext()
     }
     
 }

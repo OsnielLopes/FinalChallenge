@@ -12,6 +12,27 @@
 		49AE2B1E2163DD4F00055136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* Main.storyboard */; };
 		49AE2B202163DD5200055136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1F2163DD5200055136 /* Assets.xcassets */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
+		BD91C933216BC61D0073A003 /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F72163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift */; };
+		BD91C934216BC61D0073A003 /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F82163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift */; };
+		BD91C935216BC61D0073A003 /* RadioboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A012163F73C00612838 /* RadioboxAnswer+CoreDataClass.swift */; };
+		BD91C936216BC61D0073A003 /* RadioboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A022163F73C00612838 /* RadioboxAnswer+CoreDataProperties.swift */; };
+		BD91C937216BC61D0073A003 /* DissertationAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A032163F73C00612838 /* DissertationAnswer+CoreDataClass.swift */; };
+		BD91C938216BC61D0073A003 /* DissertationAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A042163F73C00612838 /* DissertationAnswer+CoreDataProperties.swift */; };
+		BD91C939216BC61D0073A003 /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A072163F73C00612838 /* Answer+CoreDataClass.swift */; };
+		BD91C93A216BC61D0073A003 /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A082163F73C00612838 /* Answer+CoreDataProperties.swift */; };
+		BD91C93B216BC6CF0073A003 /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F92163F73C00612838 /* Author+CoreDataClass.swift */; };
+		BD91C93C216BC6CF0073A003 /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FA2163F73C00612838 /* Author+CoreDataProperties.swift */; };
+		BD91C93D216BC6CF0073A003 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A092163F73C00612838 /* Category+CoreDataClass.swift */; };
+		BD91C93E216BC6CF0073A003 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A0A2163F73C00612838 /* Category+CoreDataProperties.swift */; };
+		BD91C93F216BC6D80073A003 /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F52163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift */; };
+		BD91C940216BC6D80073A003 /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F62163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift */; };
+		BD91C941216BC6D80073A003 /* DissertationQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FD2163F73C00612838 /* DissertationQuestion+CoreDataClass.swift */; };
+		BD91C942216BC6D80073A003 /* DissertationQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FE2163F73C00612838 /* DissertationQuestion+CoreDataProperties.swift */; };
+		BD91C943216BC6D80073A003 /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FF2163F73C00612838 /* Question+CoreDataClass.swift */; };
+		BD91C944216BC6D80073A003 /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A002163F73C00612838 /* Question+CoreDataProperties.swift */; };
+		BD91C945216BC6D80073A003 /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A0B2163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift */; };
+		BD91C946216BC6D80073A003 /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A0C2163F73C00612838 /* RadioboxQuestion+CoreDataProperties.swift */; };
+		BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
 		BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
 		BD974A0D2163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F52163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift */; };
 		BD974A0E2163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F62163F73C00612838 /* CheckboxQuestion+CoreDataProperties.swift */; };
@@ -41,9 +62,32 @@
 		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
 		BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
-		BD974A432167DB9D00612838 /* QuestionDAOHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A422167DB9D00612838 /* QuestionDAOHelper.swift */; };
 		BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
+		BD974A4D2167F01800612838 /* FinalChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A4C2167F01800612838 /* FinalChallengeTests.swift */; };
+		BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */; };
+		BD974A5A2167F11F00612838 /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FB2163F73C00612838 /* MoodInput+CoreDataClass.swift */; };
+		BD974A5B2167F11F00612838 /* MoodInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9749FC2163F73C00612838 /* MoodInput+CoreDataProperties.swift */; };
+		BD974A5C2167F11F00612838 /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A052163F73C00612838 /* MoodType+CoreDataClass.swift */; };
+		BD974A5D2167F11F00612838 /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A062163F73C00612838 /* MoodType+CoreDataProperties.swift */; };
+		BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
+		BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
+		BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
+		BD974A722167F12E00612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
+		BD974A732167F13000612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
+		BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
+		BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A782167F86900612838 /* CategoryDAOTests.swift */; };
+		BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD974A4F2167F01800612838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49AE2B0D2163DD4F00055136 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49AE2B142163DD4F00055136;
+			remoteInfo = FinalChallenge;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,12 +126,24 @@
 		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
 		BD974A38216681F100612838 /* QuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDAO.swift; sourceTree = "<group>"; };
 		BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAO.swift; sourceTree = "<group>"; };
-		BD974A422167DB9D00612838 /* QuestionDAOHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDAOHelper.swift; sourceTree = "<group>"; };
 		BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxQuestionDAO.swift; sourceTree = "<group>"; };
+		BD974A4A2167F01800612838 /* FinalChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD974A4C2167F01800612838 /* FinalChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalChallengeTests.swift; sourceTree = "<group>"; };
+		BD974A4E2167F01800612838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAOTests.swift; sourceTree = "<group>"; };
+		BD974A742167F4F700612838 /* CategoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
+		BD974A782167F86900612838 /* CategoryDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAOTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		49AE2B122163DD4F00055136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD974A472167F01800612838 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				49AE2B172163DD4F00055136 /* FinalChallenge */,
+				BD974A4B2167F01800612838 /* FinalChallengeTests */,
 				49AE2B162163DD4F00055136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				49AE2B152163DD4F00055136 /* FinalChallenge.app */,
+				BD974A4A2167F01800612838 /* FinalChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,7 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				BD974A3621654E3800612838 /* DataAccessError.swift */,
-				BD974A3D2167CDE300612838 /* QuestionDAO */,
+				BD974A742167F4F700612838 /* CategoryDAO.swift */,
+				BD974A3D2167CDE300612838 /* QuestionsDAO's */,
 			);
 			path = "Data Access Objects";
 			sourceTree = "<group>";
@@ -202,15 +261,25 @@
 			path = Mood;
 			sourceTree = "<group>";
 		};
-		BD974A3D2167CDE300612838 /* QuestionDAO */ = {
+		BD974A3D2167CDE300612838 /* QuestionsDAO's */ = {
 			isa = PBXGroup;
 			children = (
-				BD974A422167DB9D00612838 /* QuestionDAOHelper.swift */,
 				BD974A38216681F100612838 /* QuestionDAO.swift */,
 				BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */,
 				BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */,
 			);
-			path = QuestionDAO;
+			path = "QuestionsDAO's";
+			sourceTree = "<group>";
+		};
+		BD974A4B2167F01800612838 /* FinalChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A4C2167F01800612838 /* FinalChallengeTests.swift */,
+				BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */,
+				BD974A782167F86900612838 /* CategoryDAOTests.swift */,
+				BD974A4E2167F01800612838 /* Info.plist */,
+			);
+			path = FinalChallengeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +302,24 @@
 			productReference = 49AE2B152163DD4F00055136 /* FinalChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BD974A492167F01800612838 /* FinalChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD974A512167F01800612838 /* Build configuration list for PBXNativeTarget "FinalChallengeTests" */;
+			buildPhases = (
+				BD974A462167F01800612838 /* Sources */,
+				BD974A472167F01800612838 /* Frameworks */,
+				BD974A482167F01800612838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD974A502167F01800612838 /* PBXTargetDependency */,
+			);
+			name = FinalChallengeTests;
+			productName = FinalChallengeTests;
+			productReference = BD974A4A2167F01800612838 /* FinalChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -245,6 +332,10 @@
 				TargetAttributes = {
 					49AE2B142163DD4F00055136 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					BD974A492167F01800612838 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 49AE2B142163DD4F00055136;
 					};
 				};
 			};
@@ -262,6 +353,7 @@
 			projectRoot = "";
 			targets = (
 				49AE2B142163DD4F00055136 /* FinalChallenge */,
+				BD974A492167F01800612838 /* FinalChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +369,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD974A482167F01800612838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -286,6 +385,7 @@
 			files = (
 				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BD974A102163F73C00612838 /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
+				BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */,
 				BD974A212163F73C00612838 /* Category+CoreDataClass.swift in Sources */,
 				BD974A0F2163F73C00612838 /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				BD974A122163F73C00612838 /* Author+CoreDataProperties.swift in Sources */,
@@ -303,7 +403,6 @@
 				BD974A112163F73C00612838 /* Author+CoreDataClass.swift in Sources */,
 				BD974A232163F73C00612838 /* RadioboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A172163F73C00612838 /* Question+CoreDataClass.swift in Sources */,
-				BD974A432167DB9D00612838 /* QuestionDAOHelper.swift in Sources */,
 				BD974A1D2163F73C00612838 /* MoodType+CoreDataClass.swift in Sources */,
 				BD974A0D2163F73C00612838 /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A132163F73C00612838 /* MoodInput+CoreDataClass.swift in Sources */,
@@ -320,7 +419,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD974A462167F01800612838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
+				BD91C93D216BC6CF0073A003 /* Category+CoreDataClass.swift in Sources */,
+				BD91C934216BC61D0073A003 /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
+				BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
+				BD91C945216BC6D80073A003 /* RadioboxQuestion+CoreDataClass.swift in Sources */,
+				BD91C933216BC61D0073A003 /* CheckboxAnswer+CoreDataClass.swift in Sources */,
+				BD91C946216BC6D80073A003 /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
+				BD91C941216BC6D80073A003 /* DissertationQuestion+CoreDataClass.swift in Sources */,
+				BD974A5A2167F11F00612838 /* MoodInput+CoreDataClass.swift in Sources */,
+				BD91C939216BC61D0073A003 /* Answer+CoreDataClass.swift in Sources */,
+				BD974A5B2167F11F00612838 /* MoodInput+CoreDataProperties.swift in Sources */,
+				BD974A5D2167F11F00612838 /* MoodType+CoreDataProperties.swift in Sources */,
+				BD91C942216BC6D80073A003 /* DissertationQuestion+CoreDataProperties.swift in Sources */,
+				BD91C936216BC61D0073A003 /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
+				BD974A5C2167F11F00612838 /* MoodType+CoreDataClass.swift in Sources */,
+				BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */,
+				BD91C937216BC61D0073A003 /* DissertationAnswer+CoreDataClass.swift in Sources */,
+				BD91C940216BC6D80073A003 /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
+				BD974A732167F13000612838 /* CoreDataManager.swift in Sources */,
+				BD91C93A216BC61D0073A003 /* Answer+CoreDataProperties.swift in Sources */,
+				BD91C935216BC61D0073A003 /* RadioboxAnswer+CoreDataClass.swift in Sources */,
+				BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */,
+				BD91C93F216BC6D80073A003 /* CheckboxQuestion+CoreDataClass.swift in Sources */,
+				BD91C938216BC61D0073A003 /* DissertationAnswer+CoreDataProperties.swift in Sources */,
+				BD91C93E216BC6CF0073A003 /* Category+CoreDataProperties.swift in Sources */,
+				BD974A4D2167F01800612838 /* FinalChallengeTests.swift in Sources */,
+				BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */,
+				BD91C93B216BC6CF0073A003 /* Author+CoreDataClass.swift in Sources */,
+				BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */,
+				BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */,
+				BD91C944216BC6D80073A003 /* Question+CoreDataProperties.swift in Sources */,
+				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
+				BD91C93C216BC6CF0073A003 /* Author+CoreDataProperties.swift in Sources */,
+				BD91C943216BC6D80073A003 /* Question+CoreDataClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD974A502167F01800612838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49AE2B142163DD4F00055136 /* FinalChallenge */;
+			targetProxy = BD974A4F2167F01800612838 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		49AE2B1C2163DD4F00055136 /* Main.storyboard */ = {
@@ -494,6 +642,46 @@
 			};
 			name = Release;
 		};
+		BD974A522167F01800612838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = FinalChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.FinalChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalChallenge.app/FinalChallenge";
+			};
+			name = Debug;
+		};
+		BD974A532167F01800612838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = FinalChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.FinalChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalChallenge.app/FinalChallenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,6 +699,15 @@
 			buildConfigurations = (
 				49AE2B282163DD5200055136 /* Debug */,
 				49AE2B292163DD5200055136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD974A512167F01800612838 /* Build configuration list for PBXNativeTarget "FinalChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD974A522167F01800612838 /* Debug */,
+				BD974A532167F01800612838 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
