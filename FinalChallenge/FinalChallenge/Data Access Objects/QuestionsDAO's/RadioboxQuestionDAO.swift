@@ -1,33 +1,35 @@
 //
-//  DissertativeQuestionDAO.swift
+//  RadioboxQuestionDAO.swift
 //  FinalChallenge
 //
-//  Created by Guilherme Paciulli on 05/10/18.
+//  Created by Guilherme Paciulli on 09/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-class DissertativeQuestionDAO {
+class RadioboxQuestionDAO {
     
-    static let shared = DissertativeQuestionDAO()
+    static let shared = RadioboxQuestionDAO()
     
     private init() { }
     
-    func fetchAll(completion: @escaping ([DissertationQuestion]?, DataAccessError?) -> (Void)) {
-        if let allQuestions = CoreDataManager.shared.fetch(DissertationQuestion.self) {
+    func fetchAll(completion: @escaping ([RadioboxQuestion]?, DataAccessError?) -> (Void)) {
+        if let allQuestions = CoreDataManager.shared.fetch(RadioboxQuestion.self) {
             completion(allQuestions, nil)
         } else {
-            completion(nil, DataAccessError(message: "Error when fetching all DissertationQuestion"))
+            completion(nil, DataAccessError(message: "Error when fetching all RadioboxQuestion"))
         }
     }
     
-    func create(questionText: String, category: Category, author: Author, completion: @escaping (DissertationQuestion?, DataAccessError?) -> (Void)) {
-        if let newQuestion = CoreDataManager.shared.create(type: DissertationQuestion.self) {
+    func create(questionText: String, category: Category, author: Author, options: [String], completion: @escaping (RadioboxQuestion?, DataAccessError?) -> (Void)) {
+        if let newQuestion = CoreDataManager.shared.create(type: RadioboxQuestion.self) {
             
             newQuestion.questionText = questionText
             newQuestion.category = category
             newQuestion.questionAuthor = author
+            newQuestion.options = options
             
             completion(newQuestion, nil)
             
@@ -36,7 +38,7 @@ class DissertativeQuestionDAO {
         }
     }
     
-    func update(question: DissertationQuestion, questionText: String? = nil, category: Category? = nil, author: Author? = nil, completion: @escaping (DissertationQuestion?, DataAccessError?) -> (Void)) {
+    func update(question: RadioboxQuestion, questionText: String? = nil, category: Category? = nil, author: Author? = nil, options: [String]? = nil, completion: @escaping (RadioboxQuestion?, DataAccessError?) -> (Void)) {
         
         if let updatedQuestionText = questionText {
             question.questionText = updatedQuestionText
@@ -51,10 +53,14 @@ class DissertativeQuestionDAO {
             updatedAuthor.addToCreatedQuestions(question)
             question.questionAuthor = updatedAuthor
         }
+        if let updatedOptions = options {
+            question.options = updatedOptions
+        }
         
         CoreDataManager.shared.saveContext()
         
         completion(question, nil)
+        
     }
     
 }
