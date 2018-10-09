@@ -16,7 +16,7 @@ class RadioboxQuestionDAO {
     private init() { }
     
     func fetchAll(completion: @escaping ([RadioboxQuestion]?, DataAccessError?) -> (Void)) {
-        if let allQuestions = CoreDataManager.shared.fetch(RadioboxQuestion.self) as? [RadioboxQuestion] {
+        if let allQuestions = CoreDataManager.shared.fetch(RadioboxQuestion.self) {
             completion(allQuestions, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when fetching all RadioboxQuestion"))
@@ -24,7 +24,7 @@ class RadioboxQuestionDAO {
     }
     
     func create(questionText: String, category: Category, author: Author, options: [String], completion: @escaping (RadioboxQuestion?, DataAccessError?) -> (Void)) {
-        if let newQuestion = CoreDataManager.shared.create(type: RadioboxQuestion.self) as? RadioboxQuestion {
+        if let newQuestion = CoreDataManager.shared.create(type: RadioboxQuestion.self) {
             
             newQuestion.questionText = questionText
             newQuestion.category = category

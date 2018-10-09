@@ -37,7 +37,7 @@ class CoreDataManager {
         }
     }
     
-    func fetch<T: NSManagedObject>(_ fetchRequest: T.Type) -> [Any]? {
+    func fetch<T: NSManagedObject>(_ fetchRequest: T.Type) -> [T]? {
         do {
             let entityName = String(describing: T.self)
             let request = NSFetchRequest<T>(entityName: entityName)
@@ -48,10 +48,9 @@ class CoreDataManager {
         return nil
     }
     
-    func create<T: NSManagedObject>(type: T.Type) -> NSManagedObject {
+    func create<T: NSManagedObject>(type: T.Type) -> T? {
         let className = String(describing: T.self)
-        let entity = NSEntityDescription.insertNewObject(forEntityName: className, into: CoreDataManager.shared.persistentContainer.viewContext)
-        return entity
+        return NSEntityDescription.insertNewObject(forEntityName: className, into: CoreDataManager.shared.persistentContainer.viewContext) as? T
     }
     
     func delete(_ entity: NSManagedObject) {

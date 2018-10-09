@@ -15,7 +15,7 @@ class DissertativeQuestionDAO {
     private init() { }
     
     func fetchAll(completion: @escaping ([DissertationQuestion]?, DataAccessError?) -> (Void)) {
-        if let allQuestions = CoreDataManager.shared.fetch(DissertationQuestion.self) as? [DissertationQuestion] {
+        if let allQuestions = CoreDataManager.shared.fetch(DissertationQuestion.self) {
             completion(allQuestions, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when fetching all DissertationQuestion"))
@@ -23,7 +23,7 @@ class DissertativeQuestionDAO {
     }
     
     func create(questionText: String, category: Category, author: Author, completion: @escaping (DissertationQuestion?, DataAccessError?) -> (Void)) {
-        if let newQuestion = CoreDataManager.shared.create(type: DissertationQuestion.self) as? DissertationQuestion {
+        if let newQuestion = CoreDataManager.shared.create(type: DissertationQuestion.self) {
             
             newQuestion.questionText = questionText
             newQuestion.category = category

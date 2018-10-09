@@ -17,7 +17,7 @@ class CategoryDAO {
     
     func fetchAll(completion: @escaping ([Category]?, DataAccessError?) -> (Void)) {
         
-        if let allCategories = CoreDataManager.shared.fetch(Category.self) as? [Category] {
+        if let allCategories = CoreDataManager.shared.fetch(Category.self) {
             completion(allCategories, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when fetching all categories"))
@@ -27,7 +27,7 @@ class CategoryDAO {
     
     func create(name: String, completion: @escaping (Category?, DataAccessError?) -> (Void)) {
         
-        if let newCategory = CoreDataManager.shared.create(type: Category.self) as? Category {
+        if let newCategory = CoreDataManager.shared.create(type: Category.self) {
 
             newCategory.name = name
             newCategory.questions = NSSet(array: [])

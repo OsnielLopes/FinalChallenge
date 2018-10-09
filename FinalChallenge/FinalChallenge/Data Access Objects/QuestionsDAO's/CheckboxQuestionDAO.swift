@@ -15,7 +15,7 @@ class CheckboxQuestionDAO {
     private init() { }
     
     func fetchAll(completion: @escaping ([CheckboxQuestion]?, DataAccessError?) -> (Void)) {
-        if let allQuestions = CoreDataManager.shared.fetch(CheckboxQuestion.self) as? [CheckboxQuestion] {
+        if let allQuestions = CoreDataManager.shared.fetch(CheckboxQuestion.self) {
             completion(allQuestions, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when fetching all CheckboxQuestion"))
@@ -23,7 +23,7 @@ class CheckboxQuestionDAO {
     }
     
     func create(questionText: String, category: Category, author: Author, options: [String], completion: @escaping (CheckboxQuestion?, DataAccessError?) -> (Void)) {
-        if let newQuestion = CoreDataManager.shared.create(type: CheckboxQuestion.self) as? CheckboxQuestion {
+        if let newQuestion = CoreDataManager.shared.create(type: CheckboxQuestion.self) {
             
             newQuestion.questionText = questionText
             newQuestion.category = category
