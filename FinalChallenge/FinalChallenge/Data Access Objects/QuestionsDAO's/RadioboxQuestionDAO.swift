@@ -1,29 +1,30 @@
 //
-//  CheckboxQuestionDAO.swift
+//  RadioboxQuestionDAO.swift
 //  FinalChallenge
 //
-//  Created by Guilherme Paciulli on 05/10/18.
+//  Created by Guilherme Paciulli on 09/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-class CheckboxQuestionDAO {
+class RadioboxQuestionDAO {
     
-    static let shared = CheckboxQuestionDAO()
+    static let shared = RadioboxQuestionDAO()
     
     private init() { }
     
-    func fetchAll(completion: @escaping ([CheckboxQuestion]?, DataAccessError?) -> (Void)) {
-        if let allQuestions = CoreDataManager.shared.fetch(CheckboxQuestion.self) as? [CheckboxQuestion] {
+    func fetchAll(completion: @escaping ([RadioboxQuestion]?, DataAccessError?) -> (Void)) {
+        if let allQuestions = CoreDataManager.shared.fetch(RadioboxQuestion.self) as? [RadioboxQuestion] {
             completion(allQuestions, nil)
         } else {
-            completion(nil, DataAccessError(message: "Error when fetching all CheckboxQuestion"))
+            completion(nil, DataAccessError(message: "Error when fetching all RadioboxQuestion"))
         }
     }
     
-    func create(questionText: String, category: Category, author: Author, options: [String], completion: @escaping (CheckboxQuestion?, DataAccessError?) -> (Void)) {
-        if let newQuestion = CoreDataManager.shared.create(type: CheckboxQuestion.self) as? CheckboxQuestion {
+    func create(questionText: String, category: Category, author: Author, options: [String], completion: @escaping (RadioboxQuestion?, DataAccessError?) -> (Void)) {
+        if let newQuestion = CoreDataManager.shared.create(type: RadioboxQuestion.self) as? RadioboxQuestion {
             
             newQuestion.questionText = questionText
             newQuestion.category = category
@@ -37,7 +38,7 @@ class CheckboxQuestionDAO {
         }
     }
     
-    func update(question: CheckboxQuestion, questionText: String? = nil, category: Category? = nil, author: Author? = nil, options: [String]? = nil, completion: @escaping (CheckboxQuestion?, DataAccessError?) -> (Void)) {
+    func update(question: RadioboxQuestion, questionText: String? = nil, category: Category? = nil, author: Author? = nil, options: [String]? = nil, completion: @escaping (RadioboxQuestion?, DataAccessError?) -> (Void)) {
         
         if let updatedQuestionText = questionText {
             question.questionText = updatedQuestionText

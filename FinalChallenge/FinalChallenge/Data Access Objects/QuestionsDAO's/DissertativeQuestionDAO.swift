@@ -57,9 +57,4 @@ class DissertativeQuestionDAO {
         completion(question, nil)
     }
     
-    func delete(question: DissertationQuestion, completion: @escaping (DataAccessError?) -> (Void)) {
-        CoreDataManager.shared.delete(question)
-        completion(nil)
-    }
-    
 }

@@ -1,23 +1,21 @@
 //
-//  CheckboxQuestionDAOTests.swift
+//  RadioboxQuestionDAOTests.swift
 //  FinalChallengeTests
 //
-//  Created by Guilherme Paciulli on 08/10/18.
+//  Created by Guilherme Paciulli on 09/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 
 import XCTest
 import CoreData
 
-@testable import FinalChallenge
-
-class CheckboxQuestionDAOTests: XCTestCase {
+class RadioboxQuestionDAOTests: XCTestCase {
+    
+    var questions: [RadioboxQuestion]!
     
     var category: Category!
     
     var author: Author!
-    
-    var questions: [CheckboxQuestion]!
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle(for: type(of: self))] )!
@@ -41,7 +39,7 @@ class CheckboxQuestionDAOTests: XCTestCase {
         }
         return container
     }()
-
+    
     func generateData() {
         let auth = NSEntityDescription.insertNewObject(forEntityName: "Author", into: self.mockPersistantContainer.viewContext) as! Author
         auth.name = "System"
@@ -53,7 +51,7 @@ class CheckboxQuestionDAOTests: XCTestCase {
         
         self.questions = []
         for i in 0...5 {
-            let c = NSEntityDescription.insertNewObject(forEntityName: "CheckboxQuestion", into: self.mockPersistantContainer.viewContext) as! CheckboxQuestion
+            let c = NSEntityDescription.insertNewObject(forEntityName: "RadioboxQuestion", into: self.mockPersistantContainer.viewContext) as! RadioboxQuestion
             c.category = cat
             c.questionAuthor = auth
             c.questionText = "How are you? \(i)"
@@ -70,8 +68,8 @@ class CheckboxQuestionDAOTests: XCTestCase {
     
     func flushData() {
         self.questions = []
-        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "CheckboxQuestion")
-        let all = try! self.mockPersistantContainer.viewContext.fetch(request) as! [CheckboxQuestion]
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Question")
+        let all = try! self.mockPersistantContainer.viewContext.fetch(request) as! [Question]
         for i in all {
             self.mockPersistantContainer.viewContext.delete(i)
         }
@@ -83,7 +81,7 @@ class CheckboxQuestionDAOTests: XCTestCase {
         
         try! self.mockPersistantContainer.viewContext.save()
     }
-    
+
     override func setUp() {
         super.setUp()
         self.generateData()
@@ -94,16 +92,16 @@ class CheckboxQuestionDAOTests: XCTestCase {
         self.flushData()
         super.tearDown()
     }
-
+    
     func testIfCreatesCheckboxQuestion() {
-        CheckboxQuestionDAO.shared.create(questionText: "How are you?", category: self.category, author: self.author, options: ["Good", "Bad"], completion: { question, err in
+        RadioboxQuestionDAO.shared.create(questionText: "How are you?", category: self.category, author: self.author, options: ["Good", "Bad"], completion: { question, err in
             XCTAssertNil(err)
             XCTAssertNotNil(question)
         })
     }
     
     func testIfFetchesAllCheckboxQuestions() {
-        CheckboxQuestionDAO.shared.fetchAll(completion: { questions, err in
+        RadioboxQuestionDAO.shared.fetchAll(completion: { questions, err in
             XCTAssertNil(err)
             XCTAssertNotNil(questions)
             XCTAssert(questions!.count == 6)
@@ -111,10 +109,11 @@ class CheckboxQuestionDAOTests: XCTestCase {
     }
     
     func testIfUpdatesCheckboxQuestion() {
-        CheckboxQuestionDAO.shared.update(question: self.questions[0], options: ["Only good"], completion: { (question, err) in
+        RadioboxQuestionDAO.shared.update(question: self.questions[0], options: ["Only good"], completion: { (question, err) in
             XCTAssertNil(err)
             XCTAssertNotNil(question)
-            XCTAssert(self.questions![0].options![0] == "Only good")
+            XCTAssertEqual(self.questions[0].options, ["Only good"])
         })
     }
+    
 }

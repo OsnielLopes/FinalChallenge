@@ -108,13 +108,7 @@ class DissertativeQuestionDAOTests: XCTestCase {
             XCTAssert(dissertativeQuestions!.count == 6)
         })
     }
-    
-    func testIfDeletesCategory() {
-        DissertativeQuestionDAO.shared.delete(question: self.questions[0], completion: { err in
-            XCTAssertNil(err)
-        })
-    }
-    
+
     func testIfUpdatesCategory() {
         DissertativeQuestionDAO.shared.update(question: self.questions[0], questionText: "Como você foi?", completion: { question, err in
             XCTAssertNil(err)
