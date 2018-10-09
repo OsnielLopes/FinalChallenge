@@ -202,9 +202,9 @@
 		BD290C32216D1A49001F16EA /* Data Access Objects Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BD290C33216D1A6A001F16EA /* QuestionsDAO's Tests */,
 				BD974A782167F86900612838 /* CategoryDAOTests.swift */,
 				BD290C34216D1A90001F16EA /* AuthorDAOTests.swift */,
+				BD290C33216D1A6A001F16EA /* QuestionsDAO's Tests */,
 			);
 			path = "Data Access Objects Tests";
 			sourceTree = "<group>";
