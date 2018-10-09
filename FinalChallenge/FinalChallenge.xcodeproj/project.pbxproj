@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45393760216BC79900F43CAC /* CenterAndZoomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539375F216BC79900F43CAC /* CenterAndZoomFlowLayout.swift */; };
 		45652BA621667D170085A5A2 /* DailyQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45652B9F21667D170085A5A2 /* DailyQuestion.storyboard */; };
 		45652BA721667D170085A5A2 /* DailyQuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BA021667D170085A5A2 /* DailyQuestionPresenter.swift */; };
 		45652BA821667D170085A5A2 /* DailyQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BA121667D170085A5A2 /* DailyQuestionRouter.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4539375F216BC79900F43CAC /* CenterAndZoomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterAndZoomFlowLayout.swift; sourceTree = "<group>"; };
 		45652B9F21667D170085A5A2 /* DailyQuestion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuestion.storyboard; sourceTree = "<group>"; };
 		45652BA021667D170085A5A2 /* DailyQuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionPresenter.swift; sourceTree = "<group>"; };
 		45652BA121667D170085A5A2 /* DailyQuestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionRouter.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				45652BA421667D170085A5A2 /* DailyQuestionView.swift */,
 				45652BAD2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift */,
 				45652BB32167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift */,
+				4539375F216BC79900F43CAC /* CenterAndZoomFlowLayout.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				45652BA821667D170085A5A2 /* DailyQuestionRouter.swift in Sources */,
 				45652BA921667D170085A5A2 /* DailyQuestionProtocols.swift in Sources */,
 				45652BAE2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift in Sources */,
+				45393760216BC79900F43CAC /* CenterAndZoomFlowLayout.swift in Sources */,
 				45652BB42167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				45652BAA21667D170085A5A2 /* DailyQuestionInteractor.swift in Sources */,
 				49AE2B1B2163DD4F00055136 /* ViewController.swift in Sources */,

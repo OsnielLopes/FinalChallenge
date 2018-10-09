@@ -26,28 +26,14 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
 	override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.resizeCollectionViewCell()
-        
         self.dailyQuestionCollectionView.dataSource = self
         self.dailyQuestionCollectionView.delegate = self
+        self.dailyQuestionCollectionView.collectionViewLayout = CenterAndZoomFlowLayout()
     }
 
     // MARK: - DailyQuestionPresenterOutputProtocol
 
 	// MARK: - Private Methods
-    private func resizeCollectionViewCell() {
-        let newHeight = self.dailyQuestionCollectionView.bounds.size.height
-        let newWidth = (self.cellOldWidth/self.cellOldHeight) * newHeight
-        
-        let insetX = (view.bounds.width - newWidth) / 2.0
-        let insetY: CGFloat = 20.0
-        
-        if let layout = self.dailyQuestionCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize = CGSize(width: newWidth, height: newHeight)
-        }
-        
-        self.dailyQuestionCollectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
-    }
 
     // MARK: - CollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -55,6 +41,7 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //FIXME: Call Presenter to ask how many items the array has
         return 5
     }
     
@@ -73,19 +60,14 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     
     // MARK: - CollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if let layout = self.dailyQuestionCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
-            
-            var offset = targetContentOffset.pointee
-            let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
-            let roundedIndex = round(index)
-            
-            offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
-            targetContentOffset.pointee = offset
+        //FIXME: Redirect to answerView
+//        guard let cell = self.dailyQuestionCollectionView.visibleCells.first(where: { $0.frame.minY < 0 }), let dailyQuestionCell = cell as? DailyQuestionCollectionViewCell else { return }
+        for cell in self.dailyQuestionCollectionView.visibleCells {
+            guard let dailyQuestionCell = cell as? DailyQuestionCollectionViewCell else { return }
+            if dailyQuestionCell.frame.minY >= 0 {
+                dailyQuestionCell.shadowView?.removeFromSuperview()
+            }
         }
+//        dailyQuestionCell.shadowView.remove
     }
 }
