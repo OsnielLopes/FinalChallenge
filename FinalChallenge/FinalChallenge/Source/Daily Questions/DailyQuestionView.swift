@@ -12,6 +12,7 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
 
     // MARK: - Outlets
     @IBOutlet weak var dailyQuestionCollectionView: UICollectionView!
+    @IBOutlet var viewButtons: [UIButton]!
     
 	// MARK: - Viper Module Properties
     // MARK: Public Properties
@@ -26,14 +27,27 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
 	override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.dailyQuestionCollectionView.dataSource = self
-        self.dailyQuestionCollectionView.delegate = self
-        self.dailyQuestionCollectionView.collectionViewLayout = CenterAndZoomFlowLayout()
+        self.prepareViewController()
+        self.prepareButtons()
     }
 
     // MARK: - DailyQuestionPresenterOutputProtocol
 
 	// MARK: - Private Methods
+    private func prepareViewController() {
+        self.dailyQuestionCollectionView.dataSource = self
+        self.dailyQuestionCollectionView.delegate = self
+        self.dailyQuestionCollectionView.collectionViewLayout = CenterAndZoomFlowLayout()
+    }
+    
+    private func prepareButtons() {
+        for button in self.viewButtons {
+            button.layer.cornerRadius = button.frame.width/2
+            button.layer.masksToBounds = true
+            
+            //FIXME: colocar sombra (?)
+        }
+    }
 
     // MARK: - CollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -61,13 +75,14 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     // MARK: - CollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //FIXME: Redirect to answerView
-//        guard let cell = self.dailyQuestionCollectionView.visibleCells.first(where: { $0.frame.minY < 0 }), let dailyQuestionCell = cell as? DailyQuestionCollectionViewCell else { return }
-        for cell in self.dailyQuestionCollectionView.visibleCells {
-            guard let dailyQuestionCell = cell as? DailyQuestionCollectionViewCell else { return }
-            if dailyQuestionCell.frame.minY >= 0 {
-                dailyQuestionCell.shadowView?.removeFromSuperview()
-            }
-        }
-//        dailyQuestionCell.shadowView.remove
+    }
+    
+    // MARK: - Action
+    @IBAction func touchBackButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func touchRemoveButton(_ sender: UIButton) {
+        
     }
 }

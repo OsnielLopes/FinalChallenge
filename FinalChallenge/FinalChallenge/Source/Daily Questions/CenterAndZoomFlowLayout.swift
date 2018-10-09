@@ -54,35 +54,18 @@ class CenterAndZoomFlowLayout: UICollectionViewFlowLayout {
         let rectAttributes = super.layoutAttributesForElements(in: rect)!.map { $0.copy() as! UICollectionViewLayoutAttributes }
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.frame.size)
         
-        // Make the cells be zoomed when they reach the center of the screen
-//        for (attributes, cell) in rectAttributes where attributes.frame.intersects(visibleRect) {
-//            let distance = visibleRect.midX - attributes.center.x
-//            let normalizedDistance = distance / self.activeDistance
-//
-//            if distance.magnitude < self.activeDistance {
-//                let zoom = 1 + CenterAndZoomFlowLayout.zoomFactor * (1 - normalizedDistance.magnitude)
-//                attributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1)
-//                attributes.zIndex = Int(zoom.rounded())
-//
-//
-//
-//
-//
-//                guard let dailyQuestionsCells = collectionView.visibleCells as? [DailyQuestionCollectionViewCell] else { return rectAttributes }
-//
-//
-//
-//                let cell = dailyQuestionsCells.first { (cell) -> Bool in
-//                    cell.frame.intersects(visibleRect)
-//                }
-//
-//                print(cell)
-//            }
-//        }
-        guard let visibleCells = collectionView.visibleCells as? [DailyQuestionCollectionViewCell] else { return rectAttributes }
+        guard var visibleCells = collectionView.visibleCells as? [DailyQuestionCollectionViewCell] else { return rectAttributes }
         
-        for cell in rectAttributes where cell.frame.intersects(visibleRect) {
-            print(cell)
+        // Make the cells be zoomed when they reach the center of the screen
+        for attributes in rectAttributes where attributes.frame.intersects(visibleRect) {
+            let distance = visibleRect.midX - attributes.center.x
+            let normalizedDistance = distance / self.activeDistance
+
+            if distance.magnitude < self.activeDistance {
+                let zoom = 1 + CenterAndZoomFlowLayout.zoomFactor * (1 - normalizedDistance.magnitude)
+                attributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1)
+                attributes.zIndex = Int(zoom.rounded())
+            }
         }
         
         return rectAttributes

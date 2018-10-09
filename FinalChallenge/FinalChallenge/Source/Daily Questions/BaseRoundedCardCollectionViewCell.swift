@@ -17,7 +17,7 @@ class BaseRoundedCardCollectionViewCell: UICollectionViewCell {
     private let motionManager = CMMotionManager()
     private var longPressGestureRecognizer: UILongPressGestureRecognizer? = nil
     private var isPressed: Bool = false
-    public weak var shadowView: UIView?
+    private weak var shadowView: UIView?
     private var scale: CGAffineTransform?
     
     override func awakeFromNib() {
@@ -28,44 +28,6 @@ class BaseRoundedCardCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        self.configureShadow()
-    }
-    
-    // MARK: - Shadow
-    private func configureShadow() {
-        // Shadow View
-        self.shadowView?.removeFromSuperview()
-        let shadowView = UIView(frame: CGRect(x: -BaseRoundedCardCollectionViewCell.kInnerMargin,
-                                              y: -BaseRoundedCardCollectionViewCell.kInnerMargin,
-                                              width: (bounds.width * 1.05) + (2 * BaseRoundedCardCollectionViewCell.kInnerMargin),
-                                              height: (bounds.height * 1.05) + (2 * BaseRoundedCardCollectionViewCell.kInnerMargin)))
-        insertSubview(shadowView, at: 0)
-        self.shadowView = shadowView
-        
-        // Roll/Pitch Dynamic Shadow
-        if self.motionManager.isDeviceMotionAvailable {
-            self.motionManager.deviceMotionUpdateInterval = 0.02
-            self.motionManager.startDeviceMotionUpdates(to: .main, withHandler: { (motion, error) in
-                if let motion = motion {
-                    let pitch = motion.attitude.pitch * 10 // x-axis
-                    let roll = motion.attitude.roll * 10 // y-axis
-                    self.applyShadow(width: CGFloat(roll), height: CGFloat(pitch))
-                }
-            })
-        }
-    }
-    
-    private func applyShadow(width: CGFloat, height: CGFloat) {
-        if let shadowView = self.shadowView {
-            let shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 10.0)
-            shadowView.layer.masksToBounds = false
-            shadowView.layer.shadowRadius = 8.0
-            shadowView.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
-            shadowView.layer.shadowOffset = CGSize(width: width, height: height)
-            shadowView.layer.shadowOpacity = 0.15
-            shadowView.layer.shadowPath = shadowPath.cgPath
-        }
     }
     
     // MARK: - Gesture Recognizer
