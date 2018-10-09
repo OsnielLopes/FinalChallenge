@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalendarViewController.swift
 //  FinalChallenge
 //
 //  Created by Osniel Lopes Teixeira on 02/10/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalendarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
