@@ -25,7 +25,7 @@ class CheckboxAnswersDAO {
     
     func create(question: CheckboxQuestion, options: [Int], completion: @escaping (CheckboxAnswer?, DataAccessError?) -> (Void)) {
         if let newAnswer = CoreDataManager.shared.create(type: CheckboxAnswer.self) {
-            
+        
             newAnswer.options = options
             newAnswer.question = question
             question.addToAnswers(newAnswer)

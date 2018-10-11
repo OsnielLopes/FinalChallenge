@@ -12,4 +12,8 @@ struct DataAccessError {
     
     var message: String
     
+    init(message: String) {
+        self.message = message
+    }
+    
 }
