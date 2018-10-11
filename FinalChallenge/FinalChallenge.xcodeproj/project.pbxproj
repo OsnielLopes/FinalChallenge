@@ -18,10 +18,10 @@
 		45652BAE2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BAD2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift */; };
 		45652BB42167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BB32167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift */; };
 		491511EB216D358C007C0E09 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */; };
-		491511ED216D3678007C0E09 /* AnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */; };
+		491511ED216D3678007C0E09 /* TextAnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EC216D3678007C0E09 /* TextAnswerQuestionViewController.swift */; };
 		491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
-		491511F3216FC6E5007C0E09 /* RadioAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* RadioAnswerViewController.swift */; };
+		491511F3216FC6E5007C0E09 /* RadioAnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* RadioAnswerQuestionViewController.swift */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
@@ -127,10 +127,10 @@
 		45652BAD2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		45652BB32167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoundedCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswerQuestion.storyboard; sourceTree = "<group>"; };
-		491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionViewController.swift; sourceTree = "<group>"; };
+		491511EC216D3678007C0E09 /* TextAnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAnswerQuestionViewController.swift; sourceTree = "<group>"; };
 		491511EE216FBFF6007C0E09 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		491511F0216FC045007C0E09 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
-		491511F2216FC6E5007C0E09 /* RadioAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioAnswerViewController.swift; sourceTree = "<group>"; };
+		491511F2216FC6E5007C0E09 /* RadioAnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioAnswerQuestionViewController.swift; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49AE2B222163DD5200055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -205,6 +205,7 @@
 		454DF7A721655BDB0091E792 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				491511F4216FD351007C0E09 /* Answering Question */,
 				454DF7A921655E110091E792 /* Daily Questions */,
 			);
 			path = Source;
@@ -267,6 +268,16 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		491511F4216FD351007C0E09 /* Answering Question */ = {
+			isa = PBXGroup;
+			children = (
+				491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */,
+				491511EC216D3678007C0E09 /* TextAnswerQuestionViewController.swift */,
+				491511F2216FC6E5007C0E09 /* RadioAnswerQuestionViewController.swift */,
+			);
+			path = "Answering Question";
+			sourceTree = "<group>";
+		};
 		49AE2B0C2163DD4F00055136 = {
 			isa = PBXGroup;
 			children = (
@@ -288,15 +299,12 @@
 		49AE2B172163DD4F00055136 /* FinalChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
 				BD974A252163F74B00612838 /* Models */,
 				BD974A282163FD4C00612838 /* Managers */,
 				BD974A3521654B4100612838 /* Data Access Objects */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
-				491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */,
-				491511F2216FC6E5007C0E09 /* RadioAnswerViewController.swift */,
 				491511EE216FBFF6007C0E09 /* Extensions.swift */,
-				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
-				491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
 				454DF7A821655D200091E792 /* Resources */,
 				454DF7A721655BDB0091E792 /* Source */,
@@ -580,11 +588,11 @@
 				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
 				BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */,
 				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
-				491511F3216FC6E5007C0E09 /* RadioAnswerViewController.swift in Sources */,
+				491511F3216FC6E5007C0E09 /* RadioAnswerQuestionViewController.swift in Sources */,
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */,
-				491511ED216D3678007C0E09 /* AnswerQuestionViewController.swift in Sources */,
+				491511ED216D3678007C0E09 /* TextAnswerQuestionViewController.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
 				45652BAB21667D170085A5A2 /* DailyQuestionView.swift in Sources */,
 				BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnswerQuestionViewController: UIViewController {
+class TextAnswerQuestionViewController: UIViewController {
     
     //MARK: - IBOutles
     @IBOutlet weak var question: UILabel!
