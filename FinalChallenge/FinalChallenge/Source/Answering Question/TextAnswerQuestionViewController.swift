@@ -15,7 +15,9 @@ class AnswerQuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
     }
     
 
