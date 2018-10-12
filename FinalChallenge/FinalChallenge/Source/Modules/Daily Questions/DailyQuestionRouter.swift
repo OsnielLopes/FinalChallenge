@@ -11,16 +11,13 @@ import UIKit
 class DailyQuestionRouter: NSObject, DailyQuestionRouterProtocol {
 
 	// MARK: - Constants
-
 	private let storyBoardName = "DailyQuestion"
 	private let viewIdentifier = "DailyQuestionView"
 
 	// MARK: - Viper Module Properties
-
 	weak var view: DailyQuestionView!
 
 	// MARK: - Constructors
-
 	override init() {
 		super.init()
 
@@ -41,7 +38,6 @@ class DailyQuestionRouter: NSObject, DailyQuestionRouterProtocol {
     // MARK: - DailyQuestionRouterProtocol
 
 	// MARK: - Private methods
-
 	private func viewControllerFromStoryboard() -> DailyQuestionView {
 		let storyboard = UIStoryboard(name: self.storyBoardName, bundle: nil)
 		let viewController = storyboard.instantiateViewController(withIdentifier: self.viewIdentifier)

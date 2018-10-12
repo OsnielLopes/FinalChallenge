@@ -55,8 +55,7 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //FIXME: Call Presenter to ask how many items the array has
-        return 5
+        return self.presenter.numberOfCards
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
