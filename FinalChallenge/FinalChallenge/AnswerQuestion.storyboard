@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D7l-ir-WGt">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,29 +14,217 @@
             <objects>
                 <viewController id="D7l-ir-WGt" customClass="AnswerQuestionViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dt9-wk-7vt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xv-wk-50O">
-                                <rect key="frame" x="16" y="162" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu6-J1-ROx" customClass="RoundedUIButton" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="45" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Rxw-M7-KzS"/>
+                                    <constraint firstAttribute="width" secondItem="bu6-J1-ROx" secondAttribute="height" multiplier="1:1" id="pJz-qF-L9u"/>
+                                </constraints>
+                                <state key="normal" image="back-arrow"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="D7l-ir-WGt" eventType="touchUpInside" id="4Mz-jP-jEF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykQ-qT-TJB" customClass="RoundedUIButton" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="314" y="44" width="45" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="6b9-d6-LtH"/>
+                                    <constraint firstAttribute="width" secondItem="ykQ-qT-TJB" secondAttribute="height" multiplier="1:1" id="aXD-QJ-unQ"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="saveButtonPressed" destination="D7l-ir-WGt" eventType="touchUpInside" id="wc9-8l-RA4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xv-wk-50O">
+                                <rect key="frame" x="25" y="104.00000000000001" width="325" height="236.33333333333337"/>
+                                <string key="text">Elementary cellular automata have two possible values for each cell (0 or 1), and rules that depend only on nearest neighbor values. As a result, the evolution of an elementary cellular automaton can completely be described by a table specifying the state a given cell will have in the next generation based on the value of the cell to its left, the value the cell itself, and the value of the cell to its right?</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZV-4T-ULk">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Insira aqui a sua resposta." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MsT-Jr-Ztn">
+                                <rect key="frame" x="25" y="356.33333333333331" width="325" height="199.99999999999994"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Jfe-St-uZe"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.21568627450980393" green="0.66274509803921566" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="b9m-DG-nCj" firstAttribute="trailing" secondItem="MsT-Jr-Ztn" secondAttribute="trailing" constant="25" id="2F3-xK-7QC"/>
+                            <constraint firstItem="MsT-Jr-Ztn" firstAttribute="top" secondItem="0Xv-wk-50O" secondAttribute="bottom" constant="16" id="3vF-tW-hvT"/>
+                            <constraint firstItem="b9m-DG-nCj" firstAttribute="trailing" secondItem="0Xv-wk-50O" secondAttribute="trailing" constant="25" id="9WC-ZH-SMO"/>
+                            <constraint firstItem="b9m-DG-nCj" firstAttribute="trailing" secondItem="ykQ-qT-TJB" secondAttribute="trailing" constant="16" id="McN-IB-yp8"/>
+                            <constraint firstItem="MsT-Jr-Ztn" firstAttribute="leading" secondItem="b9m-DG-nCj" secondAttribute="leading" constant="25" id="PSb-Rp-DiJ"/>
+                            <constraint firstItem="0Xv-wk-50O" firstAttribute="leading" secondItem="b9m-DG-nCj" secondAttribute="leading" constant="25" id="U3q-F5-AEs"/>
+                            <constraint firstItem="bu6-J1-ROx" firstAttribute="leading" secondItem="b9m-DG-nCj" secondAttribute="leading" constant="16" id="XbB-Cj-SiV"/>
+                            <constraint firstItem="0Xv-wk-50O" firstAttribute="top" secondItem="b9m-DG-nCj" secondAttribute="top" constant="60" id="dG9-dG-EV7"/>
+                            <constraint firstItem="bu6-J1-ROx" firstAttribute="top" secondItem="b9m-DG-nCj" secondAttribute="top" id="lIK-0h-fkl"/>
+                            <constraint firstItem="ykQ-qT-TJB" firstAttribute="top" secondItem="b9m-DG-nCj" secondAttribute="top" id="nlp-pX-Ai6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="b9m-DG-nCj"/>
                     </view>
+                    <connections>
+                        <outlet property="question" destination="0Xv-wk-50O" id="iGG-h8-Buy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C84-tI-FuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-514" y="105"/>
+            <point key="canvasLocation" x="-514.39999999999998" y="104.92610837438424"/>
+        </scene>
+        <!--Answer Question View Controller-->
+        <scene sceneID="t0h-wT-1dc">
+            <objects>
+                <viewController id="BnI-Hu-hkS" customClass="AnswerQuestionViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xc1-xh-ahq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp6-1Q-a7v" customClass="RoundedUIButton" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="45" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="dwy-t1-lTZ"/>
+                                    <constraint firstAttribute="width" secondItem="Vp6-1Q-a7v" secondAttribute="height" multiplier="1:1" id="psQ-ed-lDI"/>
+                                </constraints>
+                                <state key="normal" image="back-arrow"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="BnI-Hu-hkS" eventType="touchUpInside" id="cqI-9m-JzM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEC-ae-lSy" customClass="RoundedUIButton" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="314" y="44" width="45" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pEC-ae-lSy" secondAttribute="height" multiplier="1:1" id="GOl-jS-5qf"/>
+                                    <constraint firstAttribute="width" constant="45" id="eL1-uD-olW"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="saveButtonPressed" destination="BnI-Hu-hkS" eventType="touchUpInside" id="A4E-mH-LM1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-N4-MkO">
+                                <rect key="frame" x="25" y="104.00000000000001" width="325" height="236.33333333333337"/>
+                                <string key="text">Elementary cellular automata have two possible values for each cell (0 or 1), and rules that depend only on nearest neighbor values. As a result, the evolution of an elementary cellular automaton can completely be described by a table specifying the state a given cell will have in the next generation based on the value of the cell to its left, the value the cell itself, and the value of the cell to its right?</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Insira aqui a sua resposta." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hnx-Lk-x4y">
+                                <rect key="frame" x="25" y="356.33333333333331" width="325" height="199.99999999999994"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ILZ-Uz-t0V"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.66274509800000003" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hHj-N4-MkO" firstAttribute="leading" secondItem="CsW-Ed-mAK" secondAttribute="leading" constant="25" id="7nP-ue-ZEe"/>
+                            <constraint firstItem="hnx-Lk-x4y" firstAttribute="leading" secondItem="CsW-Ed-mAK" secondAttribute="leading" constant="25" id="DCx-aE-hzf"/>
+                            <constraint firstItem="hHj-N4-MkO" firstAttribute="top" secondItem="CsW-Ed-mAK" secondAttribute="top" constant="60" id="NIF-Ur-Zxf"/>
+                            <constraint firstItem="Vp6-1Q-a7v" firstAttribute="top" secondItem="CsW-Ed-mAK" secondAttribute="top" id="PJS-fD-jza"/>
+                            <constraint firstItem="CsW-Ed-mAK" firstAttribute="trailing" secondItem="hHj-N4-MkO" secondAttribute="trailing" constant="25" id="W7p-vT-WT0"/>
+                            <constraint firstItem="CsW-Ed-mAK" firstAttribute="trailing" secondItem="pEC-ae-lSy" secondAttribute="trailing" constant="16" id="bVT-OJ-8cY"/>
+                            <constraint firstItem="hnx-Lk-x4y" firstAttribute="top" secondItem="hHj-N4-MkO" secondAttribute="bottom" constant="16" id="dfM-W6-shq"/>
+                            <constraint firstItem="CsW-Ed-mAK" firstAttribute="trailing" secondItem="hnx-Lk-x4y" secondAttribute="trailing" constant="25" id="hFG-Vc-gnv"/>
+                            <constraint firstItem="pEC-ae-lSy" firstAttribute="top" secondItem="CsW-Ed-mAK" secondAttribute="top" id="iTd-pg-wfO"/>
+                            <constraint firstItem="Vp6-1Q-a7v" firstAttribute="leading" secondItem="CsW-Ed-mAK" secondAttribute="leading" constant="16" id="ohZ-wG-sIa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CsW-Ed-mAK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAX-z0-fBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="105"/>
+        </scene>
+        <!--Answer Question View Controller-->
+        <scene sceneID="F2N-ay-ccH">
+            <objects>
+                <viewController id="xOX-OS-zWU" customClass="AnswerQuestionViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZLk-rL-6qh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4s-45-fvb" customClass="RoundedUIButton" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="45" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="IrN-uU-kRn"/>
+                                    <constraint firstAttribute="width" secondItem="R4s-45-fvb" secondAttribute="height" multiplier="1:1" id="iFA-VQ-csr"/>
+                                </constraints>
+                                <state key="normal" image="back-arrow"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="xOX-OS-zWU" eventType="touchUpInside" id="AFl-VD-oqI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21t-UB-I96" customClass="RoundedUIButton" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="314" y="44" width="45" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="8Fn-rn-cyG"/>
+                                    <constraint firstAttribute="width" secondItem="21t-UB-I96" secondAttribute="height" multiplier="1:1" id="9K1-YU-8Sv"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="saveButtonPressed" destination="xOX-OS-zWU" eventType="touchUpInside" id="dvh-Ev-2j4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjk-a0-x5V">
+                                <rect key="frame" x="25" y="104.00000000000001" width="325" height="236.33333333333337"/>
+                                <string key="text">Elementary cellular automata have two possible values for each cell (0 or 1), and rules that depend only on nearest neighbor values. As a result, the evolution of an elementary cellular automaton can completely be described by a table specifying the state a given cell will have in the next generation based on the value of the cell to its left, the value the cell itself, and the value of the cell to its right?</string>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Insira aqui a sua resposta." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lmq-80-HTa">
+                                <rect key="frame" x="25" y="356.33333333333331" width="325" height="199.99999999999994"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7se-QX-ZWu"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.66274509800000003" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="R4s-45-fvb" firstAttribute="leading" secondItem="Y7u-7h-qHA" secondAttribute="leading" constant="16" id="0Kt-qk-UGx"/>
+                            <constraint firstItem="lmq-80-HTa" firstAttribute="leading" secondItem="Y7u-7h-qHA" secondAttribute="leading" constant="25" id="ByZ-aI-cnC"/>
+                            <constraint firstItem="Y7u-7h-qHA" firstAttribute="trailing" secondItem="21t-UB-I96" secondAttribute="trailing" constant="16" id="G2w-IB-Eml"/>
+                            <constraint firstItem="vjk-a0-x5V" firstAttribute="leading" secondItem="Y7u-7h-qHA" secondAttribute="leading" constant="25" id="LcO-YD-JCi"/>
+                            <constraint firstItem="21t-UB-I96" firstAttribute="top" secondItem="Y7u-7h-qHA" secondAttribute="top" id="NUv-eO-T2v"/>
+                            <constraint firstItem="R4s-45-fvb" firstAttribute="top" secondItem="Y7u-7h-qHA" secondAttribute="top" id="O3J-lH-h3d"/>
+                            <constraint firstItem="Y7u-7h-qHA" firstAttribute="trailing" secondItem="vjk-a0-x5V" secondAttribute="trailing" constant="25" id="OAu-kb-dj7"/>
+                            <constraint firstItem="vjk-a0-x5V" firstAttribute="top" secondItem="Y7u-7h-qHA" secondAttribute="top" constant="60" id="Tw2-lp-uxu"/>
+                            <constraint firstItem="lmq-80-HTa" firstAttribute="top" secondItem="vjk-a0-x5V" secondAttribute="bottom" constant="16" id="bMK-lt-jyJ"/>
+                            <constraint firstItem="Y7u-7h-qHA" firstAttribute="trailing" secondItem="lmq-80-HTa" secondAttribute="trailing" constant="25" id="fAO-NJ-sdq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y7u-7h-qHA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29c-qG-Evv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="870"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="25" height="25"/>
+        <image name="back-arrow" width="26" height="17"/>
+    </resources>
 </document>

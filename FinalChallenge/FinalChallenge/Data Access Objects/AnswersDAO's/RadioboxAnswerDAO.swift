@@ -26,11 +26,6 @@ class RadioboxAnswersDAO {
     func create(question: RadioboxQuestion, date: Date, option: Int, completion: @escaping (RadioboxAnswer?, DataAccessError?) -> (Void)) {
         if let newAnswer = CoreDataManager.shared.create(type: RadioboxAnswer.self) {
             
-            if question.options!.count <= option {
-                completion(nil, DataAccessError(message: "Option is greater than the number of avaiable options"))
-                return
-            }
-            
             newAnswer.option = Int32(option)
             newAnswer.question = question
             newAnswer.date = date as NSDate
@@ -43,7 +38,7 @@ class RadioboxAnswersDAO {
         }
     }
     
-    func update(answer: RadioboxAnswer, option: Int? = nil, date: Date? = nil, question: CheckboxQuestion? = nil, completion: @escaping (RadioboxAnswer?, DataAccessError?) -> (Void)) {
+    func update(answer: RadioboxAnswer, option: Int? = nil, date: Date? = nil, question: RadioboxQuestion? = nil, completion: @escaping (RadioboxAnswer?, DataAccessError?) -> (Void)) {
         
         if let updatedQuestion = question {
             answer.question?.removeFromAnswers(answer)
@@ -52,10 +47,6 @@ class RadioboxAnswersDAO {
         }
         
         if let updatedOption  = option {
-            if let updatedQuestion = question, updatedQuestion.options!.count <= updatedOption {
-                completion(nil, DataAccessError(message: "Option is greater than the number of avaiable options"))
-                return
-            }
             answer.option = Int32(updatedOption)
         }
         
