@@ -20,7 +20,6 @@
 		491511EB216D358C007C0E09 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */; };
 		491511ED216D3678007C0E09 /* AnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
-		49AE2B1E2163DD4F00055136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* Main.storyboard */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
 		BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
@@ -128,7 +127,6 @@
 		491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionViewController.swift; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49AE2B1D2163DD4F00055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49AE2B222163DD5200055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AE2B242163DD5200055136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxAnswer+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 				BD974A282163FD4C00612838 /* Managers */,
 				BD974A3521654B4100612838 /* Data Access Objects */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
-				49AE2B1C2163DD4F00055136 /* Main.storyboard */,
 				491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */,
 				491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
@@ -513,7 +510,6 @@
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
 				45652BA621667D170085A5A2 /* DailyQuestion.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
-				49AE2B1E2163DD4F00055136 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,14 +637,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		49AE2B1C2163DD4F00055136 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49AE2B1D2163DD4F00055136 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49AE2B212163DD5200055136 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -787,7 +775,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.OsnielTeixeira.FinalChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -805,7 +793,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.OsnielTeixeira.FinalChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
