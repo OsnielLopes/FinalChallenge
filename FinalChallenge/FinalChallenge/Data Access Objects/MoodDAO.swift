@@ -23,7 +23,7 @@ class MoodDAO {
         
         self.createMoodType(text: "Sad", icon: "sad.png", completion: { type, err in
             if err != nil {
-                print("Error when creating happy mood type")
+                print("Error when creating sad mood type")
             }
         })
     }
@@ -58,5 +58,20 @@ class MoodDAO {
             completion(nil, DataAccessError(message: "Error when inserting mood"))
         }
     }
+    
+    func fetchAll(completion: @escaping ([MoodInput]?, DataAccessError?) -> (Void)) {
+        if let allMoodInputs = CoreDataManager.shared.fetch(MoodInput.self) {
+            completion(allMoodInputs, nil)
+        } else {
+            completion(nil, DataAccessError(message: "Error when fetching all mood inputs"))
+        }
+    }
+    
+    func fetchByDay(_ day: Date, completion: @escaping ([MoodInput]?, DataAccessError?) -> (Void)) {
+        self.fetchAll(completion: { moodInputs, err in
+            completion(moodInputs?.filter({ Calendar.current.isDate($0.date! as Date, inSameDayAs: day) }), err)
+        })
+    }
+    
     
 }
