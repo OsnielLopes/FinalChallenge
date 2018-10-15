@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol, UICollectionViewDataSource, UICollectionViewDelegate {
+class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     // MARK: - Outlets
     @IBOutlet weak var dailyQuestionCollectionView: UICollectionView!
@@ -16,7 +16,7 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     
 	// MARK: - Viper Module Properties
     // MARK: Public Properties
-    var presenter: DailyQuestionPresenterInputProtocol!
+//    var presenter: DailyQuestionPresenterInputProtocol!
     
     // MARK: Private Properties
     private let cellOldWidth: CGFloat = 284.0
@@ -35,6 +35,8 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
 
 	// MARK: - Private Methods
     private func prepareViewController() {
+        self.navigationController?.isNavigationBarHidden = true
+        
         self.dailyQuestionCollectionView.dataSource = self
         self.dailyQuestionCollectionView.delegate = self
         self.dailyQuestionCollectionView.collectionViewLayout = CenterAndZoomFlowLayout()
@@ -55,7 +57,7 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.presenter.numberOfCards
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,7 +75,10 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     
     // MARK: - CollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //FIXME: Redirect to answerView
+        let storyboard = UIStoryboard(name: "AnswerQuestion", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "AnswerQuestionView")
+        
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
     
     // MARK: - Action

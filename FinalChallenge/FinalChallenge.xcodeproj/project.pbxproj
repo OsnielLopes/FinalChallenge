@@ -22,6 +22,8 @@
 		491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */; };
+		491511FB21751711007C0E09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511FA21751711007C0E09 /* Router.swift */; };
+		491511FD21751CC5007C0E09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491511FC21751CC5007C0E09 /* Main.storyboard */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
@@ -130,6 +132,8 @@
 		491511EE216FBFF6007C0E09 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		491511F0216FC045007C0E09 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
 		491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionViewController.swift; sourceTree = "<group>"; };
+		491511FA21751711007C0E09 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		491511FC21751CC5007C0E09 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49AE2B222163DD5200055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -203,7 +207,10 @@
 		454DF7A721655BDB0091E792 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BD974A252163F74B00612838 /* Models */,
 				457F34F5216FD6E100B3F1C6 /* Modules */,
+				491511F621751232007C0E09 /* Services */,
+				491511F72175124C007C0E09 /* Utils */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -289,6 +296,25 @@
 			path = "Answering Question";
 			sourceTree = "<group>";
 		};
+		491511F621751232007C0E09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A282163FD4C00612838 /* Managers */,
+				BD974A3521654B4100612838 /* Data Access Objects */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		491511F72175124C007C0E09 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
+				491511EE216FBFF6007C0E09 /* Extensions.swift */,
+				491511FA21751711007C0E09 /* Router.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		49AE2B0C2163DD4F00055136 = {
 			isa = PBXGroup;
 			children = (
@@ -310,12 +336,8 @@
 		49AE2B172163DD4F00055136 /* FinalChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
-				BD974A252163F74B00612838 /* Models */,
-				BD974A282163FD4C00612838 /* Managers */,
-				BD974A3521654B4100612838 /* Data Access Objects */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
-				491511EE216FBFF6007C0E09 /* Extensions.swift */,
+				491511FC21751CC5007C0E09 /* Main.storyboard */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
 				454DF7A821655D200091E792 /* Resources */,
 				454DF7A721655BDB0091E792 /* Source */,
@@ -534,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				491511EB216D358C007C0E09 /* AnswerQuestion.storyboard in Resources */,
+				491511FD21751CC5007C0E09 /* Main.storyboard in Resources */,
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
 				455F6E7621750FAE00285713 /* DailyQuestion.storyboard in Resources */,
@@ -566,6 +589,7 @@
 				BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */,
 				BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */,
 				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
+				491511FB21751711007C0E09 /* Router.swift in Sources */,
 				455F6E6C21750F9800285713 /* DailyQuestionPresenter.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,

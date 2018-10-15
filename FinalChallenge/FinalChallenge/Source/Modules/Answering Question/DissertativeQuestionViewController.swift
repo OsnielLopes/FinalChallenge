@@ -24,6 +24,7 @@ class DissertativeQuestionViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func backButtonPressed() {
+        self.navigationController?.popViewController(animated: false)
     }
     
     @IBAction func saveButtonPressed() {
