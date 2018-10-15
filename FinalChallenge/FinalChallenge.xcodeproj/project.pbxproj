@@ -93,6 +93,7 @@
 		BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
 		BD290C6A21752FDB001F16EA /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6921752FDB001F16EA /* MockData.swift */; };
 		BD290C6B21752FDB001F16EA /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6921752FDB001F16EA /* MockData.swift */; };
+		BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
 		BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
 		BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
 		BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */; };
@@ -306,9 +307,9 @@
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
 				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
 				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
+				BD290C53216E9DA4001F16EA /* CalendarViewController.swift */,
 				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
 				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
-				BD290C53216E9DA4001F16EA /* CalendarViewController.swift */,
 				491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */,
 				491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
@@ -655,6 +656,7 @@
 				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
 				BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
 				BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */,
+				BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */,
 				BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,

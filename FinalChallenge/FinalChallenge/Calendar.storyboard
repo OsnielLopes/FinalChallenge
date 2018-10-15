@@ -20,7 +20,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-M9-Zu3" userLabel="Daily">
                                 <rect key="frame" x="19" y="352.5" width="356" height="266.5"/>
                                 <connections>
-                                    <segue destination="hFa-AV-XHW" kind="embed" id="S1t-S4-6gq"/>
+                                    <segue destination="hFa-AV-XHW" kind="embed" identifier="daySummarySegue" id="S1t-S4-6gq"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwJ-d7-ohf" userLabel="Add">
@@ -207,6 +207,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Hm2-NH-6hW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eTN-80-kTG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

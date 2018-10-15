@@ -22,24 +22,23 @@ class CalendarViewController: UIViewController {
     
     var isInsertMoodMenuClosed = true
     
-    var moodMenuIcons: [UIImage] = []
+    var moods: [MoodType] = []
+    
+    var daySummaryTableViewController: DaySummaryTableViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.insertButton.layer.cornerRadius = self.insertButton.frame.height / 2
         self.insertButton.clipsToBounds = true
         
-        // MOCK
-        self.moodMenuIcons = [UIImage.init(named: "mood1-icon")!,
-                          UIImage.init(named: "mood2-icon")!,
-                          UIImage.init(named: "mood3-icon")!,
-                          UIImage.init(named: "mood4-icon")!,
-                          UIImage.init(named: "mood5-icon")!]
-        
-        //END OF MOCK
-        
-        for menuIcon in self.moodMenuIcons {
-            self.moodButtons.append(self.instantiateMoodButton(forMoodImage: menuIcon))
+        self.moods = MoodDAO.shared.moodTypes
+        var i = 0
+        for mood in self.moods {
+            let button = self.instantiateMoodButton(forMoodImage: UIImage(named: mood.typeIcon!)!)
+            button.tag = i
+            button.addTarget(self, action: #selector(didTapToAddMood(_:)), for: .touchUpInside)
+            i += 1
+            self.moodButtons.append(button)
         }
         
         let questionButton = self.instantiateMenuButton(forImage: UIImage(named: "question-icon")!)
@@ -70,6 +69,19 @@ class CalendarViewController: UIViewController {
     
     @objc func didTapMoodButton() {
        self.openMoodMenu()
+    }
+    
+    @objc func didTapToAddMood(_ moodButton: Any) {
+        guard let button = moodButton as? UIButton else {
+            return
+        }
+        MoodDAO.shared.insertMood(moodType: self.moods[button.tag], date: Date(), completion: { moodInput, err in
+            guard let moodInput = moodInput, err == nil else {
+                print(err!.message)
+                return
+            }
+            self.daySummaryTableViewController?.loadData()
+        })
     }
     
     @objc func didTapQuestionButton() {
@@ -141,4 +153,13 @@ class CalendarViewController: UIViewController {
             })
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let viewController = segue.destination as? DaySummaryTableViewController {
+            self.daySummaryTableViewController = viewController
+        }
+        
+    }
+    
 }

@@ -14,9 +14,23 @@ class MoodDAO {
     
     var moodTypes: [MoodType] = []
     
-    private init() { }
+    private init() {
+        self.fetchMoodTypes(completion: { moodTypes, err in
+            guard let moodTypes = moodTypes, err == nil else {
+                self.initializeMoodTypes()
+                return
+            }
+            
+            if moodTypes.count == 0 {
+                self.initializeMoodTypes()
+            }
+            self.moodTypes = moodTypes
+            
+        })
+    }
     
     func initializeMoodTypes() {
+        
         self.createMoodType(text: "Awesome", icon: "mood5-icon", completion: { type, err in
             guard let newType = type, err == nil else {
                 print("Error when creating Awesome mood type")
@@ -49,7 +63,7 @@ class MoodDAO {
             self.moodTypes.append(newType)
         })
         
-        self.createMoodType(text: "Miserable", icon: "mood4-icon", completion: { type, err in
+        self.createMoodType(text: "Miserable", icon: "mood1-icon", completion: { type, err in
             guard let newType = type, err == nil else {
                 print("Error when creating Miserable mood type")
                 return
