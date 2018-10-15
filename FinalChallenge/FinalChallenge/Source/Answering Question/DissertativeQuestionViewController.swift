@@ -1,33 +1,35 @@
 //
-//  RadioAnswerViewController.swift
+//  AnswerQuestionViewController.swift
 //  FinalChallenge
 //
-//  Created by Osniel Lopes Teixeira on 11/10/18.
+//  Created by Osniel Lopes Teixeira on 09/10/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 
 import UIKit
 
-class RadioAnswerQuestionViewController: UIViewController {
+class DissertativeQuestionViewController: UIViewController {
     
-    // MARK: - IBOutlets
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    
+    //MARK: - IBOutles
+    @IBOutlet weak var question: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        
     }
     
+
     // MARK: - IBActions
+    
     @IBAction func backButtonPressed() {
     }
+    
     @IBAction func saveButtonPressed() {
     }
     
     
-
     /*
     // MARK: - Navigation
 
