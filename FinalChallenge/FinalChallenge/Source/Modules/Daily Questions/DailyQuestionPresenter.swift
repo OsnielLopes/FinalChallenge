@@ -9,7 +9,6 @@
 import UIKit
 
 class DailyQuestionPresenter: NSObject, DailyQuestionPresenterInputProtocol, DailyQuestionInteractorOutputProtocol {
-
 	// MARK: - Viper Module Properties
 
     weak var view: DailyQuestionPresenterOutputProtocol!
@@ -17,9 +16,33 @@ class DailyQuestionPresenter: NSObject, DailyQuestionPresenterInputProtocol, Dai
     var router: DailyQuestionRouterProtocol!
 
     // MARK: - DailyQuestionPresenterInputProtocol
-
+    var numberOfCards: Int = 5
+    
+    func showDailyQuestions() {
+        self.interactor.fetchDailyQuestions()
+    }
+    
+    func didSelectQuestion(at indexPath: IndexPath) {
+        
+    }
+    
+    func didTouchButtonReturn() {
+        
+    }
+    
+    func didTouchButtonRemove() {
+        
+    }
+    
     // MARK: - DailyQuestionPresenterInteractorOutputProtocol
-
+    func dailyQuestionsFetched() {
+        
+    }
+    
+    func dailyQuestionsFailed() {
+        
+    }
+    
 	// MARK: - Private Methods
 
 }

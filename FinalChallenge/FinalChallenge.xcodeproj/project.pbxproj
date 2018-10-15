@@ -203,7 +203,7 @@
 		454DF7A721655BDB0091E792 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				454DF7A921655E110091E792 /* Daily Questions */,
+				457F34F5216FD6E100B3F1C6 /* Modules */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -263,6 +263,14 @@
 				4539375F216BC79900F43CAC /* CenterAndZoomFlowLayout.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		457F34F5216FD6E100B3F1C6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				454DF7A921655E110091E792 /* Daily Questions */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		49AE2B0C2163DD4F00055136 = {
