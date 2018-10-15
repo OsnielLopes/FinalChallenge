@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="questionCellIdentifier" rowHeight="133" id="kMZ-9p-Uld">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="questionCellIdentifier" rowHeight="133" id="kMZ-9p-Uld" customClass="AnswerTableViewCell" customModule="FinalChallenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kMZ-9p-Uld" id="the-V7-ApY">
@@ -140,8 +140,12 @@
                                         <constraint firstItem="Ebn-At-GUR" firstAttribute="top" secondItem="stC-Jx-Sjp" secondAttribute="bottom" constant="5" id="sw8-1Y-19e"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="answerQuestionText" destination="tWO-sR-FVo" id="Wc5-wO-DkH"/>
+                                    <outlet property="answerText" destination="dBi-sW-iqj" id="KFR-e1-d8e"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="questionCellIdentifier" rowHeight="69" id="6tT-Mi-Tad">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="moodCellIdentifier" rowHeight="69" id="6tT-Mi-Tad" customClass="MoodInputTableViewCell" customModule="FinalChallenge" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="161" width="375" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6tT-Mi-Tad" id="wcJ-la-iMo">
@@ -180,6 +184,10 @@
                                         <constraint firstItem="GoP-gQ-2lT" firstAttribute="bottom" secondItem="CMN-JO-2Qo" secondAttribute="bottom" id="rgh-Kq-AAd"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="moodImage" destination="CMN-JO-2Qo" id="p5u-M1-Rqf"/>
+                                    <outlet property="moodText" destination="GoP-gQ-2lT" id="Zf2-Dh-kM2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -34,9 +34,9 @@ class DaySummaryTableViewController: UITableViewController {
         var didEndedObtainingMoods = false
         
         let didEndedObtainingData = {
-            self.entries.sort(by: { entry1, entry2 in
-                let date1 = (entry1 is MoodInput ? (entry1 as! MoodInput).date : (entry1 as! Answer).date)!
-                let date2 = (entry2 is MoodInput ? (entry2 as! MoodInput).date : (entry2 as! Answer).date)!
+            self.entries.sort(by: {
+                let date1 = (($0 is MoodInput) ? ($0 as! MoodInput).date : ($0 as! Answer).date)!
+                let date2 = (($1 is MoodInput) ? ($1 as! MoodInput).date : ($1 as! Answer).date)!
                 return date1 as Date > date2 as Date
             })
             DispatchQueue.main.async {
@@ -45,10 +45,10 @@ class DaySummaryTableViewController: UITableViewController {
         }
         
         AnswerDAO.shared.fetchByDay(self.date, completion: { (answers, err) in
-            guard err != nil, let answers = answers else {
+            guard err == nil, let answers = answers else {
                 return
             }
-            self.entries.append(answers)
+            self.entries.append(contentsOf: answers)
             didEndedObtainingAnswers = true
             if didEndedObtainingMoods {
                 didEndedObtainingData()
@@ -56,10 +56,10 @@ class DaySummaryTableViewController: UITableViewController {
         })
         
         MoodDAO.shared.fetchByDay(self.date, completion: { (moods, err) in
-            guard err != nil, let moods = moods else {
+            guard err == nil, let moods = moods else {
                 return
             }
-            self.entries.append(moods)
+            self.entries.append(contentsOf: moods)
             didEndedObtainingMoods = true
             if didEndedObtainingAnswers {
                 didEndedObtainingData()
@@ -72,28 +72,37 @@ class DaySummaryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.entries.count
-        return 4
+        return self.entries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: questionCellIdentifier, for: indexPath)
-        
-//        var cell = UITableViewCell()
-//        let entry = self.entries[indexPath.row]
-//
-//        if let entryMood = entry as? MoodInput {
-//            cell = tableView.dequeueReusableCell(withIdentifier: moodCellIdentifier, for: indexPath)
-//
-//            return cell
-//        } else if let entryAnswer = entry as? Answer {
-//            cell = tableView.dequeueReusableCell(withIdentifier: questionCellIdentifier, for: indexPath)
-//
-//            return cell
-//
-//        }
-//
-//        return cell
+        let entry = self.entries[indexPath.row]
+
+        if let entryMood = entry as? MoodInput {
+            if let moodCell = tableView.dequeueReusableCell(withIdentifier: moodCellIdentifier, for: indexPath) as? MoodInputTableViewCell {
+                moodCell.setMood(entryMood)
+                return moodCell
+            }
+        } else if let entryAnswer = entry as? Answer {
+            if let answerCell = tableView.dequeueReusableCell(withIdentifier: questionCellIdentifier, for: indexPath) as? AnswerTableViewCell {
+                answerCell.setAnswer(entryAnswer)
+                return answerCell
+            }
+        }
+
+        return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch self.entries[indexPath.row] {
+        case is Answer:
+            return 133
+        case is MoodInput:
+            return 69
+        default:
+            break
+        }
+        return 0
     }
     
 }

@@ -10,15 +10,27 @@ import UIKit
 
 class AnswerTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var answerQuestionText: UILabel!
+    
+    @IBOutlet weak var answerText: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func setAnswer(_ answer: Answer) {
+        self.answerQuestionText.text = answer.question?.questionText
+        if let answer = answer as? DissertationAnswer {
+            self.answerText.text = answer.text
+        } // else if let answer = answer as? CheckboxAnswer {
+            // FIXME: Checkbox text
+        //} else if let answer = answer as? RadioboxAnswer {
+            // FIXME: Radiobox text
+        //}
     }
 
 }

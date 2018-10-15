@@ -12,19 +12,49 @@ class MoodDAO {
     
     static let shared = MoodDAO()
     
+    var moodTypes: [MoodType] = []
+    
     private init() { }
     
-    private func initializeMoodTypes() {
-        self.createMoodType(text: "Happy", icon: "happy.png", completion: { type, err in
-            if err != nil {
-                print("Error when creating happy mood type")
+    func initializeMoodTypes() {
+        self.createMoodType(text: "Awesome", icon: "mood5-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Awesome mood type")
+                return
             }
+            self.moodTypes.append(newType)
         })
         
-        self.createMoodType(text: "Sad", icon: "sad.png", completion: { type, err in
-            if err != nil {
-                print("Error when creating sad mood type")
+        self.createMoodType(text: "Happy", icon: "mood4-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Happy mood type")
+                return
             }
+            self.moodTypes.append(newType)
+        })
+        
+        self.createMoodType(text: "Indifferent", icon: "mood3-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Indifferent mood type")
+                return
+            }
+            self.moodTypes.append(newType)
+        })
+        
+        self.createMoodType(text: "Sad", icon: "mood2-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Sad mood type")
+                return
+            }
+            self.moodTypes.append(newType)
+        })
+        
+        self.createMoodType(text: "Miserable", icon: "mood4-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Miserable mood type")
+                return
+            }
+            self.moodTypes.append(newType)
         })
     }
     
@@ -33,6 +63,8 @@ class MoodDAO {
             newMoodType.typeIcon = icon
             newMoodType.typeText = text
             CoreDataManager.shared.saveContext()
+            
+            completion(newMoodType, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when creating mood type"))
         }

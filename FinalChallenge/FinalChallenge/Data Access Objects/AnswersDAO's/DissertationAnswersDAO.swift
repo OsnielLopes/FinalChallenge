@@ -23,11 +23,12 @@ class DissertationAnswersDAO {
         
     }
     
-    func create(question: DissertationQuestion, text: String, completion: @escaping (DissertationAnswer?, DataAccessError?) -> (Void)) {
+    func create(question: DissertationQuestion, text: String, date: Date, completion: @escaping (DissertationAnswer?, DataAccessError?) -> (Void)) {
         if let newAnswer = CoreDataManager.shared.create(type: DissertationAnswer.self) {
             
             newAnswer.text = text
             newAnswer.question = question
+            newAnswer.date = date as NSDate
             question.addToAnswers(newAnswer)
             
             CoreDataManager.shared.saveContext()
