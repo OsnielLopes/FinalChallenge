@@ -16,22 +16,21 @@ class DaySummaryTableViewController: UITableViewController {
     
     var entries: [Any] = []
     
-    var moods: [MoodType] = []
+    var moodTypes: [MoodType] = []
     
     var summaryView: DailySummaryViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.moodTypes = MoodDAO.shared.moodTypes
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.moods = MoodDAO.shared.moodTypes
         self.loadData()
     }
     
-    func loadData(forDate date: Date = Date()) {
+    func loadData() {
 
         self.entries = []
         self.tableView.reloadData()
@@ -50,7 +49,7 @@ class DaySummaryTableViewController: UITableViewController {
             }
         }
         
-        AnswerDAO.shared.fetchByDay(date, completion: { (answers, err) in
+        AnswerDAO.shared.fetchByDay(self.summaryView.currentDate, completion: { (answers, err) in
             guard err == nil, let answers = answers else {
                 return
             }
@@ -61,7 +60,7 @@ class DaySummaryTableViewController: UITableViewController {
             }
         })
         
-        MoodDAO.shared.fetchByDay(date, completion: { (moods, err) in
+        MoodDAO.shared.fetchByDay(self.summaryView.currentDate, completion: { (moods, err) in
             guard err == nil, let moods = moods else {
                 return
             }
@@ -87,6 +86,7 @@ class DaySummaryTableViewController: UITableViewController {
             if let addCell = tableView.dequeueReusableCell(withIdentifier: addCellIdentifier, for: indexPath) as? InsertTableViewCell {
                 
                 addCell.daySummaryTableViewController = self
+                addCell.setButtons()
                 
                 return addCell
             } else {
@@ -130,7 +130,7 @@ class DaySummaryTableViewController: UITableViewController {
     
     func didTapInsertMood(_ mood: MoodType) {
         MoodDAO.shared.insertMood(moodType: mood, date: self.summaryView.currentDate, completion: { _, _ in
-            self.loadData(forDate: self.summaryView.currentDate)
+            self.loadData()
         })
     }
     

@@ -29,7 +29,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     var originalMonthDays: [Date?] = []
     var currentMonthDays: [Date?] = []
     var calendar = Calendar(identifier: .gregorian)
-    var summaryView: DailySummaryViewController?
+    var summaryView: DailySummaryViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +90,8 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
                 collectionView.deselectItem(at: collectionView.indexPath(for: cell)!, animated: true)
             }
         }
-        self.summaryView?.reloadSummary(forDate: self.getCurrentDate())
+        self.summaryView.currentDate = self.getCurrentDate()
+        self.summaryView.reloadData()
     }
 
     func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {

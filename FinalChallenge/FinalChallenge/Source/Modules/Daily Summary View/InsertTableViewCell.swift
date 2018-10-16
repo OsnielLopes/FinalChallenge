@@ -21,15 +21,21 @@ class InsertTableViewCell: UITableViewCell {
     var isInsertMoodMenuClosed = true
     
     var daySummaryTableViewController: DaySummaryTableViewController!
+        
+    var shouldReloadCell = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.insertButton.layer.cornerRadius = self.insertButton.frame.height / 2
         self.insertButton.clipsToBounds = true
+    }
+    
+    func setButtons() {
+        if !self.shouldReloadCell { return }
         
         var i = 0
-        for mood in self.daySummaryTableViewController.moods {
+        for mood in self.daySummaryTableViewController.moodTypes {
             let button = self.instantiateMoodButton(forMoodImage: UIImage(named: mood.typeIcon!)!)
             button.tag = i
             button.addTarget(self, action: #selector(didTapToAddMood(_:)), for: .touchUpInside)
@@ -44,6 +50,11 @@ class InsertTableViewCell: UITableViewCell {
         let moodButton = self.instantiateMenuButton(forImage: UIImage(named: "mood3-icon")!)
         moodButton.addTarget(self, action: #selector(didTapMoodButton), for: .touchUpInside)
         self.insertButtons.append(moodButton)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.shouldReloadCell = false
     }
     
     func instantiateMoodButton(forMoodImage image: UIImage) -> UIButton {
@@ -86,7 +97,7 @@ class InsertTableViewCell: UITableViewCell {
         guard let button = moodButton as? UIButton else {
             return
         }
-        self.daySummaryTableViewController.didTapInsertMood(self.daySummaryTableViewController.moods[button.tag])
+        self.daySummaryTableViewController.didTapInsertMood(self.daySummaryTableViewController.moodTypes[button.tag])
     }
     
     @objc func didTapQuestionButton() {

@@ -12,15 +12,22 @@ class DailySummaryViewController: UIViewController {
     
     var currentDate: Date = Date()
     
+    var daySummaryTableViewController: DaySummaryTableViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    func reloadData() {
+        self.daySummaryTableViewController.loadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let viewController = segue.destination as? DaySummaryTableViewController {
             viewController.summaryView = self
+            self.daySummaryTableViewController = viewController
         }
 
         if let viewController = segue.destination as? CalendarViewController {
