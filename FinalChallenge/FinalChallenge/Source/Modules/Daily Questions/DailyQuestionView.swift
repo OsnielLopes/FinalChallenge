@@ -93,7 +93,8 @@ class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollect
     // MARK: - CollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "AnswerQuestion", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "AnswerQuestionView")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "AnswerQuestionView") as! DissertativeQuestionViewController
+        viewController.question = todayQuestions[indexPath.row]
         
         self.navigationController?.pushViewController(viewController, animated: false)
     }

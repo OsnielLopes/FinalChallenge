@@ -10,13 +10,19 @@ import UIKit
 
 class DissertativeQuestionViewController: UIViewController {
     
+    // TODO: Só permitir que o botão de salvar seja pressionado depois que o texto da text view for editado.
+    // TOOD: Remover o texto default da textview após ela ser tocada e retorná-lo caso todo o texto seja apagado
+    
     //MARK: - IBOutles
-    @IBOutlet weak var question: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
     
     //MARK: - Properties
+    var question: DissertationQuestion!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        questionLabel.text = question.questionText
     }
     
 
