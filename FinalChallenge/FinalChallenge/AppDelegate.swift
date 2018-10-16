@@ -34,8 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        let storyboard = UIStoryboard(name: "DailyQuestion", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "DailyQuestionView")
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
         
         let navController = UINavigationController(rootViewController: viewController)
         
