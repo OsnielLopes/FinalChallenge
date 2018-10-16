@@ -55,17 +55,14 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         daysColletionView.allowsSelection = true
         daysColletionView.allowsMultipleSelection = true
         
-        var dateComponentes = calendar.dateComponents(in: TimeZone.current, from: referenceDay)
-        dateComponentes.setValue(1, for: .day)
-        currentMonthDays.append(contentsOf: Array(repeating: nil, count: calendar.component(.weekday, from: calendar.date(from: dateComponentes)!) - 1))
         let daysRange = calendar.range(of: .day, in: .month, for: referenceDay)
-        for i in 1...daysRange!.count {
-            currentMonthDays.append(calendar.date(bySetting: .day, value: i, of: Date()))
+        let currentDay = calendar.component(.day, from: Date())
+        currentMonthDays.append(contentsOf: Array(repeating: nil, count: calendar.component(.weekday, from: calendar.date(byAdding: .day, value: -currentDay+1, to: Date())!)-1))
+        for i in -currentDay+1...daysRange!.count-currentDay {
+            currentMonthDays.append(calendar.date(byAdding: .day, value: i, to: Date()))
         }
         originalMonthDays = currentMonthDays
         daysColletionView.collectionViewLayout = CalendarUICollectionViewFlowLayout()
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,27 +76,22 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     //MARK: - UICollectionViewDelegate
-    
-//    FIXME: SELECTED DATE IS NOT THE RIGHT DATE
-//
-//    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-//        guard let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return false }
-//        return cell.day != nil
-//    }
 
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        for cell in collectionView.visibleCells {
-//            if collectionView.indexPath(for: cell) == indexPath {
-//                cell.isSelected = true
-//                self.summaryView?.reloadSummary(forDate: self.getCurrentDate())
-//                print(self.getCurrentDate())
-//            } else {
-//                collectionView.deselectItem(at: collectionView.indexPath(for: cell)!, animated: true)
-//            }
-//
-//        }
-//
-//    }
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return false }
+        return cell.day != nil
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        for cell in collectionView.visibleCells {
+            if collectionView.indexPath(for: cell) == indexPath {
+                cell.isSelected = true
+            } else {
+                collectionView.deselectItem(at: collectionView.indexPath(for: cell)!, animated: true)
+            }
+        }
+        self.summaryView?.reloadSummary(forDate: self.getCurrentDate())
+    }
 
     func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
         return !collectionView.indexPathsForSelectedItems!.contains(indexPath)
@@ -139,10 +131,6 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
-    }
-    
-    func getCurrentDate() -> Date {
-        return (daysColletionView.cellForItem(at: (daysColletionView.indexPathsForSelectedItems?.first)!) as! CalendarCollectionViewCell).day
     }
     
     //MARK: - IBActions
@@ -215,15 +203,15 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+     // MARK: - Auxiliar Functions
+    
+    func getCurrentDate() -> Date {
+        let currentDay = (daysColletionView.cellForItem(at: (daysColletionView.indexPathsForSelectedItems?.first)!) as! CalendarCollectionViewCell).day
+        print(currentDay ?? "sem data")
+        return currentDay!
+    }
+ 
     
     
     
