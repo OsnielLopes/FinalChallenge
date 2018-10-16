@@ -8,15 +8,29 @@
 
 import UIKit
 
-class AnswerQuestionViewController: UIViewController {
+class DissertativeQuestionViewController: UIViewController {
+    
+    //MARK: - IBOutles
+    @IBOutlet weak var question: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        
     }
     
 
+    // MARK: - IBActions
+    
+    @IBAction func backButtonPressed() {
+        self.navigationController?.popViewController(animated: false)
+    }
+    
+    @IBAction func saveButtonPressed() {
+    }
+    
+    
     /*
     // MARK: - Navigation
 

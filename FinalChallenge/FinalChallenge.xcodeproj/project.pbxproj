@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451A751F216D3E7600CA0760 /* Assets.xcassets */; };
-		45393760216BC79900F43CAC /* CenterAndZoomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539375F216BC79900F43CAC /* CenterAndZoomFlowLayout.swift */; };
-		45652BA621667D170085A5A2 /* DailyQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45652B9F21667D170085A5A2 /* DailyQuestion.storyboard */; };
-		45652BA721667D170085A5A2 /* DailyQuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BA021667D170085A5A2 /* DailyQuestionPresenter.swift */; };
-		45652BA821667D170085A5A2 /* DailyQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BA121667D170085A5A2 /* DailyQuestionRouter.swift */; };
-		45652BA921667D170085A5A2 /* DailyQuestionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BA221667D170085A5A2 /* DailyQuestionProtocols.swift */; };
-		45652BAA21667D170085A5A2 /* DailyQuestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BA321667D170085A5A2 /* DailyQuestionInteractor.swift */; };
-		45652BAB21667D170085A5A2 /* DailyQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BA421667D170085A5A2 /* DailyQuestionView.swift */; };
-		45652BAE2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BAD2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift */; };
-		45652BB42167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45652BB32167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift */; };
+		455F6E6721750F1100285713 /* DailyQuestionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6621750F1100285713 /* DailyQuestionProtocols.swift */; };
+		455F6E6A21750F7E00285713 /* DailyQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6921750F7E00285713 /* DailyQuestionRouter.swift */; };
+		455F6E6C21750F9800285713 /* DailyQuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6B21750F9700285713 /* DailyQuestionPresenter.swift */; };
+		455F6E6E21750FA200285713 /* DailyQuestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6D21750FA200285713 /* DailyQuestionInteractor.swift */; };
+		455F6E7421750FAE00285713 /* CenterAndZoomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6F21750FAE00285713 /* CenterAndZoomFlowLayout.swift */; };
+		455F6E7521750FAE00285713 /* DailyQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7021750FAE00285713 /* DailyQuestionView.swift */; };
+		455F6E7621750FAE00285713 /* DailyQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455F6E7121750FAE00285713 /* DailyQuestion.storyboard */; };
+		455F6E7721750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7221750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift */; };
+		455F6E7821750FAE00285713 /* DailyQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7321750FAE00285713 /* DailyQuestionCollectionViewCell.swift */; };
 		491511EB216D358C007C0E09 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */; };
-		491511ED216D3678007C0E09 /* AnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */; };
+		491511ED216D3678007C0E09 /* DissertativeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EC216D3678007C0E09 /* DissertativeQuestionViewController.swift */; };
+		491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
+		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
+		491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */; };
+		491511FB21751711007C0E09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511FA21751711007C0E09 /* Router.swift */; };
+		491511FD21751CC5007C0E09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491511FC21751CC5007C0E09 /* Main.storyboard */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
@@ -128,17 +133,22 @@
 
 /* Begin PBXFileReference section */
 		451A751F216D3E7600CA0760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4539375F216BC79900F43CAC /* CenterAndZoomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterAndZoomFlowLayout.swift; sourceTree = "<group>"; };
-		45652B9F21667D170085A5A2 /* DailyQuestion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyQuestion.storyboard; sourceTree = "<group>"; };
-		45652BA021667D170085A5A2 /* DailyQuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionPresenter.swift; sourceTree = "<group>"; };
-		45652BA121667D170085A5A2 /* DailyQuestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionRouter.swift; sourceTree = "<group>"; };
-		45652BA221667D170085A5A2 /* DailyQuestionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionProtocols.swift; sourceTree = "<group>"; };
-		45652BA321667D170085A5A2 /* DailyQuestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionInteractor.swift; sourceTree = "<group>"; };
-		45652BA421667D170085A5A2 /* DailyQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionView.swift; sourceTree = "<group>"; };
-		45652BAD2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionCollectionViewCell.swift; sourceTree = "<group>"; };
-		45652BB32167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoundedCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		455F6E6621750F1100285713 /* DailyQuestionProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionProtocols.swift; path = "FinalChallenge/Source/Modules/New Group/DailyQuestionProtocols.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E6921750F7E00285713 /* DailyQuestionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionRouter.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionRouter.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E6B21750F9700285713 /* DailyQuestionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionPresenter.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionPresenter.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E6D21750FA200285713 /* DailyQuestionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionInteractor.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionInteractor.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E6F21750FAE00285713 /* CenterAndZoomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CenterAndZoomFlowLayout.swift; path = "FinalChallenge/Source/Modules/Daily Questions/CenterAndZoomFlowLayout.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E7021750FAE00285713 /* DailyQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionView.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionView.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E7121750FAE00285713 /* DailyQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DailyQuestion.storyboard; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestion.storyboard"; sourceTree = SOURCE_ROOT; };
+		455F6E7221750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRoundedCardCollectionViewCell.swift; path = "FinalChallenge/Source/Modules/Daily Questions/BaseRoundedCardCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E7321750FAE00285713 /* DailyQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionCollectionViewCell.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswerQuestion.storyboard; sourceTree = "<group>"; };
-		491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionViewController.swift; sourceTree = "<group>"; };
+		491511EC216D3678007C0E09 /* DissertativeQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionViewController.swift; sourceTree = "<group>"; };
+		491511EE216FBFF6007C0E09 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		491511F0216FC045007C0E09 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
+		491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionViewController.swift; sourceTree = "<group>"; };
+		491511FA21751711007C0E09 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		491511FC21751CC5007C0E09 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49AE2B222163DD5200055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -218,6 +228,10 @@
 		454DF7A721655BDB0091E792 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BD974A252163F74B00612838 /* Models */,
+				457F34F5216FD6E100B3F1C6 /* Modules */,
+				491511F621751232007C0E09 /* Services */,
+				491511F72175124C007C0E09 /* Utils */,
 				BD71F6962175627E0011C885 /* Modules */,
 				454DF7A921655E110091E792 /* Daily Questions */,
 			);
@@ -233,52 +247,95 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		454DF7A921655E110091E792 /* Daily Questions */ = {
+		455F6E6821750F1F00285713 /* Daily Questions */ = {
 			isa = PBXGroup;
 			children = (
-				45652BA221667D170085A5A2 /* DailyQuestionProtocols.swift */,
+				455F6E6621750F1100285713 /* DailyQuestionProtocols.swift */,
 				45652BB72167E0E30085A5A2 /* Router */,
 				45652BB52167E0C50085A5A2 /* Presenter */,
 				45652BB82167E0F10085A5A2 /* Interactor */,
 				45652BB92167E0FE0085A5A2 /* View */,
 			);
-			path = "Daily Questions";
+			name = "Daily Questions";
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		45652BB52167E0C50085A5A2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				45652BA021667D170085A5A2 /* DailyQuestionPresenter.swift */,
+				455F6E6B21750F9700285713 /* DailyQuestionPresenter.swift */,
 			);
 			name = Presenter;
+			path = "../../Daily Questions";
 			sourceTree = "<group>";
 		};
 		45652BB72167E0E30085A5A2 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				45652BA121667D170085A5A2 /* DailyQuestionRouter.swift */,
+				455F6E6921750F7E00285713 /* DailyQuestionRouter.swift */,
 			);
 			name = Router;
+			path = "../../Daily Questions";
 			sourceTree = "<group>";
 		};
 		45652BB82167E0F10085A5A2 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				45652BA321667D170085A5A2 /* DailyQuestionInteractor.swift */,
+				455F6E6D21750FA200285713 /* DailyQuestionInteractor.swift */,
 			);
 			name = Interactor;
+			path = "../../Daily Questions";
 			sourceTree = "<group>";
 		};
 		45652BB92167E0FE0085A5A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				45652B9F21667D170085A5A2 /* DailyQuestion.storyboard */,
-				45652BA421667D170085A5A2 /* DailyQuestionView.swift */,
-				45652BAD2166887E0085A5A2 /* DailyQuestionCollectionViewCell.swift */,
-				45652BB32167DD560085A5A2 /* BaseRoundedCardCollectionViewCell.swift */,
-				4539375F216BC79900F43CAC /* CenterAndZoomFlowLayout.swift */,
+				455F6E7221750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift */,
+				455F6E6F21750FAE00285713 /* CenterAndZoomFlowLayout.swift */,
+				455F6E7121750FAE00285713 /* DailyQuestion.storyboard */,
+				455F6E7321750FAE00285713 /* DailyQuestionCollectionViewCell.swift */,
+				455F6E7021750FAE00285713 /* DailyQuestionView.swift */,
 			);
 			name = View;
+			path = "../../Daily Questions";
+			sourceTree = "<group>";
+		};
+		457F34F5216FD6E100B3F1C6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				455F6E6821750F1F00285713 /* Daily Questions */,
+				491511F4216FD351007C0E09 /* Answering Question */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		491511F4216FD351007C0E09 /* Answering Question */ = {
+			isa = PBXGroup;
+			children = (
+				491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */,
+				491511EC216D3678007C0E09 /* DissertativeQuestionViewController.swift */,
+				491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */,
+			);
+			path = "Answering Question";
+			sourceTree = "<group>";
+		};
+		491511F621751232007C0E09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A282163FD4C00612838 /* Managers */,
+				BD974A3521654B4100612838 /* Data Access Objects */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		491511F72175124C007C0E09 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
+				491511EE216FBFF6007C0E09 /* Extensions.swift */,
+				491511FA21751711007C0E09 /* Router.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		49AE2B0C2163DD4F00055136 = {
@@ -302,10 +359,8 @@
 		49AE2B172163DD4F00055136 /* FinalChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				BD974A252163F74B00612838 /* Models */,
-				BD974A282163FD4C00612838 /* Managers */,
-				BD974A3521654B4100612838 /* Data Access Objects */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
+				491511FC21751CC5007C0E09 /* Main.storyboard */,
 				491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */,
 				491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
@@ -548,9 +603,10 @@
 			files = (
 				BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */,
 				491511EB216D358C007C0E09 /* AnswerQuestion.storyboard in Resources */,
+				491511FD21751CC5007C0E09 /* Main.storyboard in Resources */,
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
-				45652BA621667D170085A5A2 /* DailyQuestion.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
+				455F6E7621750FAE00285713 /* DailyQuestion.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +626,9 @@
 			files = (
 				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
+				491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */,
+				455F6E7821750FAE00285713 /* DailyQuestionCollectionViewCell.swift in Sources */,
+				455F6E7721750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */,
 				BD290C4A216D352D001F16EA /* MoodDAO.swift in Sources */,
 				BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
@@ -577,6 +636,8 @@
 				BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */,
 				BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */,
 				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
+				491511FB21751711007C0E09 /* Router.swift in Sources */,
+				455F6E6C21750F9800285713 /* DailyQuestionPresenter.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD290C6A21752FDB001F16EA /* MockData.swift in Sources */,
@@ -588,11 +649,14 @@
 				BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
 				BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
+				455F6E6A21750F7E00285713 /* DailyQuestionRouter.swift in Sources */,
 				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
 				BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
+				455F6E7521750FAE00285713 /* DailyQuestionView.swift in Sources */,
 				BD290C26216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
+				455F6E7421750FAE00285713 /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
 				BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
 				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
@@ -613,13 +677,17 @@
 				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
 				BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */,
 				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
+				455F6E6E21750FA200285713 /* DailyQuestionInteractor.swift in Sources */,
+				455F6E6721750F1100285713 /* DailyQuestionProtocols.swift in Sources */,
+				491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */,
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
+				491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */,
+				491511ED216D3678007C0E09 /* DissertativeQuestionViewController.swift in Sources */,
 				BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				491511ED216D3678007C0E09 /* AnswerQuestionViewController.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
-				45652BAB21667D170085A5A2 /* DailyQuestionView.swift in Sources */,
 				BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -823,6 +891,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53BLZ9DZN8;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -841,6 +910,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53BLZ9DZN8;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

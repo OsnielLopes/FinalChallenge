@@ -54,8 +54,6 @@ class CenterAndZoomFlowLayout: UICollectionViewFlowLayout {
         let rectAttributes = super.layoutAttributesForElements(in: rect)!.map { $0.copy() as! UICollectionViewLayoutAttributes }
         let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.frame.size)
         
-        guard var visibleCells = collectionView.visibleCells as? [DailyQuestionCollectionViewCell] else { return rectAttributes }
-        
         // Make the cells be zoomed when they reach the center of the screen
         for attributes in rectAttributes where attributes.frame.intersects(visibleRect) {
             let distance = visibleRect.midX - attributes.center.x
