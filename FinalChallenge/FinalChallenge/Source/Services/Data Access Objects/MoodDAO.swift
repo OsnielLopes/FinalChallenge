@@ -23,8 +23,9 @@ class MoodDAO {
             
             if moodTypes.count == 0 {
                 self.initializeMoodTypes()
+            } else {
+                self.moodTypes = moodTypes
             }
-            self.moodTypes = moodTypes
             
         })
     }
