@@ -26,6 +26,8 @@ class DailySummaryViewController: UIViewController {
     
     var daySummaryTableViewController: DaySummaryTableViewController?
     
+    var calendarViewController: CalendarViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.insertButton.layer.cornerRadius = self.insertButton.frame.height / 2
@@ -75,13 +77,17 @@ class DailySummaryViewController: UIViewController {
         guard let button = moodButton as? UIButton else {
             return
         }
-        MoodDAO.shared.insertMood(moodType: self.moods[button.tag], date: Date(), completion: { moodInput, err in
-            guard let moodInput = moodInput, err == nil else {
+        MoodDAO.shared.insertMood(moodType: self.moods[button.tag], date: self.calendarViewController?.getCurrentDate() ?? Date(), completion: { moodInput, err in
+            guard let _ = moodInput, err == nil else {
                 print(err!.message)
                 return
             }
             self.daySummaryTableViewController?.loadData()
         })
+    }
+    
+    func reloadSummary(forDate date: Date) {
+        self.daySummaryTableViewController?.loadData(forDate: date)
     }
     
     @objc func didTapQuestionButton() {
@@ -161,6 +167,11 @@ class DailySummaryViewController: UIViewController {
         
         if let viewController = segue.destination as? DaySummaryTableViewController {
             self.daySummaryTableViewController = viewController
+        }
+        
+        if let viewController = segue.destination as? CalendarViewController {
+            viewController.summaryView = self
+            self.calendarViewController = viewController
         }
         
     }

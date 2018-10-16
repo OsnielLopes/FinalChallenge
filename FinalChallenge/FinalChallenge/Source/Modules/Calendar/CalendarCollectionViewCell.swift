@@ -30,12 +30,17 @@ class CalendarCollectionViewCell: UICollectionViewCell {
                 if day != nil {
                     isToday = calendar.component(.year, from: Date()) == calendar.component(.year, from: day) && calendar.component(.month, from: Date()) == calendar.component(.month, from: day) && calendar.component(.day, from: Date()) == calendar.component(.day, from: day)
                 }
-                label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                // FIXME: WRONG IMPLEMENTATION
+                if isToday {
+                    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                }
             } else {
                 label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)  
             }
             background.isHidden = !isSelected
-            background.backgroundColor = isToday ? #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            // FIXME: WRONG IMPLEMENTATION
+            background.backgroundColor = isToday ? #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1) : .white
+//            background.backgroundColor = isToday ? #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
     }
 }

@@ -15,8 +15,6 @@ class DaySummaryTableViewController: UITableViewController {
     
     var entries: [Any] = []
     
-    var date: Date = Date()
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,7 +24,9 @@ class DaySummaryTableViewController: UITableViewController {
         self.loadData()
     }
     
-    func loadData() {
+    func loadData(forDate date: Date = Date()) {
+        
+        
         self.entries = []
         self.tableView.reloadData()
         
@@ -44,7 +44,7 @@ class DaySummaryTableViewController: UITableViewController {
             }
         }
         
-        AnswerDAO.shared.fetchByDay(self.date, completion: { (answers, err) in
+        AnswerDAO.shared.fetchByDay(date, completion: { (answers, err) in
             guard err == nil, let answers = answers else {
                 return
             }
@@ -55,7 +55,7 @@ class DaySummaryTableViewController: UITableViewController {
             }
         })
         
-        MoodDAO.shared.fetchByDay(self.date, completion: { (moods, err) in
+        MoodDAO.shared.fetchByDay(date, completion: { (moods, err) in
             guard err == nil, let moods = moods else {
                 return
             }

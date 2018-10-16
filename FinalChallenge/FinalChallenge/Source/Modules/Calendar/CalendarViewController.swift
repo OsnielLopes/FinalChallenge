@@ -29,6 +29,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     var originalMonthDays: [Date?] = []
     var currentMonthDays: [Date?] = []
     var calendar = Calendar(identifier: .gregorian)
+    var summaryView: DailySummaryViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,22 +80,26 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     
     //MARK: - UICollectionViewDelegate
     
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return false }
-        return cell.day != nil
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        for cell in collectionView.visibleCells {
-            if collectionView.indexPath(for: cell) == indexPath {
-                cell.isSelected = true
-            } else {
-                collectionView.deselectItem(at: collectionView.indexPath(for: cell)!, animated: true)
-            }
-            
-        }
-        
-    }
+//    FIXME: SELECTED DATE IS NOT THE RIGHT DATE
+//
+//    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+//        guard let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return false }
+//        return cell.day != nil
+//    }
+
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        for cell in collectionView.visibleCells {
+//            if collectionView.indexPath(for: cell) == indexPath {
+//                cell.isSelected = true
+//                self.summaryView?.reloadSummary(forDate: self.getCurrentDate())
+//                print(self.getCurrentDate())
+//            } else {
+//                collectionView.deselectItem(at: collectionView.indexPath(for: cell)!, animated: true)
+//            }
+//
+//        }
+//
+//    }
 
     func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
         return !collectionView.indexPathsForSelectedItems!.contains(indexPath)
@@ -134,6 +139,10 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func getCurrentDate() -> Date {
+        return (daysColletionView.cellForItem(at: (daysColletionView.indexPathsForSelectedItems?.first)!) as! CalendarCollectionViewCell).day
     }
     
     //MARK: - IBActions

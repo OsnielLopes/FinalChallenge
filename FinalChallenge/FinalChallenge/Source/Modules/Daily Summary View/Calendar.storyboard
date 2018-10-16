@@ -108,9 +108,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question-icon" translatesAutoresizingMaskIntoConstraints="NO" id="stC-Jx-Sjp">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dailyQuestion-icon" translatesAutoresizingMaskIntoConstraints="NO" id="stC-Jx-Sjp">
                                             <rect key="frame" x="0.0" y="0.0" width="45" height="43.5"/>
-                                            <color key="backgroundColor" red="0.070588235289999995" green="0.49803921569999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="stC-Jx-Sjp" secondAttribute="height" multiplier="27:26" id="qTe-4g-V5I"/>
                                             </constraints>
@@ -164,9 +164,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mood1-icon" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-JO-2Qo">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dailymood1-icon" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-JO-2Qo">
                                             <rect key="frame" x="0.0" y="0.0" width="45" height="43.5"/>
-                                            <color key="backgroundColor" red="0.070588235289999995" green="0.49803921569999998" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="CMN-JO-2Qo" secondAttribute="height" multiplier="27:26" id="NKL-sO-Uc1"/>
                                             </constraints>
@@ -242,7 +242,7 @@
     </scenes>
     <resources>
         <image name="add" width="25" height="25"/>
-        <image name="mood1-icon" width="27" height="27"/>
-        <image name="question-icon" width="27" height="26"/>
+        <image name="dailyQuestion-icon" width="26" height="25"/>
+        <image name="dailymood1-icon" width="28" height="27"/>
     </resources>
 </document>

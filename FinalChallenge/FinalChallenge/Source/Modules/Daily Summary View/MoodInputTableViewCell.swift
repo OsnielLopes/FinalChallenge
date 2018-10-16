@@ -32,7 +32,7 @@ class MoodInputTableViewCell: UITableViewCell {
         }
         
         self.moodText.text = "I was feeling "+type.typeText!+" at \(String(describing: hourInt)):\(String(describing: minuteInt))"
-        self.moodImage.image = UIImage.init(named: type.typeIcon!)!
+        self.moodImage.image = UIImage.init(named: "daily" + type.typeIcon!)!
     }
 
 }

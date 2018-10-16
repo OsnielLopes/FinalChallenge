@@ -122,6 +122,10 @@
 		BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 		BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A782167F86900612838 /* CategoryDAOTests.swift */; };
 		BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
+		BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
+		BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */; };
+		BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */; };
+		BDA08141217578D200F57696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -734,10 +738,13 @@
 				BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */,
 				BD290C21216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
 				BD290C01216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
+				BDA08141217578D200F57696 /* ViewController.swift in Sources */,
 				BD290C0D216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
 				BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
+				BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
+				BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */,
 				BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
 				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
@@ -747,6 +754,7 @@
 				BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
+				BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */,
 				BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

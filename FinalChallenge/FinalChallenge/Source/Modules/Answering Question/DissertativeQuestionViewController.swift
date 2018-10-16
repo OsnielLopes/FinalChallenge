@@ -27,7 +27,6 @@ class DissertativeQuestionViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed() {
-        DissertationAnswersDAO.shared.create(question: <#T##DissertationQuestion#>, text: <#T##String#>, date: <#T##Date#>, completion: <#T##(DissertationAnswer?, DataAccessError?) -> (Void)#>)
     }
 
 }
