@@ -218,6 +218,7 @@
 		454DF7A721655BDB0091E792 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BD71F6962175627E0011C885 /* Modules */,
 				454DF7A921655E110091E792 /* Daily Questions */,
 			);
 			path = Source;
@@ -305,11 +306,6 @@
 				BD974A282163FD4C00612838 /* Managers */,
 				BD974A3521654B4100612838 /* Data Access Objects */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
-				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
-				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
-				BD290C53216E9DA4001F16EA /* CalendarViewController.swift */,
-				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
-				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
 				491511EA216D358C007C0E09 /* AnswerQuestion.storyboard */,
 				491511EC216D3678007C0E09 /* AnswerQuestionViewController.swift */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
@@ -349,6 +345,26 @@
 				BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */,
 			);
 			path = "AnswersDAO's";
+			sourceTree = "<group>";
+		};
+		BD71F695217562460011C885 /* DailySummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
+				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
+				BD290C53216E9DA4001F16EA /* CalendarViewController.swift */,
+				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
+				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
+			);
+			path = DailySummaryView;
+			sourceTree = "<group>";
+		};
+		BD71F6962175627E0011C885 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BD71F695217562460011C885 /* DailySummaryView */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		BD974A252163F74B00612838 /* Models */ = {
