@@ -26,6 +26,10 @@ class DailyQuestionPresenter: NSObject, DailyQuestionPresenterInputProtocol, Dai
         return 3
     }
     
+    func loadDailyQuestions() {
+        //FIXME:
+    }
+    
     func item(at indexPath: Int) -> Question {
         //FIXME:
         return Question()

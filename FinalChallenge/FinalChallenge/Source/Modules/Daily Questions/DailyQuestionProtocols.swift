@@ -27,6 +27,8 @@ protocol DailyQuestionPresenterInputProtocol: class {
     func numberOfSections() -> Int
     func numberOfCards(in section: Int) -> Int
     
+    func loadDailyQuestions()
+    
     func item(at indexPath: Int) -> Question
     func didSelectItem(at indexPath: Int)
     
