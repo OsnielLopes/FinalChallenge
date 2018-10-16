@@ -85,7 +85,10 @@ class CalendarViewController: UIViewController {
     }
     
     @objc func didTapQuestionButton() {
-        // Push add question view
+        let storyboard = UIStoryboard(name: "DailyQuestion", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "DailyQuestionView")
+        
+        self.navigationController?.pushViewController(viewController, animated: false)
     }
     
     @IBAction func didTapInsertButton(_ sender: Any) {

@@ -100,7 +100,7 @@ class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollect
     
     // MARK: - Action
     @IBAction func touchBackButton(_ sender: UIButton) {
-        
+        self.navigationController?.popViewController(animated: false)
     }
     
     @IBAction func touchRemoveButton(_ sender: UIButton) {
