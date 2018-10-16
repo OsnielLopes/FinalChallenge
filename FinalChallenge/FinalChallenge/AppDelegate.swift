@@ -15,7 +15,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if !UserDefaults.standard.bool(forKey: "appHasAlreadyBeenUsed") {
+            QuestionsManager.insert()
+            UserDefaults.standard.set(true, forKey: "appHasAlreadyBeenUsed")
+        }
+        
+        if let date = UserDefaults.standard.object(forKey: "appHasAlreadyBeenUsedToday") as? Date {
+            if Calendar.current.compare(date, to: Date(), toGranularity: Calendar.Component.day) != .orderedSame {
+                QuestionsManager.generateQuestionsForToday()
+                UserDefaults.standard.set(Date(), forKey: "appHasAlreadyBeenUsedToday")
+            }
+        } else {
+            QuestionsManager.generateQuestionsForToday()
+            UserDefaults.standard.set(Date(), forKey: "appHasAlreadyBeenUsedToday")
+        }
+        
+        
+        
+        
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
+        
+        let navController = UINavigationController(rootViewController: viewController)
+        
+        
+        navController.isNavigationBarHidden = true
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

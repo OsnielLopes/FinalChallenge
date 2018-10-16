@@ -1,0 +1,41 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+update_fastlane
+
+default_platform(:ios)
+
+    app_identifier = "com.br.mackmobile.FinalChallenge"
+    app_name = "Finding Yourself"
+
+    scheme = "FinalChallenge"
+    username = "anacarolinadsantoss@gmail.com"
+
+platform :ios do
+  desc "Distribute on TestFlight"
+  lane :beta do
+      #parameter set to send to iTunesConnect
+      ENV['DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS'] = '-t DAV'
+
+      clear_derived_data(derived_data_path: "/"+ scheme +"/")
+
+      produce(username: username, app_identifier: app_identifier, app_name: app_name)
+
+      update_app_identifier(plist_path: "./FinalChallenge/Resources/Info.plist", app_identifier: app_identifier)
+
+      get_certificates           # invokes cert
+      get_provisioning_profile(app_identifier: app_identifier)   # invokes sigh
+      build_app(scheme: scheme)
+      upload_to_testflight(app_identifier: app_identifier)
+  end
+end
