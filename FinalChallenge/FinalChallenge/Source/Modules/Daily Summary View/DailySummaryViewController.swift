@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalendarViewController: UIViewController {
+class DailySummaryViewController: UIViewController {
 
     @IBOutlet weak var moodMenuView: UIView!
     

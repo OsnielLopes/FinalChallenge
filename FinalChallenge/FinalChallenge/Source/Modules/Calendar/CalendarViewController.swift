@@ -140,6 +140,8 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBAction func changeTheCalendarStatus() {
         
+        return
+        
         let weekOfCurrentDay = calendar.component(.weekOfMonth, from: (daysColletionView.cellForItem(at: daysColletionView.indexPathsForSelectedItems!.first!) as! CalendarCollectionViewCell).day)
         (daysColletionView.collectionViewLayout as! CalendarUICollectionViewFlowLayout).expanding = !largeCalendarView
         

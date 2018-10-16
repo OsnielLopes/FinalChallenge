@@ -12,12 +12,11 @@ class DissertativeQuestionViewController: UIViewController {
     
     //MARK: - IBOutles
     @IBOutlet weak var question: UILabel!
+    
+    //MARK: - Properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
     }
     
 
@@ -28,17 +27,7 @@ class DissertativeQuestionViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed() {
+        DissertationAnswersDAO.shared.create(question: <#T##DissertationQuestion#>, text: <#T##String#>, date: <#T##Date#>, completion: <#T##(DissertationAnswer?, DataAccessError?) -> (Void)#>)
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

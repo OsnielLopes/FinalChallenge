@@ -21,16 +21,16 @@
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */; };
 		491511FB21751711007C0E09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511FA21751711007C0E09 /* Router.swift */; };
-		491511FD21751CC5007C0E09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491511FC21751CC5007C0E09 /* Main.storyboard */; };
+		4943FDD82165355600FE2045 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */; };
+		4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */; };
 		49AB023921752D79002B8140 /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
 		49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */; };
 		49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */; };
-		4943FDD82165355600FE2045 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */; };
-		4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */; };
-		49AE2B202163DD5200055136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1F2163DD5200055136 /* Assets.xcassets */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
+		49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
+		49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
 		BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
 		BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
@@ -95,8 +95,8 @@
 		BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
 		BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD290C4F216E9613001F16EA /* Calendar.storyboard */; };
 		BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
-		BD290C54216E9DA4001F16EA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* CalendarViewController.swift */; };
-		BD290C55216E9DA4001F16EA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* CalendarViewController.swift */; };
+		BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
+		BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
 		BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
 		BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
 		BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
@@ -122,8 +122,6 @@
 		BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 		BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A782167F86900612838 /* CategoryDAOTests.swift */; };
 		BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
-		49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
-		49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,18 +149,18 @@
 		491511F0216FC045007C0E09 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
 		491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionViewController.swift; sourceTree = "<group>"; };
 		491511FA21751711007C0E09 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		491511FC21751CC5007C0E09 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		49AB023821752D79002B8140 /* QuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
 		49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionViewController.swift; sourceTree = "<group>"; };
 		49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnswerQuestion.storyboard; sourceTree = "<group>"; };
-		4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
-		4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49AE2B1D2163DD4F00055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnlyCalendar.storyboard; sourceTree = "<group>"; };
-		49AE2B1F2163DD5200055136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49AE2B222163DD5200055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AE2B242163DD5200055136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49AE2B2A2163DF0B00055136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49AE2B2C2163DF1900055136 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxAnswer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxAnswer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodInput+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -200,7 +198,7 @@
 		BD290C49216D352D001F16EA /* MoodDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDAO.swift; sourceTree = "<group>"; };
 		BD290C4F216E9613001F16EA /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryTableViewController.swift; sourceTree = "<group>"; };
-		BD290C53216E9DA4001F16EA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryViewController.swift; sourceTree = "<group>"; };
 		BD290C6321752918001F16EA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInputTableViewCell.swift; sourceTree = "<group>"; };
 		BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalChallengeDatabase.xcdatamodel; sourceTree = "<group>"; };
@@ -214,8 +212,6 @@
 		BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAOTests.swift; sourceTree = "<group>"; };
 		BD974A742167F4F700612838 /* CategoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
 		BD974A782167F86900612838 /* CategoryDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAOTests.swift; sourceTree = "<group>"; };
-		49AE2B2A2163DF0B00055136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		49AE2B2C2163DF1900055136 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +308,7 @@
 		457F34F5216FD6E100B3F1C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4925B40D217571D100413181 /* Calendar */,
 				491511F4216FD351007C0E09 /* Answering Question */,
 				455F6E6821750F1F00285713 /* Daily Questions */,
 				BD71F695217562460011C885 /* Daily Summary View */,
@@ -348,15 +345,7 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		49AB023E21756FA3002B8140 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				49AB023F21756FB6002B8140 /* Modules */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		49AB023F21756FB6002B8140 /* Modules */ = {
+		4925B40D217571D100413181 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
 				4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */,
@@ -365,7 +354,7 @@
 				49AE2B2C2163DF1900055136 /* CalendarViewController.swift */,
 				49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */,
 			);
-			path = Modules;
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		49AE2B0C2163DD4F00055136 = {
@@ -389,10 +378,7 @@
 		49AE2B172163DD4F00055136 /* FinalChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				49AB023E21756FA3002B8140 /* Source */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
-				491511FC21751CC5007C0E09 /* Main.storyboard */,
-				49AE2B1F2163DD5200055136 /* Assets.xcassets */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
 				454DF7A821655D200091E792 /* Resources */,
 				454DF7A721655BDB0091E792 /* Source */,
@@ -437,7 +423,7 @@
 			children = (
 				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
 				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
-				BD290C53216E9DA4001F16EA /* CalendarViewController.swift */,
+				BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */,
 				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
 				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
 			);
@@ -625,11 +611,9 @@
 			files = (
 				BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */,
 				49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */,
-				491511FD21751CC5007C0E09 /* Main.storyboard in Resources */,
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
 				455F6E7621750FAE00285713 /* DailyQuestion.storyboard in Resources */,
-				49AE2B202163DD5200055136 /* Assets.xcassets in Resources */,
 				49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,7 +671,7 @@
 				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
 				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
-				BD290C54216E9DA4001F16EA /* CalendarViewController.swift in Sources */,
+				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
@@ -754,7 +738,7 @@
 				BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
-				BD290C55216E9DA4001F16EA /* CalendarViewController.swift in Sources */,
+				BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
 				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
 				BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
