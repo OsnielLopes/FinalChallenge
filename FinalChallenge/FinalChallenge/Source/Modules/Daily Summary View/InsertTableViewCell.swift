@@ -12,6 +12,8 @@ class InsertTableViewCell: UITableViewCell {
     
     @IBOutlet weak var insertButton: UIButton!
     
+    @IBOutlet weak var lineView: UIView!
+    
     var moodButtons: [UIButton] = []
     
     var insertButtons: [UIButton] = []
@@ -21,7 +23,7 @@ class InsertTableViewCell: UITableViewCell {
     var isInsertMoodMenuClosed = true
     
     var daySummaryTableViewController: DaySummaryTableViewController!
-        
+    
     var shouldReloadCell = true
     
     override func awakeFromNib() {
@@ -97,7 +99,7 @@ class InsertTableViewCell: UITableViewCell {
         guard let button = moodButton as? UIButton else {
             return
         }
-        self.daySummaryTableViewController.didTapInsertMood(self.daySummaryTableViewController.moodTypes[button.tag])
+        self.daySummaryTableViewController.didTapInsertMood(button.tag)
     }
     
     @objc func didTapQuestionButton() {

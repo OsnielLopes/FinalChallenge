@@ -19,6 +19,8 @@ class DaySummaryTableViewController: UITableViewController {
     var moodTypes: [MoodType] = []
     
     var summaryView: DailySummaryViewController!
+    
+    var shouldShowAddButton = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +33,9 @@ class DaySummaryTableViewController: UITableViewController {
     }
     
     func loadData() {
-
+        
+        self.shouldShowAddButton = Calendar.current.isDateInToday(self.summaryView.currentDate)
+        
         self.entries = []
         self.tableView.reloadData()
         
@@ -39,10 +43,22 @@ class DaySummaryTableViewController: UITableViewController {
         var didEndedObtainingMoods = false
         
         let didEndedObtainingData = {
-            self.entries.sort(by: {
-                let date1 = (($0 is MoodInput) ? ($0 as! MoodInput).date : ($0 as! Answer).date)!
-                let date2 = (($1 is MoodInput) ? ($1 as! MoodInput).date : ($1 as! Answer).date)!
-                return date1 as Date > date2 as Date
+            self.entries.sort(by: { entry1, entry2 in
+                var date1: NSDate!
+                if entry1 is MoodInput {
+                    date1 = (entry1 as! MoodInput).date!
+                } else if entry1 is Answer {
+                    date1 = (entry1 as! Answer).date!
+                }
+                
+                var date2: NSDate!
+                if entry2 is MoodInput {
+                    date2 = (entry2 as! MoodInput).date!
+                } else if entry2 is Answer {
+                    date2 = (entry2 as! Answer).date!
+                }
+                
+                return (date1 as Date) > (date2 as Date)
             })
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -77,16 +93,18 @@ class DaySummaryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.entries.count + 1
+        return self.entries.count + (self.shouldShowAddButton ? 1 : 0)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
+        if indexPath.row == 0 && self.shouldShowAddButton {
             if let addCell = tableView.dequeueReusableCell(withIdentifier: addCellIdentifier, for: indexPath) as? InsertTableViewCell {
                 
                 addCell.daySummaryTableViewController = self
                 addCell.setButtons()
+                
+                addCell.lineView.isHidden = self.entries.count == 0
                 
                 return addCell
             } else {
@@ -94,11 +112,12 @@ class DaySummaryTableViewController: UITableViewController {
             }
         }
         
-        let entry = self.entries[indexPath.row - 1]
+        let entry = self.entries[indexPath.row - (self.shouldShowAddButton ? 1 : 0)]
 
         if let entryMood = entry as? MoodInput {
             if let moodCell = tableView.dequeueReusableCell(withIdentifier: moodCellIdentifier, for: indexPath) as? MoodInputTableViewCell {
                 moodCell.setMood(entryMood)
+                moodCell.lineView.isHidden = indexPath.row + (!self.shouldShowAddButton ? 1 : 0) == self.entries.count
                 return moodCell
             }
         } else if let entryAnswer = entry as? Answer {
@@ -113,11 +132,11 @@ class DaySummaryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.row == 0 {
+        if indexPath.row == 0 && self.shouldShowAddButton {
             return 70
         }
         
-        switch self.entries[indexPath.row - 1] {
+        switch self.entries[indexPath.row - (self.shouldShowAddButton ? 1 : 0)] {
         case is Answer:
             return UITableView.automaticDimension
         case is MoodInput:
@@ -128,8 +147,8 @@ class DaySummaryTableViewController: UITableViewController {
         return 0
     }
     
-    func didTapInsertMood(_ mood: MoodType) {
-        MoodDAO.shared.insertMood(moodType: mood, date: self.summaryView.currentDate, completion: { _, _ in
+    func didTapInsertMood(_ moodIndex: Int) {
+        MoodDAO.shared.insertMood(moodType: self.moodTypes[moodIndex], date: Date(), completion: { _, _ in
             self.loadData()
         })
     }

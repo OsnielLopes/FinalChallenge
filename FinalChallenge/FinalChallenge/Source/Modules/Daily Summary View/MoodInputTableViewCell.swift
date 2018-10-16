@@ -14,6 +14,8 @@ class MoodInputTableViewCell: UITableViewCell {
     
     @IBOutlet weak var moodImage: UIImageView!
     
+    @IBOutlet weak var lineView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -30,7 +32,7 @@ class MoodInputTableViewCell: UITableViewCell {
         formatter.dateFormat = "HH:mm"
         let hourString = formatter.string(from: mood.date! as Date)
         
-        self.moodText.text = "I was feeling "+(type.typeText!).lowercased()+" at \(hourString))"
+        self.moodText.text = "I was feeling "+(type.typeText!).lowercased()+" at \(hourString)"
         self.moodImage.image = UIImage.init(named: "daily" + type.typeIcon!)!
     }
 

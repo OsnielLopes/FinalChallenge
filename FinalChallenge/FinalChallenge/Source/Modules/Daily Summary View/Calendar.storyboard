@@ -98,6 +98,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="insertButton" destination="pMN-QY-7FU" id="SXS-LV-hcb"/>
+                                    <outlet property="lineView" destination="84a-Uq-SSZ" id="acI-hm-vKh"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="questionCellIdentifier" rowHeight="133" id="kMZ-9p-Uld" customClass="AnswerTableViewCell" customModule="FinalChallenge" customModuleProvider="target">
@@ -196,6 +197,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="lineView" destination="94F-K5-XPt" id="N3Z-eb-BCH"/>
                                     <outlet property="moodImage" destination="CMN-JO-2Qo" id="p5u-M1-Rqf"/>
                                     <outlet property="moodText" destination="GoP-gQ-2lT" id="Zf2-Dh-kM2"/>
                                 </connections>
