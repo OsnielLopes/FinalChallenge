@@ -243,7 +243,6 @@
 				457F34F5216FD6E100B3F1C6 /* Modules */,
 				491511F621751232007C0E09 /* Services */,
 				491511F72175124C007C0E09 /* Utils */,
-				BD71F6962175627E0011C885 /* Modules */,
 			);
 			path = Source;
 			sourceTree = "<group>";
