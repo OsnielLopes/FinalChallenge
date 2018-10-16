@@ -75,7 +75,8 @@
                         <viewLayoutGuide key="safeArea" id="b9m-DG-nCj"/>
                     </view>
                     <connections>
-                        <outlet property="question" destination="0Xv-wk-50O" id="iGG-h8-Buy"/>
+                        <outlet property="questionLabel" destination="0Xv-wk-50O" id="iGG-h8-Buy"/>
+                        <outlet property="textView" destination="MsT-Jr-Ztn" id="pRh-4Q-q8m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C84-tI-FuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,7 +129,7 @@
                                     <constraint firstAttribute="height" constant="200" id="H67-HD-d8G"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="radioOption" textLabel="AHz-x0-xvF" style="IBUITableViewCellStyleDefault" id="aK4-3g-TVI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="radioOption" textLabel="AHz-x0-xvF" style="IBUITableViewCellStyleDefault" id="aK4-3g-TVI">
                                         <rect key="frame" x="0.0" y="28" width="325" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aK4-3g-TVI" id="T1w-Pq-3EA">
