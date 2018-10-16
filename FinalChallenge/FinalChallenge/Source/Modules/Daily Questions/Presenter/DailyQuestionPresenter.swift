@@ -39,6 +39,10 @@ class DailyQuestionPresenter: NSObject, DailyQuestionPresenterInputProtocol, Dai
         //FIXME:
     }
     
+    func didTouchBackButton() {
+        //FIXME:
+    }
+    
     func loadNewQuestion() {
         //FIXME:
     }
