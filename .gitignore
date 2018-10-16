@@ -26,17 +26,17 @@ Pods/
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
 # fastlane specific
-fastlane/report.xml
+FinalChallenge/fastlane/report.xml
 
 # deliver temporary files
-fastlane/Preview.html
+FinalChallenge/fastlane/Preview.html
 
 # snapshot generated screenshots
-fastlane/screenshots/**/*.png
-fastlane/screenshots/screenshots.html
+FinalChallenge/fastlane/screenshots/**/*.png
+FinalChallenge/fastlane/screenshots/screenshots.html
 
 # scan temporary files
-fastlane/test_output
+FinalChallenge/fastlane/test_output
 
 ### macOS ###
 # General
