@@ -14,6 +14,9 @@ class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollect
     @IBOutlet weak var dailyQuestionCollectionView: UICollectionView!
     @IBOutlet var viewButtons: [UIButton]!
     
+    // MARK: - Properties
+    var todayQuestions: [DissertationQuestion] = Array()
+    
 	// MARK: - Viper Module Properties
     // MARK: Public Properties
 //    var presenter: DailyQuestionPresenterInputProtocol!
@@ -26,6 +29,20 @@ class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollect
 	// MARK: - Override methods
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let todayQuestionsTexts = UserDefaults.standard.object(forKey: "todayQuestions")! as? [String] else {
+            fatalError("Impossible to fetch today questions from NSUserDefaults")
+        }
+        
+        DissertativeQuestionDAO.shared.fetchAll { (questions, error) -> (Void) in
+            guard error == nil && questions != nil else{
+                fatalError("Impossible fetch the dissertative questions from the CoreDate")
+            }
+            
+            self.todayQuestions = (questions?.filter({ (dissertationQuestion) -> Bool in
+                return todayQuestionsTexts.contains(dissertationQuestion.questionText!)
+            }))!
+        }
         
         self.prepareViewController()
         self.prepareButtons()
@@ -57,7 +74,7 @@ class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return self.todayQuestions.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -65,8 +82,8 @@ class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.dailyQuestionCellIdentifier, for: indexPath)
             
         if let dailyCell = cell as? DailyQuestionCollectionViewCell {
-            dailyCell.categoryLabel.text = "Relationship"
-            dailyCell.dailyQuestionLabel.text = "What could I do to improve my relashionship with my frinds and family members?"
+            dailyCell.categoryLabel.text = self.todayQuestions[indexPath.row].category?.name
+            dailyCell.dailyQuestionLabel.text = self.todayQuestions[indexPath.row].questionText
             return dailyCell
         }
         

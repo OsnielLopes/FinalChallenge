@@ -16,6 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        if !UserDefaults.standard.bool(forKey: "appHasAlreadyBeenUsed") {
+            QuestionsManager.insert()
+            UserDefaults.standard.set(true, forKey: "appHasAlreadyBeenUsed")
+        }
+        
+        if let date = UserDefaults.standard.object(forKey: "appHasAlreadyBeenUsedToday") as? Date {
+            if Calendar.current.compare(date, to: Date(), toGranularity: Calendar.Component.day) != .orderedSame {
+                QuestionsManager.generateQuestionsForToday()
+                UserDefaults.standard.set(Date(), forKey: "appHasAlreadyBeenUsedToday")
+            }
+        } else {
+            QuestionsManager.generateQuestionsForToday()
+            UserDefaults.standard.set(Date(), forKey: "appHasAlreadyBeenUsedToday")
+        }
+        
+        
+        
+        
         let storyboard = UIStoryboard(name: "DailyQuestion", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "DailyQuestionView")
         
@@ -25,7 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()
         
-        // Override point for customization after application launch.
         return true
     }
 

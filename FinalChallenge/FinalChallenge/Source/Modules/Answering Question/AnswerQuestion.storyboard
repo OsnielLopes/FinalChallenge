@@ -12,7 +12,7 @@
         <!--Dissertative Question View Controller-->
         <scene sceneID="hnh-Ch-qMA">
             <objects>
-                <viewController id="D7l-ir-WGt" customClass="DissertativeQuestionViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnswerQuestionView" id="D7l-ir-WGt" customClass="DissertativeQuestionViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dt9-wk-7vt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,7 @@
         <!--Multiple Choice Question View Controller-->
         <scene sceneID="t0h-wT-1dc">
             <objects>
-                <viewController storyboardIdentifier="AnswerQuestionView" id="BnI-Hu-hkS" customClass="MultipleChoiceQuestionViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BnI-Hu-hkS" customClass="MultipleChoiceQuestionViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xc1-xh-ahq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
