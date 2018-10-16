@@ -14,7 +14,10 @@ class DailyQuestionInteractor: NSObject, DailyQuestionInteractorInputProtocol {
     weak var output: DailyQuestionInteractorOutputProtocol!
 
 	// MARK: - DailyQuestionInteractorInputProtocol
-
+    func fetchQuestionsForToday() {
+        //FIXME: get questions on CoreData
+    }
+    
     // MARK: - Private Methods
 
 }

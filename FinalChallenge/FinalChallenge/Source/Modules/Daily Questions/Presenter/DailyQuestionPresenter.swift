@@ -16,9 +16,42 @@ class DailyQuestionPresenter: NSObject, DailyQuestionPresenterInputProtocol, Dai
     var router: DailyQuestionRouterProtocol!
 
     // MARK: - DailyQuestionPresenterInputProtocol
+    func numberOfSections() -> Int {
+        //FIXME: return the number of sections that will be presented
+        return 1
+    }
+    
+    func numberOfCards(in section: Int) -> Int {
+        //FIXME: return the number of cards that will be presented
+        return 3
+    }
+    
+    func item(at indexPath: Int) -> Question {
+        //FIXME:
+        return Question()
+    }
+    
+    func didSelectItem(at indexPath: Int) {
+        //FIXME:
+    }
+    
+    func loadNewQuestion() {
+        //FIXME:
+    }
+    
+    func removeQuestion(at indexPath: Int) {
+        //FIXME:
+    }
 
     // MARK: - DailyQuestionPresenterInteractorOutputProtocol
-
+    func handleSuccess(with results: [Question]) {
+        //FIXME:
+    }
+    
+    func handleFailure(with message: String) {
+        //FIXME:
+    }
+    
 	// MARK: - Private Methods
 
 }

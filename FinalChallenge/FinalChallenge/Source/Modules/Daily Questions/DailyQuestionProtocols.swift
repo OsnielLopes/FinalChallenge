@@ -19,19 +19,29 @@ protocol DailyQuestionRouterProtocol: class {
 
 // MARK: - Interactor
 protocol DailyQuestionInteractorInputProtocol {
-
+    func fetchQuestionsForToday()
 }
 
 // MARK: - Presenter
 protocol DailyQuestionPresenterInputProtocol: class {
-
+    func numberOfSections() -> Int
+    func numberOfCards(in section: Int) -> Int
+    
+    func item(at indexPath: Int) -> Question
+    func didSelectItem(at indexPath: Int)
+    
+    func loadNewQuestion()
+    func removeQuestion(at indexPath: Int)
 }
 
 protocol DailyQuestionInteractorOutputProtocol: class {
-
+    func handleSuccess(with results: [Question])
+    func handleFailure(with message: String)
 }
 
 // MARK: - View
 protocol DailyQuestionPresenterOutputProtocol: class {
-
+    func showLoading(_ loading: Bool)
+    func showError(message: String)
+    func reloadData()
 }
