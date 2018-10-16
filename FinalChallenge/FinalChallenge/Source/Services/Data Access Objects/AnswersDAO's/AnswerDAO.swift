@@ -27,4 +27,12 @@ class AnswerDAO {
         completion(nil)
     }
     
+    func fetchByDay(_ day: Date, completion: @escaping ([Answer]?, DataAccessError?) -> (Void)) {
+        self.fetchAll(completion: { answers, err in
+            completion(answers?.filter({ Calendar.current.isDate($0.date! as Date, inSameDayAs: day) }), err)
+        })
+    }
+    
+    
+    
 }

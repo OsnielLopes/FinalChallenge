@@ -43,7 +43,7 @@ class CoreDataManager {
             let request = NSFetchRequest<T>(entityName: entityName)
             return try self.persistentContainer.viewContext.fetch(request)
         } catch {
-            print("There was and error fetching " + String(describing: T.self))
+            print("There was an error fetching " + String(describing: T.self))
         }
         return nil
     }

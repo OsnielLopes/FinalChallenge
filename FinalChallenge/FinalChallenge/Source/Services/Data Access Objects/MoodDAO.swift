@@ -12,19 +12,63 @@ class MoodDAO {
     
     static let shared = MoodDAO()
     
-    private init() { }
+    var moodTypes: [MoodType] = []
     
-    private func initializeMoodTypes() {
-        self.createMoodType(text: "Happy", icon: "happy.png", completion: { type, err in
-            if err != nil {
-                print("Error when creating happy mood type")
+    private init() {
+        self.fetchMoodTypes(completion: { moodTypes, err in
+            guard let moodTypes = moodTypes, err == nil else {
+                self.initializeMoodTypes()
+                return
             }
+            
+            if moodTypes.count == 0 {
+                self.initializeMoodTypes()
+            }
+            self.moodTypes = moodTypes
+            
+        })
+    }
+    
+    func initializeMoodTypes() {
+        
+        self.createMoodType(text: "Awesome", icon: "mood5-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Awesome mood type")
+                return
+            }
+            self.moodTypes.append(newType)
         })
         
-        self.createMoodType(text: "Sad", icon: "sad.png", completion: { type, err in
-            if err != nil {
-                print("Error when creating happy mood type")
+        self.createMoodType(text: "Happy", icon: "mood4-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Happy mood type")
+                return
             }
+            self.moodTypes.append(newType)
+        })
+        
+        self.createMoodType(text: "Indifferent", icon: "mood3-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Indifferent mood type")
+                return
+            }
+            self.moodTypes.append(newType)
+        })
+        
+        self.createMoodType(text: "Sad", icon: "mood2-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Sad mood type")
+                return
+            }
+            self.moodTypes.append(newType)
+        })
+        
+        self.createMoodType(text: "Miserable", icon: "mood1-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Miserable mood type")
+                return
+            }
+            self.moodTypes.append(newType)
         })
     }
     
@@ -33,6 +77,8 @@ class MoodDAO {
             newMoodType.typeIcon = icon
             newMoodType.typeText = text
             CoreDataManager.shared.saveContext()
+            
+            completion(newMoodType, nil)
         } else {
             completion(nil, DataAccessError(message: "Error when creating mood type"))
         }
@@ -58,5 +104,20 @@ class MoodDAO {
             completion(nil, DataAccessError(message: "Error when inserting mood"))
         }
     }
+    
+    func fetchAll(completion: @escaping ([MoodInput]?, DataAccessError?) -> (Void)) {
+        if let allMoodInputs = CoreDataManager.shared.fetch(MoodInput.self) {
+            completion(allMoodInputs, nil)
+        } else {
+            completion(nil, DataAccessError(message: "Error when fetching all mood inputs"))
+        }
+    }
+    
+    func fetchByDay(_ day: Date, completion: @escaping ([MoodInput]?, DataAccessError?) -> (Void)) {
+        self.fetchAll(completion: { moodInputs, err in
+            completion(moodInputs?.filter({ Calendar.current.isDate($0.date! as Date, inSameDayAs: day) }), err)
+        })
+    }
+    
     
 }
