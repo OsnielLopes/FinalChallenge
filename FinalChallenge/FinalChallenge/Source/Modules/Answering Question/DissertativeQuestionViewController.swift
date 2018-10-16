@@ -33,6 +33,9 @@ class DissertativeQuestionViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed() {
+        DissertationAnswersDAO.shared.create(question: question, text: self.textView.text, date: Date(), completion: { _, _ in
+            self.navigationController?.popViewController(animated: false)
+        })
     }
 
 }
