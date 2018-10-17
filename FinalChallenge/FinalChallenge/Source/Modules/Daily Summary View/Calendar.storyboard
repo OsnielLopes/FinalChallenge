@@ -18,34 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-M9-Zu3" userLabel="Daily">
-                                <rect key="frame" x="20" y="322" width="355" height="296"/>
+                                <rect key="frame" x="20" y="342" width="355" height="276"/>
                                 <connections>
                                     <segue destination="hFa-AV-XHW" kind="embed" identifier="daySummarySegue" id="S1t-S4-6gq"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-al-Z0h">
+                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jt-aW-cnP">
                                 <rect key="frame" x="0.0" y="20" width="375" height="302"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-al-Z0h">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="302"/>
+                                        <connections>
+                                            <segue destination="3CJ-sz-vzd" kind="embed" id="dg7-vm-bbY"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="302" id="CIf-VQ-9Z4"/>
+                                    <constraint firstItem="DC9-al-Z0h" firstAttribute="centerX" secondItem="1Jt-aW-cnP" secondAttribute="centerX" id="1gQ-oA-Ho9"/>
+                                    <constraint firstItem="DC9-al-Z0h" firstAttribute="centerY" secondItem="1Jt-aW-cnP" secondAttribute="centerY" id="Cbp-E9-zR2"/>
+                                    <constraint firstAttribute="height" constant="302" id="JSk-wO-q3k"/>
+                                    <constraint firstItem="DC9-al-Z0h" firstAttribute="width" secondItem="1Jt-aW-cnP" secondAttribute="width" id="QTn-61-4nb"/>
+                                    <constraint firstItem="DC9-al-Z0h" firstAttribute="height" secondItem="1Jt-aW-cnP" secondAttribute="height" id="l0E-ax-jp4"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="3CJ-sz-vzd" kind="embed" id="dg7-vm-bbY"/>
-                                </connections>
-                            </containerView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DC9-al-Z0h" firstAttribute="trailing" secondItem="OOy-tz-8M1" secondAttribute="trailing" id="7dQ-HL-QnI"/>
-                            <constraint firstItem="DC9-al-Z0h" firstAttribute="leading" secondItem="OOy-tz-8M1" secondAttribute="leading" id="EYQ-ms-wYh"/>
                             <constraint firstItem="xn1-M9-Zu3" firstAttribute="leading" secondItem="OOy-tz-8M1" secondAttribute="leading" constant="20" id="Hpw-6q-naI"/>
                             <constraint firstItem="OOy-tz-8M1" firstAttribute="bottom" secondItem="xn1-M9-Zu3" secondAttribute="bottom" id="Joe-l9-JFK"/>
-                            <constraint firstItem="DC9-al-Z0h" firstAttribute="top" secondItem="OOy-tz-8M1" secondAttribute="top" id="gLV-Jj-Cck"/>
+                            <constraint firstItem="xn1-M9-Zu3" firstAttribute="top" secondItem="1Jt-aW-cnP" secondAttribute="bottom" constant="20" id="W0p-hs-dyu"/>
+                            <constraint firstItem="OOy-tz-8M1" firstAttribute="trailing" secondItem="1Jt-aW-cnP" secondAttribute="trailing" id="YaJ-db-kdF"/>
+                            <constraint firstItem="1Jt-aW-cnP" firstAttribute="top" secondItem="OOy-tz-8M1" secondAttribute="top" id="bPE-Lw-FUL"/>
+                            <constraint firstItem="1Jt-aW-cnP" firstAttribute="leading" secondItem="OOy-tz-8M1" secondAttribute="leading" id="byl-yv-lmq"/>
                             <constraint firstItem="OOy-tz-8M1" firstAttribute="trailing" secondItem="xn1-M9-Zu3" secondAttribute="trailing" id="hKw-9G-LsE"/>
-                            <constraint firstItem="xn1-M9-Zu3" firstAttribute="top" secondItem="DC9-al-Z0h" secondAttribute="bottom" id="uv8-sp-72D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OOy-tz-8M1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="6AO-Qx-Ly9"/>
+                    <connections>
+                        <outlet property="calendarBorderView" destination="1Jt-aW-cnP" id="Dfq-SC-Oia"/>
+                        <outlet property="calendarContainerView" destination="DC9-al-Z0h" id="LEU-kc-0Aj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2u-Aq-XeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

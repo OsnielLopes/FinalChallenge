@@ -101,6 +101,7 @@
 		BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
 		BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
 		BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
+		BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
 		BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
 		BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
 		BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
@@ -710,6 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
+				BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */,
 				BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */,
 				BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */,
