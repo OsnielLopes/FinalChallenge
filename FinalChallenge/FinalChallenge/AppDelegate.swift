@@ -31,9 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(Date(), forKey: "appHasAlreadyBeenUsedToday")
         }
         
-        
-        
-        
         let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
         

@@ -48,18 +48,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="302"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJc-93-YUi">
-                                <rect key="frame" x="30" y="30" width="142.5" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBS-CE-0DD">
-                                <rect key="frame" x="107.5" y="30" width="105.5" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kUR-Ea-aMi">
                                 <rect key="frame" x="30" y="74" width="203" height="17"/>
                                 <subviews>
@@ -179,30 +167,22 @@
                             <constraint firstItem="nv2-1L-hvx" firstAttribute="leading" secondItem="WTc-gH-PT6" secondAttribute="leading" constant="30" id="4I0-jN-Ikm"/>
                             <constraint firstItem="kUR-Ea-aMi" firstAttribute="leading" secondItem="WTc-gH-PT6" secondAttribute="leading" constant="30" id="A8I-m8-Exg"/>
                             <constraint firstItem="nv2-1L-hvx" firstAttribute="top" secondItem="kUR-Ea-aMi" secondAttribute="bottom" constant="8" id="D2v-n4-td2"/>
-                            <constraint firstItem="TJc-93-YUi" firstAttribute="top" secondItem="WTc-gH-PT6" secondAttribute="top" constant="30" id="HQi-fR-Frs"/>
                             <constraint firstItem="WTc-gH-PT6" firstAttribute="trailing" secondItem="nv2-1L-hvx" secondAttribute="trailing" constant="30" id="JtY-A0-NU1"/>
                             <constraint firstItem="kUR-Ea-aMi" firstAttribute="top" secondItem="NVe-Vl-pyc" secondAttribute="top" constant="74" id="KdE-I4-65b"/>
-                            <constraint firstItem="TBS-CE-0DD" firstAttribute="top" secondItem="NVe-Vl-pyc" secondAttribute="top" constant="30" id="Pus-lC-fI2"/>
-                            <constraint firstItem="TJc-93-YUi" firstAttribute="leading" secondItem="NVe-Vl-pyc" secondAttribute="leading" constant="30" id="VpZ-Q8-mVd"/>
                             <constraint firstItem="nv2-1L-hvx" firstAttribute="bottom" secondItem="WTc-gH-PT6" secondAttribute="bottom" id="Zgm-QL-klx"/>
                             <constraint firstItem="Ga7-RP-n9W" firstAttribute="top" secondItem="WTc-gH-PT6" secondAttribute="top" id="fpt-dv-DK0"/>
-                            <constraint firstItem="TBS-CE-0DD" firstAttribute="centerX" secondItem="NVe-Vl-pyc" secondAttribute="centerX" id="nk5-ty-dFB"/>
                             <constraint firstItem="WTc-gH-PT6" firstAttribute="trailing" secondItem="Ga7-RP-n9W" secondAttribute="trailing" id="pDX-bS-Enw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WTc-gH-PT6"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="sYh-a8-RdO" appends="YES" id="wID-I4-1Fi"/>
                             <outletCollection property="gestureRecognizers" destination="aIb-M3-yWH" appends="YES" id="888-Sx-VMB"/>
+                            <outletCollection property="gestureRecognizers" destination="MBa-tN-OsU" appends="YES" id="rjq-65-Z97"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="currentMonthLabel" destination="TJc-93-YUi" id="QlR-IB-2vF"/>
-                        <outlet property="currentMonthLeadingConstraint" destination="VpZ-Q8-mVd" id="Rzo-Nr-Nap"/>
-                        <outlet property="currentMonthTopConstraint" destination="HQi-fR-Frs" id="OQy-Az-YFq"/>
                         <outlet property="daysColletionView" destination="nv2-1L-hvx" id="RWB-7l-yJh"/>
                         <outlet property="firstWeekdayLabelWidthConstraint" destination="FfT-M5-U5C" id="OBt-fr-IgX"/>
-                        <outlet property="nextMonthLabel" destination="TBS-CE-0DD" id="G3J-Dp-iDg"/>
-                        <outlet property="nextMonthLabelCenterConstraint" destination="nk5-ty-dFB" id="nzV-3X-WNi"/>
                         <outlet property="weekDaysTopConstraint" destination="KdE-I4-65b" id="gNa-AU-ZSb"/>
                         <outlet property="weekdays" destination="kUR-Ea-aMi" id="NTK-WB-Scy"/>
                     </connections>
@@ -218,6 +198,11 @@
                         <action selector="changeTheCalendarStatus" destination="SMa-Qc-yMd" id="3oa-je-H5I"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="MBa-tN-OsU">
+                    <connections>
+                        <action selector="handlePan:" destination="SMa-Qc-yMd" id="OTo-4Q-7c8"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1012" y="84.975369458128085"/>
         </scene>
