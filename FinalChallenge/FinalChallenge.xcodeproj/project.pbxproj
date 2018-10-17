@@ -7,21 +7,215 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451A751F216D3E7600CA0760 /* Assets.xcassets */; };
+		455F6E6721750F1100285713 /* DailyQuestionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6621750F1100285713 /* DailyQuestionProtocols.swift */; };
+		455F6E6A21750F7E00285713 /* DailyQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6921750F7E00285713 /* DailyQuestionRouter.swift */; };
+		455F6E6C21750F9800285713 /* DailyQuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6B21750F9700285713 /* DailyQuestionPresenter.swift */; };
+		455F6E6E21750FA200285713 /* DailyQuestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6D21750FA200285713 /* DailyQuestionInteractor.swift */; };
+		455F6E7421750FAE00285713 /* CenterAndZoomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6F21750FAE00285713 /* CenterAndZoomFlowLayout.swift */; };
+		455F6E7521750FAE00285713 /* DailyQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7021750FAE00285713 /* DailyQuestionView.swift */; };
+		455F6E7621750FAE00285713 /* DailyQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455F6E7121750FAE00285713 /* DailyQuestion.storyboard */; };
+		455F6E7721750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7221750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift */; };
+		455F6E7821750FAE00285713 /* DailyQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7321750FAE00285713 /* DailyQuestionCollectionViewCell.swift */; };
+		491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
+		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
+		491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */; };
+		491511FB21751711007C0E09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511FA21751711007C0E09 /* Router.swift */; };
+		4943FDD82165355600FE2045 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */; };
+		4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */; };
+		49AB023921752D79002B8140 /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
+		49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */; };
+		49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
-		49AE2B1B2163DD4F00055136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B1A2163DD4F00055136 /* ViewController.swift */; };
-		49AE2B1E2163DD4F00055136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* Main.storyboard */; };
-		49AE2B202163DD5200055136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1F2163DD5200055136 /* Assets.xcassets */; };
+		49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
+		49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
+		49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
+		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
+		BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
+		BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
+		BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
+		BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
+		BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
+		BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE3216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift */; };
+		BD290BFF216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE3216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift */; };
+		BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */; };
+		BD290C01216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */; };
+		BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */; };
+		BD290C03216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */; };
+		BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE6216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift */; };
+		BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE6216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift */; };
+		BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE7216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift */; };
+		BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE7216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift */; };
+		BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE8216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift */; };
+		BD290C09216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE8216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift */; };
+		BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE9216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift */; };
+		BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE9216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift */; };
+		BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEA216BE6EF001F16EA /* Answer+CoreDataClass.swift */; };
+		BD290C0D216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEA216BE6EF001F16EA /* Answer+CoreDataClass.swift */; };
+		BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEB216BE6EF001F16EA /* Answer+CoreDataProperties.swift */; };
+		BD290C0F216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEB216BE6EF001F16EA /* Answer+CoreDataProperties.swift */; };
+		BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEC216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift */; };
+		BD290C11216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEC216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift */; };
+		BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BED216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift */; };
+		BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BED216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift */; };
+		BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEE216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift */; };
+		BD290C15216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEE216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift */; };
+		BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEF216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift */; };
+		BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEF216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift */; };
+		BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */; };
+		BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */; };
+		BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */; };
+		BD290C1B216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */; };
+		BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF2216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift */; };
+		BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF2216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift */; };
+		BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF3216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift */; };
+		BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF3216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift */; };
+		BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */; };
+		BD290C21216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */; };
+		BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF5216BE6EF001F16EA /* Category+CoreDataProperties.swift */; };
+		BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF5216BE6EF001F16EA /* Category+CoreDataProperties.swift */; };
+		BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF6216BE6EF001F16EA /* Question+CoreDataClass.swift */; };
+		BD290C25216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF6216BE6EF001F16EA /* Question+CoreDataClass.swift */; };
+		BD290C26216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF7216BE6EF001F16EA /* Question+CoreDataProperties.swift */; };
+		BD290C27216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF7216BE6EF001F16EA /* Question+CoreDataProperties.swift */; };
+		BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C29216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift */; };
+		BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2B216BF569001F16EA /* QuestionsDAOTests.swift */; };
+		BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2D216D15E0001F16EA /* RadioboxQuestionDAO.swift */; };
+		BD290C2F216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2D216D15E0001F16EA /* RadioboxQuestionDAO.swift */; };
+		BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C30216D17F6001F16EA /* RadioboxQuestionDAOTests.swift */; };
+		BD290C35216D1A90001F16EA /* AuthorDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C34216D1A90001F16EA /* AuthorDAOTests.swift */; };
+		BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C36216D1B60001F16EA /* AuthorDAO.swift */; };
+		BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C36216D1B60001F16EA /* AuthorDAO.swift */; };
+		BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
+		BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
+		BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */; };
+		BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */; };
+		BD290C4A216D352D001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
+		BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
+		BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD290C4F216E9613001F16EA /* Calendar.storyboard */; };
+		BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
+		BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
+		BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
+		BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
+		BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
+		BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
+		BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
+		BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
+		BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
+		BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
+		BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */; };
+		BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */; };
+		BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
+		BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
+		BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
+		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
+		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
+		BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
+		BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
+		BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */; };
+		BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
+		BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
+		BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
+		BD974A722167F12E00612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
+		BD974A732167F13000612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
+		BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
+		BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A782167F86900612838 /* CategoryDAOTests.swift */; };
+		BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
+		BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
+		BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */; };
+		BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */; };
+		BDA08141217578D200F57696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BD974A4F2167F01800612838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49AE2B0D2163DD4F00055136 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49AE2B142163DD4F00055136;
+			remoteInfo = FinalChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		451A751F216D3E7600CA0760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		455F6E6621750F1100285713 /* DailyQuestionProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionProtocols.swift; path = "FinalChallenge/Source/Modules/New Group/DailyQuestionProtocols.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E6921750F7E00285713 /* DailyQuestionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionRouter.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionRouter.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E6B21750F9700285713 /* DailyQuestionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionPresenter.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionPresenter.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E6D21750FA200285713 /* DailyQuestionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionInteractor.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionInteractor.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E6F21750FAE00285713 /* CenterAndZoomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CenterAndZoomFlowLayout.swift; path = "FinalChallenge/Source/Modules/Daily Questions/CenterAndZoomFlowLayout.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E7021750FAE00285713 /* DailyQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionView.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionView.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E7121750FAE00285713 /* DailyQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DailyQuestion.storyboard; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestion.storyboard"; sourceTree = SOURCE_ROOT; };
+		455F6E7221750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseRoundedCardCollectionViewCell.swift; path = "FinalChallenge/Source/Modules/Daily Questions/BaseRoundedCardCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		455F6E7321750FAE00285713 /* DailyQuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyQuestionCollectionViewCell.swift; path = "FinalChallenge/Source/Modules/Daily Questions/DailyQuestionCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		491511EE216FBFF6007C0E09 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		491511F0216FC045007C0E09 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
+		491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionViewController.swift; sourceTree = "<group>"; };
+		491511FA21751711007C0E09 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		49AB023821752D79002B8140 /* QuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
+		49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionViewController.swift; sourceTree = "<group>"; };
+		49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnswerQuestion.storyboard; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49AE2B1A2163DD4F00055136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		49AE2B1D2163DD4F00055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		49AE2B1F2163DD5200055136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49AE2B1D2163DD4F00055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnlyCalendar.storyboard; sourceTree = "<group>"; };
 		49AE2B222163DD5200055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AE2B242163DD5200055136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49AE2B2A2163DF0B00055136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49AE2B2C2163DF1900055136 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxAnswer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxAnswer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodInput+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BE3216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodInput+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BE6216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxAnswer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BE7216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxAnswer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BE8216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxQuestion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BE9216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckboxQuestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BEA216BE6EF001F16EA /* Answer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BEB216BE6EF001F16EA /* Answer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BEC216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxQuestion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BED216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioboxQuestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BEE216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DissertationQuestion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BEF216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DissertationQuestion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BF2216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DissertationAnswer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BF3216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DissertationAnswer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BF5216BE6EF001F16EA /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290BF6216BE6EF001F16EA /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD290BF7216BE6EF001F16EA /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BD290C29216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxQuestionDAOTests.swift; sourceTree = "<group>"; };
+		BD290C2B216BF569001F16EA /* QuestionsDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDAOTests.swift; sourceTree = "<group>"; };
+		BD290C2D216D15E0001F16EA /* RadioboxQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioboxQuestionDAO.swift; sourceTree = "<group>"; };
+		BD290C30216D17F6001F16EA /* RadioboxQuestionDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioboxQuestionDAOTests.swift; sourceTree = "<group>"; };
+		BD290C34216D1A90001F16EA /* AuthorDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDAOTests.swift; sourceTree = "<group>"; };
+		BD290C36216D1B60001F16EA /* AuthorDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDAO.swift; sourceTree = "<group>"; };
+		BD290C41216D2FDD001F16EA /* AnswerDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerDAO.swift; sourceTree = "<group>"; };
+		BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertationAnswersDAO.swift; sourceTree = "<group>"; };
+		BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxAnswer.swift; sourceTree = "<group>"; };
+		BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioboxAnswerDAO.swift; sourceTree = "<group>"; };
+		BD290C49216D352D001F16EA /* MoodDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDAO.swift; sourceTree = "<group>"; };
+		BD290C4F216E9613001F16EA /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryTableViewController.swift; sourceTree = "<group>"; };
+		BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryViewController.swift; sourceTree = "<group>"; };
+		BD290C6321752918001F16EA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
+		BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInputTableViewCell.swift; sourceTree = "<group>"; };
+		BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalChallengeDatabase.xcdatamodel; sourceTree = "<group>"; };
+		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
+		BD974A38216681F100612838 /* QuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDAO.swift; sourceTree = "<group>"; };
+		BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAO.swift; sourceTree = "<group>"; };
+		BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxQuestionDAO.swift; sourceTree = "<group>"; };
+		BD974A4A2167F01800612838 /* FinalChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD974A4E2167F01800612838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAOTests.swift; sourceTree = "<group>"; };
+		BD974A742167F4F700612838 /* CategoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
+		BD974A782167F86900612838 /* CategoryDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAOTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,13 +226,146 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD974A472167F01800612838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454DF7A721655BDB0091E792 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A252163F74B00612838 /* Models */,
+				457F34F5216FD6E100B3F1C6 /* Modules */,
+				491511F621751232007C0E09 /* Services */,
+				491511F72175124C007C0E09 /* Utils */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		454DF7A821655D200091E792 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				451A751F216D3E7600CA0760 /* Assets.xcassets */,
+				49AE2B242163DD5200055136 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		455F6E6821750F1F00285713 /* Daily Questions */ = {
+			isa = PBXGroup;
+			children = (
+				455F6E6621750F1100285713 /* DailyQuestionProtocols.swift */,
+				45652BB72167E0E30085A5A2 /* Router */,
+				45652BB52167E0C50085A5A2 /* Presenter */,
+				45652BB82167E0F10085A5A2 /* Interactor */,
+				45652BB92167E0FE0085A5A2 /* View */,
+			);
+			name = "Daily Questions";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		45652BB52167E0C50085A5A2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				455F6E6B21750F9700285713 /* DailyQuestionPresenter.swift */,
+			);
+			name = Presenter;
+			path = "../../Daily Questions";
+			sourceTree = "<group>";
+		};
+		45652BB72167E0E30085A5A2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				455F6E6921750F7E00285713 /* DailyQuestionRouter.swift */,
+			);
+			name = Router;
+			path = "../../Daily Questions";
+			sourceTree = "<group>";
+		};
+		45652BB82167E0F10085A5A2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				455F6E6D21750FA200285713 /* DailyQuestionInteractor.swift */,
+			);
+			name = Interactor;
+			path = "../../Daily Questions";
+			sourceTree = "<group>";
+		};
+		45652BB92167E0FE0085A5A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				455F6E7221750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift */,
+				455F6E6F21750FAE00285713 /* CenterAndZoomFlowLayout.swift */,
+				455F6E7121750FAE00285713 /* DailyQuestion.storyboard */,
+				455F6E7321750FAE00285713 /* DailyQuestionCollectionViewCell.swift */,
+				455F6E7021750FAE00285713 /* DailyQuestionView.swift */,
+			);
+			name = View;
+			path = "../../Daily Questions";
+			sourceTree = "<group>";
+		};
+		457F34F5216FD6E100B3F1C6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4925B40D217571D100413181 /* Calendar */,
+				491511F4216FD351007C0E09 /* Answering Question */,
+				455F6E6821750F1F00285713 /* Daily Questions */,
+				BD71F695217562460011C885 /* Daily Summary View */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		491511F4216FD351007C0E09 /* Answering Question */ = {
+			isa = PBXGroup;
+			children = (
+				49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */,
+				49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */,
+				491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */,
+			);
+			path = "Answering Question";
+			sourceTree = "<group>";
+		};
+		491511F621751232007C0E09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A282163FD4C00612838 /* Managers */,
+				BD974A3521654B4100612838 /* Data Access Objects */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		491511F72175124C007C0E09 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
+				491511EE216FBFF6007C0E09 /* Extensions.swift */,
+				491511FA21751711007C0E09 /* Router.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4925B40D217571D100413181 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */,
+				4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */,
+				49AE2B2A2163DF0B00055136 /* ViewController.swift */,
+				49AE2B2C2163DF1900055136 /* CalendarViewController.swift */,
+				49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		49AE2B0C2163DD4F00055136 = {
 			isa = PBXGroup;
 			children = (
 				49AE2B172163DD4F00055136 /* FinalChallenge */,
+				BD974A4B2167F01800612838 /* FinalChallengeTests */,
 				49AE2B162163DD4F00055136 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				49AE2B152163DD4F00055136 /* FinalChallenge.app */,
+				BD974A4A2167F01800612838 /* FinalChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,13 +383,153 @@
 			isa = PBXGroup;
 			children = (
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
-				49AE2B1A2163DD4F00055136 /* ViewController.swift */,
-				49AE2B1C2163DD4F00055136 /* Main.storyboard */,
-				49AE2B1F2163DD5200055136 /* Assets.xcassets */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
-				49AE2B242163DD5200055136 /* Info.plist */,
+				454DF7A821655D200091E792 /* Resources */,
+				454DF7A721655BDB0091E792 /* Source */,
 			);
 			path = FinalChallenge;
+			sourceTree = "<group>";
+		};
+		BD290C32216D1A49001F16EA /* Data Access Objects Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A782167F86900612838 /* CategoryDAOTests.swift */,
+				BD290C34216D1A90001F16EA /* AuthorDAOTests.swift */,
+				BD290C33216D1A6A001F16EA /* QuestionsDAO's Tests */,
+			);
+			path = "Data Access Objects Tests";
+			sourceTree = "<group>";
+		};
+		BD290C33216D1A6A001F16EA /* QuestionsDAO's Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */,
+				BD290C29216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift */,
+				BD290C2B216BF569001F16EA /* QuestionsDAOTests.swift */,
+				BD290C30216D17F6001F16EA /* RadioboxQuestionDAOTests.swift */,
+			);
+			path = "QuestionsDAO's Tests";
+			sourceTree = "<group>";
+		};
+		BD290C40216D2FBB001F16EA /* AnswersDAO's */ = {
+			isa = PBXGroup;
+			children = (
+				BD290C41216D2FDD001F16EA /* AnswerDAO.swift */,
+				BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */,
+				BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */,
+				BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */,
+			);
+			path = "AnswersDAO's";
+			sourceTree = "<group>";
+		};
+		BD71F695217562460011C885 /* Daily Summary View */ = {
+			isa = PBXGroup;
+			children = (
+				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
+				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
+				BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */,
+				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
+				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
+			);
+			path = "Daily Summary View";
+			sourceTree = "<group>";
+		};
+		BD974A252163F74B00612838 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */,
+				BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */,
+				BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */,
+				BD290BF5216BE6EF001F16EA /* Category+CoreDataProperties.swift */,
+				BD974A3A2166A04D00612838 /* Question */,
+				BD974A3B2166A05E00612838 /* Answer */,
+				BD974A3C2166A07000612838 /* Mood */,
+				BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD974A282163FD4C00612838 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				49AB023821752D79002B8140 /* QuestionsManager.swift */,
+				BD974A262163FD4600612838 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BD974A3521654B4100612838 /* Data Access Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A3621654E3800612838 /* DataAccessError.swift */,
+				BD974A742167F4F700612838 /* CategoryDAO.swift */,
+				BD290C36216D1B60001F16EA /* AuthorDAO.swift */,
+				BD290C49216D352D001F16EA /* MoodDAO.swift */,
+				BD974A3D2167CDE300612838 /* QuestionsDAO's */,
+				BD290C40216D2FBB001F16EA /* AnswersDAO's */,
+			);
+			path = "Data Access Objects";
+			sourceTree = "<group>";
+		};
+		BD974A3A2166A04D00612838 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				BD290BF6216BE6EF001F16EA /* Question+CoreDataClass.swift */,
+				BD290BF7216BE6EF001F16EA /* Question+CoreDataProperties.swift */,
+				BD290BEE216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift */,
+				BD290BEF216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift */,
+				BD290BEC216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift */,
+				BD290BED216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift */,
+				BD290BE8216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift */,
+				BD290BE9216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		BD974A3B2166A05E00612838 /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				BD290BF2216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift */,
+				BD290BF3216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift */,
+				BD290BEA216BE6EF001F16EA /* Answer+CoreDataClass.swift */,
+				BD290BEB216BE6EF001F16EA /* Answer+CoreDataProperties.swift */,
+				BD290BE6216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift */,
+				BD290BE7216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift */,
+				BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */,
+				BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
+		BD974A3C2166A07000612838 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */,
+				BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */,
+				BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */,
+				BD290BE3216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift */,
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
+		BD974A3D2167CDE300612838 /* QuestionsDAO's */ = {
+			isa = PBXGroup;
+			children = (
+				BD974A38216681F100612838 /* QuestionDAO.swift */,
+				BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */,
+				BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */,
+				BD290C2D216D15E0001F16EA /* RadioboxQuestionDAO.swift */,
+			);
+			path = "QuestionsDAO's";
+			sourceTree = "<group>";
+		};
+		BD974A4B2167F01800612838 /* FinalChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD290C32216D1A49001F16EA /* Data Access Objects Tests */,
+				BD974A4E2167F01800612838 /* Info.plist */,
+			);
+			path = FinalChallengeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +552,24 @@
 			productReference = 49AE2B152163DD4F00055136 /* FinalChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BD974A492167F01800612838 /* FinalChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD974A512167F01800612838 /* Build configuration list for PBXNativeTarget "FinalChallengeTests" */;
+			buildPhases = (
+				BD974A462167F01800612838 /* Sources */,
+				BD974A472167F01800612838 /* Frameworks */,
+				BD974A482167F01800612838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD974A502167F01800612838 /* PBXTargetDependency */,
+			);
+			name = FinalChallengeTests;
+			productName = FinalChallengeTests;
+			productReference = BD974A4A2167F01800612838 /* FinalChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +582,10 @@
 				TargetAttributes = {
 					49AE2B142163DD4F00055136 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					BD974A492167F01800612838 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 49AE2B142163DD4F00055136;
 					};
 				};
 			};
@@ -113,6 +603,7 @@
 			projectRoot = "";
 			targets = (
 				49AE2B142163DD4F00055136 /* FinalChallenge */,
+				BD974A492167F01800612838 /* FinalChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -122,9 +613,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */,
+				49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */,
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
-				49AE2B202163DD5200055136 /* Assets.xcassets in Resources */,
-				49AE2B1E2163DD4F00055136 /* Main.storyboard in Resources */,
+				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
+				455F6E7621750FAE00285713 /* DailyQuestion.storyboard in Resources */,
+				49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD974A482167F01800612838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,20 +636,146 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49AE2B1B2163DD4F00055136 /* ViewController.swift in Sources */,
+				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
+				BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
+				491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */,
+				455F6E7821750FAE00285713 /* DailyQuestionCollectionViewCell.swift in Sources */,
+				455F6E7721750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift in Sources */,
+				BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */,
+				BD290C4A216D352D001F16EA /* MoodDAO.swift in Sources */,
+				BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
+				BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */,
+				BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */,
+				BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */,
+				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
+				491511FB21751711007C0E09 /* Router.swift in Sources */,
+				455F6E6C21750F9800285713 /* DailyQuestionPresenter.swift in Sources */,
+				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
+				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
+				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
+				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
+				BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
+				BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
+				BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
+				BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
+				BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
+				BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
+				49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */,
+				455F6E6A21750F7E00285713 /* DailyQuestionRouter.swift in Sources */,
+				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
+				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
+				BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
+				455F6E7521750FAE00285713 /* DailyQuestionView.swift in Sources */,
+				49AB023921752D79002B8140 /* QuestionsManager.swift in Sources */,
+				BD290C26216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
+				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
+				455F6E7421750FAE00285713 /* CenterAndZoomFlowLayout.swift in Sources */,
+				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
+				BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
+				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
+				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
+				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
+				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
+				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
+				BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
+				BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
+				BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
+				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
+				BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */,
+				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
+				455F6E6E21750FA200285713 /* DailyQuestionInteractor.swift in Sources */,
+				455F6E6721750F1100285713 /* DailyQuestionProtocols.swift in Sources */,
+				491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */,
+				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
+				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
+				491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */,
+				BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */,
+				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
+				4943FDD82165355600FE2045 /* CalendarCollectionViewCell.swift in Sources */,
+				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,
+				49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */,
+				4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
+				BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD974A462167F01800612838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
+				BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
+				BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */,
+				BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */,
+				BD290C15216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
+				BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */,
+				BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
+				BD974A732167F13000612838 /* CoreDataManager.swift in Sources */,
+				BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
+				BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */,
+				BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */,
+				BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */,
+				BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */,
+				BD290C09216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
+				BD290BFF216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
+				BD290C0F216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
+				BD290C1B216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
+				BD290C25216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
+				BD290C27216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
+				BD290C2F216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
+				BD290C35216D1A90001F16EA /* AuthorDAOTests.swift in Sources */,
+				BD290C03216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
+				BD290C11216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
+				BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */,
+				BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */,
+				BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
+				BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */,
+				BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
+				BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
+				BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */,
+				BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */,
+				BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */,
+				BD290C21216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
+				BD290C01216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
+				BDA08141217578D200F57696 /* ViewController.swift in Sources */,
+				BD290C0D216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
+				BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
+				BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
+				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
+				BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
+				BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */,
+				BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
+				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
+				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
+				BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
+				BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */,
+				BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */,
+				BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
+				BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
+				BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
+				BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */,
+				BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BD974A502167F01800612838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49AE2B142163DD4F00055136 /* FinalChallenge */;
+			targetProxy = BD974A4F2167F01800612838 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		49AE2B1C2163DD4F00055136 /* Main.storyboard */ = {
+		49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				49AE2B1D2163DD4F00055136 /* Base */,
 			);
-			name = Main.storyboard;
+			name = OnlyCalendar.storyboard;
 			sourceTree = "<group>";
 		};
 		49AE2B212163DD5200055136 /* LaunchScreen.storyboard */ = {
@@ -283,16 +910,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
-				INFOPLIST_FILE = FinalChallenge/Info.plist;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.OsnielTeixeira.FinalChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,16 +928,56 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
-				INFOPLIST_FILE = FinalChallenge/Info.plist;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.OsnielTeixeira.FinalChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BD974A522167F01800612838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = FinalChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.FinalChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalChallenge.app/FinalChallenge";
+			};
+			name = Debug;
+		};
+		BD974A532167F01800612838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = FinalChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.FinalChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalChallenge.app/FinalChallenge";
 			};
 			name = Release;
 		};
@@ -335,7 +1002,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BD974A512167F01800612838 /* Build configuration list for PBXNativeTarget "FinalChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD974A522167F01800612838 /* Debug */,
+				BD974A532167F01800612838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */,
+			);
+			currentVersion = BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */;
+			path = FinalChallengeDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49AE2B0D2163DD4F00055136 /* Project object */;
 }
