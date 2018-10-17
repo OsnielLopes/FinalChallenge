@@ -20,7 +20,7 @@ class DailySummaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cornerRadiusValue = self.calendarBorderView.frame.size.width / 10
+        let cornerRadiusValue = self.calendarBorderView.frame.size.width / 15
         
         self.calendarContainerView.layer.cornerRadius = cornerRadiusValue
         self.calendarContainerView.clipsToBounds = true
@@ -28,7 +28,7 @@ class DailySummaryViewController: UIViewController {
         self.calendarBorderView.layer.cornerRadius = cornerRadiusValue
         self.calendarBorderView.clipsToBounds = true
         
-        self.calendarBorderView.dropShadow(color: .black, opacity: 0.5, offSet: CGSize(width: 0, height: 10), radius: 2, scale: true)
+        self.calendarBorderView.dropShadow(color: UIColor(red: 18/255, green: 40/255, blue: 37/255, alpha: 1), opacity: 0.25, offSet: CGSize(width: 0, height: 5), radius: 20, scale: true)
     }
     
     func reloadData() {

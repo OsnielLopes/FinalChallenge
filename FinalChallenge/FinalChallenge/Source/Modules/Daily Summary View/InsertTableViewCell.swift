@@ -31,7 +31,7 @@ class InsertTableViewCell: UITableViewCell {
         
         self.insertButton.layer.cornerRadius = self.insertButton.frame.height / 2
         self.insertButton.clipsToBounds = true
-        self.insertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 3), radius: 2, scale: false)
+        self.insertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)
     }
     
     func setButtons() {
@@ -72,7 +72,7 @@ class InsertTableViewCell: UITableViewCell {
         newInsertButton.alpha = 0
         newInsertButton.layer.cornerRadius = newInsertButton.frame.height / 2
         newInsertButton.clipsToBounds = true
-        newInsertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 3), radius: 2, scale: false)
+        newInsertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)
         self.addSubview(newInsertButton)
         return newInsertButton
     }
