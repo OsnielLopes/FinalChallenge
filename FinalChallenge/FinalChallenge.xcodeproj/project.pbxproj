@@ -102,6 +102,13 @@
 		BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
 		BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
 		BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
+		BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */; };
+		BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
+		BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
+		BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
+		BD4E0E812179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
+		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
+		BD4E0E8421791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
 		BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
 		BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
 		BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
@@ -208,6 +215,10 @@
 		BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryViewController.swift; sourceTree = "<group>"; };
 		BD290C6321752918001F16EA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInputTableViewCell.swift; sourceTree = "<group>"; };
+		BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreathingView.storyboard; sourceTree = "<group>"; };
+		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
+		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
+		BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
 		BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalChallengeDatabase.xcdatamodel; sourceTree = "<group>"; };
 		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
@@ -330,6 +341,9 @@
 				49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */,
 				49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */,
 				491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */,
+				BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */,
+				BD4E0E8521791BF500DEA2F5 /* Bullshit */,
+				BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */,
 			);
 			path = "Answering Question";
 			sourceTree = "<group>";
@@ -424,6 +438,15 @@
 				BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */,
 			);
 			path = "AnswersDAO's";
+			sourceTree = "<group>";
+		};
+		BD4E0E8521791BF500DEA2F5 /* Bullshit */ = {
+			isa = PBXGroup;
+			children = (
+				BD4E0E7C2179192100DEA2F5 /* giphy.gif */,
+				BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */,
+			);
+			path = Bullshit;
 			sourceTree = "<group>";
 		};
 		BD71F695217562460011C885 /* Daily Summary View */ = {
@@ -623,6 +646,8 @@
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
 				455F6E7621750FAE00285713 /* DailyQuestion.storyboard in Resources */,
+				BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */,
+				BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */,
 				49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +656,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,10 +678,12 @@
 				BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */,
 				BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */,
 				BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */,
+				BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
 				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
 				491511FB21751711007C0E09 /* Router.swift in Sources */,
 				455F6E6C21750F9800285713 /* DailyQuestionPresenter.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
+				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
@@ -729,6 +757,7 @@
 				BD290C0F216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
 				BD290C1B216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
 				BD290C25216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
+				BD4E0E812179197A00DEA2F5 /* FunnyGif.swift in Sources */,
 				BD290C27216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
 				BD290C2F216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
 				BD290C35216D1A90001F16EA /* AuthorDAOTests.swift in Sources */,
@@ -744,6 +773,7 @@
 				BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */,
 				BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */,
 				BD290C21216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
+				BD4E0E8421791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
 				BD290C01216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
 				BDA08141217578D200F57696 /* ViewController.swift in Sources */,
 				BD290C0D216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
