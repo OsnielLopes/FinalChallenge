@@ -97,6 +97,8 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     }
     
     @IBAction func touchRemoveButton(_ sender: UIButton) {
-//        self.presenter.removeQuestion(at: <#T##Int#>)
+        if let currentCard = self.dailyQuestionCollectionView.visibleCells.first(where: { return $0.frame.minY < 0 }), let currentIndexPath = self.dailyQuestionCollectionView.indexPath(for: currentCard) {
+            self.presenter.removeQuestion(at: currentIndexPath.row)
+        }
     }
 }

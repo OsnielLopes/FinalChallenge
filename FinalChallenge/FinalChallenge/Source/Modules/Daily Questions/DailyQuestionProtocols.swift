@@ -20,6 +20,7 @@ protocol DailyQuestionRouterProtocol: class {
 // MARK: - Interactor
 protocol DailyQuestionInteractorInputProtocol {
     func fetchQuestionsForToday()
+    func fetchNewQuestion()
 }
 
 // MARK: - Presenter

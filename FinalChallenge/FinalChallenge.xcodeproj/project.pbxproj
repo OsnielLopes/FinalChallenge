@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450ED4C52177ABA700195CAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450ED4C42177ABA700195CAE /* Constants.swift */; };
+		450ED4CB2177D85300195CAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 450ED4CD2177D85300195CAE /* Localizable.strings */; };
 		451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451A751F216D3E7600CA0760 /* Assets.xcassets */; };
 		453953F621766D0F00CF71EC /* DailyQuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453953F021766D0F00CF71EC /* DailyQuestionPresenter.swift */; };
 		453953F721766D0F00CF71EC /* DailyQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453953F121766D0F00CF71EC /* DailyQuestionRouter.swift */; };
@@ -139,6 +141,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450ED4C42177ABA700195CAE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		450ED4C62177D7D700195CAE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		450ED4C72177D7D700195CAE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/OnlyCalendar.strings"; sourceTree = "<group>"; };
+		450ED4CC2177D85300195CAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		450ED4CE2177D85400195CAE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		451A751F216D3E7600CA0760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453953F021766D0F00CF71EC /* DailyQuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionPresenter.swift; sourceTree = "<group>"; };
 		453953F121766D0F00CF71EC /* DailyQuestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestionRouter.swift; sourceTree = "<group>"; };
@@ -236,6 +243,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450ED4C82177D7FE00195CAE /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				450ED4CD2177D85300195CAE /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		453953EE21766CD900CF71EC /* Daily Questions */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +321,7 @@
 		454DF7A821655D200091E792 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				450ED4C82177D7FE00195CAE /* Localizable */,
 				451A751F216D3E7600CA0760 /* Assets.xcassets */,
 				49AE2B242163DD5200055136 /* Info.plist */,
 			);
@@ -348,6 +364,7 @@
 				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
 				491511EE216FBFF6007C0E09 /* Extensions.swift */,
 				491511FA21751711007C0E09 /* Router.swift */,
+				450ED4C42177ABA700195CAE /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -599,6 +616,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 49AE2B0C2163DD4F00055136;
 			productRefGroup = 49AE2B162163DD4F00055136 /* Products */;
@@ -619,6 +637,7 @@
 				BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */,
 				49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */,
 				4539540D21766DBF00CF71EC /* DailyQuestion.storyboard in Resources */,
+				450ED4CB2177D85300195CAE /* Localizable.strings in Resources */,
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
 				49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */,
@@ -648,6 +667,7 @@
 				453953F821766D0F00CF71EC /* DailyQuestionProtocols.swift in Sources */,
 				BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 				BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */,
+				450ED4C52177ABA700195CAE /* Constants.swift in Sources */,
 				BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */,
 				BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */,
 				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
@@ -773,10 +793,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		450ED4CD2177D85300195CAE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				450ED4CC2177D85300195CAE /* en */,
+				450ED4CE2177D85400195CAE /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				49AE2B1D2163DD4F00055136 /* Base */,
+				450ED4C72177D7D700195CAE /* pt-BR */,
 			);
 			name = OnlyCalendar.storyboard;
 			sourceTree = "<group>";
@@ -785,6 +815,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				49AE2B222163DD5200055136 /* Base */,
+				450ED4C62177D7D700195CAE /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -796,6 +827,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -857,6 +889,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
