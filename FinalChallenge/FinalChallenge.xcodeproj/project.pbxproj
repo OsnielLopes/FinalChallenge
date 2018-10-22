@@ -109,6 +109,8 @@
 		BD4E0E812179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
 		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
 		BD4E0E8421791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
+		BD4E0E8721791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */; };
+		BD4E0E8821791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */; };
 		BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
 		BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
 		BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
@@ -136,6 +138,16 @@
 		BDA08141217578D200F57696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 		BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
 		BDA84B91217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
+		BDC07EE1217E3BA9009D5C8D /* DailyQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7021750FAE00285713 /* DailyQuestionView.swift */; };
+		BDC07EE2217E3DA2009D5C8D /* DailyQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6921750F7E00285713 /* DailyQuestionRouter.swift */; };
+		BDC07EE3217E3DA2009D5C8D /* DailyQuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6B21750F9700285713 /* DailyQuestionPresenter.swift */; };
+		BDC07EE4217E3DA2009D5C8D /* DailyQuestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6D21750FA200285713 /* DailyQuestionInteractor.swift */; };
+		BDC07EE5217E3DA6009D5C8D /* BaseRoundedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7221750FAE00285713 /* BaseRoundedCardCollectionViewCell.swift */; };
+		BDC07EE6217E3DA6009D5C8D /* CenterAndZoomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E6F21750FAE00285713 /* CenterAndZoomFlowLayout.swift */; };
+		BDC07EE7217E3DA6009D5C8D /* DailyQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455F6E7121750FAE00285713 /* DailyQuestion.storyboard */; };
+		BDC07EE8217E3DA6009D5C8D /* DailyQuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F6E7321750FAE00285713 /* DailyQuestionCollectionViewCell.swift */; };
+		BDC07EE9217E3DD1009D5C8D /* DissertativeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */; };
+		BDC07EEA217E3DD4009D5C8D /* MultipleChoiceQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +231,7 @@
 		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
 		BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
+		BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToScreenSizeTransitionAnimation.swift; sourceTree = "<group>"; };
 		BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalChallengeDatabase.xcdatamodel; sourceTree = "<group>"; };
 		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
@@ -341,9 +354,10 @@
 				49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */,
 				49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */,
 				491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */,
-				BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */,
 				BD4E0E8521791BF500DEA2F5 /* Bullshit */,
+				BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */,
 				BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */,
+				BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */,
 			);
 			path = "Answering Question";
 			sourceTree = "<group>";
@@ -656,6 +670,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC07EE7217E3DA6009D5C8D /* DailyQuestion.storyboard in Resources */,
 				BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,6 +746,7 @@
 				4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
 				BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
+				BD4E0E8721791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC07EE1217E3BA9009D5C8D /* DailyQuestionView.swift in Sources */,
 				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
 				BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */,
 				BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
@@ -747,9 +764,12 @@
 				BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */,
 				BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
 				BD974A732167F13000612838 /* CoreDataManager.swift in Sources */,
+				BDC07EE3217E3DA2009D5C8D /* DailyQuestionPresenter.swift in Sources */,
 				BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
+				BDC07EE4217E3DA2009D5C8D /* DailyQuestionInteractor.swift in Sources */,
 				BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */,
 				BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */,
+				BD4E0E8821791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */,
 				BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */,
 				BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */,
 				BD290C09216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
@@ -767,6 +787,7 @@
 				BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */,
+				BDC07EE2217E3DA2009D5C8D /* DailyQuestionRouter.swift in Sources */,
 				BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */,
@@ -780,8 +801,12 @@
 				BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
+				BDC07EE5217E3DA6009D5C8D /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
+				BDC07EEA217E3DD4009D5C8D /* MultipleChoiceQuestionViewController.swift in Sources */,
 				BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */,
+				BDC07EE9217E3DD1009D5C8D /* DissertativeQuestionViewController.swift in Sources */,
+				BDC07EE8217E3DA6009D5C8D /* DailyQuestionCollectionViewCell.swift in Sources */,
 				BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
 				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
@@ -793,6 +818,7 @@
 				BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
 				BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */,
+				BDC07EE6217E3DA6009D5C8D /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,12 +13,12 @@
         <!--Breathing View Controller-->
         <scene sceneID="qch-So-tg9">
             <objects>
-                <viewController id="qzt-EN-65o" customClass="BreathingViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="breathingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qzt-EN-65o" customClass="BreathingViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W4w-nG-nok">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-t7-5WB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-t7-5WB">
                                 <rect key="frame" x="75" y="243.5" width="225" height="200"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Respire por um momento, toque para refletir hoje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxq-bx-rT3">

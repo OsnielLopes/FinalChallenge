@@ -12,6 +12,8 @@ class InsertTableViewCell: UITableViewCell {
     
     @IBOutlet weak var insertButton: UIButton!
     
+    var questionButton: UIButton!
+    
     @IBOutlet weak var lineView: UIView!
     
     var moodButtons: [UIButton] = []
@@ -46,9 +48,9 @@ class InsertTableViewCell: UITableViewCell {
             self.moodButtons.append(button)
         }
         
-        let questionButton = self.instantiateMenuButton(forImage: UIImage(named: "question-icon")!)
+        self.questionButton = self.instantiateMenuButton(forImage: UIImage(named: "question-icon")!)
         questionButton.addTarget(self, action: #selector(didTapQuestionButton), for: .touchUpInside)
-        self.insertButtons.append(questionButton)
+        self.insertButtons.append(self.questionButton)
         
         let moodButton = self.instantiateMenuButton(forImage: UIImage(named: "mood3-icon")!)
         moodButton.addTarget(self, action: #selector(didTapMoodButton), for: .touchUpInside)
@@ -105,7 +107,7 @@ class InsertTableViewCell: UITableViewCell {
     }
     
     @objc func didTapQuestionButton() {
-        self.daySummaryTableViewController.didTapInsertQuestion()
+        self.daySummaryTableViewController.didTapInsertQuestion(insertButton: self.questionButton)
     }
 }
 
