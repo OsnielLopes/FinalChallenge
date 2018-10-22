@@ -23,6 +23,8 @@
 		491511FB21751711007C0E09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511FA21751711007C0E09 /* Router.swift */; };
 		4943FDD82165355600FE2045 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */; };
 		4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */; };
+		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
+		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
 		49AB023921752D79002B8140 /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
 		49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */; };
 		49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */; };
@@ -155,6 +157,8 @@
 		491511FA21751711007C0E09 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewController.swift; sourceTree = "<group>"; };
+		494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
 		49AB023821752D79002B8140 /* QuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
 		49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionViewController.swift; sourceTree = "<group>"; };
 		49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnswerQuestion.storyboard; sourceTree = "<group>"; };
@@ -357,6 +361,8 @@
 				49AE2B2A2163DF0B00055136 /* ViewController.swift */,
 				49AE2B2C2163DF1900055136 /* CalendarViewController.swift */,
 				49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */,
+				494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */,
+				494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -651,6 +657,7 @@
 				491511FB21751711007C0E09 /* Router.swift in Sources */,
 				455F6E6C21750F9800285713 /* DailyQuestionPresenter.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
+				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
@@ -697,6 +704,7 @@
 				4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
 				BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
+				494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
