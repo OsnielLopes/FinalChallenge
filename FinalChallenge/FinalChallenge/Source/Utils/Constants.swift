@@ -137,6 +137,11 @@ enum Project {
     }
     
     // MARK: - UserDafaults
+    enum UserSettings: String {
+        case appHasBeenUsed = "appHasAlreadyBeenUsed"
+        case appHasBeenUsedToday = "appHasAlreadyBeenUsedToday"
+        case todayQuestions = "todayQuestions"
+    }
     
     // MARK: - Categories
     

@@ -18,9 +18,41 @@ class DailyQuestionInteractor: NSObject, DailyQuestionInteractorInputProtocol {
 
 	// MARK: - DailyQuestionInteractorInputProtocol
     func fetchQuestionsForToday() {
+        var todayQuestions: [Question] = []
         
-        
-        //FIXME: get questions on CoreData
+        // If questions were set for today, then just get questions from userDefalts and return to interactor
+        if let date = UserDefaults.standard.object(forKey: Project.UserSettings.appHasBeenUsedToday.rawValue) as? Date, Calendar.current.compare(date, to: Date(), toGranularity: Calendar.Component.day) == .orderedSame, let todayQuestionsText = UserDefaults.standard.stringArray(forKey: Project.UserSettings.todayQuestions.rawValue) {
+            
+            QuestionDAO.shared.fetchAll { (questions, error) -> (Void) in
+                guard let aQuestions = questions, error == nil else {
+                    self.output.handleFailure(with: "Impossible to load questions for today")
+                    return
+                }
+                
+                for text in todayQuestionsText {
+                    guard let question = aQuestions.first(where: { return $0.questionText == text }) else { return }
+                    todayQuestions.append(question)
+                }
+                
+                self.questions = todayQuestions
+                self.output.handleSuccess(with: todayQuestions)
+            }
+            
+        } else {
+            QuestionsManager.shared.createQuestionsForToday { (questions, error) -> (Void) in
+                guard let aQuestions = questions, error == nil else {
+                    self.output.handleFailure(with: "Impossible to load questions for today")
+                    return
+                }
+                
+                UserDefaults.standard.set(Date(), forKey: Project.UserSettings.appHasBeenUsedToday.rawValue)
+                
+                self.questions = aQuestions
+                self.output.handleSuccess(with: aQuestions)
+                
+                
+            }
+        }
     }
     
     func fetchNewQuestion() {

@@ -24,7 +24,7 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
 	override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.presenter.loadNewQuestion()
+        self.presenter.loadDailyQuestions()
         
         self.prepareViewController()
         self.prepareButtons()
@@ -40,7 +40,7 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     }
     
     func reloadData() {
-        //FIXME: reload collectionView data
+        self.dailyQuestionCollectionView.reloadData()
     }
 
     // MARK: - CollectionView Data Source

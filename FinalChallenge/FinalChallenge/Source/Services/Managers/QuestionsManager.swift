@@ -9,71 +9,69 @@
 import Foundation
 
 class QuestionsManager {
-    static func insert() {
-        
-        
+    
+    static let shared = QuestionsManager()
+    
+    private init() { }
+    
+    func createAllQuestions() {
         AuthorDAO.shared.create(authorName: Project.Localizable.Question.author) { (author, error) -> (Void) in
-            
             for question in Project.Localizable.Question.allCases {
-                
-                CategoryDAO.shared.create(name: question.category) { (category, error) -> (Void) in
+                CategoryDAO.shared.create(name: Project.Localizable.Question.author, completion: { (category, error) -> (Void) in
                     
-                        DissertativeQuestionDAO.shared.create(questionText: question.localized, category: category!, author: author!, completion: { (_, _) -> (Void) in })
-                }
+                    guard let aCategory = category, let aAuthor = author else {
+                        fatalError("Error creating questions on CoreData")
+                    }
+                    
+                    DissertativeQuestionDAO.shared.create(questionText: question.localized, category: aCategory, author: aAuthor, completion: { (_, _) -> (Void) in })
+                })
             }
-            
-            
         }
-        
     }
     
-    static func generateQuestionsForToday(){
-        DissertativeQuestionDAO.shared.fetchAll { (questions, error) -> (Void) in
-            guard error == nil && questions != nil else{
+    func createQuestionsForToday(completion: @escaping ([Question]?, DataAccessError?) -> (Void)){
+        QuestionDAO.shared.fetchAll { (questions, error) -> (Void) in
+            guard let aQuestions = questions, error == nil else {
+                completion(nil, error)
                 fatalError("Impossible fetch the dissertative questions from the CoreDate")
             }
             
-            var todayQuestions: [DissertationQuestion] = Array()
+            var todayQuestions: [Question] = []
             
-            if var unansweredQuestions = questions?.filter({ (question) -> Bool in
-                return question.answers?.count == 0
-            }) {
+            let unansweredQuestions = aQuestions.filter({ return $0.answers?.count == 0 })
             
-                
-                if unansweredQuestions.count < 3 {
-                    let alreadyAnsweredQuestions = questions?.filter({ (question) -> Bool in
-                        return !unansweredQuestions.contains(question)
-                    })
-                    
-                    todayQuestions.append(contentsOf: unansweredQuestions)
-                    while todayQuestions.count < 3 {
-                        
-                        let random = alreadyAnsweredQuestions!.randomElement()
-                        
-                        if !(todayQuestions.contains(random!)) {
-                            todayQuestions.append(random!)
-                        }
-                    }
-                } else {
-                    while todayQuestions.count < 3 {
-                        
-                        let random = unansweredQuestions.randomElement()
-                        
-                        if !(todayQuestions.contains(random!)) {
-                            todayQuestions.append(random!)
-                        }
-                        
-                        
-                    }
-                }
+            if unansweredQuestions.count < 3 {
+                todayQuestions.append(contentsOf: unansweredQuestions)
+                todayQuestions.append(contentsOf: self.insertRandomQuestions(from: aQuestions, on: todayQuestions))
+            } else {
+                todayQuestions.append(contentsOf: self.insertRandomQuestions(from: unansweredQuestions, on: todayQuestions))
             }
             
-            let questionsDescriptions: [String] = todayQuestions.map({ (question) -> String in
-                return question.questionText!
-            })
-            
-            UserDefaults.standard.set(questionsDescriptions, forKey: "todayQuestions")
-            
+            completion(todayQuestions, nil)
         }
     }
+    
+    // MARK: - Private functions
+    private func insertRandomQuestions(from questionsA: [Question], on questionsB: [Question]) -> [Question] {
+        var questionsToAdd = questionsB
+        
+        while questionsToAdd.count < 3 {
+            let random = questionsA.randomElement()
+            
+            if !(questionsToAdd.contains(random!)) {
+                questionsToAdd.append(random!)
+            }
+        }
+        
+        self.saveForToday(questions: questionsToAdd)
+        
+        return questionsToAdd
+    }
+    
+    private func saveForToday(questions: [Question]) {
+        let questionsDescriptions: [String] = questions.map({ return $0.questionText! })
+        
+        UserDefaults.standard.set(questionsDescriptions, forKey: Project.UserSettings.todayQuestions.rawValue)
+    }
+        
 }
