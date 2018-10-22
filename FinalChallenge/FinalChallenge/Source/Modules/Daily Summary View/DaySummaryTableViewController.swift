@@ -179,9 +179,12 @@ extension DaySummaryTableViewController: UIViewControllerTransitioningDelegate {
         }
         
         self.transitionAnimator.transitionMode = .present
-        self.transitionAnimator.startingPoint = self.view.convert(insertButton.layer.presentation()!.frame.origin, to: nil)
+        
+        var originPoint = insertButton.layer.presentation()!.frame.origin
+        originPoint.x += insertButton.layer.presentation()!.frame.width / 2
+        
+        self.transitionAnimator.startingPoint = self.view.convert(originPoint, to: nil)
         self.transitionAnimator.bubbleColor = insertButton.backgroundColor!
-        self.transitionAnimator.duration = 10
         
         return self.transitionAnimator
     }
