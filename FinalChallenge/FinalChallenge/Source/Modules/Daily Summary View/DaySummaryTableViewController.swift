@@ -16,6 +16,8 @@ class DaySummaryTableViewController: UITableViewController {
     
     var entries: [Any] = []
     
+    var transitionAnimator = PopToScreenSizeTransitionAnimation()
+    
     var moodTypes: [MoodType] = []
     
     var summaryView: DailySummaryViewController!
@@ -153,11 +155,49 @@ class DaySummaryTableViewController: UITableViewController {
         })
     }
     
-    func didTapInsertQuestion() {
-        let storyboard = UIStoryboard(name: "DailyQuestion", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "DailyQuestionView")
-        self.navigationController?.pushViewController(viewController, animated: false)
+    var insertButton: UIButton?
+    
+    func didTapInsertQuestion(insertButton: UIButton) {
+        self.insertButton = insertButton
+        let storyboard = UIStoryboard(name: "BreathingView", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "breathingView") as? BreathingViewController {
+            viewController.transitioningDelegate = self
+            viewController.daySummaryViewController = self
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+}
 
+extension DaySummaryTableViewController: UIViewControllerTransitioningDelegate {
+    
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        guard let insertButton = self.insertButton else {
+            return nil
+        }
+        
+        self.transitionAnimator.transitionMode = .present
+        
+        var originPoint = insertButton.layer.presentation()!.frame.origin
+        originPoint.x += insertButton.layer.presentation()!.frame.width / 2
+        
+        self.transitionAnimator.startingPoint = self.view.convert(originPoint, to: nil)
+        self.transitionAnimator.bubbleColor = insertButton.backgroundColor!
+        
+        return self.transitionAnimator
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard let insertButton = self.insertButton else {
+            return nil
+        }
+        self.transitionAnimator.transitionMode = .pop
+        self.transitionAnimator.startingPoint = insertButton.center
+        self.transitionAnimator.bubbleColor = insertButton.backgroundColor!
+        
+        return nil
     }
     
 }

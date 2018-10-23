@@ -16,6 +16,7 @@ class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollect
     
     // MARK: - Properties
     var todayQuestions: [DissertationQuestion] = Array()
+    var summaryViewController: UIViewController!
     
 	// MARK: - Viper Module Properties
     // MARK: Public Properties
@@ -101,7 +102,8 @@ class DailyQuestionView: UIViewController, UICollectionViewDataSource, UICollect
     
     // MARK: - Action
     @IBAction func touchBackButton(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: false)
+//        self.navigationController?.popViewController(animated: false)
+        self.summaryViewController.dismiss(animated: true)
     }
     
     @IBAction func touchRemoveButton(_ sender: UIButton) {

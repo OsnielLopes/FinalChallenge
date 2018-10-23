@@ -12,6 +12,8 @@ class InsertTableViewCell: UITableViewCell {
     
     @IBOutlet weak var insertButton: UIButton!
     
+    var questionButton: UIButton!
+    
     @IBOutlet weak var lineView: UIView!
     
     var moodButtons: [UIButton] = []
@@ -46,9 +48,9 @@ class InsertTableViewCell: UITableViewCell {
             self.moodButtons.append(button)
         }
         
-        let questionButton = self.instantiateMenuButton(forImage: UIImage(named: "question-icon")!)
+        self.questionButton = self.instantiateMenuButton(forImage: UIImage(named: "question-icon")!)
         questionButton.addTarget(self, action: #selector(didTapQuestionButton), for: .touchUpInside)
-        self.insertButtons.append(questionButton)
+        self.insertButtons.append(self.questionButton)
         
         let moodButton = self.instantiateMenuButton(forImage: UIImage(named: "mood3-icon")!)
         moodButton.addTarget(self, action: #selector(didTapMoodButton), for: .touchUpInside)
@@ -105,7 +107,7 @@ class InsertTableViewCell: UITableViewCell {
     }
     
     @objc func didTapQuestionButton() {
-        self.daySummaryTableViewController.didTapInsertQuestion()
+        self.daySummaryTableViewController.didTapInsertQuestion(insertButton: self.questionButton)
     }
 }
 
@@ -116,7 +118,7 @@ extension InsertTableViewCell {
     func openInsertMenu(completion: (() -> (Void))? = nil) {
         self.isInsertMenuClosed = false
         UIView.animate(withDuration: 0.25, animations: {
-            self.insertButton.transform = CGAffineTransform(rotationAngle: -45)
+            self.insertButton.transform = CGAffineTransform.init(rotationAngle: (-45 * CGFloat.pi) / 180)
         })
         self.openMenu(forButtons: self.insertButtons)
     }
@@ -126,14 +128,20 @@ extension InsertTableViewCell {
         UIView.animate(withDuration: 0.25, animations: {
             self.insertButton.transform = CGAffineTransform(rotationAngle: 0)
         })
-        self.closeMenu(forButtons: self.insertButtons, completion: {
+        self.closeMenu(forButtons: self.insertButtons, i: self.insertButtons.count, completion: {
             completion?()
         })
     }
     
     func openMoodMenu(completion: (() -> (Void))? = nil) {
         self.isInsertMoodMenuClosed = false
-        self.closeMenu(forButtons: self.insertButtons, completion: {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.insertButton.transform = CGAffineTransform(rotationAngle: 0)
+        })
+        self.closeMenu(forButtons: self.insertButtons, i: self.insertButtons.count, completion: {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.insertButton.transform = CGAffineTransform.init(rotationAngle: (-45 * CGFloat.pi) / 180)
+            })
             self.openMenu(forButtons: self.moodButtons)
         })
     }
@@ -144,27 +152,53 @@ extension InsertTableViewCell {
         UIView.animate(withDuration: 0.25, animations: {
             self.insertButton.transform = CGAffineTransform(rotationAngle: 0)
         })
-        self.closeMenu(forButtons: self.moodButtons)
+        self.closeMenu(forButtons: self.moodButtons, i: self.moodButtons.count)
     }
     
-    func openMenu(forButtons buttons: [UIButton], completion: (() -> (Void))? = nil) {
-        for i in 1...buttons.count {
-            UIView.animate(withDuration: 0.3 + (Double(i) * 0.05), animations: {
-                buttons[i - 1].transform = CGAffineTransform(translationX: (buttons[i - 1].frame.width + 10) * CGFloat(i), y: 0)
-                buttons[i - 1].alpha = 1
-                completion?()
-            })
+    func openMenu(forButtons buttons: [UIButton], i: Int = 1, completion: (() -> (Void))? = nil) {
+        
+        if i >= buttons.count + 1 {
+            completion?()
+            return
         }
+        UIView.animate(withDuration: 0.17, animations: {
+            for j in stride(from: buttons.count, to: i - 1, by: -1) {
+                buttons[j - 1].transform = CGAffineTransform(translationX: (buttons[j - 1].frame.width + 10) * CGFloat(i), y: 0)
+            }
+            buttons[i - 1].alpha = 1
+        }, completion: { _ in
+            self.openMenu(forButtons: buttons, i: i + 1, completion: completion)
+            self.openMenu(forButtons: buttons, i: i + 2, completion: completion)
+        })
     }
     
-    func closeMenu(forButtons buttons: [UIButton], completion: (() -> (Void))? = nil) {
+    func closeMenu(forButtons buttons: [UIButton], i: Int, completion: (() -> (Void))? = nil) {
+        
         for i in stride(from: buttons.count, to: 0, by: -1) {
-            UIView.animate(withDuration: 0.3 + (Double(i) * 0.05), animations: {
+            
+            UIView.animate(withDuration: 0.25, animations: {
                 buttons[i - 1].transform = CGAffineTransform(translationX: self.insertButton.frame.origin.x, y: 0)
                 buttons[i - 1].alpha = 0
-                completion?()
+            }, completion: { _ in
+                if i == 1 { completion?() }
             })
+            
         }
+        
+//        if i <= 0 { completion?(); return }
+//
+//        UIView.animate(withDuration: 0.15, animations: {
+//
+////            let destPoint = i - 2 > 0 ? buttons[i - 2].frame.origin.x : self.insertButton.frame.origin.x
+//
+//            for j in i...buttons.count {
+//                buttons[j - 1].transform = CGAffineTransform(translationX: self.insertButton.frame.origin.x, y: 0)
+////                buttons[j - 1].transform = CGAffineTransform(translationX: destPoint, y: 0)
+//            }
+//            buttons[i - 1].alpha = 0
+//        }, completion: { _ in
+//            self.closeMenu(forButtons: buttons, i: i - 1, completion: completion)
+//        })
     }
     
 }
