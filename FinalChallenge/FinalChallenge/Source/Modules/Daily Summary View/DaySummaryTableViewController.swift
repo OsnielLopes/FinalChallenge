@@ -23,6 +23,8 @@ class DaySummaryTableViewController: UITableViewController {
     var summaryView: DailySummaryViewController!
     
     var shouldShowAddButton = true
+    
+    let headerHeight: CGFloat = 150.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,23 +47,7 @@ class DaySummaryTableViewController: UITableViewController {
         var didEndedObtainingMoods = false
         
         let didEndedObtainingData = {
-            self.entries.sort(by: { entry1, entry2 in
-                var date1: NSDate!
-                if entry1 is MoodInput {
-                    date1 = (entry1 as! MoodInput).date!
-                } else if entry1 is Answer {
-                    date1 = (entry1 as! Answer).date!
-                }
-                
-                var date2: NSDate!
-                if entry2 is MoodInput {
-                    date2 = (entry2 as! MoodInput).date!
-                } else if entry2 is Answer {
-                    date2 = (entry2 as! Answer).date!
-                }
-                
-                return (date1 as Date) > (date2 as Date)
-            })
+            self.sortEntries()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -87,6 +73,26 @@ class DaySummaryTableViewController: UITableViewController {
             if didEndedObtainingAnswers {
                 didEndedObtainingData()
             }
+        })
+    }
+    
+    func sortEntries() {
+        self.entries.sort(by: { entry1, entry2 in
+            var date1: NSDate!
+            if entry1 is MoodInput {
+                date1 = (entry1 as! MoodInput).date!
+            } else if entry1 is Answer {
+                date1 = (entry1 as! Answer).date!
+            }
+            
+            var date2: NSDate!
+            if entry2 is MoodInput {
+                date2 = (entry2 as! MoodInput).date!
+            } else if entry2 is Answer {
+                date2 = (entry2 as! Answer).date!
+            }
+            
+            return (date1 as Date) > (date2 as Date)
         })
     }
 
@@ -149,9 +155,26 @@ class DaySummaryTableViewController: UITableViewController {
         return 0
     }
     
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.tableView.frame.width, height: self.headerHeight)))
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.headerHeight
+    }
+    
     func didTapInsertMood(_ moodIndex: Int) {
-        MoodDAO.shared.insertMood(moodType: self.moodTypes[moodIndex], date: Date(), completion: { _, _ in
-            self.loadData()
+        MoodDAO.shared.insertMood(moodType: self.moodTypes[moodIndex], date: Date(), completion: { mood, err in
+            guard let mood = mood, err == nil else {
+                print("There was an error inserting the mood in the table view")
+                return
+            }
+            self.entries.append(mood)
+            self.sortEntries()
+            self.tableView.beginUpdates()
+            self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
+            self.tableView.endUpdates()
         })
     }
     
@@ -182,6 +205,7 @@ extension DaySummaryTableViewController: UIViewControllerTransitioningDelegate {
         
         var originPoint = insertButton.layer.presentation()!.frame.origin
         originPoint.x += insertButton.layer.presentation()!.frame.width / 2
+        originPoint.y += self.headerHeight
         
         self.transitionAnimator.startingPoint = self.view.convert(originPoint, to: nil)
         self.transitionAnimator.bubbleColor = insertButton.backgroundColor!

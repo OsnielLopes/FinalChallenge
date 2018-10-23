@@ -695,7 +695,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC07EE7217E3DA6009D5C8D /* DailyQuestion.storyboard in Resources */,
 				BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,7 +843,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC07EE1217E3BA9009D5C8D /* DailyQuestionView.swift in Sources */,
 				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
 				BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */,
 				BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
@@ -854,9 +852,7 @@
 				BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */,
 				BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
 				BD974A732167F13000612838 /* CoreDataManager.swift in Sources */,
-				BDC07EE3217E3DA2009D5C8D /* DailyQuestionPresenter.swift in Sources */,
 				BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
-				BDC07EE4217E3DA2009D5C8D /* DailyQuestionInteractor.swift in Sources */,
 				BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */,
 				BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BD4E0E8821791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */,
@@ -877,7 +873,6 @@
 				BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */,
-				BDC07EE2217E3DA2009D5C8D /* DailyQuestionRouter.swift in Sources */,
 				BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */,
@@ -891,12 +886,8 @@
 				BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
-				BDC07EE5217E3DA6009D5C8D /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
-				BDC07EEA217E3DD4009D5C8D /* MultipleChoiceQuestionViewController.swift in Sources */,
 				BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */,
-				BDC07EE9217E3DD1009D5C8D /* DissertativeQuestionViewController.swift in Sources */,
-				BDC07EE8217E3DA6009D5C8D /* DailyQuestionCollectionViewCell.swift in Sources */,
 				BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
 				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
@@ -908,7 +899,6 @@
 				BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
 				BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */,
-				BDC07EE6217E3DA6009D5C8D /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1066,7 +1056,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -103,7 +103,9 @@ class InsertTableViewCell: UITableViewCell {
         guard let button = moodButton as? UIButton else {
             return
         }
-        self.daySummaryTableViewController.didTapInsertMood(button.tag)
+        self.closeMoodMenu(completion: {
+            self.daySummaryTableViewController.didTapInsertMood(button.tag)
+        })
     }
     
     @objc func didTapQuestionButton() {
@@ -152,7 +154,9 @@ extension InsertTableViewCell {
         UIView.animate(withDuration: 0.25, animations: {
             self.insertButton.transform = CGAffineTransform(rotationAngle: 0)
         })
-        self.closeMenu(forButtons: self.moodButtons, i: self.moodButtons.count)
+        self.closeMenu(forButtons: self.moodButtons, i: self.moodButtons.count, completion: {
+            completion?()
+        })
     }
     
     func openMenu(forButtons buttons: [UIButton], i: Int = 1, completion: (() -> (Void))? = nil) {
@@ -161,7 +165,8 @@ extension InsertTableViewCell {
             completion?()
             return
         }
-        UIView.animate(withDuration: 0.17, animations: {
+        
+        UIView.animate(withDuration: 0.15, animations: {
             for j in stride(from: buttons.count, to: i - 1, by: -1) {
                 buttons[j - 1].transform = CGAffineTransform(translationX: (buttons[j - 1].frame.width + 10) * CGFloat(i), y: 0)
             }
