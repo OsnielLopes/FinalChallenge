@@ -11,9 +11,10 @@ import Foundation
 class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummaryInteractorOutputProtocol {
     
     // MARK: - Properties
-    private var answers: [Answer] = []
     private var moodTypes: [MoodType] = []
-    private var moods: [MoodInput] = []
+    private var entries: [Any] = []
+    private var didEndedFetchingMoodInputs = false
+    private var didEndedFetchingAnswers = false
     
     // MARK: - Viper Module Properties
     weak var view: DaySummaryPresenterOutputProtocol!
