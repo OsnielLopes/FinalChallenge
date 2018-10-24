@@ -628,9 +628,7 @@
 			children = (
 				BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */,
 				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
-				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
-				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
-				BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */,
+				BDE468412180F9DD002BDE93 /* TableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -657,6 +655,16 @@
 				BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		BDE468412180F9DD002BDE93 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
+				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
+				BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		F84F77F27EDB0EC1035497DF /* Frameworks */ = {
@@ -1154,7 +1162,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

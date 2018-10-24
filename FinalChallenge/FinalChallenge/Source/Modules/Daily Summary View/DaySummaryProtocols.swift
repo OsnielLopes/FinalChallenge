@@ -20,28 +20,32 @@ protocol DaySummaryRouterProtocol: class {
 
 // MARK: - Interactor
 protocol DaySummaryInteractorInputProtocol {
-    func fetchQuestionsForToday()
-    func fetchNewQuestion()
+    func fetchMoodTypes()
+    func fetchMoods(forDate date: Date)
+    func fetchQuestions(forDate date: Date)
+}
+
+protocol DaySummaryInteractorOutputProtocol: class {
+    func handleSuccessFetchedMoodTypes(with results: [MoodType])
+    func handleFailureFetchedMoodTypes(with message: String)
+    
+    func handleSuccessFetchedMood(with results: [MoodInput])
+    func handleFailureFetchedMood(with message: String)
+    
+    func handleSuccessFetchedAnwsers(with results: [Answer])
+    func handleFailureFetchedAnwsers(with message: String)
 }
 
 // MARK: - Presenter
 protocol DaySummaryPresenterInputProtocol: class {
+    func loadTodayEntries()
+    
     func numberOfSections() -> Int
-    func numberOfCards(in section: Int) -> Int
+    func numberOfEntries(in section: Int) -> Int
+    func item(at indexPath: Int) -> Any
     
-    func loadDailyQuestions()
-    
-    func item(at indexPath: Int) -> Question
-    func didSelectItem(at indexPath: Int)
-    
-    func didTouchBackButton()
-    func loadNewQuestion()
-    func removeQuestion(at indexPath: Int)
-}
-
-protocol DaySummaryInteractorOutputProtocol: class {
-    func handleSuccess(with results: [Question])
-    func handleFailure(with message: String)
+    func didTapInsert(mood index: Int)
+    func didTapInsertQuestion()
 }
 
 // MARK: - View
