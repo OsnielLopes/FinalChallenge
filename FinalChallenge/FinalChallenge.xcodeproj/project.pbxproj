@@ -34,8 +34,6 @@
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
 		49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 		49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
-		5BAC48475E12F0118CA8CD52 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF51C97C2BA9C96DADDFD6B /* Pods_FinalChallenge.framework */; };
-		77D5203DE38C11F64506CAF4 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEA01F3CEF160BC63709D04 /* Pods_FinalChallengeTests.framework */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
 		BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
 		BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
@@ -143,6 +141,16 @@
 		BDA08141217578D200F57696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 		BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
 		BDA84B91217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
+		BDE4682F2180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */; };
+		BDE468302180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */; };
+		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
+		BDE468342180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
+		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
+		BDE468372180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
+		BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */; };
+		BDE4683B2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */; };
+		BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */; };
+		BDE4683F2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -249,6 +257,11 @@
 		BD974A742167F4F700612838 /* CategoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
 		BD974A782167F86900612838 /* CategoryDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAOTests.swift; sourceTree = "<group>"; };
 		BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTableViewCell.swift; sourceTree = "<group>"; };
+		BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummaryView.storyboard; sourceTree = "<group>"; };
+		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
+		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
+		BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryInteractor.swift; sourceTree = "<group>"; };
+		BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryRouter.swift; sourceTree = "<group>"; };
 		C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6C0D3FE9A09DAE3E9ADCF /* Pods-FinalChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -501,12 +514,13 @@
 		BD71F695217562460011C885 /* Daily Summary View */ = {
 			isa = PBXGroup;
 			children = (
-				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
-				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
 				BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */,
-				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
-				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
-				BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */,
+				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
+				BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */,
+				BDE468402180F954002BDE93 /* Router */,
+				BDE4683C2180F924002BDE93 /* Interactor */,
+				BDE468382180F8FE002BDE93 /* Presenter */,
+				BDE468312180F709002BDE93 /* View */,
 			);
 			path = "Daily Summary View";
 			sourceTree = "<group>";
@@ -609,6 +623,42 @@
 			path = FinalChallengeTests;
 			sourceTree = "<group>";
 		};
+		BDE468312180F709002BDE93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */,
+				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
+				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
+				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
+				BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDE468382180F8FE002BDE93 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDE4683C2180F924002BDE93 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BDE468402180F954002BDE93 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		F84F77F27EDB0EC1035497DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +758,7 @@
 				4539540D21766DBF00CF71EC /* DailyQuestion.storyboard in Resources */,
 				450ED4CB2177D85300195CAE /* Localizable.strings in Resources */,
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
+				BDE4682F2180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
 				BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */,
 				BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */,
@@ -719,8 +770,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC07EE7217E3DA6009D5C8D /* DailyQuestion.storyboard in Resources */,
 				BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */,
+				BDE468302180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,15 +862,19 @@
 				BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
 				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
 				491511FB21751711007C0E09 /* Router.swift in Sources */,
+				BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
+				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
 				BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
+				BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */,
 				4539540921766DBF00CF71EC /* DailyQuestionCollectionViewCell.swift in Sources */,
 				BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
+				BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */,
 				BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				453953F721766D0F00CF71EC /* DailyQuestionRouter.swift in Sources */,
 				BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
@@ -869,7 +924,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC07EE1217E3BA9009D5C8D /* DailyQuestionView.swift in Sources */,
+				BDE4683B2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */,
 				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
 				BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */,
 				BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
@@ -879,10 +934,10 @@
 				BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */,
 				BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
 				BD974A732167F13000612838 /* CoreDataManager.swift in Sources */,
-				BDC07EE3217E3DA2009D5C8D /* DailyQuestionPresenter.swift in Sources */,
 				BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
-				BDC07EE4217E3DA2009D5C8D /* DailyQuestionInteractor.swift in Sources */,
+				BDE4683F2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */,
 				BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */,
+				BDE468372180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BD4E0E8821791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */,
 				BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */,
@@ -902,7 +957,6 @@
 				BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */,
-				BDC07EE2217E3DA2009D5C8D /* DailyQuestionRouter.swift in Sources */,
 				BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */,
@@ -916,12 +970,8 @@
 				BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
-				BDC07EE5217E3DA6009D5C8D /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
-				BDC07EEA217E3DD4009D5C8D /* MultipleChoiceQuestionViewController.swift in Sources */,
 				BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */,
-				BDC07EE9217E3DD1009D5C8D /* DissertativeQuestionViewController.swift in Sources */,
-				BDC07EE8217E3DA6009D5C8D /* DailyQuestionCollectionViewCell.swift in Sources */,
 				BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
 				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
@@ -932,8 +982,8 @@
 				BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
+				BDE468342180F777002BDE93 /* DaySummaryProtocols.swift in Sources */,
 				BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */,
-				BDC07EE6217E3DA6009D5C8D /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
