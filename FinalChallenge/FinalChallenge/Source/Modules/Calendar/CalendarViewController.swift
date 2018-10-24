@@ -280,7 +280,7 @@ class CalendarViewController: UIViewController {
                         
                         self.previousMonthCollectionViewController.updateFor(referenceDay: self.calendar.date(byAdding: .month, value: -1, to: self.referenceDay)!)
                         //                self.previousMonthContainerViewLeadingConstraint.constant -= self.view.frame.width*2
-                        
+                        self.updateSummaryView()
                     }
                 } else {
                     previousMonthLabelLeadingConstraint.constant = nextMonthLabelLeadingConstraint.constant + self.distanceBetweenCurrentAndNextMonth
@@ -329,6 +329,7 @@ class CalendarViewController: UIViewController {
                         
                         self.nextMonthCollectionViewController.updateFor(referenceDay: self.calendar.date(byAdding: .month, value: 1, to: self.referenceDay)!)
                         //                self.previousMonthContainerViewLeadingConstraint.constant -= self.view.frame.width*2
+                        self.updateSummaryView()
                         
                     }
                 }
@@ -343,7 +344,6 @@ class CalendarViewController: UIViewController {
 //            }
             
             currentAnimationFractionComplete = 0
-            self.updateSummaryView()
             
         default:
             break
@@ -361,6 +361,7 @@ class CalendarViewController: UIViewController {
         let indexPathOfSelectedCell = currentMonthCollectionViewController.collectionView.indexPathsForSelectedItems!.first!
         let selectedCell = currentMonthCollectionViewController.collectionView.cellForItem(at: indexPathOfSelectedCell) as! MonthCollectionViewCell
         dailySummaryViewController.currentDate = selectedCell.day
+        dailySummaryViewController.reloadData()
     }
  
     

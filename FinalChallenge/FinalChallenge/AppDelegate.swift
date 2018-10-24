@@ -37,9 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.window?.rootViewController = navController
 //        self.window?.makeKeyAndVisible()
 
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        guard let window = self.window else { return true}
-        window.makeKeyAndVisible()
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        guard let window = self.window else { return true}
+//        window.makeKeyAndVisible()
         
         let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")

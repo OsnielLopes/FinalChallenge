@@ -15,7 +15,6 @@ class DailySummaryViewController: UIViewController {
     var daySummaryTableViewController: DaySummaryTableViewController!
     
     @IBOutlet weak var calendarContainerView: UIView!
-    
     @IBOutlet weak var calendarBorderView: UIView!
     
     override func viewDidLoad() {
@@ -40,10 +39,6 @@ class DailySummaryViewController: UIViewController {
         if let viewController = segue.destination as? DaySummaryTableViewController {
             viewController.summaryView = self
             self.daySummaryTableViewController = viewController
-        }
-
-        if let viewController = segue.destination as? CalendarViewController {
-            viewController.summaryView = self
         }
         
     }
