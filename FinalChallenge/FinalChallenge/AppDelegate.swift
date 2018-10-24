@@ -7,29 +7,39 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        if !UserDefaults.standard.bool(forKey: "appHasAlreadyBeenUsed") {
-            QuestionsManager.insert()
-            UserDefaults.standard.set(true, forKey: "appHasAlreadyBeenUsed")
-        }
+        Fabric.with([Crashlytics.self])
         
-        if let date = UserDefaults.standard.object(forKey: "appHasAlreadyBeenUsedToday") as? Date {
-            if Calendar.current.compare(date, to: Date(), toGranularity: Calendar.Component.day) != .orderedSame {
-                QuestionsManager.generateQuestionsForToday()
-                UserDefaults.standard.set(Date(), forKey: "appHasAlreadyBeenUsedToday")
-            }
-        } else {
-            QuestionsManager.generateQuestionsForToday()
-            UserDefaults.standard.set(Date(), forKey: "appHasAlreadyBeenUsedToday")
+        //FIXME: add animation util is done!
+        if !UserDefaults.standard.bool(forKey: Project.UserSettings.appHasBeenUsed.rawValue) {
+            QuestionsManager.shared.createAllQuestions()
+            UserDefaults.standard.set(true, forKey: Project.UserSettings.appHasBeenUsed.rawValue)
         }
+//
+//        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
+//
+//        let navController = UINavigationController(rootViewController: viewController)
+//
+//
+//        navController.isNavigationBarHidden = true
+//
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = navController
+//        self.window?.makeKeyAndVisible()
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        guard let window = self.window else { return true}
+        window.makeKeyAndVisible()
         
         let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
