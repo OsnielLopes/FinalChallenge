@@ -12,43 +12,47 @@ private let reuseIdentifier = "Cell"
 
 class MonthCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var referenceDay = Date()
-    var originalMonthDays: [Date?] = []
+    var originalMonthDays: [Date?]!
     var currentMonthDays: [Date?] = []
     var cellWidth: CGFloat!
     let calendar = Calendar(identifier: .gregorian)
-  
+    var referenceDay: Date!
+    var indexOfFirstDay: Int!
+    
+    init(collectionViewLayout layout: UICollectionViewLayout, referenceDay: Date) {
+        super.init(collectionViewLayout: layout)
+        self.referenceDay = referenceDay
+        let daysRange = calendar.range(of: .day, in: .month, for: referenceDay)
+        let currentDay = calendar.component(.day, from: referenceDay)
+        indexOfFirstDay = calendar.component(.weekday, from: calendar.date(byAdding: .day, value: -currentDay+1, to: referenceDay)!)-1
+        currentMonthDays.append(contentsOf: Array(repeating: nil, count: indexOfFirstDay))
+        for i in -currentDay+1...daysRange!.count-currentDay {
+            currentMonthDays.append(calendar.date(byAdding: .day, value: i, to: referenceDay))
+        }
+        originalMonthDays = currentMonthDays
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.backgroundColor = UIColor.white
         self.collectionView!.register(MonthCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         self.collectionView.delegate = self
-        
-        let daysRange = calendar.range(of: .day, in: .month, for: referenceDay)
-        let currentDay = calendar.component(.day, from: referenceDay)
-        currentMonthDays.append(contentsOf: Array(repeating: nil, count: calendar.component(.weekday, from: calendar.date(byAdding: .day, value: -currentDay+1, to: Date())!)-1))
-        for i in -currentDay+1...daysRange!.count-currentDay {
-            currentMonthDays.append(calendar.date(byAdding: .day, value: i, to: Date()))
-        }
-        originalMonthDays = currentMonthDays
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        for case let cell as MonthCollectionViewCell in self.collectionView.visibleCells {
-            guard cell.day != nil else { continue }
-            if calendar.component(.month, from: Date()) != calendar.component(.month, from: cell.day) {
-                collectionView.selectItem(at: collectionView.indexPath(for: cell), animated: false, scrollPosition: .centeredHorizontally)
-                break
-            } else {
-                let isToday = calendar.component(.year, from: Date()) == calendar.component(.year, from: cell.day) && calendar.component(.month, from: Date()) == calendar.component(.month, from: cell.day) && calendar.component(.day, from: Date()) == calendar.component(.day, from: cell.day)
-                if isToday {
-                    collectionView.selectItem(at: collectionView.indexPath(for: cell), animated: false, scrollPosition: .centeredHorizontally)
-                }
-            }
-        }
         
+        guard let cell = self.collectionView.cellForItem(at: IndexPath(row: indexOfFirstDay, section: 0)) as? MonthCollectionViewCell else { return }
+        if calendar.component(.month, from: Date()) != calendar.component(.month, from: cell.day) {
+            collectionView.selectItem(at: collectionView.indexPath(for: cell), animated: false, scrollPosition: .centeredHorizontally)
+        } else {
+            collectionView.selectItem(at: IndexPath(row: calendar.component(.day, from: referenceDay)+indexOfFirstDay-1, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+        }
     }
-
+    
     //MARK: - UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -65,11 +69,11 @@ class MonthCollectionViewController: UICollectionViewController, UICollectionVie
         cell.background.layer.cornerRadius = cell.bounds.height/2
         return cell
     }
-
+    
     //MARK: - UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return false }
+        guard let cell = collectionView.cellForItem(at: indexPath) as? MonthCollectionViewCell else { return false }
         return cell.day != nil
     }
     
@@ -81,7 +85,11 @@ class MonthCollectionViewController: UICollectionViewController, UICollectionVie
                 collectionView.deselectItem(at: collectionView.indexPath(for: cell)!, animated: true)
             }
         }
-//        self.summaryView?.reloadSummary(forDate: self.getCurrentDate())
+        guard let parentViewController = self.parent as? CalendarViewController else {
+            print("Impossible to downcast the parentViewController to CalendarViewController")
+            return
+        }
+        parentViewController.updateSummaryView()
     }
     
     override func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
@@ -106,5 +114,32 @@ class MonthCollectionViewController: UICollectionViewController, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-
+    
+    // MARK: - Auxiliar Functions
+    
+    func updateFor(referenceDay: Date){
+        self.referenceDay = referenceDay
+        let daysRange = calendar.range(of: .day, in: .month, for: referenceDay)
+        let currentDay = calendar.component(.day, from: referenceDay)
+        indexOfFirstDay = calendar.component(.weekday, from: calendar.date(byAdding: .day, value: -currentDay+1, to: referenceDay)!)-1
+        currentMonthDays = []
+        currentMonthDays.append(contentsOf: Array(repeating: nil, count: indexOfFirstDay))
+        for i in -currentDay+1...daysRange!.count-currentDay {
+            currentMonthDays.append(calendar.date(byAdding: .day, value: i, to: referenceDay))
+        }
+        originalMonthDays = currentMonthDays
+        
+        self.collectionView.reloadData()
+        
+        self.collectionView.performBatchUpdates(nil) { (didComplete) in
+            guard let cell = self.collectionView.cellForItem(at: IndexPath(row: self.indexOfFirstDay, section: 0)) as? MonthCollectionViewCell else { return }
+            if self.calendar.component(.month, from: Date()) != self.calendar.component(.month, from: cell.day) {
+                self.collectionView.selectItem(at: self.collectionView.indexPath(for: cell), animated: false, scrollPosition: .centeredHorizontally)
+            } else {
+                self.collectionView.selectItem(at: IndexPath(row: self.calendar.component(.day, from: referenceDay)+self.indexOfFirstDay-1, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+            }
+        }
+        
+    }
+    
 }

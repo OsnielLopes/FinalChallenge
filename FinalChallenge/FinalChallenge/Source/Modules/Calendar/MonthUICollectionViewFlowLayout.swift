@@ -8,13 +8,13 @@
 
 import UIKit
 
-class CalendarUICollectionViewFlowLayout: UICollectionViewFlowLayout {
+class MonthUICollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     public var weekOfCurrentDay: Int!
     public var expanding: Bool!
     
     override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        guard let attr = layoutAttributesForItem(at: itemIndexPath)!.copy() as? UICollectionViewLayoutAttributes else {
+        guard let attr = layoutAttributesForItem(at: itemIndexPath)!.copy() as? UICollectionViewLayoutAttributes, weekOfCurrentDay != nil else {
             return nil
         }
         if !expanding {
@@ -33,7 +33,7 @@ class CalendarUICollectionViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        guard let attr = layoutAttributesForItem(at: itemIndexPath)!.copy() as? UICollectionViewLayoutAttributes else {
+        guard let attr = layoutAttributesForItem(at: itemIndexPath)!.copy() as? UICollectionViewLayoutAttributes, weekOfCurrentDay != nil else {
             return nil
         }
         if expanding {
