@@ -22,7 +22,7 @@ protocol DaySummaryRouterProtocol: class {
 protocol DaySummaryInteractorInputProtocol {
     func fetchMoodTypes()
     func fetchMoods(forDate date: Date)
-    func fetchQuestions(forDate date: Date)
+    func fetchAnswers(forDate date: Date)
 }
 
 protocol DaySummaryInteractorOutputProtocol: class {
