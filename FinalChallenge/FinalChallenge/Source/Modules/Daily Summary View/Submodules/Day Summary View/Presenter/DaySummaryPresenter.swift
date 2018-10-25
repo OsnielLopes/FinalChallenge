@@ -113,7 +113,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func didTapInsertQuestion() {
-        fatalError()
+        self.router.presentAnswerQuestion()
     }
     
     // MARK: - Private Routines

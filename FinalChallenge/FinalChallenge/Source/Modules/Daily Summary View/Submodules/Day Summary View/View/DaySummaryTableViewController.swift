@@ -111,12 +111,6 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
     func didTapInsertQuestion(insertButton: UIButton) {
         self.insertButton = insertButton
         self.presenter.didTapInsertQuestion()
-//        let storyboard = UIStoryboard(name: "BreathingView", bundle: nil)
-//        if let viewController = storyboard.instantiateViewController(withIdentifier: "breathingView") as? BreathingViewController {
-//            viewController.transitioningDelegate = self
-//            viewController.daySummaryViewController = self
-//            self.present(viewController, animated: true, completion: nil)
-//        }
     }
     
     // MARK: - DaySummaryPresenterOutputProtocol

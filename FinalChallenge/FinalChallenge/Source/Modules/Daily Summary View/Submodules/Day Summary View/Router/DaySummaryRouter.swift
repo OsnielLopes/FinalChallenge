@@ -14,6 +14,8 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
     // MARK: - Constants
     private let storyBoardName = "DaySummary"
     private let viewIdentifier = "DaySummaryView"
+    private let answerQuestionStory = "BreathingView"
+    private let answerQuestionIdentifier = "breathingView"
     
     // MARK: - Viper Module Properties
     weak var view: DaySummaryTableViewController!
@@ -54,6 +56,16 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
     
     func getCurrentDate() -> Date {
         return self.dailySummaryRouter.getCurrentDate()
+    }
+    
+    func presentAnswerQuestion() {
+        let storyboard = UIStoryboard(name: self.answerQuestionStory, bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: self.answerQuestionIdentifier) as? BreathingViewController {
+            viewController.transitioningDelegate = self.view
+            viewController.daySummaryViewController = self.view
+            self.view.present(viewController, animated: true, completion: nil)
+        }
+
     }
     
     // MARK: - Private methods
