@@ -17,6 +17,7 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
     
     // MARK: - Viper Module Properties
     weak var view: DailySummaryViewController!
+    var dailySummaryRouter: DailySummaryRouter!
     
     // MARK: - Constructors
     override init() {

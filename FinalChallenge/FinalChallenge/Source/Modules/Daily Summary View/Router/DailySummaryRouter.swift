@@ -18,6 +18,7 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
 	weak var view: DailySummaryViewController!
 //    var calendarRouter: CalendarRouter!
     var daySummaryRouter: DaySummaryRouter!
+    var currentDate: Date!
 
 	// MARK: - Constructors
 	override init() {
@@ -32,13 +33,14 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
 		view.presenter = presenter
 
 		self.view = view
+        
+        self.currentDate = Date()
 	}
 
     // MARK: - DailySummaryRouterProtocol
     
     func presentAsRoot(window: UIWindow) {
-        let navigation = UINavigationController(rootViewController: self.view)
-        window.rootViewController = navigation
+        window.rootViewController = self.view
     }
     
     func willPresentSummaryView(_ view: DaySummaryTableViewController) {
