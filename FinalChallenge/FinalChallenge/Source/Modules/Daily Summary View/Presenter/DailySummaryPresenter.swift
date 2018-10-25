@@ -8,11 +8,9 @@
 
 import UIKit
 
-class DailySummaryPresenter: NSObject, DailySummaryPresenterInputProtocol, DailySummaryInteractorOutputProtocol {
+class DailySummaryPresenter: NSObject, DailySummaryPresenterInputProtocol {
 
 	// MARK: - Viper Module Properties
-    weak var view: DailySummaryPresenterOutputProtocol!
-    var interactor: DailySummaryInteractorInputProtocol!
     var router: DailySummaryRouterProtocol!
 
     // MARK: - DailySummaryPresenterInputProtocol

@@ -20,9 +20,6 @@ protocol DailySummaryRouterProtocol: class {
 }
 
 // MARK: - Interactor
-protocol DailySummaryInteractorInputProtocol {
-
-}
 
 // MARK: - Presenter
 protocol DailySummaryPresenterInputProtocol: class {
@@ -30,11 +27,4 @@ protocol DailySummaryPresenterInputProtocol: class {
     func willPresentCalendarView(_ view: CalendarViewController)
 }
 
-protocol DailySummaryInteractorOutputProtocol: class {
-
-}
-
 // MARK: - View
-protocol DailySummaryPresenterOutputProtocol: class {
-
-}

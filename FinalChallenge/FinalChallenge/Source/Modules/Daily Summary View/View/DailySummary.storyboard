@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="1926" y="-193"/>
         </scene>
-        <!--DaySummaryView-->
+        <!--DaySummary-->
         <scene sceneID="keg-mT-Ivp">
             <objects>
-                <viewControllerPlaceholder storyboardName="DaySummaryView" id="CPS-ay-wPG" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="DaySummary" id="CPS-ay-wPG" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wDr-1k-qri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1926" y="243"/>

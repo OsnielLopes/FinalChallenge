@@ -14,6 +14,7 @@ fileprivate let addCellIdentifier = "addCellIdentifier"
 
 class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterOutputProtocol {
     
+    
     var transitionAnimator = PopToScreenSizeTransitionAnimation()
     var insertTableViewCell: InsertTableViewCell?
     var summaryView: DailySummaryViewController!
@@ -25,6 +26,8 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter.loadMoodTypes()
+        self.presenter.loadTodayEntries()
     }
     
     // MARK: - UITableViewControllerDelegate and UITableViewControllerDataSource
@@ -132,7 +135,7 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
         self.insertTableViewCell?.setButtons(forMoodTypes: moodTypes)
     }
     
-    func didAdded(moodInput mood: MoodInput) {
+    func didAddedMood() {
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
         self.tableView.endUpdates()

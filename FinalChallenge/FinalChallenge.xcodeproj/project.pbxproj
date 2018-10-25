@@ -92,7 +92,7 @@
 		BDB7C53F21823768009A8206 /* DailySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53921823768009A8206 /* DailySummaryPresenter.swift */; };
 		BDB7C54021823768009A8206 /* DailySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53A21823768009A8206 /* DailySummaryRouter.swift */; };
 		BDB7C54121823768009A8206 /* DailySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53B21823768009A8206 /* DailySummaryProtocols.swift */; };
-		BDE4682F2180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */; };
+		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
 		BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */; };
@@ -206,7 +206,7 @@
 		BDB7C53921823768009A8206 /* DailySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryPresenter.swift; sourceTree = "<group>"; };
 		BDB7C53A21823768009A8206 /* DailySummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryRouter.swift; sourceTree = "<group>"; };
 		BDB7C53B21823768009A8206 /* DailySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryProtocols.swift; sourceTree = "<group>"; };
-		BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummaryView.storyboard; sourceTree = "<group>"; };
+		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
 		BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryInteractor.swift; sourceTree = "<group>"; };
@@ -618,8 +618,8 @@
 		BDE468312180F709002BDE93 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */,
 				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
+				BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */,
 				BDE468412180F9DD002BDE93 /* TableView */,
 			);
 			path = View;
@@ -758,7 +758,7 @@
 				4539540D21766DBF00CF71EC /* DailyQuestion.storyboard in Resources */,
 				450ED4CB2177D85300195CAE /* Localizable.strings in Resources */,
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
-				BDE4682F2180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */,
+				BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
 				BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */,
 				BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */,

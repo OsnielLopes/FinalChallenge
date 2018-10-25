@@ -12,18 +12,19 @@ import UIKit
 class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
     
     // MARK: - Constants
-    private let storyBoardName = "DailySummary"
-    private let viewIdentifier = "DailySummaryView"
+    private let storyBoardName = "DaySummary"
+    private let viewIdentifier = "DaySummaryView"
     
     // MARK: - Viper Module Properties
     weak var view: DaySummaryTableViewController!
+    
+    // MARK: - Communication routers
     var dailySummaryRouter: DailySummaryRouterProtocol!
     
     // MARK: - Constructors
-    override init() {
+    init(view: DaySummaryTableViewController) {
         super.init()
         
-        let view = self.viewControllerFromStoryboard()
         let interactor = DaySummaryInteractor()
         let presenter = DaySummaryPresenter()
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DailySummaryViewController: UIViewController, DailySummaryPresenterOutputProtocol {
+class DailySummaryViewController: UIViewController {
     
     var currentDate: Date = Date()
     var daySummaryTableViewController: DaySummaryTableViewController!
@@ -31,7 +31,6 @@ class DailySummaryViewController: UIViewController, DailySummaryPresenterOutputP
     }
     
     func reloadData() {
-//        self.daySummaryTableViewController.loadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

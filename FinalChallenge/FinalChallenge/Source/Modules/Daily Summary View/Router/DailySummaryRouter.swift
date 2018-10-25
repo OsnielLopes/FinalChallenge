@@ -27,8 +27,6 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
 		let presenter = DailySummaryPresenter()
 
 		presenter.router = self
-		presenter.view = view
-
 		view.presenter = presenter
 
 		self.view = view
@@ -41,16 +39,8 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
     }
     
     func willPresentSummaryView(_ view: DaySummaryTableViewController) {
-        let presenter = DaySummaryPresenter()
-        let interactor = DaySummaryInteractor()
-        self.daySummaryRouter = DaySummaryRouter()
+        self.daySummaryRouter = DaySummaryRouter(view: view)
         self.daySummaryRouter.dailySummaryRouter = self
-        
-        presenter.router = self.daySummaryRouter
-        presenter.view = view
-        presenter.interactor = interactor
-        
-        view.presenter = presenter
     }
     
     func willPresentCalendarView(_ view: CalendarViewController) {

@@ -60,7 +60,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     func handleSuccessAddedMood(with results: MoodInput) {
         self.entries.append(results)
         self.sortEntries()
-        self.view.didAdded(moodInput: results)
+        self.view.didAddedMood()
     }
     
     func handleFailureAddedMood(with message: String) {
@@ -107,7 +107,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func didTapInsert(mood index: Int) {
-        fatalError()
+        self.interactor.add(moodType: self.moodTypes[index], toDate: self.getCurrentDate())
     }
     
     func didTapInsertQuestion() {
