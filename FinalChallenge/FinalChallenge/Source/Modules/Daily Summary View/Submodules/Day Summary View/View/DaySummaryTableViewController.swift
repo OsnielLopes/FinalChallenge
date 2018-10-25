@@ -26,7 +26,6 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter.loadMoodTypes()
         self.presenter.loadTodayEntries()
     }
     
@@ -51,6 +50,8 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
                 
                 addCell.daySummaryTableViewController = self
                 addCell.lineView.isHidden = self.presenter.shouldDisplayLine(for: indexPath.row)
+                self.insertTableViewCell = addCell
+                self.presenter.loadMoodTypes()
                 
                 return addCell
             } else {

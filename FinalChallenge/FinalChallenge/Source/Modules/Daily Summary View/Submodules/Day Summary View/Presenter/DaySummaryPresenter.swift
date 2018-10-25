@@ -34,6 +34,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     func handleSuccessFetchedMood(with results: [MoodInput]) {
         self.view.showLoading(false)
         self.didEndedFetchingMoodInputs = true
+        self.entries.append(contentsOf: results)
         self.didEndedFetching()
     }
     
@@ -47,6 +48,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     func handleSuccessFetchedAnwsers(with results: [Answer]) {
         self.didEndedFetchingAnswers = true
         self.view.showLoading(false)
+        self.entries.append(contentsOf: results)
         self.didEndedFetching()
     }
     
