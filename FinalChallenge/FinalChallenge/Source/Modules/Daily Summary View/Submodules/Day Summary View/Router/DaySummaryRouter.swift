@@ -12,8 +12,8 @@ import UIKit
 class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
     
     // MARK: - Constants
-    private let storyBoardName = "DailyQuestion"
-    private let viewIdentifier = "DailyQuestionView"
+    private let storyBoardName = "DailySummary"
+    private let viewIdentifier = "DailySummaryView"
     
     // MARK: - Viper Module Properties
     weak var view: DailySummaryViewController!
@@ -59,7 +59,7 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
         let storyboard = UIStoryboard(name: self.storyBoardName, bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: self.viewIdentifier)
         
-        return viewController as! DailyQuestionView
+        return viewController as! DailySummaryViewController
     }
     
 }

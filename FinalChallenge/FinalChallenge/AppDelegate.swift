@@ -25,25 +25,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(true, forKey: Project.UserSettings.appHasBeenUsed.rawValue)
         }
 //
-        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
-
-        let navController = UINavigationController(rootViewController: viewController)
-
-
-        navController.isNavigationBarHidden = true
+//        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
+//
+//        let navController = UINavigationController(rootViewController: viewController)
+//
+//
+//        navController.isNavigationBarHidden = true
+//
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = navController
+//        self.window?.makeKeyAndVisible()
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = navController
-        self.window?.makeKeyAndVisible()
+        guard let window = self.window else { return true}
+        window.makeKeyAndVisible()
 
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        guard let window = self.window else { return true}
-//        window.makeKeyAndVisible()
-//
-//        let dailyView = DailyQuestionRouter()
-//
-//        dailyView.presentAsRoot(window: window)
+        let dailyView = DailySummaryRouter()
+
+        dailyView.presentAsRoot(window: window)
         
         return true
     }

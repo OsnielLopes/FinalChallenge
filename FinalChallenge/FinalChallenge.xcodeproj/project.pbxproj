@@ -96,14 +96,14 @@
 		BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */; };
 		BD290C4A216D352D001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
 		BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
-		BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD290C4F216E9613001F16EA /* Calendar.storyboard */; };
+		BD290C50216E9613001F16EA /* DailySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD290C4F216E9613001F16EA /* DailySummary.storyboard */; };
 		BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
 		BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
-		BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
 		BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
 		BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
 		BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
 		BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
+		BD3E3C25218244CF00539ADB /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
 		BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
 		BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */; };
 		BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
@@ -141,6 +141,9 @@
 		BDA08141217578D200F57696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 		BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
 		BDA84B91217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
+		BDB7C53F21823768009A8206 /* DailySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53921823768009A8206 /* DailySummaryPresenter.swift */; };
+		BDB7C54021823768009A8206 /* DailySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53A21823768009A8206 /* DailySummaryRouter.swift */; };
+		BDB7C54121823768009A8206 /* DailySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53B21823768009A8206 /* DailySummaryProtocols.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */; };
 		BDE468302180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
@@ -235,7 +238,7 @@
 		BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxAnswer.swift; sourceTree = "<group>"; };
 		BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioboxAnswerDAO.swift; sourceTree = "<group>"; };
 		BD290C49216D352D001F16EA /* MoodDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDAO.swift; sourceTree = "<group>"; };
-		BD290C4F216E9613001F16EA /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		BD290C4F216E9613001F16EA /* DailySummary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailySummary.storyboard; sourceTree = "<group>"; };
 		BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryTableViewController.swift; sourceTree = "<group>"; };
 		BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryViewController.swift; sourceTree = "<group>"; };
 		BD290C6321752918001F16EA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
@@ -257,6 +260,9 @@
 		BD974A742167F4F700612838 /* CategoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
 		BD974A782167F86900612838 /* CategoryDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAOTests.swift; sourceTree = "<group>"; };
 		BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTableViewCell.swift; sourceTree = "<group>"; };
+		BDB7C53921823768009A8206 /* DailySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryPresenter.swift; sourceTree = "<group>"; };
+		BDB7C53A21823768009A8206 /* DailySummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryRouter.swift; sourceTree = "<group>"; };
+		BDB7C53B21823768009A8206 /* DailySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummaryView.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
@@ -514,13 +520,11 @@
 		BD71F695217562460011C885 /* Daily Summary View */ = {
 			isa = PBXGroup;
 			children = (
-				BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */,
-				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
-				BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */,
-				BDE468402180F954002BDE93 /* Router */,
-				BDE4683C2180F924002BDE93 /* Interactor */,
-				BDE468382180F8FE002BDE93 /* Presenter */,
-				BDE468312180F709002BDE93 /* View */,
+				BDB7C53B21823768009A8206 /* DailySummaryProtocols.swift */,
+				BDB7C546218237AF009A8206 /* Router */,
+				BDB7C54421823789009A8206 /* Presenter */,
+				BDB7C5452182379A009A8206 /* View */,
+				BDB7C5482182380B009A8206 /* Submodules */,
 			);
 			path = "Daily Summary View";
 			sourceTree = "<group>";
@@ -621,6 +625,51 @@
 				BD974A4E2167F01800612838 /* Info.plist */,
 			);
 			path = FinalChallengeTests;
+			sourceTree = "<group>";
+		};
+		BDB7C53721823724009A8206 /* Day Summary View */ = {
+			isa = PBXGroup;
+			children = (
+				BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */,
+				BDE468402180F954002BDE93 /* Router */,
+				BDE4683C2180F924002BDE93 /* Interactor */,
+				BDE468382180F8FE002BDE93 /* Presenter */,
+				BDE468312180F709002BDE93 /* View */,
+			);
+			path = "Day Summary View";
+			sourceTree = "<group>";
+		};
+		BDB7C54421823789009A8206 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDB7C53921823768009A8206 /* DailySummaryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDB7C5452182379A009A8206 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */,
+				BD290C4F216E9613001F16EA /* DailySummary.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDB7C546218237AF009A8206 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BDB7C53A21823768009A8206 /* DailySummaryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BDB7C5482182380B009A8206 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				BDB7C53721823724009A8206 /* Day Summary View */,
+			);
+			path = Submodules;
 			sourceTree = "<group>";
 		};
 		BDE468312180F709002BDE93 /* View */ = {
@@ -761,7 +810,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */,
+				BD290C50216E9613001F16EA /* DailySummary.storyboard in Resources */,
 				49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */,
 				4539540D21766DBF00CF71EC /* DailyQuestion.storyboard in Resources */,
 				450ED4CB2177D85300195CAE /* Localizable.strings in Resources */,
@@ -874,6 +923,7 @@
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
+				BDB7C54121823768009A8206 /* DailySummaryProtocols.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
@@ -915,6 +965,7 @@
 				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */,
 				BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */,
+				BDB7C53F21823768009A8206 /* DailySummaryPresenter.swift in Sources */,
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				4943FDD82165355600FE2045 /* CalendarCollectionViewCell.swift in Sources */,
@@ -923,6 +974,7 @@
 				49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */,
 				4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
+				BDB7C54021823768009A8206 /* DailySummaryRouter.swift in Sources */,
 				BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
 				BD4E0E8721791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */,
 			);
@@ -980,7 +1032,7 @@
 				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
 				BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
 				BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */,
-				BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
+				BD3E3C25218244CF00539ADB /* DailySummaryViewController.swift in Sources */,
 				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
 				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
 				BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,

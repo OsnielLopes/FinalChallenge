@@ -8,15 +8,14 @@
 
 import UIKit
 
-class DailySummaryViewController: UIViewController {
+class DailySummaryViewController: UIViewController, DailySummaryPresenterOutputProtocol {
     
     var currentDate: Date = Date()
-    
     var daySummaryTableViewController: DaySummaryTableViewController!
-    
     @IBOutlet weak var calendarContainerView: UIView!
-    
     @IBOutlet weak var calendarBorderView: UIView!
+    
+    var presenter: DailySummaryPresenterInputProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +39,13 @@ class DailySummaryViewController: UIViewController {
         if let viewController = segue.destination as? DaySummaryTableViewController {
             viewController.summaryView = self
             self.daySummaryTableViewController = viewController
+            self.presenter.willPresentSummaryView(viewController)
+            
         }
 
         if let viewController = segue.destination as? CalendarViewController {
             viewController.summaryView = self
+            self.presenter.willPresentCalendarView(viewController)
         }
         
     }
