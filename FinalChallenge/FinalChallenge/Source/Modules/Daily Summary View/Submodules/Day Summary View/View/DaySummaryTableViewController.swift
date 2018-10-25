@@ -101,21 +101,12 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
     
     // MARK: - Actions
     func didTapInsertMood(_ moodIndex: Int) {
-//        MoodDAO.shared.insertMood(moodType: self.moodTypes[moodIndex], date: Date(), completion: { mood, err in
-//            guard let mood = mood, err == nil else {
-//                print("There was an error inserting the mood in the table view")
-//                return
-//            }
-//            self.entries.append(mood)
-//            self.sortEntries()
-//            self.tableView.beginUpdates()
-//            self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
-//            self.tableView.endUpdates()
-//        })
+        self.presenter.didTapInsert(mood: moodIndex)
     }
     
     func didTapInsertQuestion(insertButton: UIButton) {
-//        self.insertButton = insertButton
+        self.insertButton = insertButton
+        self.presenter.didTapInsertQuestion()
 //        let storyboard = UIStoryboard(name: "BreathingView", bundle: nil)
 //        if let viewController = storyboard.instantiateViewController(withIdentifier: "breathingView") as? BreathingViewController {
 //            viewController.transitioningDelegate = self
@@ -139,8 +130,14 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
     
     func didFetch(moodTypes: [MoodType]) {
         self.insertTableViewCell?.setButtons(forMoodTypes: moodTypes)
-//        self.tableView.reloadData()
     }
+    
+    func didAdded(moodInput mood: MoodInput) {
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
+        self.tableView.endUpdates()
+    }
+    
     
 }
 

@@ -15,6 +15,8 @@ protocol DailySummaryRouterProtocol: class {
     
     func willPresentSummaryView(_ view: DaySummaryTableViewController)
     func willPresentCalendarView(_ view: CalendarViewController)
+    
+    func getCurrentDate() -> Date
 }
 
 // MARK: - Interactor

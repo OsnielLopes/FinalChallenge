@@ -11,22 +11,14 @@ import UIKit
 class InsertTableViewCell: UITableViewCell {
     
     @IBOutlet weak var insertButton: UIButton!
-    
-    var questionButton: UIButton!
-    
     @IBOutlet weak var lineView: UIView!
-    
     var moodButtons: [UIButton] = []
-    
     var insertButtons: [UIButton] = []
-    
+    var questionButton: UIButton!
     var isInsertMenuClosed = true
-    
     var isInsertMoodMenuClosed = true
-    
-    var daySummaryTableViewController: DaySummaryTableViewController!
-    
     var shouldReloadCell = true
+    var daySummaryTableViewController: DaySummaryTableViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()

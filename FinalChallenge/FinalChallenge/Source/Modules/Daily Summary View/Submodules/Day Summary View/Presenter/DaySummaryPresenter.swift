@@ -9,19 +9,17 @@
 import Foundation
 
 class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummaryInteractorOutputProtocol {
-    
+
     // MARK: - Properties
     private var moodTypes: [MoodType] = []
     private var entries: [Any] = []
     private var didEndedFetchingMoodInputs = false
     private var didEndedFetchingAnswers = false
-    private var currentDate: Date = Date()
     
     // MARK: - Viper Module Properties
     weak var view: DaySummaryPresenterOutputProtocol!
     var interactor: DaySummaryInteractorInputProtocol!
-    var router: DaySummaryRouterProtocol!
-    
+    var router: DaySummaryRouterProtocol!    
     
     // MARK: - DaySummaryInteractorOutputProtocol
     func handleSuccessFetchedMoodTypes(with results: [MoodType]) {
@@ -59,6 +57,16 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
         self.view.showError(message: message)
     }
     
+    func handleSuccessAddedMood(with results: MoodInput) {
+        self.entries.append(results)
+        self.sortEntries()
+        self.view.didAdded(moodInput: results)
+    }
+    
+    func handleFailureAddedMood(with message: String) {
+        self.view.showError(message: message)
+    }
+    
     // MARK: - DaySummaryPresenterInputProtocol
     func loadTodayEntries() {
         self.view.showLoading(true)
@@ -66,8 +74,8 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
         self.didEndedFetchingAnswers = false
         self.didEndedFetchingMoodInputs = false
         
-        self.interactor.fetchMoods(forDate: self.currentDate)
-        self.interactor.fetchAnswers(forDate: self.currentDate)
+        self.interactor.fetchMoods(forDate: self.getCurrentDate())
+        self.interactor.fetchAnswers(forDate: self.getCurrentDate())
     }
     
     func loadMoodTypes() {
@@ -88,7 +96,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func shouldShowAddButton() -> Bool {
-        return Calendar.current.isDateInToday(self.currentDate)
+        return Calendar.current.isDateInToday(self.getCurrentDate())
     }
     
     func shouldDisplayLine(for index: Int) -> Bool {
@@ -97,7 +105,6 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
         }
         return index + (!self.shouldShowAddButton() ? 1 : 0) == self.entries.count
     }
-    
     
     func didTapInsert(mood index: Int) {
         fatalError()
@@ -133,5 +140,9 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
             
             return (date1 as Date) > (date2 as Date)
         })
+    }
+    
+    private func getCurrentDate() -> Date {
+        return self.router.getCurrentDate()
     }
 }

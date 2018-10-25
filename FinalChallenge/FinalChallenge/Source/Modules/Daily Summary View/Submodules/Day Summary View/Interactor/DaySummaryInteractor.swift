@@ -52,4 +52,16 @@ class DaySummaryInteractor: NSObject, DaySummaryInteractorInputProtocol {
         })
     }
     
+    func add(moodType type: MoodType, toDate date: Date) {
+        MoodDAO.shared.insertMood(moodType: type, date: date, completion: { mood, err in
+            guard let mood = mood, err == nil else {
+                self.output.handleFailureFetchedAnwsers(with: "There was a problem adding a mood for this date")
+                return
+            }
+            self.moodInputs.append(mood)
+            self.output.handleSuccessAddedMood(with: mood)
+        })
+
+    }
+    
 }

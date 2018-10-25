@@ -14,7 +14,7 @@ protocol DaySummaryRouterProtocol: class {
     func present(with viewController: UIViewController)
     func presentAsRoot(window: UIWindow)
     
-    func presentCalendar()
+    func getCurrentDate() -> Date
 }
 
 // MARK: - Interactor
@@ -22,6 +22,7 @@ protocol DaySummaryInteractorInputProtocol {
     func fetchMoodTypes()
     func fetchMoods(forDate date: Date)
     func fetchAnswers(forDate date: Date)
+    func add(moodType type: MoodType, toDate date: Date)
 }
 
 protocol DaySummaryInteractorOutputProtocol: class {
@@ -33,6 +34,9 @@ protocol DaySummaryInteractorOutputProtocol: class {
     
     func handleSuccessFetchedAnwsers(with results: [Answer])
     func handleFailureFetchedAnwsers(with message: String)
+    
+    func handleSuccessAddedMood(with results: MoodInput)
+    func handleFailureAddedMood(with message: String)
 }
 
 // MARK: - Presenter
@@ -49,6 +53,7 @@ protocol DaySummaryPresenterInputProtocol: class {
     
     func shouldShowAddButton() -> Bool
     func shouldDisplayLine(for index: Int) -> Bool
+    
 }
 
 // MARK: - View
@@ -57,4 +62,5 @@ protocol DaySummaryPresenterOutputProtocol: class {
     func showError(message: String)
     func didFetchEntries()
     func didFetch(moodTypes: [MoodType])
+    func didAdded(moodInput mood: MoodInput)
 }

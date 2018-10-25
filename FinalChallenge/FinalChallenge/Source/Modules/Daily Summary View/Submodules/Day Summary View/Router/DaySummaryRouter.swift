@@ -16,8 +16,8 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
     private let viewIdentifier = "DailySummaryView"
     
     // MARK: - Viper Module Properties
-    weak var view: DailySummaryViewController!
-    var dailySummaryRouter: DailySummaryRouter!
+    weak var view: DaySummaryTableViewController!
+    var dailySummaryRouter: DailySummaryRouterProtocol!
     
     // MARK: - Constructors
     override init() {
@@ -29,9 +29,9 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
         
         presenter.interactor = interactor
         presenter.router = self
-//        presenter.view = view
+        presenter.view = view
         
-//        view.presenter = presenter
+        view.presenter = presenter
         interactor.output = presenter
         
         self.view = view
@@ -51,16 +51,16 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
         //FIXME: create implementation to present calendar Router
     }
     
-    func presentAnswerQuestion() {
-        //FIXME: create implementation to present answer question Router
+    func getCurrentDate() -> Date {
+        return self.dailySummaryRouter.getCurrentDate()
     }
     
     // MARK: - Private methods
-    private func viewControllerFromStoryboard() -> DailySummaryViewController {
+    private func viewControllerFromStoryboard() -> DaySummaryTableViewController {
         let storyboard = UIStoryboard(name: self.storyBoardName, bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: self.viewIdentifier)
         
-        return viewController as! DailySummaryViewController
+        return viewController as! DaySummaryTableViewController
     }
     
 }

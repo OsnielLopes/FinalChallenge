@@ -18,7 +18,6 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
 	weak var view: DailySummaryViewController!
 //    var calendarRouter: CalendarRouter!
     var daySummaryRouter: DaySummaryRouter!
-    var currentDate: Date!
 
 	// MARK: - Constructors
 	override init() {
@@ -33,8 +32,6 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
 		view.presenter = presenter
 
 		self.view = view
-        
-        self.currentDate = Date()
 	}
 
     // MARK: - DailySummaryRouterProtocol
@@ -47,6 +44,7 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
         let presenter = DaySummaryPresenter()
         let interactor = DaySummaryInteractor()
         self.daySummaryRouter = DaySummaryRouter()
+        self.daySummaryRouter.dailySummaryRouter = self
         
         presenter.router = self.daySummaryRouter
         presenter.view = view
@@ -58,6 +56,11 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
     func willPresentCalendarView(_ view: CalendarViewController) {
         // FIXME: - Waiting for calendar view VIPER submodules
     }
+    
+    func getCurrentDate() -> Date {
+        // FIXME: - Waiting for calendar view VIPER submodules
+        return Date()
+    }
 
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> DailySummaryViewController {
@@ -66,4 +69,5 @@ class DailySummaryRouter: NSObject, DailySummaryRouterProtocol {
 
 		return viewController as! DailySummaryViewController
 	}
+    
 }
