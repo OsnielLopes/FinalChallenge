@@ -9,6 +9,8 @@
 import XCTest
 import CoreData
 
+@testable import FinalChallenge
+
 class QuestionsDAOTests: XCTestCase {
     
     var questions: [Question]!

@@ -26,7 +26,6 @@
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
 		4943FDD82165355600FE2045 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */; };
 		4943FDDA21669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */; };
-		49AB023921752D79002B8140 /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
 		49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */; };
 		49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
@@ -35,125 +34,69 @@
 		49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 		49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
-		BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
 		BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
-		BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
 		BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
-		BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
 		BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE3216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift */; };
-		BD290BFF216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE3216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift */; };
 		BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */; };
-		BD290C01216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */; };
 		BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */; };
-		BD290C03216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */; };
 		BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE6216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift */; };
-		BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE6216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift */; };
 		BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE7216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift */; };
-		BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE7216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift */; };
 		BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE8216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift */; };
-		BD290C09216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE8216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift */; };
 		BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE9216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift */; };
-		BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE9216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift */; };
 		BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEA216BE6EF001F16EA /* Answer+CoreDataClass.swift */; };
-		BD290C0D216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEA216BE6EF001F16EA /* Answer+CoreDataClass.swift */; };
 		BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEB216BE6EF001F16EA /* Answer+CoreDataProperties.swift */; };
-		BD290C0F216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEB216BE6EF001F16EA /* Answer+CoreDataProperties.swift */; };
 		BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEC216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift */; };
-		BD290C11216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEC216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift */; };
 		BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BED216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift */; };
-		BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BED216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift */; };
 		BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEE216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift */; };
-		BD290C15216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEE216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift */; };
 		BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEF216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift */; };
-		BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEF216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift */; };
 		BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */; };
-		BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */; };
 		BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */; };
-		BD290C1B216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */; };
 		BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF2216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift */; };
-		BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF2216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift */; };
 		BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF3216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift */; };
-		BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF3216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift */; };
 		BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */; };
-		BD290C21216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */; };
 		BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF5216BE6EF001F16EA /* Category+CoreDataProperties.swift */; };
-		BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF5216BE6EF001F16EA /* Category+CoreDataProperties.swift */; };
 		BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF6216BE6EF001F16EA /* Question+CoreDataClass.swift */; };
-		BD290C25216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF6216BE6EF001F16EA /* Question+CoreDataClass.swift */; };
 		BD290C26216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF7216BE6EF001F16EA /* Question+CoreDataProperties.swift */; };
-		BD290C27216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF7216BE6EF001F16EA /* Question+CoreDataProperties.swift */; };
 		BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C29216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift */; };
 		BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2B216BF569001F16EA /* QuestionsDAOTests.swift */; };
 		BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2D216D15E0001F16EA /* RadioboxQuestionDAO.swift */; };
-		BD290C2F216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2D216D15E0001F16EA /* RadioboxQuestionDAO.swift */; };
 		BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C30216D17F6001F16EA /* RadioboxQuestionDAOTests.swift */; };
 		BD290C35216D1A90001F16EA /* AuthorDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C34216D1A90001F16EA /* AuthorDAOTests.swift */; };
 		BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C36216D1B60001F16EA /* AuthorDAO.swift */; };
-		BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C36216D1B60001F16EA /* AuthorDAO.swift */; };
 		BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
 		BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
 		BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */; };
 		BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */; };
 		BD290C4A216D352D001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
-		BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
 		BD290C50216E9613001F16EA /* DailySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD290C4F216E9613001F16EA /* DailySummary.storyboard */; };
 		BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
 		BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
 		BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
-		BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
 		BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
-		BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
-		BD3E3C25218244CF00539ADB /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
-		BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
+		BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
+		BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 		BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */; };
 		BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
-		BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
 		BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
-		BD4E0E812179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
 		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
-		BD4E0E8421791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
 		BD4E0E8721791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */; };
-		BD4E0E8821791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */; };
-		BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
-		BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
-		BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
-		BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */; };
-		BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */; };
-		BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
 		BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
-		BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
 		BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
 		BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
 		BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */; };
-		BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
-		BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
-		BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
-		BD974A722167F12E00612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
-		BD974A732167F13000612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 		BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 		BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A782167F86900612838 /* CategoryDAOTests.swift */; };
-		BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
-		BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
-		BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* CalendarUICollectionViewFlowLayout.swift */; };
-		BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD72165355600FE2045 /* CalendarCollectionViewCell.swift */; };
-		BDA08141217578D200F57696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 		BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
-		BDA84B91217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
 		BDB7C53F21823768009A8206 /* DailySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53921823768009A8206 /* DailySummaryPresenter.swift */; };
 		BDB7C54021823768009A8206 /* DailySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53A21823768009A8206 /* DailySummaryRouter.swift */; };
 		BDB7C54121823768009A8206 /* DailySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C53B21823768009A8206 /* DailySummaryProtocols.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */; };
-		BDE468302180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummaryView.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
-		BDE468342180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
-		BDE468372180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
 		BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */; };
-		BDE4683B2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */; };
 		BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */; };
-		BDE4683F2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -827,8 +770,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */,
-				BDE468302180F6DD002BDE93 /* DaySummaryView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,11 +880,11 @@
 				BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */,
 				453953F621766D0F00CF71EC /* DailyQuestionPresenter.swift in Sources */,
+				BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */,
 				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
 				453953FA21766D0F00CF71EC /* DailyQuestionView.swift in Sources */,
 				BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
-				49AB023921752D79002B8140 /* QuestionsManager.swift in Sources */,
 				BD290C26216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
@@ -958,7 +899,6 @@
 				BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
 				BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
 				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
-				BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */,
 				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
 				491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */,
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
@@ -969,6 +909,7 @@
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				4943FDD82165355600FE2045 /* CalendarCollectionViewCell.swift in Sources */,
+				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,
 				49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */,
@@ -984,67 +925,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE4683B2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */,
-				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
-				BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */,
-				BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
-				BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */,
-				BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */,
-				BD290C15216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
-				BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */,
-				BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
-				BD974A732167F13000612838 /* CoreDataManager.swift in Sources */,
-				BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
-				BDE4683F2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */,
 				BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */,
-				BDE468372180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
-				BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */,
-				BD4E0E8821791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */,
-				BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */,
 				BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */,
-				BD290C09216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
-				BD290BFF216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
-				BD290C0F216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
-				BD290C1B216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
-				BD290C25216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
-				BD4E0E812179197A00DEA2F5 /* FunnyGif.swift in Sources */,
-				BD290C27216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
-				BD290C2F216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
 				BD290C35216D1A90001F16EA /* AuthorDAOTests.swift in Sources */,
-				BD290C03216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
-				BD290C11216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */,
-				BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */,
-				BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */,
-				BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
-				BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
-				BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */,
-				BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */,
-				BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */,
-				BD290C21216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
-				BD4E0E8421791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
-				BD290C01216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
-				BDA08141217578D200F57696 /* ViewController.swift in Sources */,
-				BD290C0D216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
-				BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
-				BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
-				BDA0813F217578CC00F57696 /* CalendarUICollectionViewFlowLayout.swift in Sources */,
-				BDA08140217578CF00F57696 /* CalendarCollectionViewCell.swift in Sources */,
-				BD3E3C25218244CF00539ADB /* DailySummaryViewController.swift in Sources */,
-				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
-				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
-				BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
-				BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */,
-				BDA84B91217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
-				BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */,
-				BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
-				BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
-				BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
-				BDE468342180F777002BDE93 /* DaySummaryProtocols.swift in Sources */,
-				BDA0813E217577DE00F57696 /* CalendarViewController.swift in Sources */,
-				BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
