@@ -12,107 +12,42 @@ fileprivate let moodCellIdentifier = "moodCellIdentifier"
 fileprivate let questionCellIdentifier = "questionCellIdentifier"
 fileprivate let addCellIdentifier = "addCellIdentifier"
 
-class DaySummaryTableViewController: UITableViewController {
-    
-    var entries: [Any] = []
+class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterOutputProtocol {
     
     var transitionAnimator = PopToScreenSizeTransitionAnimation()
-    
-    var moodTypes: [MoodType] = []
-    
+    var insertTableViewCell: InsertTableViewCell?
     var summaryView: DailySummaryViewController!
-    
-    var shouldShowAddButton = true
-    
     let headerHeight: CGFloat = 150.0
+    var insertButton: UIButton?
+    
+    // MARK: - Viper Module Properties
+    var presenter: DaySummaryPresenterInputProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.moodTypes = MoodDAO.shared.moodTypes
     }
+    
+    // MARK: - UITableViewControllerDelegate and UITableViewControllerDataSource
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loadData()
     }
     
-    func loadData() {
-        
-        self.shouldShowAddButton = Calendar.current.isDateInToday(self.summaryView.currentDate)
-        
-        self.entries = []
-        self.tableView.reloadData()
-        
-        var didEndedObtainingAnswers = false
-        var didEndedObtainingMoods = false
-        
-        let didEndedObtainingData = {
-            self.sortEntries()
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-        
-        AnswerDAO.shared.fetchByDay(self.summaryView.currentDate, completion: { (answers, err) in
-            guard err == nil, let answers = answers else {
-                return
-            }
-            self.entries.append(contentsOf: answers)
-            didEndedObtainingAnswers = true
-            if didEndedObtainingMoods {
-                didEndedObtainingData()
-            }
-        })
-        
-        MoodDAO.shared.fetchByDay(self.summaryView.currentDate, completion: { (moods, err) in
-            guard err == nil, let moods = moods else {
-                return
-            }
-            self.entries.append(contentsOf: moods)
-            didEndedObtainingMoods = true
-            if didEndedObtainingAnswers {
-                didEndedObtainingData()
-            }
-        })
-    }
-    
-    func sortEntries() {
-        self.entries.sort(by: { entry1, entry2 in
-            var date1: NSDate!
-            if entry1 is MoodInput {
-                date1 = (entry1 as! MoodInput).date!
-            } else if entry1 is Answer {
-                date1 = (entry1 as! Answer).date!
-            }
-            
-            var date2: NSDate!
-            if entry2 is MoodInput {
-                date2 = (entry2 as! MoodInput).date!
-            } else if entry2 is Answer {
-                date2 = (entry2 as! Answer).date!
-            }
-            
-            return (date1 as Date) > (date2 as Date)
-        })
-    }
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return self.presenter.numberOfSections()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.entries.count + (self.shouldShowAddButton ? 1 : 0)
+        return self.presenter.numberOfEntries(in: section)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 && self.shouldShowAddButton {
+        if indexPath.row == 0 && self.presenter.shouldShowAddButton() {
             if let addCell = tableView.dequeueReusableCell(withIdentifier: addCellIdentifier, for: indexPath) as? InsertTableViewCell {
                 
                 addCell.daySummaryTableViewController = self
-                addCell.setButtons()
-                
-                addCell.lineView.isHidden = self.entries.count == 0
+                addCell.lineView.isHidden = self.presenter.shouldDisplayLine(for: indexPath.row)
                 
                 return addCell
             } else {
@@ -120,12 +55,12 @@ class DaySummaryTableViewController: UITableViewController {
             }
         }
         
-        let entry = self.entries[indexPath.row - (self.shouldShowAddButton ? 1 : 0)]
-
+        let entry = self.presenter.item(at: indexPath.row)
+        
         if let entryMood = entry as? MoodInput {
             if let moodCell = tableView.dequeueReusableCell(withIdentifier: moodCellIdentifier, for: indexPath) as? MoodInputTableViewCell {
                 moodCell.setMood(entryMood)
-                moodCell.lineView.isHidden = indexPath.row + (!self.shouldShowAddButton ? 1 : 0) == self.entries.count
+                moodCell.lineView.isHidden = self.presenter.shouldDisplayLine(for: indexPath.row)
                 return moodCell
             }
         } else if let entryAnswer = entry as? Answer {
@@ -140,11 +75,11 @@ class DaySummaryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.row == 0 && self.shouldShowAddButton {
+        if indexPath.row == 0 && self.presenter.shouldShowAddButton() {
             return 70
         }
         
-        switch self.entries[indexPath.row - (self.shouldShowAddButton ? 1 : 0)] {
+        switch self.presenter.item(at: indexPath.row) {
         case is Answer:
             return UITableView.automaticDimension
         case is MoodInput:
@@ -164,30 +99,47 @@ class DaySummaryTableViewController: UITableViewController {
         return self.headerHeight
     }
     
+    // MARK: - Actions
     func didTapInsertMood(_ moodIndex: Int) {
-        MoodDAO.shared.insertMood(moodType: self.moodTypes[moodIndex], date: Date(), completion: { mood, err in
-            guard let mood = mood, err == nil else {
-                print("There was an error inserting the mood in the table view")
-                return
-            }
-            self.entries.append(mood)
-            self.sortEntries()
-            self.tableView.beginUpdates()
-            self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
-            self.tableView.endUpdates()
-        })
+//        MoodDAO.shared.insertMood(moodType: self.moodTypes[moodIndex], date: Date(), completion: { mood, err in
+//            guard let mood = mood, err == nil else {
+//                print("There was an error inserting the mood in the table view")
+//                return
+//            }
+//            self.entries.append(mood)
+//            self.sortEntries()
+//            self.tableView.beginUpdates()
+//            self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
+//            self.tableView.endUpdates()
+//        })
     }
     
-    var insertButton: UIButton?
-    
     func didTapInsertQuestion(insertButton: UIButton) {
-        self.insertButton = insertButton
-        let storyboard = UIStoryboard(name: "BreathingView", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "breathingView") as? BreathingViewController {
-            viewController.transitioningDelegate = self
-            viewController.daySummaryViewController = self
-            self.present(viewController, animated: true, completion: nil)
-        }
+//        self.insertButton = insertButton
+//        let storyboard = UIStoryboard(name: "BreathingView", bundle: nil)
+//        if let viewController = storyboard.instantiateViewController(withIdentifier: "breathingView") as? BreathingViewController {
+//            viewController.transitioningDelegate = self
+//            viewController.daySummaryViewController = self
+//            self.present(viewController, animated: true, completion: nil)
+//        }
+    }
+    
+    // MARK: - DaySummaryPresenterOutputProtocol
+    func showLoading(_ loading: Bool) {
+        //FIXME: add activity controll on view if loading is true, otherwise, remove loading
+    }
+    
+    func showError(message: String) {
+        //FIXME: present the error message on view!
+    }
+    
+    func didFetchEntries() {
+        self.tableView.reloadData()
+    }
+    
+    func didFetch(moodTypes: [MoodType]) {
+        self.insertTableViewCell?.setButtons(forMoodTypes: moodTypes)
+//        self.tableView.reloadData()
     }
     
 }

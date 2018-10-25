@@ -32,7 +32,7 @@ class DailySummaryViewController: UIViewController {
     }
     
     func reloadData() {
-        self.daySummaryTableViewController.loadData()
+//        self.daySummaryTableViewController.loadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

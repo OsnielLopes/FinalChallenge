@@ -36,11 +36,11 @@ class InsertTableViewCell: UITableViewCell {
         self.insertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)
     }
     
-    func setButtons() {
+    func setButtons(forMoodTypes moodTypes: [MoodType]) {
         if !self.shouldReloadCell { return }
         
         var i = 0
-        for mood in self.daySummaryTableViewController.moodTypes {
+        for mood in moodTypes {
             let button = self.instantiateMoodButton(forMoodImage: UIImage(named: mood.typeIcon!)!)
             button.tag = i
             button.addTarget(self, action: #selector(didTapToAddMood(_:)), for: .touchUpInside)
