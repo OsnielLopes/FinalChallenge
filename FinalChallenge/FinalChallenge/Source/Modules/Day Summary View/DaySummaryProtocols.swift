@@ -13,7 +13,7 @@ import UIKit
 protocol DaySummaryRouterProtocol: class {
     func present(with viewController: UIViewController)
     func presentAsRoot(window: UIWindow)
-    func presentAnswerQuestion()    
+    func presentBreathingView()    
 }
 
 // MARK: - Interactor

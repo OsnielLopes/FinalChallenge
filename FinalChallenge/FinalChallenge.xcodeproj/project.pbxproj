@@ -322,7 +322,7 @@
 				4925B40D217571D100413181 /* Calendar */,
 				491511F4216FD351007C0E09 /* Answering Question */,
 				453953EE21766CD900CF71EC /* Daily Questions */,
-				BD71F695217562460011C885 /* Daily Summary View */,
+				BDB7C53721823724009A8206 /* Day Summary View */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -459,14 +459,6 @@
 				BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */,
 			);
 			path = Bullshit;
-			sourceTree = "<group>";
-		};
-		BD71F695217562460011C885 /* Daily Summary View */ = {
-			isa = PBXGroup;
-			children = (
-				BDB7C53721823724009A8206 /* Day Summary View */,
-			);
-			path = "Daily Summary View";
 			sourceTree = "<group>";
 		};
 		BD974A252163F74B00612838 /* Models */ = {
