@@ -53,7 +53,6 @@ protocol DaySummaryPresenterInputProtocol: class {
     func shouldShowAddButton() -> Bool
     func shouldDisplayLine(for index: Int) -> Bool
     
-    func getCurrentDate() -> Date
     func setCurrentDate(_ date: Date)
 }
 

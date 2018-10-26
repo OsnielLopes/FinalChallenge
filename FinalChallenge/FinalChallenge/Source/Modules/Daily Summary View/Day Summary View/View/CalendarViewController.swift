@@ -356,10 +356,6 @@ class CalendarViewController: UIViewController {
      // MARK: - Auxiliar Functions
     
     func updateSummaryView(){
-        guard let dailySummaryViewController = self.parent as? DailySummaryViewController else {
-            print("Impossible to downcast the parenteViewController to DailySummaryViewController")
-            return
-        }
         let indexPathOfSelectedCell = currentMonthCollectionViewController.collectionView.indexPathsForSelectedItems!.first!
         let selectedCell = currentMonthCollectionViewController.collectionView.cellForItem(at: indexPathOfSelectedCell) as! MonthCollectionViewCell
         self.dailySummaryParentViewController.setCurrentDate(selectedCell.day)

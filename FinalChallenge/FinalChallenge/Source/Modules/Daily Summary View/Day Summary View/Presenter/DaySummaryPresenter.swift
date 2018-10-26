@@ -72,6 +72,8 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     
     // MARK: - DaySummaryPresenterInputProtocol
     func loadTodayEntries() {
+        self.entries = []
+        self.view.didFetchEntries()
         self.view.showLoading(true)
         
         self.didEndedFetchingAnswers = false
@@ -115,10 +117,6 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     
     func didTapInsertQuestion() {
         self.router.presentAnswerQuestion()
-    }
-    
-    func getCurrentDate() -> Date {
-        return self.currentDate
     }
     
     func setCurrentDate(_ date: Date) {

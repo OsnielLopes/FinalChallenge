@@ -101,10 +101,6 @@ class DailySummaryViewController: UIViewController, DaySummaryPresenterOutputPro
         self.daySummaryTableViewController.didAddedMood()
     }
     
-    func getCurrentDate() -> Date {
-        return self.presenter.getCurrentDate()
-    }
-    
     func setCurrentDate(_ date: Date) {
         self.presenter.setCurrentDate(date)
     }
