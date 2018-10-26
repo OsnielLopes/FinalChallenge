@@ -8,130 +8,145 @@
 
 import UIKit
 
-class CalendarViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CalendarViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var currentMonthLabel: UILabel!
-    @IBOutlet weak var currentMonthLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet var currentMonthTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var nextMonthLabel: UILabel!
-    @IBOutlet weak var nextMonthLabelCenterConstraint: NSLayoutConstraint!
     @IBOutlet weak var weekdays: UIStackView!
     @IBOutlet weak var weekDaysTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var firstWeekdayLabelWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var daysColletionView: UICollectionView!
     
+    // MARK: - Properties
     
-    // MARK: - Variables
+    var previousMonthLabel: UILabel!
+    var currentMonthLabel: UILabel!
+    var nextMonthLabel: UILabel!
+    
+    var previousMonthLabelLeadingConstraint: NSLayoutConstraint!
+    var currentMonthLabelLeadingConstraint: NSLayoutConstraint!
+    var nextMonthLabelLeadingConstraint: NSLayoutConstraint!
+    
+    var previousMonthContainerView: UIView!
+    var currentMonthContainerView: UIView!
+    var nextMonthContainerView: UIView!
+    
+    var previousMonthContainerViewLeadingConstraint: NSLayoutConstraint!
+    var currentMonthContainerViewLeadingConstraint: NSLayoutConstraint!
+    var nextMonthContainerViewLeadingConstraint: NSLayoutConstraint!
+    
+    var previousMonthCollectionViewController: MonthCollectionViewController!
+    var currentMonthCollectionViewController: MonthCollectionViewController!
+    var nextMonthCollectionViewController: MonthCollectionViewController!
+    
     var largeCalendarView = true
     var referenceDay = Date()
     var currentMonthLabelInitialFrame: CGRect!
+    var calendar = Calendar(identifier: .gregorian)
+    var summaryView: DailySummaryViewController?
+    var horizontalTranslationLength: CGFloat = 0
+    var distanceBetweenCurrentAndNextMonth: CGFloat = 0
+    var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        dateFormatter.dateFormat = "MMMM"
+        return dateFormatter
+    }()
     var originalMonthDays: [Date?] = []
     var currentMonthDays: [Date?] = []
-    var calendar = Calendar(identifier: .gregorian)
-    var summaryView: DailySummaryViewController!
+    var safeAreaLayout: UILayoutGuide!
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextMonthLabelCenterConstraint.constant = self.view.frame.width/2
-        referenceDay = calendar.date(byAdding: .day, value: 14, to: referenceDay)!
+        safeAreaLayout = self.view.safeAreaLayoutGuide
+        let firstDayOfTheWeekLabelExtraMargin = (firstWeekdayLabelWidthConstraint.constant/2)-weekdays.arrangedSubviews.first!.intrinsicContentSize.width/2
+        
+        currentMonthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        currentMonthLabel.text = dateFormatter.string(from: referenceDay)
+        currentMonthLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        self.view.addSubview(currentMonthLabel)
+        currentMonthLabel.translatesAutoresizingMaskIntoConstraints = false
+        currentMonthLabelLeadingConstraint = currentMonthLabel.leadingAnchor.constraint(equalTo: safeAreaLayout.leadingAnchor, constant: 30 + firstDayOfTheWeekLabelExtraMargin)
+        currentMonthLabelLeadingConstraint.isActive = true
+        currentMonthLabel.topAnchor.constraint(equalTo: safeAreaLayout.topAnchor, constant: 30).isActive = true
+        
+        nextMonthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        nextMonthLabel.text = dateFormatter.string(from: calendar.date(byAdding: .month, value: 1, to: referenceDay)!)
+        nextMonthLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        nextMonthLabel.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        self.view.addSubview(nextMonthLabel)
+        nextMonthLabel.translatesAutoresizingMaskIntoConstraints = false
+        nextMonthLabelLeadingConstraint = nextMonthLabel.leadingAnchor.constraint(equalTo: safeAreaLayout.leadingAnchor, constant: self.view.frame.width-nextMonthLabel.intrinsicContentSize.width/2)
+        nextMonthLabelLeadingConstraint.isActive = true
+        nextMonthLabel.topAnchor.constraint(equalTo: safeAreaLayout.topAnchor, constant: 30).isActive = true
+        
+        previousMonthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        previousMonthLabel.text = dateFormatter.string(from: calendar.date(byAdding: .month, value: -1, to: referenceDay)!)
+        previousMonthLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        self.view.addSubview(previousMonthLabel)
+        previousMonthLabel.translatesAutoresizingMaskIntoConstraints = false
+        distanceBetweenCurrentAndNextMonth = nextMonthLabelLeadingConstraint.constant - currentMonthLabelLeadingConstraint.constant
+        previousMonthLabelLeadingConstraint = previousMonthLabel.leadingAnchor.constraint(equalTo: safeAreaLayout.leadingAnchor, constant:  -distanceBetweenCurrentAndNextMonth)
+        previousMonthLabelLeadingConstraint.isActive = true
+        previousMonthLabel.topAnchor.constraint(equalTo: safeAreaLayout.topAnchor, constant: 30).isActive = true
         
         firstWeekdayLabelWidthConstraint.constant = (self.view.frame.width - 60) / 7
+        horizontalTranslationLength = self.view.frame.width-60
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "pt_BR")
-        dateFormatter.dateFormat = "MMMM"
-        currentMonthLabel.text = dateFormatter.string(from: referenceDay)
-        nextMonthLabel.text = dateFormatter.string(from: calendar.date(byAdding: .month, value: 1, to: referenceDay)!)
-        currentMonthLabel.layer.anchorPoint = CGPoint(x: 0, y: 0)
-        currentMonthLabelInitialFrame = currentMonthLabel.frame
-        currentMonthLeadingConstraint.constant -= currentMonthLabel.intrinsicContentSize.width/2
-        currentMonthLeadingConstraint.constant += (firstWeekdayLabelWidthConstraint.constant/2)-weekdays.arrangedSubviews.first!.intrinsicContentSize.width/2
-        currentMonthTopConstraint.constant -= currentMonthLabelInitialFrame.height/2
+        // Configure and displays the month collection views
         
-        daysColletionView.dataSource = self
-        daysColletionView.delegate = self
-        daysColletionView.allowsSelection = true
-        daysColletionView.allowsMultipleSelection = true
+        previousMonthContainerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width-60, height: 0))
+        self.view.addSubview(previousMonthContainerView)
+        previousMonthContainerView.translatesAutoresizingMaskIntoConstraints = false
+        previousMonthContainerView.topAnchor.constraint(equalTo: weekdays.bottomAnchor, constant:  8).isActive = true
+        previousMonthContainerViewLeadingConstraint = previousMonthContainerView.leadingAnchor.constraint(equalTo: safeAreaLayout.leadingAnchor, constant: 30-self.view.frame.width)
+        previousMonthContainerViewLeadingConstraint.isActive = true
+        previousMonthContainerView.bottomAnchor.constraint(equalTo: safeAreaLayout.bottomAnchor, constant: 0).isActive = true
+        previousMonthContainerView.widthAnchor.constraint(equalToConstant: self.view.frame.width-60).isActive = true
         
-        let daysRange = calendar.range(of: .day, in: .month, for: referenceDay)
-        let currentDay = calendar.component(.day, from: Date())
-        currentMonthDays.append(contentsOf: Array(repeating: nil, count: calendar.component(.weekday, from: calendar.date(byAdding: .day, value: -currentDay+1, to: Date())!)-1))
-        for i in -currentDay+1...daysRange!.count-currentDay {
-            currentMonthDays.append(calendar.date(byAdding: .day, value: i, to: Date()))
-        }
-        originalMonthDays = currentMonthDays
-        daysColletionView.collectionViewLayout = CalendarUICollectionViewFlowLayout()
-    }
+        previousMonthCollectionViewController = MonthCollectionViewController(collectionViewLayout: MonthUICollectionViewFlowLayout(), referenceDay: calendar.date(byAdding: .month, value: -1, to: referenceDay)!)
+        previousMonthCollectionViewController.cellWidth = (firstWeekdayLabelWidthConstraint.constant)-0.00001
+        previousMonthCollectionViewController.collectionView.reloadData()
+        self.addChild(previousMonthCollectionViewController)
+        previousMonthCollectionViewController.view.frame = CGRect(origin: CGPoint.zero, size: previousMonthContainerView.frame.size)
+        self.previousMonthContainerView.addSubview(previousMonthCollectionViewController.view)
+        previousMonthCollectionViewController.didMove(toParent: self)
+        
+        currentMonthContainerView = UIView(frame: CGRect(x: 10, y: 10, width: self.view.frame.width-60, height: 100))
+        self.view.addSubview(currentMonthContainerView)
+        currentMonthContainerView.translatesAutoresizingMaskIntoConstraints = false
+        currentMonthContainerView.topAnchor.constraint(equalTo: weekdays.bottomAnchor, constant:  8).isActive = true
+        currentMonthContainerViewLeadingConstraint = currentMonthContainerView.leadingAnchor.constraint(equalTo: safeAreaLayout.leadingAnchor, constant: 30)
+        currentMonthContainerViewLeadingConstraint.isActive = true
+        currentMonthContainerView.bottomAnchor.constraint(equalTo: safeAreaLayout.bottomAnchor, constant: 0).isActive = true
+        currentMonthContainerView.widthAnchor.constraint(equalToConstant: self.view.frame.width-60).isActive = true
+        
+        currentMonthCollectionViewController = MonthCollectionViewController(collectionViewLayout: MonthUICollectionViewFlowLayout(), referenceDay: Date())
+        currentMonthCollectionViewController.cellWidth = (firstWeekdayLabelWidthConstraint.constant)-0.00001
+        currentMonthCollectionViewController.collectionView.reloadData()
+        self.addChild(currentMonthCollectionViewController)
+        currentMonthCollectionViewController.view.frame = CGRect(origin: CGPoint.zero, size: currentMonthContainerView.frame.size)
+        self.currentMonthContainerView.addSubview(currentMonthCollectionViewController.view)
+        currentMonthCollectionViewController.didMove(toParent: self)
+        
+        nextMonthContainerView = UIView(frame: CGRect(x: 10, y: 10, width: self.view.frame.width-60, height: 100))
+        self.view.addSubview(nextMonthContainerView)
+        nextMonthContainerView.translatesAutoresizingMaskIntoConstraints = false
+        nextMonthContainerView.topAnchor.constraint(equalTo: weekdays.bottomAnchor, constant:  8).isActive = true
+        nextMonthContainerViewLeadingConstraint = nextMonthContainerView.leadingAnchor.constraint(equalTo: safeAreaLayout.leadingAnchor, constant: 30+self.view.frame.width)
+        nextMonthContainerViewLeadingConstraint.isActive = true
+        nextMonthContainerView.bottomAnchor.constraint(equalTo: safeAreaLayout.bottomAnchor, constant: 0).isActive = true
+        nextMonthContainerView.widthAnchor.constraint(equalToConstant: self.view.frame.width-60).isActive = true
+        
+        nextMonthCollectionViewController = MonthCollectionViewController(collectionViewLayout: MonthUICollectionViewFlowLayout(), referenceDay: calendar.date(byAdding: .month, value: +1, to: referenceDay)!)
+        nextMonthCollectionViewController.cellWidth = (firstWeekdayLabelWidthConstraint.constant)-0.00001
+        nextMonthCollectionViewController.collectionView.reloadData()
+        self.addChild(nextMonthCollectionViewController)
+        nextMonthCollectionViewController.view.frame = CGRect(origin: CGPoint.zero, size: nextMonthContainerView.frame.size)
+        self.nextMonthContainerView.addSubview(nextMonthCollectionViewController.view)
+        nextMonthCollectionViewController.didMove(toParent: self)
     
-    override func viewDidAppear(_ animated: Bool) {
-        for case let cell as CalendarCollectionViewCell in daysColletionView.visibleCells {
-            guard cell.day != nil else { continue }
-            let isToday = calendar.component(.year, from: Date()) == calendar.component(.year, from: cell.day) && calendar.component(.month, from: Date()) == calendar.component(.month, from: cell.day) && calendar.component(.day, from: Date()) == calendar.component(.day, from: cell.day)
-            if isToday {
-                daysColletionView.selectItem(at: daysColletionView.indexPath(for: cell), animated: false, scrollPosition: .centeredHorizontally)
-            }
-        }
-    }
-    
-    //MARK: - UICollectionViewDelegate
 
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? CalendarCollectionViewCell else { return false }
-        return cell.day != nil
-    }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        for cell in collectionView.visibleCells {
-            if collectionView.indexPath(for: cell) == indexPath {
-                cell.isSelected = true
-            } else {
-                collectionView.deselectItem(at: collectionView.indexPath(for: cell)!, animated: true)
-            }
-        }
-        self.summaryView.currentDate = self.getCurrentDate()
-        self.summaryView.reloadData()
-    }
-
-    func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
-        return !collectionView.indexPathsForSelectedItems!.contains(indexPath)
-    }
-
-    //MARK: - UICollectionViewDataSource
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return currentMonthDays.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "day", for: indexPath) as! CalendarCollectionViewCell
-        cell.day = originalMonthDays[indexPath.row]
-        cell.background.layer.cornerRadius = cell.bounds.height/2
-        return cell
-    }
-    
-    //MARK: - UICollectionViewDelegateFlowLayout
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let heightPerItem = collectionView.bounds.height/6
-        return CGSize(width: (firstWeekdayLabelWidthConstraint.constant)-0.00001, height: heightPerItem)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
     }
     
     //MARK: - IBActions
@@ -140,8 +155,8 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
         
         return
         
-        let weekOfCurrentDay = calendar.component(.weekOfMonth, from: (daysColletionView.cellForItem(at: daysColletionView.indexPathsForSelectedItems!.first!) as! CalendarCollectionViewCell).day)
-        (daysColletionView.collectionViewLayout as! CalendarUICollectionViewFlowLayout).expanding = !largeCalendarView
+        let weekOfCurrentDay = calendar.component(.weekOfMonth, from: (currentMonthCollectionViewController.collectionView.cellForItem(at: currentMonthCollectionViewController.collectionView.indexPathsForSelectedItems!.first!) as! MonthCollectionViewCell).day)
+        (currentMonthCollectionViewController.collectionViewLayout as! MonthUICollectionViewFlowLayout).expanding = !largeCalendarView
         
         if largeCalendarView {
             
@@ -156,7 +171,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
                 return IndexPath(item: i, section: 0)
             }
             
-            for indexPath in daysColletionView!.indexPathsForSelectedItems! {
+            for indexPath in currentMonthCollectionViewController.collectionView.indexPathsForSelectedItems! {
                 if indexPathOfItemsToBeRemoved.contains(indexPath) {
                     fatalError("Trying to remove a selected item.")
                 }
@@ -167,7 +182,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
                 currentMonthDays.remove(at: index)
             }
 
-            (daysColletionView.collectionViewLayout as! CalendarUICollectionViewFlowLayout).weekOfCurrentDay = weekOfCurrentDay
+            (currentMonthCollectionViewController.collectionViewLayout as! MonthUICollectionViewFlowLayout).weekOfCurrentDay = weekOfCurrentDay
             
             UIView.animate(withDuration: 1) {
                 self.currentMonthLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
@@ -175,7 +190,7 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
                 self.nextMonthLabel.alpha = 0
                 self.weekDaysTopConstraint.constant -= self.currentMonthLabelInitialFrame.height/2
                 self.view.layoutIfNeeded()
-                self.daysColletionView.deleteItems(at: indexPathOfItemsToBeRemoved)
+                self.currentMonthCollectionViewController.collectionView.deleteItems(at: indexPathOfItemsToBeRemoved)
             }
             
         } else {
@@ -194,23 +209,159 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
                 self.nextMonthLabel.alpha = 1
                 self.weekDaysTopConstraint.constant += self.currentMonthLabelInitialFrame.height/2
                 self.view.layoutIfNeeded()
-                self.daysColletionView.insertItems(at: indexPathOfItemsToBeAdded)
+                self.currentMonthCollectionViewController.collectionView.insertItems(at: indexPathOfItemsToBeAdded)
                 
             }
-            //            daysColletionView.insertItems(at: [IndexPath(row: 0, section: 0)])
+            //            currentMonth.insertItems(at: [IndexPath(row: 0, section: 0)])
         }
         
         largeCalendarView = !largeCalendarView
     }
     
+    // Animation Variables
+    var changingMonthAnimation: UIViewPropertyAnimator!
+    var currentAnimationFractionComplete: CGFloat = 0
     
+    @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+        
+        let translation = sender.translation(in: self.view)
+        let horizontalPan = Double(translation.x)
+        
+        // let percentageComplete = CGFloat((verticalPan - startPoint) / swipeLength) usar um valor definido para startPoint impediria o usuário de começar uma transição não solicitada
+        let percentageComplete = CGFloat(abs(horizontalPan)/Double(horizontalTranslationLength))
+        switch sender.state {
+        case .began: break
+        case .changed:
+            
+            if currentAnimationFractionComplete == 0 {
+                if horizontalPan > 0 {
+                    changingMonthAnimation = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: {
+                        self.previousMonthLabelLeadingConstraint.constant = self.currentMonthLabelLeadingConstraint.constant
+                        self.currentMonthLabelLeadingConstraint.constant = self.view.frame.width - self.currentMonthLabel.intrinsicContentSize.width/2
+                        self.currentMonthLabel.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                        self.previousMonthLabel.textColor = UIColor.black
+                        self.nextMonthLabelLeadingConstraint.constant += self.view.frame.width
+                        self.previousMonthContainerViewLeadingConstraint.constant = 30
+                        self.currentMonthContainerViewLeadingConstraint.constant += self.view.frame.width
+                        self.view.layoutIfNeeded()
+                    })
+                    changingMonthAnimation.addCompletion { (animationPosition) in
+                        
+                        self.referenceDay = self.calendar.date(byAdding: .month, value: -1, to: self.referenceDay)!
+                        
+                        let placeholderLabel = self.nextMonthLabel
+                        self.nextMonthLabel = self.currentMonthLabel
+                        self.currentMonthLabel = self.previousMonthLabel
+                        self.previousMonthLabel = placeholderLabel
+                        self.previousMonthLabel.textColor = UIColor.black
+                        self.previousMonthLabel.text = self.dateFormatter.string(from: self.calendar.date(byAdding: .month, value: -1, to: self.referenceDay)!)
+                        
+                        let placeholderConstraint = self.nextMonthLabelLeadingConstraint
+                        self.nextMonthLabelLeadingConstraint = self.currentMonthLabelLeadingConstraint
+                        self.currentMonthLabelLeadingConstraint = self.previousMonthLabelLeadingConstraint
+                        self.previousMonthLabelLeadingConstraint = placeholderConstraint
+                        self.previousMonthLabelLeadingConstraint.constant = -self.distanceBetweenCurrentAndNextMonth
+                        
+                        let placeholderContainerView = self.nextMonthContainerView
+                        self.nextMonthContainerView = self.currentMonthContainerView
+                        self.currentMonthContainerView = self.previousMonthContainerView
+                        self.previousMonthContainerView = placeholderContainerView
+                        
+                        let placeholderCollectionView = self.nextMonthCollectionViewController
+                        self.nextMonthCollectionViewController = self.currentMonthCollectionViewController
+                        self.currentMonthCollectionViewController = self.previousMonthCollectionViewController
+                        self.previousMonthCollectionViewController = placeholderCollectionView
+                        
+                        let placeholderContainerViewConstraint = self.nextMonthContainerViewLeadingConstraint
+                        self.nextMonthContainerViewLeadingConstraint = self.currentMonthContainerViewLeadingConstraint
+                        self.currentMonthContainerViewLeadingConstraint = self.previousMonthContainerViewLeadingConstraint
+                        self.previousMonthContainerViewLeadingConstraint = placeholderContainerViewConstraint
+                        self.previousMonthContainerViewLeadingConstraint.constant = -self.view.frame.width
+                        
+                        self.previousMonthCollectionViewController.updateFor(referenceDay: self.calendar.date(byAdding: .month, value: -1, to: self.referenceDay)!)
+                        //                self.previousMonthContainerViewLeadingConstraint.constant -= self.view.frame.width*2
+                        self.updateSummaryView()
+                    }
+                } else {
+                    previousMonthLabelLeadingConstraint.constant = nextMonthLabelLeadingConstraint.constant + self.distanceBetweenCurrentAndNextMonth
+                    self.view.layoutIfNeeded()
+                    previousMonthLabel.text = self.dateFormatter.string(from: self.calendar.date(byAdding: .month, value: 2, to: self.referenceDay)!)
+                    changingMonthAnimation = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: {
+                        self.nextMonthLabelLeadingConstraint.constant = self.currentMonthLabelLeadingConstraint.constant
+                        self.currentMonthLabelLeadingConstraint.constant -= self.distanceBetweenCurrentAndNextMonth
+                        self.previousMonthLabelLeadingConstraint.constant = self.view.frame.width - self.previousMonthLabel.intrinsicContentSize.width/2
+                        self.currentMonthLabel.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                        self.nextMonthLabel.textColor = UIColor.black
+                        self.previousMonthLabel.textColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                        self.nextMonthContainerViewLeadingConstraint.constant = 30
+                        self.currentMonthContainerViewLeadingConstraint.constant -= self.view.frame.width
+                        self.view.layoutIfNeeded()
+                    })
+                    changingMonthAnimation.addCompletion { (animationPosition) in
+                        
+                        self.referenceDay = self.calendar.date(byAdding: .month, value: 1, to: self.referenceDay)!
+                        
+                        let placeholderLabel = self.previousMonthLabel
+                        self.previousMonthLabel = self.currentMonthLabel
+                        self.currentMonthLabel = self.nextMonthLabel
+                        self.nextMonthLabel = placeholderLabel
+                        
+                        let placeholderConstraint = self.previousMonthLabelLeadingConstraint
+                        self.previousMonthLabelLeadingConstraint = self.currentMonthLabelLeadingConstraint
+                        self.currentMonthLabelLeadingConstraint = self.nextMonthLabelLeadingConstraint
+                        self.nextMonthLabelLeadingConstraint = placeholderConstraint
+                        
+                        let placeholderContainerView = self.previousMonthContainerView
+                        self.previousMonthContainerView = self.currentMonthContainerView
+                        self.currentMonthContainerView = self.nextMonthContainerView
+                        self.nextMonthContainerView = placeholderContainerView
+                        
+                        let placeholderCollectionView = self.previousMonthCollectionViewController
+                        self.previousMonthCollectionViewController = self.currentMonthCollectionViewController
+                        self.currentMonthCollectionViewController = self.nextMonthCollectionViewController
+                        self.nextMonthCollectionViewController = placeholderCollectionView
+                        
+                        let placeholderContainerViewConstraint = self.previousMonthContainerViewLeadingConstraint
+                        self.previousMonthContainerViewLeadingConstraint = self.currentMonthContainerViewLeadingConstraint
+                        self.currentMonthContainerViewLeadingConstraint = self.nextMonthContainerViewLeadingConstraint
+                        self.nextMonthContainerViewLeadingConstraint = placeholderContainerViewConstraint
+                        self.nextMonthContainerViewLeadingConstraint.constant = 30 + self.view.frame.width
+                        
+                        self.nextMonthCollectionViewController.updateFor(referenceDay: self.calendar.date(byAdding: .month, value: 1, to: self.referenceDay)!)
+                        //                self.previousMonthContainerViewLeadingConstraint.constant -= self.view.frame.width*2
+                        self.updateSummaryView()
+                        
+                    }
+                }
+                changingMonthAnimation.pauseAnimation()
+                currentAnimationFractionComplete = percentageComplete
+            }
+            self.changingMonthAnimation.fractionComplete = percentageComplete
+        case .ended, .cancelled:
+            // Inserir reverse para a animação caso o usuário tenha feito pouca translação?
+//            if percentageComplete > 0.3 {
+                changingMonthAnimation.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+//            }
+            
+            currentAnimationFractionComplete = 0
+            
+        default:
+            break
+        }
+       
+    }
     
      // MARK: - Auxiliar Functions
     
-    func getCurrentDate() -> Date {
-        let currentDay = (daysColletionView.cellForItem(at: (daysColletionView.indexPathsForSelectedItems?.first)!) as! CalendarCollectionViewCell).day
-        print(currentDay ?? "sem data")
-        return currentDay!
+    func updateSummaryView(){
+        guard let dailySummaryViewController = self.parent as? DailySummaryViewController else {
+            print("Impossible to downcast the parenteViewController to DailySummaryViewController")
+            return
+        }
+        let indexPathOfSelectedCell = currentMonthCollectionViewController.collectionView.indexPathsForSelectedItems!.first!
+        let selectedCell = currentMonthCollectionViewController.collectionView.cellForItem(at: indexPathOfSelectedCell) as! MonthCollectionViewCell
+        dailySummaryViewController.currentDate = selectedCell.day
+        dailySummaryViewController.reloadData()
     }
  
     
