@@ -10,22 +10,19 @@ import Foundation
 import UIKit
 
 class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
-    
+
     // MARK: - Constants
-    private let storyBoardName = "DaySummary"
-    private let viewIdentifier = "DaySummaryView"
-    private let answerQuestionStory = "BreathingView"
-    private let answerQuestionIdentifier = "breathingView"
+    private let storyBoardName = "DailySummary"
+    private let viewIdentifier = "DailySummaryView"
     
     // MARK: - Viper Module Properties
-    weak var view: DaySummaryTableViewController!
-    
-    // MARK: - Communication routers
-    var dailySummaryRouter: DailySummaryRouterProtocol!
+    weak var view: DailySummaryViewController!
     
     // MARK: - Constructors
-    init(view: DaySummaryTableViewController) {
+    override init() {
         super.init()
+        
+        let view = self.viewControllerFromStoryboard()
         
         let interactor = DaySummaryInteractor()
         let presenter = DaySummaryPresenter()
@@ -54,26 +51,21 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
         //FIXME: create implementation to present calendar Router
     }
     
-    func getCurrentDate() -> Date {
-        return self.dailySummaryRouter.getCurrentDate()
-    }
-    
     func presentAnswerQuestion() {
-        let storyboard = UIStoryboard(name: self.answerQuestionStory, bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: self.answerQuestionIdentifier) as? BreathingViewController {
-            viewController.transitioningDelegate = self.view
-            viewController.daySummaryViewController = self.view
-            self.view.present(viewController, animated: true, completion: nil)
-        }
-
+//        let storyboard = UIStoryboard(name: self.answerQuestionStory, bundle: nil)
+//        if let viewController = storyboard.instantiateViewController(withIdentifier: self.answerQuestionIdentifier) as? BreathingViewController {
+//            viewController.transitioningDelegate = self.view
+//            viewController.daySummaryViewController = self.view
+//            self.view.present(viewController, animated: true, completion: nil)
+//        }
     }
     
     // MARK: - Private methods
-    private func viewControllerFromStoryboard() -> DaySummaryTableViewController {
+    private func viewControllerFromStoryboard() -> DailySummaryViewController {
         let storyboard = UIStoryboard(name: self.storyBoardName, bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: self.viewIdentifier)
         
-        return viewController as! DaySummaryTableViewController
+        return viewController as! DailySummaryViewController
     }
     
 }

@@ -12,7 +12,7 @@ fileprivate let moodCellIdentifier = "moodCellIdentifier"
 fileprivate let questionCellIdentifier = "questionCellIdentifier"
 fileprivate let addCellIdentifier = "addCellIdentifier"
 
-class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterOutputProtocol {
+class DaySummaryTableViewController: UITableViewController {
     
     
     var transitionAnimator = PopToScreenSizeTransitionAnimation()
@@ -20,13 +20,11 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
     var summaryView: DailySummaryViewController!
     let headerHeight: CGFloat = 150.0
     var insertButton: UIButton?
+    var dailySummaryParentViewController: DailySummaryViewController!
     
-    // MARK: - Viper Module Properties
-    var presenter: DaySummaryPresenterInputProtocol!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter.loadTodayEntries()
+        self.dailySummaryParentViewController.loadTodayEntries()
     }
     
     // MARK: - UITableViewControllerDelegate and UITableViewControllerDataSource
@@ -36,22 +34,22 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return self.presenter.numberOfSections()
+        return self.dailySummaryParentViewController.numberOfSections()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.presenter.numberOfEntries(in: section)
+        return self.dailySummaryParentViewController.numberOfEntries(in: section)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 && self.presenter.shouldShowAddButton() {
+        if indexPath.row == 0 && self.dailySummaryParentViewController.shouldShowAddButton() {
             if let addCell = tableView.dequeueReusableCell(withIdentifier: addCellIdentifier, for: indexPath) as? InsertTableViewCell {
                 
                 addCell.daySummaryTableViewController = self
-                addCell.lineView.isHidden = self.presenter.shouldDisplayLine(for: indexPath.row)
+                addCell.lineView.isHidden = self.dailySummaryParentViewController.shouldDisplayLine(for: indexPath.row)
                 self.insertTableViewCell = addCell
-                self.presenter.loadMoodTypes()
+                self.dailySummaryParentViewController.loadMoodTypes()
                 
                 return addCell
             } else {
@@ -59,12 +57,12 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
             }
         }
         
-        let entry = self.presenter.item(at: indexPath.row)
+        let entry = self.dailySummaryParentViewController.item(at: indexPath.row)
         
         if let entryMood = entry as? MoodInput {
             if let moodCell = tableView.dequeueReusableCell(withIdentifier: moodCellIdentifier, for: indexPath) as? MoodInputTableViewCell {
                 moodCell.setMood(entryMood)
-                moodCell.lineView.isHidden = self.presenter.shouldDisplayLine(for: indexPath.row)
+                moodCell.lineView.isHidden = self.dailySummaryParentViewController.shouldDisplayLine(for: indexPath.row)
                 return moodCell
             }
         } else if let entryAnswer = entry as? Answer {
@@ -79,11 +77,11 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.row == 0 && self.presenter.shouldShowAddButton() {
+        if indexPath.row == 0 && self.dailySummaryParentViewController.shouldShowAddButton() {
             return 70
         }
         
-        switch self.presenter.item(at: indexPath.row) {
+        switch self.dailySummaryParentViewController.item(at: indexPath.row) {
         case is Answer:
             return UITableView.automaticDimension
         case is MoodInput:
@@ -105,12 +103,12 @@ class DaySummaryTableViewController: UITableViewController, DaySummaryPresenterO
     
     // MARK: - Actions
     func didTapInsertMood(_ moodIndex: Int) {
-        self.presenter.didTapInsert(mood: moodIndex)
+        self.dailySummaryParentViewController.didTapInsert(mood: moodIndex)
     }
     
     func didTapInsertQuestion(insertButton: UIButton) {
         self.insertButton = insertButton
-        self.presenter.didTapInsertQuestion()
+        self.dailySummaryParentViewController.didTapInsertQuestion()
     }
     
     // MARK: - DaySummaryPresenterOutputProtocol

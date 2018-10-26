@@ -13,9 +13,7 @@ import UIKit
 protocol DaySummaryRouterProtocol: class {
     func present(with viewController: UIViewController)
     func presentAsRoot(window: UIWindow)
-    func presentAnswerQuestion()
-    
-    func getCurrentDate() -> Date
+    func presentAnswerQuestion()    
 }
 
 // MARK: - Interactor
@@ -55,6 +53,8 @@ protocol DaySummaryPresenterInputProtocol: class {
     func shouldShowAddButton() -> Bool
     func shouldDisplayLine(for index: Int) -> Bool
     
+    func getCurrentDate() -> Date
+    func setCurrentDate(_ date: Date)
 }
 
 // MARK: - View

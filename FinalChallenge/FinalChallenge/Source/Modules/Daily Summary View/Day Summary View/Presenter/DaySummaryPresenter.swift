@@ -15,6 +15,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     private var entries: [Any] = []
     private var didEndedFetchingMoodInputs = false
     private var didEndedFetchingAnswers = false
+    var currentDate: Date = Date()
     
     // MARK: - Viper Module Properties
     weak var view: DaySummaryPresenterOutputProtocol!
@@ -76,8 +77,8 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
         self.didEndedFetchingAnswers = false
         self.didEndedFetchingMoodInputs = false
         
-        self.interactor.fetchMoods(forDate: self.getCurrentDate())
-        self.interactor.fetchAnswers(forDate: self.getCurrentDate())
+        self.interactor.fetchMoods(forDate: self.currentDate)
+        self.interactor.fetchAnswers(forDate: self.currentDate)
     }
     
     func loadMoodTypes() {
@@ -98,7 +99,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func shouldShowAddButton() -> Bool {
-        return Calendar.current.isDateInToday(self.getCurrentDate())
+        return Calendar.current.isDateInToday(self.currentDate)
     }
     
     func shouldDisplayLine(for index: Int) -> Bool {
@@ -109,11 +110,20 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func didTapInsert(mood index: Int) {
-        self.interactor.add(moodType: self.moodTypes[index], toDate: self.getCurrentDate())
+        self.interactor.add(moodType: self.moodTypes[index], toDate: self.currentDate)
     }
     
     func didTapInsertQuestion() {
         self.router.presentAnswerQuestion()
+    }
+    
+    func getCurrentDate() -> Date {
+        return self.currentDate
+    }
+    
+    func setCurrentDate(_ date: Date) {
+        self.currentDate = date
+        self.loadTodayEntries()
     }
     
     // MARK: - Private Routines
@@ -144,7 +154,4 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
         })
     }
     
-    private func getCurrentDate() -> Date {
-        return self.router.getCurrentDate()
-    }
 }
