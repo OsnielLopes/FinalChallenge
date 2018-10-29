@@ -16,9 +16,10 @@ class DailyQuestionRouter: NSObject, DailyQuestionRouterProtocol {
 
 	// MARK: - Viper Module Properties
 	weak var view: DailyQuestionView!
+    var daySummaryRouter: DaySummaryRouterProtocol!
 
 	// MARK: - Constructors
-	override init() {
+	init(daySummaryRouter: DaySummaryRouterProtocol) {
 		super.init()
 
 		let view = self.viewControllerFromStoryboard()
@@ -33,6 +34,8 @@ class DailyQuestionRouter: NSObject, DailyQuestionRouterProtocol {
 		interactor.output = presenter
 
 		self.view = view
+        
+        self.daySummaryRouter = daySummaryRouter
 	}
 
     // MARK: - DailyQuestionRouterProtocol
@@ -46,7 +49,7 @@ class DailyQuestionRouter: NSObject, DailyQuestionRouterProtocol {
     }
     
     func presentCalendar() {
-        //FIXME: create implementation to present calendar Router
+        self.daySummaryRouter.dismiss()
     }
     
     func presentAnswerQuestion() {
@@ -60,4 +63,5 @@ class DailyQuestionRouter: NSObject, DailyQuestionRouterProtocol {
 
 		return viewController as! DailyQuestionView
 	}
+    
 }

@@ -13,7 +13,6 @@ import UIKit
 protocol BreathingRouterProtocol: class {
     func present(with viewController: UIViewController)
     func presentDailyQuestionsView()
-    
 }
 
 // MARK: - Interactor

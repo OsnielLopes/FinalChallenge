@@ -51,8 +51,13 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
         //FIXME: create implementation to present calendar Router
     }
     
+    func dismiss() {
+        self.view.dismiss(animated: true)
+    }
+    
+    
     func presentBreathingView() {
-        let breathingRouter = BreathingRouter()
+        let breathingRouter = BreathingRouter(daySummaryRouter: self)
         breathingRouter.view.transitioningDelegate = self.view
         breathingRouter.present(with: self.view)
     }

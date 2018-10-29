@@ -16,10 +16,11 @@ class BreathingRouter: NSObject, BreathingRouterProtocol {
 
 	// MARK: - Viper Module Properties
 	weak var view: BreathingViewController!
+    var daySummaryRouter: DaySummaryRouterProtocol!
 
 	// MARK: - Constructors
-	override init() {
-		super.init()
+    init(daySummaryRouter: DaySummaryRouterProtocol) {
+        super.init()
 
 		let view = self.viewControllerFromStoryboard()
 		let presenter = BreathingPresenter()
@@ -28,6 +29,8 @@ class BreathingRouter: NSObject, BreathingRouterProtocol {
 		view.presenter = presenter
 		
 		self.view = view
+        
+        self.daySummaryRouter = daySummaryRouter
 	}
 
     // MARK: - BreathingRouterProtocol
@@ -36,7 +39,7 @@ class BreathingRouter: NSObject, BreathingRouterProtocol {
     }
     
     func presentDailyQuestionsView() {
-        let router = DailyQuestionRouter()
+        let router = DailyQuestionRouter(daySummaryRouter: self.daySummaryRouter)
         router.present(with: self.view)
     }
 

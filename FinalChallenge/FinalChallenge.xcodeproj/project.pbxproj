@@ -250,8 +250,8 @@
 			children = (
 				453953F221766D0F00CF71EC /* DailyQuestionProtocols.swift */,
 				453953FD21766D3100CF71EC /* Router */,
-				453953FC21766D2900CF71EC /* Presenter */,
 				453953FE21766D3600CF71EC /* Interactor */,
+				453953FC21766D2900CF71EC /* Presenter */,
 				453953FB21766D2000CF71EC /* View */,
 			);
 			path = "Daily Questions";
