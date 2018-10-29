@@ -116,7 +116,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func didTapInsertQuestion() {
-        self.router.presentAnswerQuestion()
+        self.router.presentBreathingView()
     }
     
     func setCurrentDate(_ date: Date) {
