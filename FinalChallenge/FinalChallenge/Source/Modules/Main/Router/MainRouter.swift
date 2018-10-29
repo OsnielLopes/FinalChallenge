@@ -42,11 +42,20 @@ class MainRouter: NSObject, MainRouterProtocol {
 		let storyboard = UIStoryboard(name: self.storyBoardName, bundle: nil)
 		let viewController = storyboard.instantiateViewController(withIdentifier: self.viewIdentifier) as! MainView
         
-        let daySummaryViewRouter = DaySummaryRouter()
-        daySummaryViewRouter.view.tabBarItem = UITabBarItem.init(tabBarSystemItem: .bookmarks, tag: 0)
-        
-        viewController.viewControllers = [daySummaryViewRouter.view]
+        viewController.viewControllers = self.generateTabBarViewControllers()
 
 		return viewController
 	}
+    
+    private func generateTabBarViewControllers() -> [UIViewController] {
+        var viewControllers: [UIViewController] = []
+        
+        let daySummaryViewRouter = DaySummaryRouter()
+        daySummaryViewRouter.view.tabBarItem = UITabBarItem(title: "Calendar",
+                                                            image: UIImage(named: "tabBarItemDeselected"),
+                                                            selectedImage: UIImage(named: "tabBarItemSelected"))
+        viewControllers.append(daySummaryViewRouter.view)
+        
+        return viewControllers
+    }
 }

@@ -16,6 +16,7 @@ class MainView: UITabBarController, MainPresenterOutputProtocol {
     // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     // MARK: - MainPresenterOutputProtocol
