@@ -248,6 +248,7 @@
 		453953EE21766CD900CF71EC /* Daily Questions */ = {
 			isa = PBXGroup;
 			children = (
+				BD3E3C512183A87100539ADB /* Breathing */,
 				453953F221766D0F00CF71EC /* DailyQuestionProtocols.swift */,
 				453953FD21766D3100CF71EC /* Router */,
 				453953FE21766D3600CF71EC /* Interactor */,
@@ -339,7 +340,6 @@
 				49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */,
 				49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */,
 				491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */,
-				BD3E3C512183A87100539ADB /* Breathing */,
 			);
 			path = "Answering Question";
 			sourceTree = "<group>";
