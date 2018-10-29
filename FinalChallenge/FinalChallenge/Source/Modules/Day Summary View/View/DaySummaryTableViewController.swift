@@ -15,11 +15,8 @@ fileprivate let addCellIdentifier = "addCellIdentifier"
 class DaySummaryTableViewController: UITableViewController {
     
     
-    var transitionAnimator = PopToScreenSizeTransitionAnimation()
     var insertTableViewCell: InsertTableViewCell?
     var summaryView: DailySummaryViewController!
-    let headerHeight: CGFloat = 150.0
-    var insertButton: UIButton?
     var dailySummaryParentViewController: DailySummaryViewController!
     
     override func viewDidLoad() {
@@ -94,11 +91,11 @@ class DaySummaryTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.tableView.frame.width, height: self.headerHeight)))
+        return UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.tableView.frame.width, height: self.dailySummaryParentViewController.headerHeight)))
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return self.headerHeight
+        return self.dailySummaryParentViewController.headerHeight
     }
     
     // MARK: - Actions
@@ -107,7 +104,7 @@ class DaySummaryTableViewController: UITableViewController {
     }
     
     func didTapInsertQuestion(insertButton: UIButton) {
-        self.insertButton = insertButton
+        self.dailySummaryParentViewController.insertQuestionButton = insertButton
         self.dailySummaryParentViewController.didTapInsertQuestion()
     }
     
@@ -132,41 +129,6 @@ class DaySummaryTableViewController: UITableViewController {
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
         self.tableView.endUpdates()
-    }
-    
-    
-}
-
-extension DaySummaryTableViewController: UIViewControllerTransitioningDelegate {
-    
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        guard let insertButton = self.insertButton else {
-            return nil
-        }
-        
-        self.transitionAnimator.transitionMode = .present
-        
-        var originPoint = insertButton.layer.presentation()!.frame.origin
-        originPoint.x += insertButton.layer.presentation()!.frame.width / 2
-        originPoint.y += self.headerHeight
-        
-        self.transitionAnimator.startingPoint = self.view.convert(originPoint, to: nil)
-        self.transitionAnimator.bubbleColor = insertButton.backgroundColor!
-        
-        return self.transitionAnimator
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let insertButton = self.insertButton else {
-            return nil
-        }
-        self.transitionAnimator.transitionMode = .pop
-        self.transitionAnimator.startingPoint = insertButton.center
-        self.transitionAnimator.bubbleColor = insertButton.backgroundColor!
-        
-        return nil
     }
     
 }

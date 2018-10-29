@@ -51,18 +51,10 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
         //FIXME: create implementation to present calendar Router
     }
     
-    func presentAnswerQuestion() {
-//        let storyboard = UIStoryboard(name: self.answerQuestionStory, bundle: nil)
-//        if let viewController = storyboard.instantiateViewController(withIdentifier: self.answerQuestionIdentifier) as? BreathingViewController {
-//            viewController.transitioningDelegate = self.view
-//            viewController.daySummaryViewController = self.view
-//            self.view.present(viewController, animated: true, completion: nil)
-//        }
-//        let breathingRouter
-    }
-    
     func presentBreathingView() {
-//        let breathingRouter = 
+        let breathingRouter = BreathingRouter()
+        breathingRouter.view.transitioningDelegate = self.view
+        breathingRouter.present(with: self.view)
     }
     
     

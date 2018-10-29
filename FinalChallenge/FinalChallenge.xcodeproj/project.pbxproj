@@ -79,7 +79,7 @@
 		BD3E3C5A2183AE0900539ADB /* BreathingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */; };
 		BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E3C552183AE0900539ADB /* BreathingRouter.swift */; };
 		BD3E3C5C2183AE0900539ADB /* BreathingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E3C562183AE0900539ADB /* BreathingProtocols.swift */; };
-		BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */; };
+		BD4E0E7B2179159700DEA2F5 /* Breathing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7A2179159700DEA2F5 /* Breathing.storyboard */; };
 		BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
 		BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
 		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
@@ -191,7 +191,7 @@
 		BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPresenter.swift; sourceTree = "<group>"; };
 		BD3E3C552183AE0900539ADB /* BreathingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingRouter.swift; sourceTree = "<group>"; };
 		BD3E3C562183AE0900539ADB /* BreathingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingProtocols.swift; sourceTree = "<group>"; };
-		BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreathingView.storyboard; sourceTree = "<group>"; };
+		BD4E0E7A2179159700DEA2F5 /* Breathing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Breathing.storyboard; sourceTree = "<group>"; };
 		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
 		BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
@@ -470,7 +470,7 @@
 		BD3E3C522183ADF600539ADB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */,
+				BD4E0E7A2179159700DEA2F5 /* Breathing.storyboard */,
 				BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */,
 				BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */,
 			);
@@ -762,7 +762,7 @@
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
 				BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
-				BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */,
+				BD4E0E7B2179159700DEA2F5 /* Breathing.storyboard in Resources */,
 				BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */,
 				49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */,
 			);

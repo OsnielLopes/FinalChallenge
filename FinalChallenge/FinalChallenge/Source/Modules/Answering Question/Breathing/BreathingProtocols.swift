@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Router
 protocol BreathingRouterProtocol: class {
-    
+    func present(with viewController: UIViewController)
     func presentDailyQuestionsView()
     
 }

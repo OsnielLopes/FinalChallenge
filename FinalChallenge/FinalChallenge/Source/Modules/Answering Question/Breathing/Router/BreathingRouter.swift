@@ -9,7 +9,6 @@
 import UIKit
 
 class BreathingRouter: NSObject, BreathingRouterProtocol {
-    
 
 	// MARK: - Constants
 	private let storyBoardName = "Breathing"
@@ -32,6 +31,9 @@ class BreathingRouter: NSObject, BreathingRouterProtocol {
 	}
 
     // MARK: - BreathingRouterProtocol
+    func present(with viewController: UIViewController) {
+        viewController.present(self.view, animated: true, completion: nil)
+    }
     
     func presentDailyQuestionsView() {
         let router = DailyQuestionRouter()
