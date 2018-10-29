@@ -12,7 +12,7 @@
         <!--Daily Question View-->
         <scene sceneID="0yJ-gf-T5z">
             <objects>
-                <viewController storyboardIdentifier="DailyQuestionView" id="2aj-bM-ixw" customClass="DailyQuestionView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DailyQuestionView" modalTransitionStyle="crossDissolve" id="2aj-bM-ixw" customClass="DailyQuestionView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zIR-mc-HJo"/>
                         <viewControllerLayoutGuide type="bottom" id="VJw-nr-gPZ"/>
