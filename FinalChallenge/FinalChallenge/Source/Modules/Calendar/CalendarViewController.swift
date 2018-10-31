@@ -153,8 +153,6 @@ class CalendarViewController: UIViewController {
     
     @IBAction func changeTheCalendarStatus() {
         
-        return
-        
         let weekOfCurrentDay = calendar.component(.weekOfMonth, from: (currentMonthCollectionViewController.collectionView.cellForItem(at: currentMonthCollectionViewController.collectionView.indexPathsForSelectedItems!.first!) as! MonthCollectionViewCell).day)
         (currentMonthCollectionViewController.collectionViewLayout as! MonthUICollectionViewFlowLayout).expanding = !largeCalendarView
         
@@ -230,7 +228,7 @@ class CalendarViewController: UIViewController {
         // let percentageComplete = CGFloat((verticalPan - startPoint) / swipeLength) usar um valor definido para startPoint impediria o usuário de começar uma transição não solicitada
         let percentageComplete = CGFloat(abs(horizontalPan)/Double(horizontalTranslationLength))
         switch sender.state {
-        case .began: break
+        case .began: print(horizontalPan)
         case .changed:
             
             if currentAnimationFractionComplete == 0 {
@@ -281,6 +279,8 @@ class CalendarViewController: UIViewController {
                         self.previousMonthCollectionViewController.updateFor(referenceDay: self.calendar.date(byAdding: .month, value: -1, to: self.referenceDay)!)
                         //                self.previousMonthContainerViewLeadingConstraint.constant -= self.view.frame.width*2
                         self.updateSummaryView()
+                        
+                        self.currentAnimationFractionComplete = 0
                     }
                 } else {
                     previousMonthLabelLeadingConstraint.constant = nextMonthLabelLeadingConstraint.constant + self.distanceBetweenCurrentAndNextMonth
@@ -331,19 +331,22 @@ class CalendarViewController: UIViewController {
                         //                self.previousMonthContainerViewLeadingConstraint.constant -= self.view.frame.width*2
                         self.updateSummaryView()
                         
+                        self.currentAnimationFractionComplete = 0
+                        
                     }
                 }
                 changingMonthAnimation.pauseAnimation()
                 currentAnimationFractionComplete = percentageComplete
             }
             self.changingMonthAnimation.fractionComplete = percentageComplete
+            
         case .ended, .cancelled:
             // Inserir reverse para a animação caso o usuário tenha feito pouca translação?
 //            if percentageComplete > 0.3 {
                 changingMonthAnimation.continueAnimation(withTimingParameters: nil, durationFactor: 0)
 //            }
             
-            currentAnimationFractionComplete = 0
+            
             
         default:
             break
