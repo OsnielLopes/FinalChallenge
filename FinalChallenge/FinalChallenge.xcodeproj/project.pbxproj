@@ -24,120 +24,81 @@
 		491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */; };
 		491511FB21751711007C0E09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511FA21751711007C0E09 /* Router.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
+		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
-		49AB023921752D79002B8140 /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
 		49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */; };
 		49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
-		49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2A2163DF0B00055136 /* ViewController.swift */; };
 		49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B2C2163DF1900055136 /* CalendarViewController.swift */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
-		BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
 		BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
-		BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
 		BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
-		BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
 		BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE3216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift */; };
-		BD290BFF216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE3216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift */; };
 		BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */; };
-		BD290C01216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */; };
 		BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */; };
-		BD290C03216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */; };
 		BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE6216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift */; };
-		BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE6216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift */; };
 		BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE7216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift */; };
-		BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE7216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift */; };
 		BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE8216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift */; };
-		BD290C09216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE8216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift */; };
 		BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE9216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift */; };
-		BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE9216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift */; };
 		BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEA216BE6EF001F16EA /* Answer+CoreDataClass.swift */; };
-		BD290C0D216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEA216BE6EF001F16EA /* Answer+CoreDataClass.swift */; };
 		BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEB216BE6EF001F16EA /* Answer+CoreDataProperties.swift */; };
-		BD290C0F216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEB216BE6EF001F16EA /* Answer+CoreDataProperties.swift */; };
 		BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEC216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift */; };
-		BD290C11216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEC216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift */; };
 		BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BED216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift */; };
-		BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BED216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift */; };
 		BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEE216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift */; };
-		BD290C15216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEE216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift */; };
 		BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEF216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift */; };
-		BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BEF216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift */; };
 		BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */; };
-		BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */; };
 		BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */; };
-		BD290C1B216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */; };
 		BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF2216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift */; };
-		BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF2216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift */; };
 		BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF3216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift */; };
-		BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF3216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift */; };
 		BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */; };
-		BD290C21216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */; };
 		BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF5216BE6EF001F16EA /* Category+CoreDataProperties.swift */; };
-		BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF5216BE6EF001F16EA /* Category+CoreDataProperties.swift */; };
 		BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF6216BE6EF001F16EA /* Question+CoreDataClass.swift */; };
-		BD290C25216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF6216BE6EF001F16EA /* Question+CoreDataClass.swift */; };
 		BD290C26216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF7216BE6EF001F16EA /* Question+CoreDataProperties.swift */; };
-		BD290C27216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF7216BE6EF001F16EA /* Question+CoreDataProperties.swift */; };
 		BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C29216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift */; };
 		BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2B216BF569001F16EA /* QuestionsDAOTests.swift */; };
 		BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2D216D15E0001F16EA /* RadioboxQuestionDAO.swift */; };
-		BD290C2F216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C2D216D15E0001F16EA /* RadioboxQuestionDAO.swift */; };
 		BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C30216D17F6001F16EA /* RadioboxQuestionDAOTests.swift */; };
 		BD290C35216D1A90001F16EA /* AuthorDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C34216D1A90001F16EA /* AuthorDAOTests.swift */; };
 		BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C36216D1B60001F16EA /* AuthorDAO.swift */; };
-		BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C36216D1B60001F16EA /* AuthorDAO.swift */; };
 		BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
 		BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
 		BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */; };
 		BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */; };
 		BD290C4A216D352D001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
-		BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C49216D352D001F16EA /* MoodDAO.swift */; };
-		BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD290C4F216E9613001F16EA /* Calendar.storyboard */; };
+		BD290C50216E9613001F16EA /* DailySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD290C4F216E9613001F16EA /* DailySummary.storyboard */; };
 		BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
 		BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
-		BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */; };
 		BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
-		BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6321752918001F16EA /* AnswerTableViewCell.swift */; };
 		BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
-		BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */; };
-		BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
-		BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */; };
+		BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
+		BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
+		BD3E3C5A2183AE0900539ADB /* BreathingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */; };
+		BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E3C552183AE0900539ADB /* BreathingRouter.swift */; };
+		BD3E3C5C2183AE0900539ADB /* BreathingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E3C562183AE0900539ADB /* BreathingProtocols.swift */; };
+		BD4E0E7B2179159700DEA2F5 /* Breathing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7A2179159700DEA2F5 /* Breathing.storyboard */; };
 		BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
-		BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
 		BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
-		BD4E0E812179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
 		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
-		BD4E0E8421791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
 		BD4E0E8721791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */; };
-		BD4E0E8821791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */; };
-		BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */; };
-		BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C41216D2FDD001F16EA /* AnswerDAO.swift */; };
-		BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C43216D3085001F16EA /* DissertationAnswersDAO.swift */; };
-		BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */; };
-		BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */; };
-		BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
 		BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
-		BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
 		BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
 		BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
 		BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */; };
-		BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
-		BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3E2167CDF900612838 /* DissertativeQuestionDAO.swift */; };
-		BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A442167DE4F00612838 /* CheckboxQuestionDAO.swift */; };
-		BD974A722167F12E00612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
-		BD974A732167F13000612838 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 		BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 		BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A782167F86900612838 /* CategoryDAOTests.swift */; };
 		BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 		BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
-		BDA84B91217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
+		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
+		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
+		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
+		BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */; };
+		BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -183,7 +144,6 @@
 		49AE2B1D2163DD4F00055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnlyCalendar.storyboard; sourceTree = "<group>"; };
 		49AE2B222163DD5200055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AE2B242163DD5200055136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49AE2B2A2163DF0B00055136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		49AE2B2C2163DF1900055136 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		6DDAC83CB4181DD96AB7A321 /* Pods-FinalChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,12 +183,15 @@
 		BD290C45216D32E3001F16EA /* CheckboxAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxAnswer.swift; sourceTree = "<group>"; };
 		BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioboxAnswerDAO.swift; sourceTree = "<group>"; };
 		BD290C49216D352D001F16EA /* MoodDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodDAO.swift; sourceTree = "<group>"; };
-		BD290C4F216E9613001F16EA /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		BD290C4F216E9613001F16EA /* DailySummary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailySummary.storyboard; sourceTree = "<group>"; };
 		BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryTableViewController.swift; sourceTree = "<group>"; };
 		BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryViewController.swift; sourceTree = "<group>"; };
 		BD290C6321752918001F16EA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInputTableViewCell.swift; sourceTree = "<group>"; };
-		BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BreathingView.storyboard; sourceTree = "<group>"; };
+		BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPresenter.swift; sourceTree = "<group>"; };
+		BD3E3C552183AE0900539ADB /* BreathingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingRouter.swift; sourceTree = "<group>"; };
+		BD3E3C562183AE0900539ADB /* BreathingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingProtocols.swift; sourceTree = "<group>"; };
+		BD4E0E7A2179159700DEA2F5 /* Breathing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Breathing.storyboard; sourceTree = "<group>"; };
 		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
 		BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +208,11 @@
 		BD974A742167F4F700612838 /* CategoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
 		BD974A782167F86900612838 /* CategoryDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAOTests.swift; sourceTree = "<group>"; };
 		BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTableViewCell.swift; sourceTree = "<group>"; };
+		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
+		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
+		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
+		BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryInteractor.swift; sourceTree = "<group>"; };
+		BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryRouter.swift; sourceTree = "<group>"; };
 		C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6C0D3FE9A09DAE3E9ADCF /* Pods-FinalChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -280,10 +248,11 @@
 		453953EE21766CD900CF71EC /* Daily Questions */ = {
 			isa = PBXGroup;
 			children = (
+				BD3E3C512183A87100539ADB /* Breathing */,
 				453953F221766D0F00CF71EC /* DailyQuestionProtocols.swift */,
 				453953FD21766D3100CF71EC /* Router */,
-				453953FC21766D2900CF71EC /* Presenter */,
 				453953FE21766D3600CF71EC /* Interactor */,
+				453953FC21766D2900CF71EC /* Presenter */,
 				453953FB21766D2000CF71EC /* View */,
 			);
 			path = "Daily Questions";
@@ -360,7 +329,7 @@
 				4925B40D217571D100413181 /* Calendar */,
 				491511F4216FD351007C0E09 /* Answering Question */,
 				453953EE21766CD900CF71EC /* Daily Questions */,
-				BD71F695217562460011C885 /* Daily Summary View */,
+				BDB7C53721823724009A8206 /* Day Summary View */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -371,10 +340,6 @@
 				49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */,
 				49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */,
 				491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */,
-				BD4E0E8521791BF500DEA2F5 /* Bullshit */,
-				BD4E0E7A2179159700DEA2F5 /* BreathingView.storyboard */,
-				BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */,
-				BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */,
 			);
 			path = "Answering Question";
 			sourceTree = "<group>";
@@ -402,12 +367,6 @@
 		4925B40D217571D100413181 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				49AE2B2A2163DF0B00055136 /* ViewController.swift */,
-				49AE2B2C2163DF1900055136 /* CalendarViewController.swift */,
-				49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */,
-				494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */,
-				494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */,
-				4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -486,6 +445,54 @@
 			path = "AnswersDAO's";
 			sourceTree = "<group>";
 		};
+		BD3E3C5021838E7800539ADB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */,
+				BD290C4F216E9613001F16EA /* DailySummary.storyboard */,
+				BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BD3E3C512183A87100539ADB /* Breathing */ = {
+			isa = PBXGroup;
+			children = (
+				BD4E0E8521791BF500DEA2F5 /* Bullshit */,
+				BD3E3C562183AE0900539ADB /* BreathingProtocols.swift */,
+				BD3E3C602183AE3100539ADB /* Router */,
+				BD3E3C5F2183AE2300539ADB /* Presenter */,
+				BD3E3C522183ADF600539ADB /* View */,
+			);
+			path = Breathing;
+			sourceTree = "<group>";
+		};
+		BD3E3C522183ADF600539ADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD4E0E7A2179159700DEA2F5 /* Breathing.storyboard */,
+				BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */,
+				BD4E0E8621791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD3E3C5F2183AE2300539ADB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD3E3C602183AE3100539ADB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BD3E3C552183AE0900539ADB /* BreathingRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		BD4E0E8521791BF500DEA2F5 /* Bullshit */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,19 +500,6 @@
 				BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */,
 			);
 			path = Bullshit;
-			sourceTree = "<group>";
-		};
-		BD71F695217562460011C885 /* Daily Summary View */ = {
-			isa = PBXGroup;
-			children = (
-				BD290C4F216E9613001F16EA /* Calendar.storyboard */,
-				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
-				BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */,
-				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
-				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
-				BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */,
-			);
-			path = "Daily Summary View";
 			sourceTree = "<group>";
 		};
 		BD974A252163F74B00612838 /* Models */ = {
@@ -606,6 +600,67 @@
 			path = FinalChallengeTests;
 			sourceTree = "<group>";
 		};
+		BDB7C53721823724009A8206 /* Day Summary View */ = {
+			isa = PBXGroup;
+			children = (
+				BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */,
+				BDE468402180F954002BDE93 /* Router */,
+				BDE4683C2180F924002BDE93 /* Interactor */,
+				BDE468382180F8FE002BDE93 /* Presenter */,
+				BDE468312180F709002BDE93 /* View */,
+			);
+			path = "Day Summary View";
+			sourceTree = "<group>";
+		};
+		BDE468312180F709002BDE93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */,
+				BD290C51216E9764001F16EA /* DaySummaryTableViewController.swift */,
+				49AE2B2C2163DF1900055136 /* CalendarViewController.swift */,
+				494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */,
+				BD3E3C5021838E7800539ADB /* Storyboards */,
+				BDE468412180F9DD002BDE93 /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDE468382180F8FE002BDE93 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDE4683C2180F924002BDE93 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BDE468402180F954002BDE93 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BDE468412180F9DD002BDE93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */,
+				4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */,
+				BD290C6321752918001F16EA /* AnswerTableViewCell.swift */,
+				BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */,
+				BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F84F77F27EDB0EC1035497DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,8 +682,6 @@
 				49AE2B122163DD4F00055136 /* Frameworks */,
 				49AE2B132163DD4F00055136 /* Resources */,
 				459BB046217674CF0065630F /* ShellScript */,
-				A58BAFEDEB89521DF01ABE13 /* [CP] Embed Pods Frameworks */,
-				11C948A25E79BC8F29349E1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -647,8 +700,6 @@
 				BD974A462167F01800612838 /* Sources */,
 				BD974A472167F01800612838 /* Frameworks */,
 				BD974A482167F01800612838 /* Resources */,
-				EEBF4BE28A0F1D6ABCF7C586 /* [CP] Embed Pods Frameworks */,
-				5705FECA91666A78D55E591A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -704,13 +755,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD290C50216E9613001F16EA /* Calendar.storyboard in Resources */,
+				BD290C50216E9613001F16EA /* DailySummary.storyboard in Resources */,
 				49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */,
 				4539540D21766DBF00CF71EC /* DailyQuestion.storyboard in Resources */,
 				450ED4CB2177D85300195CAE /* Localizable.strings in Resources */,
 				49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */,
+				BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
-				BD4E0E7B2179159700DEA2F5 /* BreathingView.storyboard in Resources */,
+				BD4E0E7B2179159700DEA2F5 /* Breathing.storyboard in Resources */,
 				BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */,
 				49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */,
 			);
@@ -720,32 +772,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4E0E7E2179192100DEA2F5 /* giphy.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11C948A25E79BC8F29349E1F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		459BB046217674CF0065630F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -786,25 +818,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5705FECA91666A78D55E591A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7CC117D16B183E412BD13F1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -825,44 +838,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A58BAFEDEB89521DF01ABE13 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EEBF4BE28A0F1D6ABCF7C586 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -887,27 +862,34 @@
 				BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
 				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
 				491511FB21751711007C0E09 /* Router.swift in Sources */,
+				BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */,
+				BD3E3C5C2183AE0900539ADB /* BreathingProtocols.swift in Sources */,
+				BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
+				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
 				BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
+				BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */,
 				4539540921766DBF00CF71EC /* DailyQuestionCollectionViewCell.swift in Sources */,
 				BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
+				BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */,
 				BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				453953F721766D0F00CF71EC /* DailyQuestionRouter.swift in Sources */,
 				BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
 				BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */,
 				453953F621766D0F00CF71EC /* DailyQuestionPresenter.swift in Sources */,
+				BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */,
 				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
 				453953FA21766D0F00CF71EC /* DailyQuestionView.swift in Sources */,
+				BD3E3C5A2183AE0900539ADB /* BreathingPresenter.swift in Sources */,
 				BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
-				49AB023921752D79002B8140 /* QuestionsManager.swift in Sources */,
 				BD290C26216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
@@ -922,7 +904,6 @@
 				BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
 				BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
 				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
-				BD974A272163FD4600612838 /* CoreDataManager.swift in Sources */,
 				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
 				491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */,
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
@@ -931,9 +912,10 @@
 				BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */,
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
+				4943FDD82165355600FE2045 /* (null) in Sources */,
+				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,
-				49AE2B2B2163DF0B00055136 /* ViewController.swift in Sources */,
 				4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
 				BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
@@ -947,58 +929,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
-				BD4E0E732177A81D00DEA2F5 /* Extensions.swift in Sources */,
-				BD91C948216BCA470073A003 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
-				BD974A6F2167F12B00612838 /* QuestionDAO.swift in Sources */,
-				BD290C4C216D3539001F16EA /* MoodDAO.swift in Sources */,
-				BD290C15216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
-				BD906E6D2175336000C746B1 /* DissertationAnswersDAO.swift in Sources */,
-				BD290C19216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
-				BD974A732167F13000612838 /* CoreDataManager.swift in Sources */,
-				BD290C1D216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
 				BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */,
-				BD974A712167F12B00612838 /* CheckboxQuestionDAO.swift in Sources */,
-				BD4E0E8821791F0400DEA2F5 /* PopToScreenSizeTransitionAnimation.swift in Sources */,
-				BD906E6C2175336000C746B1 /* AnswerDAO.swift in Sources */,
 				BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */,
-				BD290C09216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
-				BD290BFF216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
-				BD290C0F216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
-				BD290C1B216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
-				BD290C25216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
-				BD4E0E812179197A00DEA2F5 /* FunnyGif.swift in Sources */,
-				BD290C27216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
-				BD290C2F216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
 				BD290C35216D1A90001F16EA /* AuthorDAOTests.swift in Sources */,
-				BD290C03216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
-				BD290C11216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */,
-				BD290C38216D1B60001F16EA /* AuthorDAO.swift in Sources */,
-				BD290BFB216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				BD290C2C216BF569001F16EA /* QuestionsDAOTests.swift in Sources */,
-				BD290C6821752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
-				BD290BF9216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
-				BD906E6F2175336000C746B1 /* RadioboxAnswerDAO.swift in Sources */,
-				BD974A702167F12B00612838 /* DissertativeQuestionDAO.swift in Sources */,
-				BD906E6E2175336000C746B1 /* CheckboxAnswer.swift in Sources */,
-				BD290C21216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
-				BD4E0E8421791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
-				BD290C01216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
-				BD290C0D216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
-				BD290C05216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
-				BD290C17216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290C31216D17F6001F16EA /* RadioboxQuestionDAOTests.swift in Sources */,
-				BD290C55216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
-				BD974A722167F12E00612838 /* DataAccessError.swift in Sources */,
-				BD290BFD216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
-				BD290C1F216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
-				BD290C6521752919001F16EA /* AnswerTableViewCell.swift in Sources */,
-				BDA84B91217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
-				BD71F694217560630011C885 /* DaySummaryTableViewController.swift in Sources */,
-				BD290C0B216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
-				BD290C07216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
-				BD290C13216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
-				BD290C23216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1168,7 +1104,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1187,7 +1123,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

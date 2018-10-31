@@ -11,22 +11,14 @@ import UIKit
 class InsertTableViewCell: UITableViewCell {
     
     @IBOutlet weak var insertButton: UIButton!
-    
-    var questionButton: UIButton!
-    
     @IBOutlet weak var lineView: UIView!
-    
     var moodButtons: [UIButton] = []
-    
     var insertButtons: [UIButton] = []
-    
+    var questionButton: UIButton!
     var isInsertMenuClosed = true
-    
     var isInsertMoodMenuClosed = true
-    
-    var daySummaryTableViewController: DaySummaryTableViewController!
-    
     var shouldReloadCell = true
+    var daySummaryTableViewController: DaySummaryTableViewController!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,11 +28,11 @@ class InsertTableViewCell: UITableViewCell {
         self.insertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)
     }
     
-    func setButtons() {
+    func setButtons(forMoodTypes moodTypes: [MoodType]) {
         if !self.shouldReloadCell { return }
         
         var i = 0
-        for mood in self.daySummaryTableViewController.moodTypes {
+        for mood in moodTypes {
             let button = self.instantiateMoodButton(forMoodImage: UIImage(named: mood.typeIcon!)!)
             button.tag = i
             button.addTarget(self, action: #selector(didTapToAddMood(_:)), for: .touchUpInside)
@@ -103,7 +95,9 @@ class InsertTableViewCell: UITableViewCell {
         guard let button = moodButton as? UIButton else {
             return
         }
-        self.daySummaryTableViewController.didTapInsertMood(button.tag)
+        self.closeMoodMenu(completion: {
+            self.daySummaryTableViewController.didTapInsertMood(button.tag)
+        })
     }
     
     @objc func didTapQuestionButton() {
@@ -152,7 +146,9 @@ extension InsertTableViewCell {
         UIView.animate(withDuration: 0.25, animations: {
             self.insertButton.transform = CGAffineTransform(rotationAngle: 0)
         })
-        self.closeMenu(forButtons: self.moodButtons, i: self.moodButtons.count)
+        self.closeMenu(forButtons: self.moodButtons, i: self.moodButtons.count, completion: {
+            completion?()
+        })
     }
     
     func openMenu(forButtons buttons: [UIButton], i: Int = 1, completion: (() -> (Void))? = nil) {
@@ -161,7 +157,8 @@ extension InsertTableViewCell {
             completion?()
             return
         }
-        UIView.animate(withDuration: 0.17, animations: {
+        
+        UIView.animate(withDuration: 0.15, animations: {
             for j in stride(from: buttons.count, to: i - 1, by: -1) {
                 buttons[j - 1].transform = CGAffineTransform(translationX: (buttons[j - 1].frame.width + 10) * CGFloat(i), y: 0)
             }

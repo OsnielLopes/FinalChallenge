@@ -41,16 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        guard let window = self.window else { return true}
 //        window.makeKeyAndVisible()
         
-        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
+//        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
+//
+//        let navController = UINavigationController(rootViewController: viewController)
+//
+//
+//        navController.isNavigationBarHidden = true
+//
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window?.rootViewController = navController
         
-        let navController = UINavigationController(rootViewController: viewController)
         
-        
-        navController.isNavigationBarHidden = true
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = navController
+        let router = DaySummaryRouter()
+        router.presentAsRoot(window: self.window!)
         self.window?.makeKeyAndVisible()
         
         return true

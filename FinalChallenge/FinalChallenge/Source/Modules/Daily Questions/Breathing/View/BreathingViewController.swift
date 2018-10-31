@@ -11,8 +11,8 @@ import UIKit
 class BreathingViewController: UIViewController {
 
     @IBOutlet weak var breathingAnimationImageView: UIImageView!
-    
     var daySummaryViewController: UIViewController!
+    var presenter: BreathingPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +21,7 @@ class BreathingViewController: UIViewController {
     }
 
     @IBAction func didTapViewToContinue(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "DailyQuestion", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "DailyQuestionView") as? DailyQuestionView {
-//            viewController.summaryViewController = self.daySummaryViewController
-            self.present(viewController, animated: true, completion: nil)
-        }
+        self.presenter.didTapViewToContinue()
     }
     
 }

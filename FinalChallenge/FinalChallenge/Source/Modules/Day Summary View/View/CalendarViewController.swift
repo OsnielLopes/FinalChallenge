@@ -53,6 +53,8 @@ class CalendarViewController: UIViewController {
     var originalMonthDays: [Date?] = []
     var currentMonthDays: [Date?] = []
     var safeAreaLayout: UILayoutGuide!
+    var dailySummaryParentViewController: DailySummaryViewController!
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -357,14 +359,9 @@ class CalendarViewController: UIViewController {
      // MARK: - Auxiliar Functions
     
     func updateSummaryView(){
-        guard let dailySummaryViewController = self.parent as? DailySummaryViewController else {
-            print("Impossible to downcast the parenteViewController to DailySummaryViewController")
-            return
-        }
         let indexPathOfSelectedCell = currentMonthCollectionViewController.collectionView.indexPathsForSelectedItems!.first!
         let selectedCell = currentMonthCollectionViewController.collectionView.cellForItem(at: indexPathOfSelectedCell) as! MonthCollectionViewCell
-        dailySummaryViewController.currentDate = selectedCell.day
-        dailySummaryViewController.reloadData()
+        self.dailySummaryParentViewController.setCurrentDate(selectedCell.day)
     }
  
     
