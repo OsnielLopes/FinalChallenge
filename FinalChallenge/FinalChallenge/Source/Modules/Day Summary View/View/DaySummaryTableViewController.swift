@@ -128,6 +128,9 @@ class DaySummaryTableViewController: UITableViewController {
     func didAddedMood() {
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
+        if let insertCell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? InsertTableViewCell {
+            insertCell.lineView.isHidden = self.dailySummaryParentViewController.shouldDisplayLine(for: 0)
+        }
         self.tableView.endUpdates()
     }
     

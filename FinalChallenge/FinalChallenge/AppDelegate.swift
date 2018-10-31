@@ -24,36 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             QuestionsManager.shared.createAllQuestions()
             UserDefaults.standard.set(true, forKey: Project.UserSettings.appHasBeenUsed.rawValue)
         }
-//
-//        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
-//
-//        let navController = UINavigationController(rootViewController: viewController)
-//
-//
-//        navController.isNavigationBarHidden = true
-//
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        self.window?.rootViewController = navController
-//        self.window?.makeKeyAndVisible()
-
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        guard let window = self.window else { return true}
-//        window.makeKeyAndVisible()
         
-//        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "CalendarView")
-//
-//        let navController = UINavigationController(rootViewController: viewController)
-//
-//
-//        navController.isNavigationBarHidden = true
-//
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        self.window?.rootViewController = navController
-        
-        
-        let router = DaySummaryRouter()
+        let router = MainRouter()
         router.presentAsRoot(window: self.window!)
         self.window?.makeKeyAndVisible()
         
