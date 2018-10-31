@@ -54,6 +54,10 @@ class MainRouter: NSObject, MainRouterProtocol {
         daySummaryViewRouter.view.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendarTabBarItemDeselected"), selectedImage: UIImage(named: "calendarTabBarItemSelected"))
         viewControllers.append(daySummaryViewRouter.view)
         
+        let questionsHistoricRouter = QuestionsHistoricRouter()
+        questionsHistoricRouter.view.tabBarItem = UITabBarItem.init(tabBarSystemItem: .bookmarks, tag: 1)
+        viewControllers.append(questionsHistoricRouter.view)
+        
         return viewControllers
     }
 }
