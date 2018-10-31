@@ -22,6 +22,8 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.estimatedSectionHeaderHeight = 40.0
+        self.tableView.estimatedRowHeight = 40.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +63,10 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return UITableView.automaticDimension
     }
     
