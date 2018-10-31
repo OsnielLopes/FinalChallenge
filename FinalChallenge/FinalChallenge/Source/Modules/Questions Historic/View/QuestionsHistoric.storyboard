@@ -1,30 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View-->
+        <!--Perguntas-->
         <scene sceneID="0yJ-gf-T5z">
             <objects>
-                <viewController storyboardIdentifier="QuestionsHistoricView" id="2aj-bM-ixw" customClass="QuestionsHistoricView" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zIR-mc-HJo"/>
-                        <viewControllerLayoutGuide type="bottom" id="VJw-nr-gPZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="T0n-7X-0uE">
+                <viewController storyboardIdentifier="QuestionsHistoricView" id="2aj-bM-ixw" customClass="QuestionsHistoricView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qen-GF-eN6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionsHistoricCell" rowHeight="170" id="Mwc-t4-d6x" customClass="QuestionsHistoricCell" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="170"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mwc-t4-d6x" id="zMt-PM-nt5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CB9-Qt-MNq">
+                                            <rect key="frame" x="20" y="20" width="335" height="130"/>
+                                            <subviews>
+                                                <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-iA-vw4">
+                                                    <rect key="frame" x="10" y="0.0" width="325" height="90"/>
+                                                    <string key="text">Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras, mas também é o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" name="color-black"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Por Dilma" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FsB-ST-UOn">
+                                                    <rect key="frame" x="30" y="115.5" width="305" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.070588235289999995" green="0.15686274510000001" blue="0.1450980392" alpha="0.51853735207100593" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="FsB-ST-UOn" firstAttribute="trailing" secondItem="VHZ-iA-vw4" secondAttribute="trailing" id="BET-Zi-6uY"/>
+                                                <constraint firstItem="FsB-ST-UOn" firstAttribute="top" secondItem="VHZ-iA-vw4" secondAttribute="bottom" id="OaF-Pl-LYS"/>
+                                                <constraint firstItem="VHZ-iA-vw4" firstAttribute="top" secondItem="CB9-Qt-MNq" secondAttribute="top" id="aaB-Ns-QPx"/>
+                                                <constraint firstAttribute="bottom" secondItem="FsB-ST-UOn" secondAttribute="bottom" id="hay-bS-JhO"/>
+                                                <constraint firstItem="VHZ-iA-vw4" firstAttribute="leading" secondItem="CB9-Qt-MNq" secondAttribute="leading" constant="10" id="iHe-pE-Kkx"/>
+                                                <constraint firstItem="FsB-ST-UOn" firstAttribute="leading" secondItem="VHZ-iA-vw4" secondAttribute="leading" constant="20" id="pED-V4-7L6"/>
+                                                <constraint firstAttribute="trailing" secondItem="VHZ-iA-vw4" secondAttribute="trailing" id="tDS-v4-Gg8"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="CB9-Qt-MNq" secondAttribute="trailing" constant="20" id="fM6-Jg-40p"/>
+                                        <constraint firstAttribute="bottom" secondItem="CB9-Qt-MNq" secondAttribute="bottom" constant="20" id="jRe-eQ-syc"/>
+                                        <constraint firstItem="CB9-Qt-MNq" firstAttribute="top" secondItem="zMt-PM-nt5" secondAttribute="top" constant="20" id="qPz-I0-Cxy"/>
+                                        <constraint firstItem="CB9-Qt-MNq" firstAttribute="leading" secondItem="zMt-PM-nt5" secondAttribute="leading" constant="20" id="yqT-7a-eP5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cardView" destination="CB9-Qt-MNq" id="9F7-3x-EmW"/>
+                                    <outlet property="questionAuthorLabel" destination="FsB-ST-UOn" id="YBQ-Xq-pOu"/>
+                                    <outlet property="questionTextLabel" destination="VHZ-iA-vw4" id="0t1-iI-aia"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Perguntas" id="01y-U6-VcT"/>
+                    <connections>
+                        <outlet property="tableView" destination="qen-GF-eN6" id="LoH-m6-8My"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxF-vk-lxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="152"/>
+            <point key="canvasLocation" x="928.79999999999995" y="151.57421289355324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b92-so-wz4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7f6-OK-NQa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JqF-kw-wuN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2aj-bM-ixw" kind="relationship" relationship="rootViewController" id="jla-ey-eu0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5x-58-hEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.4" y="151.57421289355324"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="color-black">
+            <color red="0.019607843137254902" green="0.062745098039215685" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -14,11 +14,59 @@ class QuestionsHistoricPresenter: NSObject, QuestionsHistoricPresenterInputProto
     weak var view: QuestionsHistoricPresenterOutputProtocol!
     var interactor: QuestionsHistoricInteractorInputProtocol!
     var router: QuestionsHistoricRouterProtocol!
+    
+    // MARK: - Properties
+    var questions: [Question] = []
+    var questionsCategoryVO: [QuestionsCategoryViewObject] = []
 
     // MARK: - QuestionsHistoricPresenterInputProtocol
+    
+    func fetchQuestions() {
+        self.view.showLoading(true)
+        self.interactor.fetchQuestions()
+    }
+    
+    func numberOfSections() -> Int {
+        return self.questionsCategoryVO.count
+    }
+    
+    func numberOfQuestions(in section: Int) -> Int {
+        return self.questionsCategoryVO[section].questions.count
+    }
+    
+    func item(at indexPath: IndexPath) -> Question {
+        return self.questionsCategoryVO[indexPath.section].questions[indexPath.row]
+    }
+    
+    func header(at section: Int) -> Category {
+        return self.questionsCategoryVO[section].category
+    }
+    
+    func moveToQuestion(_ question: Question) {
+        self.router.presentQuestionView(question)
+    }
 
     // MARK: - QuestionsHistoricPresenterInteractorOutputProtocol
+    
+    func handleSuccessFetchedQuestion(with results: [Question]) {
+        self.questions = results
+        self.orderQuestions()
+        self.view.showLoading(false)
+        self.view.didFetchQuestions()
+    }
+    
+    func handleFailureFetchedQuestion(with message: String) {
+        self.view.showError(message: message)
+        self.view.showLoading(false)
+    }
 
 	// MARK: - Private Methods
+    
+    private func orderQuestions() {
+        let category = self.questions.map({ $0.category! })
+        category.forEach({ category in
+            self.questionsCategoryVO.append(QuestionsCategoryViewObject(category: category, questions: self.questions.filter({ $0.category == category })))
+        })
+    }
 
 }

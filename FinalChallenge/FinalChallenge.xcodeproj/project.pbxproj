@@ -80,6 +80,10 @@
 		BD3635E7218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635E1218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift */; };
 		BD3635E8218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635E2218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift */; };
 		BD3635E9218A19FF00E4A6EA /* QuestionsHistoricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */; };
+		BD3635F1218A1DC000E4A6EA /* QuestionsHistoricHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */; };
+		BD3635F3218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */; };
+		BD3635F6218A204700E4A6EA /* QuestionsHistoricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */; };
+		BD3635F8218A387B00E4A6EA /* QuestionsCategoryViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */; };
 		BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
 		BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 		BD3E3C5A2183AE0900539ADB /* BreathingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */; };
@@ -205,6 +209,10 @@
 		BD3635E1218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricProtocols.swift; sourceTree = "<group>"; };
 		BD3635E2218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricInteractor.swift; sourceTree = "<group>"; };
 		BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricView.swift; sourceTree = "<group>"; };
+		BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsHistoricHeader.xib; sourceTree = "<group>"; };
+		BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricHeaderView.swift; sourceTree = "<group>"; };
+		BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricCell.swift; sourceTree = "<group>"; };
+		BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCategoryViewObject.swift; sourceTree = "<group>"; };
 		BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPresenter.swift; sourceTree = "<group>"; };
 		BD3E3C552183AE0900539ADB /* BreathingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingRouter.swift; sourceTree = "<group>"; };
 		BD3E3C562183AE0900539ADB /* BreathingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingProtocols.swift; sourceTree = "<group>"; };
@@ -476,8 +484,8 @@
 			isa = PBXGroup;
 			children = (
 				BD3635E1218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift */,
-				BD3635ED218A1A6000E4A6EA /* Interactor */,
 				BD3635EC218A1A5B00E4A6EA /* Router */,
+				BD3635ED218A1A6000E4A6EA /* Interactor */,
 				BD3635EB218A1A5400E4A6EA /* Presenter */,
 				BD3635EA218A1A4E00E4A6EA /* View */,
 			);
@@ -489,6 +497,9 @@
 			children = (
 				BD3635DE218A19FF00E4A6EA /* QuestionsHistoric.storyboard */,
 				BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */,
+				BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */,
+				BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */,
+				BD3635F4218A1E3800E4A6EA /* Header */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,6 +526,15 @@
 				BD3635E2218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BD3635F4218A1E3800E4A6EA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */,
+				BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		BD3E3C5021838E7800539ADB /* Storyboards */ = {
@@ -853,6 +873,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD290C50216E9613001F16EA /* DailySummary.storyboard in Resources */,
+				BD3635F1218A1DC000E4A6EA /* QuestionsHistoricHeader.xib in Resources */,
 				49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */,
 				4539540D21766DBF00CF71EC /* DailyQuestion.storyboard in Resources */,
 				BD3635E4218A19FF00E4A6EA /* QuestionsHistoric.storyboard in Resources */,
@@ -954,6 +975,7 @@
 				453953F921766D0F00CF71EC /* DailyQuestionInteractor.swift in Sources */,
 				BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */,
 				BD290C4A216D352D001F16EA /* MoodDAO.swift in Sources */,
+				BD3635F3218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift in Sources */,
 				453953F821766D0F00CF71EC /* DailyQuestionProtocols.swift in Sources */,
 				BD3635E6218A19FF00E4A6EA /* QuestionsHistoricRouter.swift in Sources */,
 				BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
@@ -974,6 +996,7 @@
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
+				BD3635F6218A204700E4A6EA /* QuestionsHistoricCell.swift in Sources */,
 				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
 				BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
@@ -1017,6 +1040,7 @@
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */,
+				BD3635F8218A387B00E4A6EA /* QuestionsCategoryViewObject.swift in Sources */,
 				BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */,
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,

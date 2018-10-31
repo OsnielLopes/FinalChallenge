@@ -9,6 +9,7 @@
 import UIKit
 
 class QuestionsHistoricRouter: NSObject, QuestionsHistoricRouterProtocol {
+    
 
 	// MARK: - Constants
 	private let storyBoardName = "QuestionsHistoric"
@@ -36,6 +37,10 @@ class QuestionsHistoricRouter: NSObject, QuestionsHistoricRouterProtocol {
 	}
 
     // MARK: - QuestionsHistoricRouterProtocol
+    
+    func presentQuestionView(_ question: Question) {
+        fatalError()
+    }
 
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> QuestionsHistoricView {
