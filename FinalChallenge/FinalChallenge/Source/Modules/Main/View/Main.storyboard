@@ -12,7 +12,7 @@
         <scene sceneID="9Z6-jP-X6g">
             <objects>
                 <tabBarController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eD8-88-Fmm" customClass="MainView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" shadowImage="add" id="peq-YQ-LZ9">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="peq-YQ-LZ9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,7 +36,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gcl-uw-Ylk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LRH-bf-9Zz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -47,7 +47,4 @@
             <point key="canvasLocation" x="1908" y="-164"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="add" width="25" height="25"/>
-    </resources>
 </document>
