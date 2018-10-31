@@ -18,7 +18,7 @@ class QuestionsHistoricCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.cardView.layer.cornerRadius = self.cardView.frame.width / 30
-        self.cardView.dropShadow(color: #colorLiteral(red: 0.01960784314, green: 0.06274509804, blue: 0.07843137255, alpha: 1), opacity: 0.25, offSet: CGSize.init(width: 0, height: 0), radius: 0, scale: true)
+        self.cardView.dropShadow(color: #colorLiteral(red: 0.01960784314, green: 0.06274509804, blue: 0.07843137255, alpha: 1), opacity: 0.25, offSet: CGSize(width: 0, height: 5), radius: 5, scale: true, shouldFollowPath: false)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

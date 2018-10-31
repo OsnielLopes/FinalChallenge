@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionsHistoricHeaderView: UITableViewHeaderFooterView {
+class QuestionsHistoricHeaderView: UIView {
 
     @IBOutlet weak var categoryTitleLabel: UILabel!
     

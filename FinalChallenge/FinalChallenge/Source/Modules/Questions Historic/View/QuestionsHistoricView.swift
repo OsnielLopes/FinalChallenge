@@ -16,15 +16,12 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
     // MARK: - Properties
     @IBOutlet var tableView: UITableView!
     let reuseIdentifierCell = "questionsHistoricCell"
-    let reuseIdentifierHeader = "questionsHistoricHeader"
     
     // MARK: - Override methods
 	override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        self.tableView.register(UINib(nibName: "QuestionsHistoricHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: self.reuseIdentifierHeader)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +50,7 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let header = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: self.reuseIdentifierHeader) as? QuestionsHistoricHeaderView else {
+        guard let header = UINib(nibName: "QuestionsHistoricHeader", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? QuestionsHistoricHeaderView else {
             return UIView()
         }
         header.setCategory(self.presenter.header(at: section))
