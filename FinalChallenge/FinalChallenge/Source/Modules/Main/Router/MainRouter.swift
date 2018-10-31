@@ -51,9 +51,7 @@ class MainRouter: NSObject, MainRouterProtocol {
         var viewControllers: [UIViewController] = []
         
         let daySummaryViewRouter = DaySummaryRouter()
-        daySummaryViewRouter.view.tabBarItem = UITabBarItem(title: "Calendar",
-                                                            image: UIImage(named: "tabBarItemDeselected"),
-                                                            selectedImage: UIImage(named: "tabBarItemSelected"))
+        daySummaryViewRouter.view.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendarTabBarItemDeselected"), selectedImage: UIImage(named: "calendarTabBarItemSelected"))
         viewControllers.append(daySummaryViewRouter.view)
         
         return viewControllers
