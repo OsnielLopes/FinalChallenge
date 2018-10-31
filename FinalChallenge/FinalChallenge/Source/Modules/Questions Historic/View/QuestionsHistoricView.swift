@@ -27,17 +27,27 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
         self.tableView.register(UINib(nibName: "QuestionsHistoricHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: self.reuseIdentifierHeader)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.presenter.fetchQuestions()
+    }
+    
     // MARK: - UITableViewDataSource
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.presenter.numberOfSections()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.presenter.numberOfQuestions(in: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifierCell) as? QuestionsHistoricCell else {
             return UITableViewCell()
         }
-        
+        cell.setQuestion(self.presenter.item(at: indexPath))
         
         return cell
     }
@@ -46,6 +56,7 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
         guard let header = self.tableView.dequeueReusableHeaderFooterView(withIdentifier: self.reuseIdentifierHeader) as? QuestionsHistoricHeaderView else {
             return UIView()
         }
+        header.setCategory(self.presenter.header(at: section))
         
         return header
     }
