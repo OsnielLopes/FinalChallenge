@@ -495,11 +495,10 @@
 		BD3635EA218A1A4E00E4A6EA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */,
 				BD3635DE218A19FF00E4A6EA /* QuestionsHistoric.storyboard */,
 				BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */,
-				BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */,
-				BD3635F4218A1E3800E4A6EA /* Header */,
+				BD36360C218B76ED00E4A6EA /* View Object */,
+				BD3635F4218A1E3800E4A6EA /* Table View */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,13 +527,22 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		BD3635F4218A1E3800E4A6EA /* Header */ = {
+		BD3635F4218A1E3800E4A6EA /* Table View */ = {
 			isa = PBXGroup;
 			children = (
 				BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */,
 				BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */,
+				BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */,
 			);
-			path = Header;
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		BD36360C218B76ED00E4A6EA /* View Object */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */,
+			);
+			path = "View Object";
 			sourceTree = "<group>";
 		};
 		BD3E3C5021838E7800539ADB /* Storyboards */ = {
