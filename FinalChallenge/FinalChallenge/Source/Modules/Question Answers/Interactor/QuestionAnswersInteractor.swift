@@ -24,6 +24,14 @@ class QuestionAnswersInteractor: NSObject, QuestionAnswersInteractorInputProtoco
 
 	// MARK: - QuestionAnswersInteractorInputProtocol
     func fetchAnswers() {
+        AnswerDAO.shared.fetchByQuestion(question, completion: { answers, err in
+            guard let answers = answers, err == nil else { 
+                self.output.handleFailure(with: "There was a problem fetching the answers for this date")
+                return
+            }
+            self.answers = answers
+            self.output.handleSuccess(with: self.answers)
+        })
     }
 
     // MARK: - Private Methods

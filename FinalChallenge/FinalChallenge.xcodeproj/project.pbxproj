@@ -116,6 +116,7 @@
 		BDAF3AC5218B82D900EFD2A9 /* QuestionAnswersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ABF218B82D900EFD2A9 /* QuestionAnswersInteractor.swift */; };
 		BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */; };
 		BDAF3ACC218B87C000EFD2A9 /* QuestionTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */; };
+		BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
@@ -252,6 +253,7 @@
 		BDAF3ABF218B82D900EFD2A9 /* QuestionAnswersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswersInteractor.swift; sourceTree = "<group>"; };
 		BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswersView.swift; sourceTree = "<group>"; };
 		BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTextCell.swift; sourceTree = "<group>"; };
+		BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
@@ -781,9 +783,18 @@
 			children = (
 				BDAF3ABB218B82D900EFD2A9 /* QuestionAnswers.storyboard */,
 				BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */,
-				BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */,
+				BDAF3ACF218B999000EFD2A9 /* Table View */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BDAF3ACF218B999000EFD2A9 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */,
+				BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */,
+			);
+			path = "Table View";
 			sourceTree = "<group>";
 		};
 		BDB7C53721823724009A8206 /* Day Summary View */ = {
@@ -1061,6 +1072,7 @@
 				BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */,
 				BD3E3C5C2183AE0900539ADB /* BreathingProtocols.swift in Sources */,
 				BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */,
+				BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,

@@ -47,7 +47,7 @@ class QuestionAnswersPresenter: NSObject, QuestionAnswersPresenterInputProtocol,
     }
     
     func item(at indexPath: Int) -> Any {
-        return indexPath == 0 ? self.question : self.answers[indexPath]
+        return indexPath == 0 ? self.question : self.answers[indexPath - 1]
     }
 
     // MARK: - QuestionAnswersPresenterInteractorOutputProtocol

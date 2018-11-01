@@ -17,7 +17,8 @@ class QuestionAnswersView: UIViewController, QuestionAnswersPresenterOutputProto
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    let reuseIdentifierCell = "questionTextCell"
+    let questionReuseIdentifier = "questionTextCell"
+    let answerReuseIdentifier = "answerCell"
     
     // MARK: - Override methods
 	override func viewDidLoad() {
@@ -46,16 +47,36 @@ class QuestionAnswersView: UIViewController, QuestionAnswersPresenterOutputProto
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = self.tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifierCell) else {
-            return UITableViewCell()
+        let entity = self.presenter.item(at: indexPath.row)
+        
+        if let question = entity as? Question {
+            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: self.questionReuseIdentifier) as? QuestionTextCell else {
+                return UITableViewCell()
+            }
+            cell.setQuestion(question)
+            cell.tableView = self
+            
+            return cell
+        } else if let answer = entity as? Answer {
+            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: self.questionReuseIdentifier) as? AnswerCell else {
+                return UITableViewCell()
+            }
+            cell.setAnswer(answer)
+            
+            return cell
         }
-        return cell
+        
+        return UITableViewCell()
     }
     
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func dissmiss() {
+        self.presenter.didTapToDismiss()
     }
 
 	// MARK: - Private Methods
