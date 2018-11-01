@@ -39,7 +39,8 @@ class QuestionsHistoricRouter: NSObject, QuestionsHistoricRouterProtocol {
     // MARK: - QuestionsHistoricRouterProtocol
     
     func presentQuestionView(_ question: Question) {
-        fatalError()
+        let router = QuestionAnswersRouter(question: question)
+        router.present(with: self.view)
     }
 
 	// MARK: - Private methods

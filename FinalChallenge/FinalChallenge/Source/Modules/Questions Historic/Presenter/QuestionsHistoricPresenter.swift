@@ -42,9 +42,10 @@ class QuestionsHistoricPresenter: NSObject, QuestionsHistoricPresenterInputProto
         return self.questionsCategoryVO[section].category
     }
     
-    func moveToQuestion(_ question: Question) {
-        self.router.presentQuestionView(question)
+    func moveToQuestion(at indexPath: IndexPath) {
+        self.router.presentQuestionView(self.questionsCategoryVO[indexPath.section].questions[indexPath.row])
     }
+    
 
     // MARK: - QuestionsHistoricPresenterInteractorOutputProtocol
     

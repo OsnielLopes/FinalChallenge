@@ -18,12 +18,12 @@ class QuestionAnswersRouter: NSObject, QuestionAnswersRouterProtocol {
 	weak var view: QuestionAnswersView!
 
 	// MARK: - Constructors
-	override init() {
+    init(question: Question) {
 		super.init()
 
 		let view = self.viewControllerFromStoryboard()
-		let interactor = QuestionAnswersInteractor()
-		let presenter = QuestionAnswersPresenter()
+        let interactor = QuestionAnswersInteractor(question: question)
+        let presenter = QuestionAnswersPresenter(question: question)
 
 		presenter.interactor = interactor
 		presenter.router = self
@@ -36,6 +36,13 @@ class QuestionAnswersRouter: NSObject, QuestionAnswersRouterProtocol {
 	}
 
     // MARK: - QuestionAnswersRouterProtocol
+    func present(with viewController: UIViewController) {
+        viewController.present(self.view, animated: true, completion: nil)
+    }
+    
+    func dismiss() {
+        self.view.dismiss(animated: true)
+    }
 
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> QuestionAnswersView {

@@ -12,8 +12,19 @@ class QuestionAnswersInteractor: NSObject, QuestionAnswersInteractorInputProtoco
 
 	// MARK: - Viper Module Properties
     weak var output: QuestionAnswersInteractorOutputProtocol!
+    
+    // MARK: - Properties
+    var question: Question
+    var answers: [Answer] = []
+    
+    // MARK: - Constructors
+    init(question: Question) {
+        self.question = question
+    }
 
 	// MARK: - QuestionAnswersInteractorInputProtocol
+    func fetchAnswers() {
+    }
 
     // MARK: - Private Methods
 

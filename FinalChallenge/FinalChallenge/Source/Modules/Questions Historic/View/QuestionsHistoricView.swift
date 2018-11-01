@@ -80,6 +80,10 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.moveToQuestion(at: indexPath)
+    }
+    
     // MARK: - QuestionsHistoricPresenterOutputProtocol
     
     func showLoading(_ loading: Bool) {
