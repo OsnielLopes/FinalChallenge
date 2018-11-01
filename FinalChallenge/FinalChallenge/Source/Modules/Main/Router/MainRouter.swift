@@ -56,7 +56,7 @@ class MainRouter: NSObject, MainRouterProtocol {
         
         let questionsHistoricRouter = QuestionsHistoricRouter()
         questionsHistoricRouter.view.tabBarItem = UITabBarItem.init(tabBarSystemItem: .bookmarks, tag: 1)
-        viewControllers.append(questionsHistoricRouter.view)
+        viewControllers.append(UINavigationController(rootViewController: questionsHistoricRouter.view))
         
         return viewControllers
     }

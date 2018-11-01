@@ -63,9 +63,9 @@ class QuestionsHistoricPresenter: NSObject, QuestionsHistoricPresenterInputProto
 	// MARK: - Private Methods
     
     private func orderQuestions() {
-        let category = self.questions.map({ $0.category! })
-        category.forEach({ category in
-            self.questionsCategoryVO.append(QuestionsCategoryViewObject(category: category, questions: self.questions.filter({ $0.category == category })))
+        let dictionary = Dictionary(grouping: self.questions, by: { $0.category! })
+        dictionary.forEach({
+            self.questionsCategoryVO.append(QuestionsCategoryViewObject(category: $0, questions: $1))
         })
     }
 

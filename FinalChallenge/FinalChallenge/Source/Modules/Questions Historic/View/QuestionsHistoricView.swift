@@ -24,6 +24,15 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
         self.tableView.dataSource = self
         self.tableView.estimatedSectionHeaderHeight = 40.0
         self.tableView.estimatedRowHeight = 40.0
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.backgroundColor = .white
+        
+//        FIXME: - Set right font and font color
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red,
+//                                                                        NSAttributedString.Key.font: UIFont(name: "System Italic", size: 18)]
     }
     
     override func viewWillAppear(_ animated: Bool) {
