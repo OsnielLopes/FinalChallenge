@@ -8,6 +8,7 @@ target 'FinalChallenge' do
   # Pods for FinalChallenge
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'Hero'
 
   target 'FinalChallengeTests' do
     inherit! :search_paths
