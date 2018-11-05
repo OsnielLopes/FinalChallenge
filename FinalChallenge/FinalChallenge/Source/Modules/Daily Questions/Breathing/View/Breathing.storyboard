@@ -27,16 +27,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-0G-6DW">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4zg-0G-6DW" secondAttribute="height" multiplier="1:1" id="22c-Nw-inc"/>
+                                    <constraint firstAttribute="width" constant="240" id="ZZ1-eQ-veR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="color-yellow"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="4zg-0G-6DW" firstAttribute="centerY" secondItem="W4w-nG-nok" secondAttribute="centerY" id="2L8-9w-PVM"/>
                             <constraint firstItem="dnx-t7-5WB" firstAttribute="centerX" secondItem="xVH-s5-wgS" secondAttribute="centerX" id="4Gg-da-Lk2"/>
                             <constraint firstItem="dnx-t7-5WB" firstAttribute="height" secondItem="W4w-nG-nok" secondAttribute="height" multiplier="0.3" id="CdA-GC-KmM"/>
                             <constraint firstItem="dnx-t7-5WB" firstAttribute="width" secondItem="W4w-nG-nok" secondAttribute="width" multiplier="0.6" id="JbO-E5-Kut"/>
                             <constraint firstItem="kxq-bx-rT3" firstAttribute="leading" secondItem="xVH-s5-wgS" secondAttribute="leading" constant="20" id="Nf1-bo-dxZ"/>
                             <constraint firstItem="kxq-bx-rT3" firstAttribute="top" secondItem="dnx-t7-5WB" secondAttribute="bottom" id="Nf4-M6-eSY"/>
                             <constraint firstItem="xVH-s5-wgS" firstAttribute="bottom" secondItem="kxq-bx-rT3" secondAttribute="bottom" id="Rig-Am-R0h"/>
+                            <constraint firstItem="4zg-0G-6DW" firstAttribute="centerX" secondItem="W4w-nG-nok" secondAttribute="centerX" id="WRq-74-PV9"/>
                             <constraint firstItem="xVH-s5-wgS" firstAttribute="trailing" secondItem="kxq-bx-rT3" secondAttribute="trailing" constant="20" id="qqH-FS-TZD"/>
                             <constraint firstItem="dnx-t7-5WB" firstAttribute="centerY" secondItem="xVH-s5-wgS" secondAttribute="centerY" id="wPO-aj-rPN"/>
                         </constraints>
@@ -46,7 +56,10 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="aView" destination="4zg-0G-6DW" id="nAe-8E-Hf5"/>
                         <outlet property="breathingAnimationImageView" destination="dnx-t7-5WB" id="yvL-rV-eJZ"/>
+                        <outlet property="widthOfView" destination="ZZ1-eQ-veR" id="EEr-b0-fkB"/>
+                        <outlet property="yposOfView" destination="2L8-9w-PVM" id="w5v-5F-dms"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dz0-sc-lmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
