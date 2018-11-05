@@ -51,11 +51,11 @@ class MainRouter: NSObject, MainRouterProtocol {
         var viewControllers: [UIViewController] = []
         
         let daySummaryViewRouter = DaySummaryRouter()
-        daySummaryViewRouter.view.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "calendarTabBarItemDeselected"), selectedImage: UIImage(named: "calendarTabBarItemSelected"))
+        daySummaryViewRouter.view.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "Calendar Icon Deselected"), selectedImage: UIImage(named: "Calendar Icon Selected"))
         viewControllers.append(daySummaryViewRouter.view)
         
         let questionsHistoricRouter = QuestionsHistoricRouter()
-        questionsHistoricRouter.view.tabBarItem = UITabBarItem.init(tabBarSystemItem: .bookmarks, tag: 1)
+        questionsHistoricRouter.view.tabBarItem = UITabBarItem(title: "Questions", image: UIImage(named: "Question Icon Deselected"), selectedImage: UIImage(named: "Question Icon Selected"))
         viewControllers.append(UINavigationController(rootViewController: questionsHistoricRouter.view))
         
         return viewControllers

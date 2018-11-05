@@ -40,7 +40,7 @@ class QuestionsHistoricRouter: NSObject, QuestionsHistoricRouterProtocol {
     
     func presentQuestionView(_ question: Question) {
         let router = QuestionAnswersRouter(question: question)
-        router.view.transitioningDelegate = self.view
+        router.view.hero.isEnabled = true
         router.present(with: self.view)
     }
 

@@ -26,6 +26,8 @@ class QuestionAnswersView: UIViewController, QuestionAnswersPresenterOutputProto
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.estimatedRowHeight = 40.0
+
+        self.view.hero.id = "\(self.presenter.fetchQuestion().objectID)cardView"
     }
     
     override func viewWillAppear(_ animated: Bool) {
