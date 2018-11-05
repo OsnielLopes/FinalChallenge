@@ -50,7 +50,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label verifyAmbiguity="off" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqX-1M-alU">
-                                                    <rect key="frame" x="56" y="42" width="304" height="590"/>
+                                                    <rect key="frame" x="56" y="42" width="304" height="147"/>
                                                     <string key="text">A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <color key="textColor" name="color-black"/>
@@ -81,7 +81,7 @@
                                                 <constraint firstItem="MX0-cF-deI" firstAttribute="centerX" secondItem="D7q-JT-T6j" secondAttribute="centerX" id="hGd-QF-HGS"/>
                                                 <constraint firstItem="MX0-cF-deI" firstAttribute="top" secondItem="D7q-JT-T6j" secondAttribute="bottom" constant="-2" id="rdj-el-OEl"/>
                                                 <constraint firstItem="D7q-JT-T6j" firstAttribute="top" secondItem="bUl-8c-fVP" secondAttribute="bottom" constant="10" id="sAn-mN-Egc"/>
-                                                <constraint firstAttribute="trailing" secondItem="xqX-1M-alU" secondAttribute="trailing" constant="15" id="uo1-7Q-xCs"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xqX-1M-alU" secondAttribute="trailing" constant="15" id="uo1-7Q-xCs"/>
                                                 <constraint firstItem="bUl-8c-fVP" firstAttribute="top" secondItem="TWT-cK-xgw" secondAttribute="top" constant="10" id="yCV-An-ZhU"/>
                                                 <constraint firstItem="Zy5-1P-bvQ" firstAttribute="trailing" secondItem="xqX-1M-alU" secondAttribute="trailing" id="zXt-gz-0qa"/>
                                             </constraints>

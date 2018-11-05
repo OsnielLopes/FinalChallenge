@@ -27,6 +27,11 @@ class QuestionAnswersView: UIViewController, QuestionAnswersPresenterOutputProto
         self.tableView.dataSource = self
         self.tableView.estimatedRowHeight = 40.0
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.presenter.fetchAnswers()
+    }
 
     // MARK: - QuestionAnswersPresenterOutputProtocol
     func showLoading(_ loading: Bool) {
