@@ -33,6 +33,9 @@ class QuestionTextCell: UITableViewCell {
     func setQuestion(_ question: Question) {
         self.questionTextLabel.text = question.questionText
         self.questionAuthorLabel.text = "por "+question.questionAuthor!.name!
+        
+        self.questionTextLabel.hero.id = "\(question.objectID)textLabel"
+        self.questionAuthorLabel.hero.id = "\(question.objectID)authorLabel"
     }
 
     // MARK: - IBActions

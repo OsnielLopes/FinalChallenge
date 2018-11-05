@@ -26,6 +26,11 @@ class QuestionsHistoricCell: UITableViewCell {
     }
     
     func setQuestion(_ question: Question) {
+        
+        self.questionTextLabel.hero.id = "\(question.objectID)textLabel"
+        self.questionAuthorLabel.hero.id = "\(question.objectID)authorLabel"
+        self.cardView.hero.id = "\(question.objectID)cardView"
+
         self.questionTextLabel.text = question.questionText
         self.questionAuthorLabel.text = "Por " + question.questionAuthor!.name!
     }

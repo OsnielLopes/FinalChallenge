@@ -119,7 +119,6 @@
 		BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */; };
 		BDAF3ACC218B87C000EFD2A9 /* QuestionTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */; };
 		BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */; };
-		BDAF3AD12190A24400EFD2A9 /* IncreaseCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3AD02190A24400EFD2A9 /* IncreaseCardAnimator.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
@@ -259,7 +258,6 @@
 		BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswersView.swift; sourceTree = "<group>"; };
 		BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTextCell.swift; sourceTree = "<group>"; };
 		BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
-		BDAF3AD02190A24400EFD2A9 /* IncreaseCardAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCardAnimator.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
@@ -554,7 +552,6 @@
 			children = (
 				BD3635DE218A19FF00E4A6EA /* QuestionsHistoric.storyboard */,
 				BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */,
-				BDAF3AD02190A24400EFD2A9 /* IncreaseCardAnimator.swift */,
 				BD36360C218B76ED00E4A6EA /* View Object */,
 				BD3635F4218A1E3800E4A6EA /* Table View */,
 			);
@@ -920,7 +917,7 @@
 				49AE2B122163DD4F00055136 /* Frameworks */,
 				49AE2B132163DD4F00055136 /* Resources */,
 				459BB046217674CF0065630F /* ShellScript */,
-				A368C399CAF22772E851DE46 /* [CP] Embed Pods Frameworks */,
+				7397644D0116D78363845555 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1061,6 +1058,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7397644D0116D78363845555 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7CC117D16B183E412BD13F1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1137,7 +1156,6 @@
 				BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */,
 				BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
-				BDAF3AD12190A24400EFD2A9 /* IncreaseCardAnimator.swift in Sources */,
 				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
