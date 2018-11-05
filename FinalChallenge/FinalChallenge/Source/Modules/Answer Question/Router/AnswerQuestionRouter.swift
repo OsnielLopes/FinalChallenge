@@ -37,12 +37,12 @@ class AnswerQuestionRouter: NSObject, AnswerQuestionRouterProtocol {
 
     // MARK: - AnswerQuestionRouterProtocol
     func presentDailyQuestion() {
-        
+       self.view.dismiss(animated: true, completion: nil)
     }
     
     
     func present(with viewController: UIViewController) {
-        
+        viewController.present(self.view, animated: true, completion: nil)
     }
     
     func presentAsRoot(window: UIWindow) {

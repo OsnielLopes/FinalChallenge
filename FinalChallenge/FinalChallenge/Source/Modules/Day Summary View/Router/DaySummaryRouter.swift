@@ -47,10 +47,6 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
         window.rootViewController = navigation
     }
     
-    func presentCalendar() {
-        //FIXME: create implementation to present calendar Router
-    }
-    
     func dismiss() {
         self.view.dismiss(animated: true)
     }

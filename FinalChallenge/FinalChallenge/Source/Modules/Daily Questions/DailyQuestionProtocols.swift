@@ -14,8 +14,7 @@ protocol DailyQuestionRouterProtocol: class {
     func presentAsRoot(window: UIWindow)
     
     func presentCalendar()
-    func presentAnswerQuestion()
-    
+    func presentAnswerQuestion(question: Question)
 }
 
 // MARK: - Interactor

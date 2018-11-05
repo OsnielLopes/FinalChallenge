@@ -52,7 +52,9 @@ class DailyQuestionRouter: NSObject, DailyQuestionRouterProtocol {
         self.daySummaryRouter.dismiss()
     }
     
-    func presentAnswerQuestion() {
+    func presentAnswerQuestion(question: Question) {
+        let answerQuestionrouter = AnswerQuestionRouter(question: question)
+        answerQuestionrouter.present(with: self.view)
         //FIXME: create implementation to present answer question Router
     }
 

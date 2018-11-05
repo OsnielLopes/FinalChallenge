@@ -37,7 +37,7 @@ class DailyQuestionPresenter: NSObject, DailyQuestionPresenterInputProtocol, Dai
     }
     
     func didSelectItem(at indexPath: Int) {
-        self.router.presentAnswerQuestion()
+        self.router.presentAnswerQuestion(question: questions[indexPath])
     }
     
     func didTouchBackButton() {

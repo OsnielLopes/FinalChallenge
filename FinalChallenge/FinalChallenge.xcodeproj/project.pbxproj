@@ -28,7 +28,7 @@
 		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
-		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		4943FDD82165355600FE2045 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
@@ -921,6 +921,7 @@
 				49AE2B122163DD4F00055136 /* Frameworks */,
 				49AE2B132163DD4F00055136 /* Resources */,
 				459BB046217674CF0065630F /* ShellScript */,
+				0FB95A037A88AA29005B8E95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1021,6 +1022,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FB95A037A88AA29005B8E95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		459BB046217674CF0065630F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1175,7 +1198,7 @@
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */,
-				4943FDD82165355600FE2045 /* (null) in Sources */,
+				4943FDD82165355600FE2045 /* BuildFile in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,
