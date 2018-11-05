@@ -58,7 +58,7 @@ class DaySummaryRouter: NSObject, DaySummaryRouterProtocol {
     
     func presentBreathingView() {
         let breathingRouter = BreathingRouter(daySummaryRouter: self)
-        breathingRouter.view.transitioningDelegate = self.view
+        breathingRouter.view.hero.isEnabled = true
         breathingRouter.present(with: self.view)
     }
     

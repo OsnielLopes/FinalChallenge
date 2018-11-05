@@ -25,7 +25,7 @@ class InsertTableViewCell: UITableViewCell {
         
         self.insertButton.layer.cornerRadius = self.insertButton.frame.height / 2
         self.insertButton.clipsToBounds = true
-        self.insertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)
+        self.insertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)        
     }
     
     func setButtons(forMoodTypes moodTypes: [MoodType]) {
@@ -42,6 +42,8 @@ class InsertTableViewCell: UITableViewCell {
         
         self.questionButton = self.instantiateMenuButton(forImage: UIImage(named: "question-icon")!)
         questionButton.addTarget(self, action: #selector(didTapQuestionButton), for: .touchUpInside)
+        questionButton.hero.id = "insertQuestionButtonId"
+        questionButton.hero.modifiers = [.arc, .source(heroID: "insertQuestionButtonId")]
         self.insertButtons.append(self.questionButton)
         
         let moodButton = self.instantiateMenuButton(forImage: UIImage(named: "mood3-icon")!)
