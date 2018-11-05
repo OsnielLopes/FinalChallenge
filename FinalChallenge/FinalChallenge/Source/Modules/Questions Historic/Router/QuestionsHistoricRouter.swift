@@ -40,6 +40,7 @@ class QuestionsHistoricRouter: NSObject, QuestionsHistoricRouterProtocol {
     
     func presentQuestionView(_ question: Question) {
         let router = QuestionAnswersRouter(question: question)
+        router.view.transitioningDelegate = self.view
         router.present(with: self.view)
     }
 
