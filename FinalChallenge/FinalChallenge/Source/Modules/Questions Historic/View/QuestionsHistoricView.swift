@@ -16,6 +16,7 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
     // MARK: - Properties
     @IBOutlet var tableView: UITableView!
     let reuseIdentifierCell = "questionsHistoricCell"
+    let transition = IncreaseCardAnimator()
     
     // MARK: - Override methods
 	override func viewDidLoad() {
@@ -80,6 +81,10 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.moveToQuestion(at: indexPath)
+    }
+    
     // MARK: - QuestionsHistoricPresenterOutputProtocol
     
     func showLoading(_ loading: Bool) {
@@ -96,4 +101,16 @@ class QuestionsHistoricView: UIViewController, QuestionsHistoricPresenterOutputP
 
 	// MARK: - Private Methods
 
+}
+
+extension QuestionsHistoricView: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self.transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
+    }
+    
 }

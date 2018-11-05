@@ -12,7 +12,6 @@
         <!--Perguntas-->
         <scene sceneID="JiX-f9-01N">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xme-GU-jzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="QuestionsHistoricView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pQX-v0-Bml" customClass="QuestionsHistoricView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Knx-1h-Eyh"/>
@@ -26,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionsHistoricCell" rowHeight="198" id="Mwc-t4-d6x" customClass="QuestionsHistoricCell" customModule="FinalChallenge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionsHistoricCell" rowHeight="198" id="Mwc-t4-d6x" customClass="QuestionsHistoricCell" customModule="FinalChallenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="198"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mwc-t4-d6x" id="zMt-PM-nt5">
@@ -91,6 +90,7 @@
                         <outlet property="tableView" destination="qen-GF-eN6" id="4c2-4V-bXI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xme-GU-jzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1726" y="152"/>
         </scene>

@@ -21,7 +21,7 @@ protocol QuestionsHistoricInteractorInputProtocol {
 // MARK: - Presenter
 protocol QuestionsHistoricPresenterInputProtocol: class {
     func fetchQuestions()
-    func moveToQuestion(_ question: Question)
+    func moveToQuestion(at indexPath: IndexPath)
     
     func numberOfSections() -> Int
     func numberOfQuestions(in section: Int) -> Int
