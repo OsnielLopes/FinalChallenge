@@ -19,17 +19,13 @@
 		4539540D21766DBF00CF71EC /* DailyQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4539540421766DBF00CF71EC /* DailyQuestion.storyboard */; };
 		4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539541221766E6A00CF71EC /* CenterAndZoomFlowLayout.swift */; };
 		4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539541321766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift */; };
-		491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* Extensions.swift */; };
+		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
-		491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */; };
-		491511FB21751711007C0E09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511FA21751711007C0E09 /* Router.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
 		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
-		49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */; };
-		49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
@@ -144,16 +140,12 @@
 		4539540421766DBF00CF71EC /* DailyQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DailyQuestion.storyboard; path = "FinalChallenge/Source/Modules/Daily Questions/View/DailyQuestion.storyboard"; sourceTree = SOURCE_ROOT; };
 		4539541221766E6A00CF71EC /* CenterAndZoomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAndZoomFlowLayout.swift; sourceTree = "<group>"; };
 		4539541321766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRoundedCardCollectionViewCell.swift; sourceTree = "<group>"; };
-		491511EE216FBFF6007C0E09 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		491511EE216FBFF6007C0E09 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		491511F0216FC045007C0E09 /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
-		491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionViewController.swift; sourceTree = "<group>"; };
-		491511FA21751711007C0E09 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewController.swift; sourceTree = "<group>"; };
 		494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
 		49AB023821752D79002B8140 /* QuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
-		49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionViewController.swift; sourceTree = "<group>"; };
-		49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnswerQuestion.storyboard; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49AE2B1D2163DD4F00055136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OnlyCalendar.storyboard; sourceTree = "<group>"; };
@@ -356,23 +348,12 @@
 		457F34F5216FD6E100B3F1C6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BD3635DD218A186800E4A6EA /* Questions Historic */,
 				4925B40D217571D100413181 /* Main */,
-				491511F4216FD351007C0E09 /* Answering Question */,
-				453953EE21766CD900CF71EC /* Daily Questions */,
 				BDB7C53721823724009A8206 /* Day Summary View */,
+				453953EE21766CD900CF71EC /* Daily Questions */,
+				BD3635DD218A186800E4A6EA /* Questions Historic */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		491511F4216FD351007C0E09 /* Answering Question */ = {
-			isa = PBXGroup;
-			children = (
-				49AB023B21756CD4002B8140 /* AnswerQuestion.storyboard */,
-				49AB023A21756CD4002B8140 /* DissertativeQuestionViewController.swift */,
-				491511F2216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift */,
-			);
-			path = "Answering Question";
 			sourceTree = "<group>";
 		};
 		491511F621751232007C0E09 /* Services */ = {
@@ -388,8 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
-				491511EE216FBFF6007C0E09 /* Extensions.swift */,
-				491511FA21751711007C0E09 /* Router.swift */,
+				491511EE216FBFF6007C0E09 /* UIView+Extension.swift */,
 				450ED4C42177ABA700195CAE /* Constants.swift */,
 			);
 			path = Utils;
@@ -882,7 +862,6 @@
 			files = (
 				BD290C50216E9613001F16EA /* DailySummary.storyboard in Resources */,
 				BD3635F1218A1DC000E4A6EA /* QuestionsHistoricHeader.xib in Resources */,
-				49AB023D21756CD4002B8140 /* AnswerQuestion.storyboard in Resources */,
 				4539540D21766DBF00CF71EC /* DailyQuestion.storyboard in Resources */,
 				BD3635E4218A19FF00E4A6EA /* QuestionsHistoric.storyboard in Resources */,
 				450ED4CB2177D85300195CAE /* Localizable.strings in Resources */,
@@ -994,7 +973,6 @@
 				BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
 				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
 				BD3635E8218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift in Sources */,
-				491511FB21751711007C0E09 /* Router.swift in Sources */,
 				BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */,
 				BD3E3C5C2183AE0900539ADB /* BreathingProtocols.swift in Sources */,
 				BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */,
@@ -1018,7 +996,6 @@
 				BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
 				BD3635E7218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift in Sources */,
 				BD3635E5218A19FF00E4A6EA /* QuestionsHistoricPresenter.swift in Sources */,
-				49AB023C21756CD4002B8140 /* DissertativeQuestionViewController.swift in Sources */,
 				453953F621766D0F00CF71EC /* DailyQuestionPresenter.swift in Sources */,
 				BD3E3C772187804100539ADB /* MainRouter.swift in Sources */,
 				BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */,
@@ -1044,10 +1021,9 @@
 				BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
 				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
 				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
-				491511F3216FC6E5007C0E09 /* MultipleChoiceQuestionViewController.swift in Sources */,
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
-				491511EF216FBFF6007C0E09 /* Extensions.swift in Sources */,
+				491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */,
 				BD3635F8218A387B00E4A6EA /* QuestionsCategoryViewObject.swift in Sources */,
 				BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */,
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
