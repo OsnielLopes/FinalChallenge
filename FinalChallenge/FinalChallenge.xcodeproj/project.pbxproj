@@ -28,7 +28,7 @@
 		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
-		4943FDD82165355600FE2045 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
@@ -214,16 +214,16 @@
 		BD290C53216E9DA4001F16EA /* DailySummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryViewController.swift; sourceTree = "<group>"; };
 		BD290C6321752918001F16EA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		BD290C6621752978001F16EA /* MoodInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInputTableViewCell.swift; sourceTree = "<group>"; };
-		BD3635DE218A19FF00E4A6EA /* QuestionsHistoric.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionsHistoric.storyboard; sourceTree = "<group>"; };
-		BD3635DF218A19FF00E4A6EA /* QuestionsHistoricPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricPresenter.swift; sourceTree = "<group>"; };
-		BD3635E0218A19FF00E4A6EA /* QuestionsHistoricRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricRouter.swift; sourceTree = "<group>"; };
-		BD3635E1218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricProtocols.swift; sourceTree = "<group>"; };
-		BD3635E2218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricInteractor.swift; sourceTree = "<group>"; };
-		BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricView.swift; sourceTree = "<group>"; };
-		BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsHistoricHeader.xib; sourceTree = "<group>"; };
-		BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricHeaderView.swift; sourceTree = "<group>"; };
-		BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsHistoricCell.swift; sourceTree = "<group>"; };
-		BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCategoryViewObject.swift; sourceTree = "<group>"; };
+		BD3635DE218A19FF00E4A6EA /* QuestionsHistoric.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = QuestionsHistoric.storyboard; path = "FinalChallenge/Source/Modules/Questions Historic/View/QuestionsHistoric.storyboard"; sourceTree = "<group>"; };
+		BD3635DF218A19FF00E4A6EA /* QuestionsHistoricPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricPresenter.swift; path = "FinalChallenge/Source/Modules/Questions Historic/Presenter/QuestionsHistoricPresenter.swift"; sourceTree = "<group>"; };
+		BD3635E0218A19FF00E4A6EA /* QuestionsHistoricRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricRouter.swift; path = "FinalChallenge/Source/Modules/Questions Historic/Router/QuestionsHistoricRouter.swift"; sourceTree = "<group>"; };
+		BD3635E1218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricProtocols.swift; path = "FinalChallenge/Source/Modules/Questions Historic/QuestionsHistoricProtocols.swift"; sourceTree = "<group>"; };
+		BD3635E2218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricInteractor.swift; path = "FinalChallenge/Source/Modules/Questions Historic/Interactor/QuestionsHistoricInteractor.swift"; sourceTree = "<group>"; };
+		BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricView.swift; path = "FinalChallenge/Source/Modules/Questions Historic/View/QuestionsHistoricView.swift"; sourceTree = "<group>"; };
+		BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QuestionsHistoricHeader.xib; path = "FinalChallenge/Source/Modules/Questions Historic/View/Table View/QuestionsHistoricHeader.xib"; sourceTree = "<group>"; };
+		BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricHeaderView.swift; path = "FinalChallenge/Source/Modules/Questions Historic/View/Table View/QuestionsHistoricHeaderView.swift"; sourceTree = "<group>"; };
+		BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricCell.swift; path = "FinalChallenge/Source/Modules/Questions Historic/View/Table View/QuestionsHistoricCell.swift"; sourceTree = "<group>"; };
+		BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsCategoryViewObject.swift; path = "FinalChallenge/Source/Modules/Questions Historic/View/View Object/QuestionsCategoryViewObject.swift"; sourceTree = "<group>"; };
 		BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPresenter.swift; sourceTree = "<group>"; };
 		BD3E3C552183AE0900539ADB /* BreathingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingRouter.swift; sourceTree = "<group>"; };
 		BD3E3C562183AE0900539ADB /* BreathingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingProtocols.swift; sourceTree = "<group>"; };
@@ -375,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				BDAF3ABA218B829500EFD2A9 /* Question Answers */,
+				BDB5F7C02192000E0092BEDF /* Questions Historic */,
 				4925B40D217571D100413181 /* Main */,
 				BDB7C53721823724009A8206 /* Day Summary View */,
 				453953EE21766CD900CF71EC /* Daily Questions */,
@@ -530,71 +531,6 @@
 				BD290C47216D33C6001F16EA /* RadioboxAnswerDAO.swift */,
 			);
 			path = "AnswersDAO's";
-			sourceTree = "<group>";
-		};
-		BD3635DD218A186800E4A6EA /* Questions Historic */ = {
-			isa = PBXGroup;
-			children = (
-				BD3635E1218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift */,
-				BD3635EC218A1A5B00E4A6EA /* Router */,
-				BD3635ED218A1A6000E4A6EA /* Interactor */,
-				BD3635EB218A1A5400E4A6EA /* Presenter */,
-				BD3635EA218A1A4E00E4A6EA /* View */,
-			);
-			path = "Questions Historic";
-			sourceTree = "<group>";
-		};
-		BD3635EA218A1A4E00E4A6EA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BD3635DE218A19FF00E4A6EA /* QuestionsHistoric.storyboard */,
-				BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */,
-				BD36360C218B76ED00E4A6EA /* View Object */,
-				BD3635F4218A1E3800E4A6EA /* Table View */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BD3635EB218A1A5400E4A6EA /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				BD3635DF218A19FF00E4A6EA /* QuestionsHistoricPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		BD3635EC218A1A5B00E4A6EA /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				BD3635E0218A19FF00E4A6EA /* QuestionsHistoricRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		BD3635ED218A1A6000E4A6EA /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				BD3635E2218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		BD3635F4218A1E3800E4A6EA /* Table View */ = {
-			isa = PBXGroup;
-			children = (
-				BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */,
-				BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */,
-				BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */,
-			);
-			path = "Table View";
-			sourceTree = "<group>";
-		};
-		BD36360C218B76ED00E4A6EA /* View Object */ = {
-			isa = PBXGroup;
-			children = (
-				BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */,
-			);
-			path = "View Object";
 			sourceTree = "<group>";
 		};
 		BD3E3C5021838E7800539ADB /* Storyboards */ = {
@@ -831,6 +767,72 @@
 			path = "Table View";
 			sourceTree = "<group>";
 		};
+		BDB5F7BA2191FFC90092BEDF /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */,
+				BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */,
+				BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */,
+			);
+			name = "Table View";
+			sourceTree = "<group>";
+		};
+		BDB5F7BB2191FFD10092BEDF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635E0218A19FF00E4A6EA /* QuestionsHistoricRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		BDB5F7BC2191FFD60092BEDF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635E1218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		BDB5F7BD2191FFDB0092BEDF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635DF218A19FF00E4A6EA /* QuestionsHistoricPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		BDB5F7BE2191FFF60092BEDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635DE218A19FF00E4A6EA /* QuestionsHistoric.storyboard */,
+				BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */,
+				BDB5F7BA2191FFC90092BEDF /* Table View */,
+				BDB5F7BF2191FFFC0092BEDF /* View Object */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BDB5F7BF2191FFFC0092BEDF /* View Object */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */,
+			);
+			name = "View Object";
+			sourceTree = "<group>";
+		};
+		BDB5F7C02192000E0092BEDF /* Questions Historic */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635E2218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift */,
+				BDB5F7BB2191FFD10092BEDF /* Router */,
+				BDB5F7BC2191FFD60092BEDF /* Interactor */,
+				BDB5F7BD2191FFDB0092BEDF /* Presenter */,
+				BDB5F7BE2191FFF60092BEDF /* View */,
+			);
+			name = "Questions Historic";
+			path = ../../..;
+			sourceTree = "<group>";
+		};
 		BDB7C53721823724009A8206 /* Day Summary View */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,8 +934,6 @@
 				BD974A462167F01800612838 /* Sources */,
 				BD974A472167F01800612838 /* Frameworks */,
 				BD974A482167F01800612838 /* Resources */,
-				D9D77535E275EB9372A014E0 /* [CP] Embed Pods Frameworks */,
-				1254B8AF3604CFAC806279B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1078,28 +1078,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7397644D0116D78363845555 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7CC117D16B183E412BD13F1E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1213,7 +1191,7 @@
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */,
-				4943FDD82165355600FE2045 /* BuildFile in Sources */,
+				4943FDD82165355600FE2045 /* (null) in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,
