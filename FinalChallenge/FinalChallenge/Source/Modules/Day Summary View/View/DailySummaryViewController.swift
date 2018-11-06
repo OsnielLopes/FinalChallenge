@@ -16,7 +16,6 @@ class DailySummaryViewController: UIViewController, DaySummaryPresenterOutputPro
     var calendarViewController: CalendarViewController!
     var insertQuestionButton: UIButton?
     let headerHeight: CGFloat = 150.0
-    var transitionAnimator = PopToScreenSizeTransitionAnimation()
     
     // MARK: - Viper Module Properties
     var presenter: DaySummaryPresenterInputProtocol!
@@ -32,6 +31,7 @@ class DailySummaryViewController: UIViewController, DaySummaryPresenterOutputPro
         self.calendarBorderView.clipsToBounds = true
         
         self.calendarBorderView.dropShadow(color: UIColor(red: 18/255, green: 40/255, blue: 37/255, alpha: 1), opacity: 0.25, offSet: CGSize(width: 0, height: 5), radius: 20, scale: true)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -106,40 +106,6 @@ class DailySummaryViewController: UIViewController, DaySummaryPresenterOutputPro
     
     func setCurrentDate(_ date: Date) {
         self.presenter.setCurrentDate(date)
-    }
-    
-}
-
-extension DailySummaryViewController: UIViewControllerTransitioningDelegate {
-    
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        guard let insertButton = self.insertQuestionButton else {
-            return nil
-        }
-        
-        self.transitionAnimator.transitionMode = .present
-        
-        var originPoint = insertButton.layer.presentation()!.frame.origin
-        originPoint.x += insertButton.layer.presentation()!.frame.width / 2
-        originPoint.y += self.headerHeight
-        
-        self.transitionAnimator.startingPoint = self.daySummaryTableViewController.view.convert(originPoint, to: nil)
-        self.transitionAnimator.bubbleColor = insertButton.backgroundColor!
-        
-        return self.transitionAnimator
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let insertButton = self.insertQuestionButton else {
-            return nil
-        }
-        self.transitionAnimator.transitionMode = .pop
-        self.transitionAnimator.startingPoint = insertButton.center
-        self.transitionAnimator.bubbleColor = insertButton.backgroundColor!
-        
-        return nil
     }
     
 }
