@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Le-xn-Ftp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="BHU-aX-npI">
+            <objects>
+                <viewController storyboardIdentifier="DailySummaryView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Le-xn-Ftp" customClass="DailySummaryViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uHe-YN-ixa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-M9-Zu3" userLabel="Daily">
+                                <rect key="frame" x="10" y="212" width="365" height="406"/>
+                                <connections>
+                                    <segue destination="CPS-ay-wPG" kind="embed" identifier="daySummarySegue" id="S1t-S4-6gq"/>
+                                </connections>
+                            </containerView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jt-aW-cnP">
+                                <rect key="frame" x="0.0" y="-278" width="375" height="600"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DC9-al-Z0h">
+                                        <rect key="frame" x="0.0" y="298" width="375" height="302"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="302" id="KMj-vF-cOR"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="3CJ-sz-vzd" kind="embed" id="dg7-vm-bbY"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DC9-al-Z0h" firstAttribute="centerX" secondItem="1Jt-aW-cnP" secondAttribute="centerX" id="1gQ-oA-Ho9"/>
+                                    <constraint firstAttribute="height" constant="600" id="JSk-wO-q3k"/>
+                                    <constraint firstItem="DC9-al-Z0h" firstAttribute="width" secondItem="1Jt-aW-cnP" secondAttribute="width" id="QTn-61-4nb"/>
+                                    <constraint firstAttribute="bottom" secondItem="DC9-al-Z0h" secondAttribute="bottom" id="Si6-w5-cyY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xn1-M9-Zu3" firstAttribute="leading" secondItem="OOy-tz-8M1" secondAttribute="leading" constant="10" id="Hpw-6q-naI"/>
+                            <constraint firstItem="OOy-tz-8M1" firstAttribute="bottom" secondItem="xn1-M9-Zu3" secondAttribute="bottom" id="Joe-l9-JFK"/>
+                            <constraint firstItem="xn1-M9-Zu3" firstAttribute="top" secondItem="1Jt-aW-cnP" secondAttribute="bottom" constant="-110" id="W0p-hs-dyu"/>
+                            <constraint firstItem="OOy-tz-8M1" firstAttribute="trailing" secondItem="1Jt-aW-cnP" secondAttribute="trailing" id="YaJ-db-kdF"/>
+                            <constraint firstItem="1Jt-aW-cnP" firstAttribute="top" secondItem="OOy-tz-8M1" secondAttribute="top" constant="-298" id="bPE-Lw-FUL"/>
+                            <constraint firstItem="1Jt-aW-cnP" firstAttribute="leading" secondItem="OOy-tz-8M1" secondAttribute="leading" id="byl-yv-lmq"/>
+                            <constraint firstItem="OOy-tz-8M1" firstAttribute="trailing" secondItem="xn1-M9-Zu3" secondAttribute="trailing" id="hKw-9G-LsE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OOy-tz-8M1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="6AO-Qx-Ly9"/>
+                    <connections>
+                        <outlet property="calendarBorderView" destination="1Jt-aW-cnP" id="Dfq-SC-Oia"/>
+                        <outlet property="calendarContainerView" destination="DC9-al-Z0h" id="LEU-kc-0Aj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2u-Aq-XeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114.4000000000001" y="44.527736131934034"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eUr-sL-plb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Hm2-NH-6hW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eTN-80-kTG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9Le-xn-Ftp" kind="relationship" relationship="viewControllers" id="Zbc-H7-bO2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBY-HK-gVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-102" y="-94"/>
+        </scene>
+        <!--OnlyCalendar-->
+        <scene sceneID="5ZX-xu-zBl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OnlyCalendar" id="3CJ-sz-vzd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djJ-jr-I5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="-193"/>
+        </scene>
+        <!--DaySummary-->
+        <scene sceneID="keg-mT-Ivp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DaySummary" id="CPS-ay-wPG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDr-1k-qri" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="243"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Answer Question View-->
+        <scene sceneID="0yJ-gf-T5z">
+            <objects>
+                <viewController storyboardIdentifier="AnswerQuestionView" id="2aj-bM-ixw" customClass="AnswerQuestionView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zIR-mc-HJo"/>
+                        <viewControllerLayoutGuide type="bottom" id="VJw-nr-gPZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rN3-HQ-qrZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITu-qs-PTt" customClass="RoundedUIButton" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="25" y="30" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ITu-qs-PTt" secondAttribute="height" multiplier="1:1" id="bfq-hL-sNz"/>
+                                    <constraint firstAttribute="width" constant="50" id="cDi-7v-SuH"/>
+                                </constraints>
+                                <state key="normal" image="back-arrow"/>
+                                <connections>
+                                    <action selector="touchBackButton:" destination="2aj-bM-ixw" eventType="touchUpInside" id="Zvc-Rh-NaJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXz-5x-Y1O">
+                                <rect key="frame" x="25" y="110" width="325" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwR-Aa-pbd" customClass="RoundedUIButton" customModule="FinalChallenge" customModuleProvider="target">
+                                <rect key="frame" x="305" y="30" width="45" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="kUp-Y0-qhw"/>
+                                    <constraint firstAttribute="width" secondItem="kwR-Aa-pbd" secondAttribute="height" multiplier="1:1" id="vrb-Re-33D"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="touchSaveButton:" destination="2aj-bM-ixw" eventType="touchUpInside" id="ofi-Qd-q2B"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jHp-YM-2TM">
+                                <rect key="frame" x="25" y="156.5" width="325" height="485.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dissertationCellIdentifier" id="Xt9-4d-Qzi" customClass="DissertationAnswerTableViewCell" customModule="FinalChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="325" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xt9-4d-Qzi" id="1AM-Ur-f4W">
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aLH-76-cpD">
+                                                    <rect key="frame" x="0.0" y="-1" width="325" height="44"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" name="color-white"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="aLH-76-cpD" secondAttribute="trailing" id="2Ge-QK-Xrr"/>
+                                                <constraint firstItem="aLH-76-cpD" firstAttribute="leading" secondItem="1AM-Ur-f4W" secondAttribute="leading" id="EVj-Sj-PFU"/>
+                                                <constraint firstItem="aLH-76-cpD" firstAttribute="top" secondItem="1AM-Ur-f4W" secondAttribute="top" id="Teg-MT-JYI"/>
+                                                <constraint firstAttribute="bottom" secondItem="aLH-76-cpD" secondAttribute="bottom" id="lgh-jr-CWH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="answerTextView" destination="aLH-76-cpD" id="hBS-YH-vIl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="checkboxCellIdentifier" id="xGT-J6-Vdz">
+                                        <rect key="frame" x="0.0" y="72" width="325" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xGT-J6-Vdz" id="Qba-BL-F9V">
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="radioboxCellIdentifier" id="Obc-qi-gPE">
+                                        <rect key="frame" x="0.0" y="116" width="325" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Obc-qi-gPE" id="wRJ-la-BB9">
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.66274509800000003" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PXz-5x-Y1O" firstAttribute="leading" secondItem="ITu-qs-PTt" secondAttribute="leading" id="8QQ-S8-Vem"/>
+                            <constraint firstItem="ITu-qs-PTt" firstAttribute="leading" secondItem="rN3-HQ-qrZ" secondAttribute="leading" constant="25" id="911-b4-cKr"/>
+                            <constraint firstAttribute="trailing" secondItem="kwR-Aa-pbd" secondAttribute="trailing" constant="25" id="K5g-Gg-fOk"/>
+                            <constraint firstItem="ITu-qs-PTt" firstAttribute="width" secondItem="ITu-qs-PTt" secondAttribute="height" multiplier="1:1" id="MOC-EJ-5uS"/>
+                            <constraint firstItem="VJw-nr-gPZ" firstAttribute="top" secondItem="jHp-YM-2TM" secondAttribute="bottom" constant="25" id="MjM-Gl-YVr"/>
+                            <constraint firstItem="jHp-YM-2TM" firstAttribute="trailing" secondItem="PXz-5x-Y1O" secondAttribute="trailing" id="POh-WG-yvn"/>
+                            <constraint firstItem="jHp-YM-2TM" firstAttribute="leading" secondItem="PXz-5x-Y1O" secondAttribute="leading" id="Vmh-kj-6JH"/>
+                            <constraint firstItem="jHp-YM-2TM" firstAttribute="top" secondItem="PXz-5x-Y1O" secondAttribute="bottom" constant="25" id="a4D-yY-hRg"/>
+                            <constraint firstItem="ITu-qs-PTt" firstAttribute="top" secondItem="zIR-mc-HJo" secondAttribute="bottom" constant="10" id="lAL-8E-cLZ"/>
+                            <constraint firstItem="PXz-5x-Y1O" firstAttribute="trailing" secondItem="kwR-Aa-pbd" secondAttribute="trailing" id="nqz-UH-gVb"/>
+                            <constraint firstItem="kwR-Aa-pbd" firstAttribute="top" secondItem="ITu-qs-PTt" secondAttribute="top" id="vXW-0e-sFk"/>
+                            <constraint firstItem="kwR-Aa-pbd" firstAttribute="width" secondItem="kwR-Aa-pbd" secondAttribute="height" multiplier="1:1" id="yzl-6z-1Ik"/>
+                            <constraint firstItem="PXz-5x-Y1O" firstAttribute="top" secondItem="kwR-Aa-pbd" secondAttribute="bottom" constant="35" id="zoi-EE-3dU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerTableView" destination="jHp-YM-2TM" id="jUW-Fd-avg"/>
+                        <outlet property="bottomTableViewConstraint" destination="MjM-Gl-YVr" id="GyD-Ef-XaQ"/>
+                        <outlet property="questionTextLabel" destination="PXz-5x-Y1O" id="xom-He-I3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxF-vk-lxh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="25" height="25"/>
+        <image name="back-arrow" width="26" height="17"/>
+        <namedColor name="color-white">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

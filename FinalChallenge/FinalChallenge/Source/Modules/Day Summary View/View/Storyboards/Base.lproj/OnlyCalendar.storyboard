@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SMa-Qc-yMd">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calendar View Controller-->
+        <scene sceneID="aN1-ED-xYA">
+            <objects>
+                <viewController restorationIdentifier="Calendar" storyboardIdentifier="Calendar" id="SMa-Qc-yMd" customClass="CalendarViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NVe-Vl-pyc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kUR-Ea-aMi">
+                                <rect key="frame" x="30" y="74" width="203" height="17"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUb-zb-7eI">
+                                        <rect key="frame" x="0.0" y="0.0" width="29" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="29" id="FfT-M5-U5C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="seg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SR-2V-foW">
+                                        <rect key="frame" x="29" y="0.0" width="29" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4u-mN-Ln7">
+                                        <rect key="frame" x="58" y="0.0" width="29" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qua" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7z-uU-W7M">
+                                        <rect key="frame" x="87" y="0.0" width="29" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="qui" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idm-TU-m1h">
+                                        <rect key="frame" x="116" y="0.0" width="29" height="17"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSR-FQ-gsd">
+                                        <rect key="frame" x="145" y="0.0" width="29" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jb-FN-kxB">
+                                        <rect key="frame" x="174" y="0.0" width="29" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="O7z-uU-W7M" firstAttribute="width" secondItem="fUb-zb-7eI" secondAttribute="width" id="LQA-bP-3nE"/>
+                                    <constraint firstItem="l4u-mN-Ln7" firstAttribute="width" secondItem="fUb-zb-7eI" secondAttribute="width" id="bTD-qB-omT"/>
+                                    <constraint firstItem="8jb-FN-kxB" firstAttribute="width" secondItem="fUb-zb-7eI" secondAttribute="width" id="eDf-fC-uYj"/>
+                                    <constraint firstItem="3SR-2V-foW" firstAttribute="width" secondItem="fUb-zb-7eI" secondAttribute="width" id="icg-Vo-DJy"/>
+                                    <constraint firstItem="lSR-FQ-gsd" firstAttribute="width" secondItem="fUb-zb-7eI" secondAttribute="width" id="nhC-MX-D18"/>
+                                    <constraint firstItem="idm-TU-m1h" firstAttribute="width" secondItem="fUb-zb-7eI" secondAttribute="width" id="ssN-yX-VPw"/>
+                                </constraints>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ga7-RP-n9W">
+                                <rect key="frame" x="290" y="20" width="30" height="30"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="changeTheCalendarStatus" destination="SMa-Qc-yMd" eventType="touchUpInside" id="Vbv-AH-i5Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="kUR-Ea-aMi" firstAttribute="leading" secondItem="WTc-gH-PT6" secondAttribute="leading" constant="30" id="A8I-m8-Exg"/>
+                            <constraint firstItem="kUR-Ea-aMi" firstAttribute="top" secondItem="NVe-Vl-pyc" secondAttribute="top" constant="74" id="KdE-I4-65b"/>
+                            <constraint firstItem="Ga7-RP-n9W" firstAttribute="top" secondItem="WTc-gH-PT6" secondAttribute="top" id="fpt-dv-DK0"/>
+                            <constraint firstItem="WTc-gH-PT6" firstAttribute="trailing" secondItem="Ga7-RP-n9W" secondAttribute="trailing" id="pDX-bS-Enw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WTc-gH-PT6"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sYh-a8-RdO" appends="YES" id="wID-I4-1Fi"/>
+                            <outletCollection property="gestureRecognizers" destination="aIb-M3-yWH" appends="YES" id="888-Sx-VMB"/>
+                            <outletCollection property="gestureRecognizers" destination="MBa-tN-OsU" appends="YES" id="rjq-65-Z97"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="firstWeekdayLabelWidthConstraint" destination="FfT-M5-U5C" id="OBt-fr-IgX"/>
+                        <outlet property="weekDaysTopConstraint" destination="KdE-I4-65b" id="gNa-AU-ZSb"/>
+                        <outlet property="weekdays" destination="kUR-Ea-aMi" id="NTK-WB-Scy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8o-Vg-40Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="sYh-a8-RdO">
+                    <connections>
+                        <action selector="changeTheCalendarStatus" destination="SMa-Qc-yMd" id="pNg-qe-abd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="aIb-M3-yWH">
+                    <connections>
+                        <action selector="changeTheCalendarStatus" destination="SMa-Qc-yMd" id="3oa-je-H5I"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="MBa-tN-OsU">
+                    <connections>
+                        <action selector="handlePan:" destination="SMa-Qc-yMd" id="OTo-4Q-7c8"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1012" y="84.975369458128085"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,79 @@
+/* 
+  Localizable.strings
+  FinalChallenge
+
+  Created by Ana Carolina Silva on 17/10/18.
+  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
+*/
+
+"question.01" = "Estou usando meu tempo sabiamente?";
+"question.02" = "Estou considerando algo como garantido?";
+"question.03" = "Estou seguindo uma perspectiva saudável?";
+"question.04" = "Eu estou vivendo fiel a mim mesmo?";
+"question.05" = "Estou acordando de manhã pronto para enfrentar o dia?";
+"question.06" = "Estou nutrindo pensamentos negativos antes de adormecer?";
+"question.07" = "Estou colocando esforço suficiente em meus relacionamentos?";
+"question.08" = "Estou cuidando de mim mesmo fisicamente?";
+"question.09" = "Estou deixando assuntos que estão fora do meu controle me estressar?";
+"question.10" = "Estou atingindo as metas que defini para mim mesmo?";
+"question.11" = "Quem sou eu de verdade?";
+"question.12" = "O que mais me preocupa sobre o futuro?";
+"question.13" = "Se este fosse o último dia da minha vida, eu gostaria de fazer o que estou prestes a fazer hoje?";
+"question.14" = "O que eu realmente tenho medo?";
+"question.15" = "Eu estou prendendo algo que eu preciso deixar ir?";
+"question.16" = "Se não agora, então quando?";
+"question.17" = "O que importa mais na minha vida?";
+"question.18" = "O que estou fazendo sobre as coisas que mais importam na minha vida?";
+"question.19" = "Eu fiz alguma coisa ultimamente que vale a pena lembrar?";
+"question.20" = "Eu fiz alguém sorrir hoje?";
+"question.21" = "O que eu desisti?";
+"question.22" = "Quando foi a última vez que empurrei os limites da minha zona de conforto?";
+"question.23" = "Se eu tivesse que dar um conselho na mente de um bebê recém-nascido, que conselho eu daria?";
+"question.24" = "Que pequeno ato de bondade me foi uma vez mostrado que nunca vou esquecer?";
+"question.26" = "O que eu preciso mudar em mim?";
+"question.27" = "É mais importante amar ou ser amado?";
+"question.28" = "Quantos dos meus amigos eu confiaria a minha vida?";
+"question.29" = "Quem teve o maior impacto na minha vida?";
+"question.30" = "Eu quebraria a lei para salvar um ente querido?";
+"question.31" = "Eu roubaria para alimentar uma criança faminta?";
+"question.32" = "O que eu mais quero na vida?";
+"question.33" = "O que a vida tem pedido de mim?";
+"question.34" = "O que é pior, falhar ou nunca tentar?";
+"question.36" = "Qual é a única coisa que gostaria que os outros lembrassem de mim no final da minha vida?";
+"question.37" = "Realmente importa o que os outros pensam de mim?";
+"question.38" = "Até que ponto eu realmente controlei o curso que minha vida tomou?";
+"question.39" = "Quando tudo estiver dito e feito, o que eu terei dito mais do que fiz?";
+"question.40" = "Minha maneira favorita de passar o dia é...";
+"question.41" = "Se eu pudesse falar com meu eu mais novo, a única coisa que eu diria é...";
+"question.42" = "Os dois momentos que nunca vou esquecer na minha vida são... Descreva-os em grande detalhe, e o que os torna tão inesquecíveis.";
+"question.43" = "Quais são as 10 coisas que me fazem sorrir?";
+"question.44" = "As palavras pelas quais eu gostaria de viver, são...";
+"question.45" = "Eu não conseguia imaginar viver sem...";
+"question.46" = "Quando estou com dor (física ou emocional) a melhor coisa que posso fazer por mim mesmo é...";
+"question.47" = "Quem são as pessoas na minha vida que genuinamente me apoiam e em quem eu posso genuinamente confiar? (Que tal arranjar tempo para sair com eles?)";
+"question.48" = "Como é o amor incondicional para mim?";
+"question.49" = "O que eu faria se me amasse incondicionalmente? Como posso agir sobre essas coisas, quer eu atualmente faça ou não?";
+"question.50" = "Eu realmente queria que os outros soubessem isso sobre mim...";
+"question.51" = "O que é o suficiente para mim?";
+"question.52" = "Se meu corpo pudesse falar, ele diria...";
+"question.53" = "De que forma compassiva apoiei um amigo recentemente? Como posso fazer o mesmo por mim?";
+"question.54" = "O que eu amo na vida?";
+"question.55" = "Quando o trabalho parecia real para mim, necessário e satisfatório, pago ou não, profissional ou doméstico, físico ou mental?";
+"question.56" = "O que eu tenho a dizer sobre meu primeiro amor (seja uma pessoa, um lugar ou uma coisa)?";
+"question.57" = "Como eu me descreveria usando 10 palavras?";
+"question.58" = "O que mais me surpreendeu na minha vida ou na vida em geral?";
+"question.59" = "O que posso aprender com meus maiores erros?";
+"question.60" = "Eu me sinto mais energizado quando...";
+"question.61" = "Quais são as perguntas que eu preciso com urgência de respostas?";
+"question.62" = "O que me inspira (de livros a sites, citações, pessoas, pinturas, lojas, celebridades)?";
+"question.63" = "Qual é o assunto sobre o qual preciso aprender mais para me ajudar a ter uma vida mais gratificante?";
+"question.64" = "Eu me sinto mais feliz na minha pele quando...";
+"question.65" = "Para que eu gostaria de dizer não?";
+"question.66" = "Para que eu gostaria de dizer sim?";
+"question.67" = "Quais são as palavras que preciso ouvir?";
+"question.68" = "Quais são minhas definições de sucesso?";
+"question.69" = "Que tipo de amigo eu quero ser?";
+"question.70" = "Eu me envolvo em atividades para fugir da minha realidade?";
+"question.71" = "Eu acredito em todo pensamento que penso?";
+"question.72" = "Qual foi o melhor conselho que já recebi?";
+"question.73" = "O que está me preocupando atualmente?";

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Breathing View Controller-->
+        <scene sceneID="qch-So-tg9">
+            <objects>
+                <viewController storyboardIdentifier="BreathingView" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qzt-EN-65o" customClass="BreathingViewController" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W4w-nG-nok">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dnx-t7-5WB">
+                                <rect key="frame" x="75" y="243.5" width="225" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Respire por um momento, toque para refletir hoje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxq-bx-rT3">
+                                <rect key="frame" x="20" y="443.5" width="335" height="223.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-0G-6DW">
+                                <rect key="frame" x="67.5" y="213.5" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4zg-0G-6DW" secondAttribute="height" multiplier="1:1" id="22c-Nw-inc"/>
+                                    <constraint firstAttribute="width" constant="240" id="ZZ1-eQ-veR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="color-yellow"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="4zg-0G-6DW" firstAttribute="centerY" secondItem="W4w-nG-nok" secondAttribute="centerY" id="2L8-9w-PVM"/>
+                            <constraint firstItem="dnx-t7-5WB" firstAttribute="centerX" secondItem="xVH-s5-wgS" secondAttribute="centerX" id="4Gg-da-Lk2"/>
+                            <constraint firstItem="dnx-t7-5WB" firstAttribute="height" secondItem="W4w-nG-nok" secondAttribute="height" multiplier="0.3" id="CdA-GC-KmM"/>
+                            <constraint firstItem="dnx-t7-5WB" firstAttribute="width" secondItem="W4w-nG-nok" secondAttribute="width" multiplier="0.6" id="JbO-E5-Kut"/>
+                            <constraint firstItem="kxq-bx-rT3" firstAttribute="leading" secondItem="xVH-s5-wgS" secondAttribute="leading" constant="20" id="Nf1-bo-dxZ"/>
+                            <constraint firstItem="kxq-bx-rT3" firstAttribute="top" secondItem="dnx-t7-5WB" secondAttribute="bottom" id="Nf4-M6-eSY"/>
+                            <constraint firstItem="xVH-s5-wgS" firstAttribute="bottom" secondItem="kxq-bx-rT3" secondAttribute="bottom" id="Rig-Am-R0h"/>
+                            <constraint firstItem="4zg-0G-6DW" firstAttribute="centerX" secondItem="W4w-nG-nok" secondAttribute="centerX" id="WRq-74-PV9"/>
+                            <constraint firstItem="xVH-s5-wgS" firstAttribute="trailing" secondItem="kxq-bx-rT3" secondAttribute="trailing" constant="20" id="qqH-FS-TZD"/>
+                            <constraint firstItem="dnx-t7-5WB" firstAttribute="centerY" secondItem="xVH-s5-wgS" secondAttribute="centerY" id="wPO-aj-rPN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xVH-s5-wgS"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="c53-Ug-ecR" appends="YES" id="8UU-V6-nJg"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="aView" destination="4zg-0G-6DW" id="nAe-8E-Hf5"/>
+                        <outlet property="breathingAnimationImageView" destination="dnx-t7-5WB" id="yvL-rV-eJZ"/>
+                        <outlet property="widthOfView" destination="ZZ1-eQ-veR" id="EEr-b0-fkB"/>
+                        <outlet property="yposOfView" destination="2L8-9w-PVM" id="w5v-5F-dms"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dz0-sc-lmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="c53-Ug-ecR">
+                    <connections>
+                        <action selector="didTapViewToContinue:" destination="qzt-EN-65o" id="obb-Xg-u4q"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-234.40000000000001" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="color-yellow">
+            <color red="0.93725490196078431" green="0.81960784313725488" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

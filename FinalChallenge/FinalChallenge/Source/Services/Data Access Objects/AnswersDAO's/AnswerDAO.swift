@@ -33,6 +33,11 @@ class AnswerDAO {
         })
     }
     
+    func fetchByQuestion(_ question: Question, completion: @escaping ([Answer]?, DataAccessError?) -> (Void)) {
+        self.fetchAll(completion: { answers, err in
+            completion(answers?.filter({ $0.question == question }), err)
+        })
+    }
     
     
 }
