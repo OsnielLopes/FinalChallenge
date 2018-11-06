@@ -40,18 +40,17 @@ class DissertationAnswersDAO {
     
     func update(answer: DissertationAnswer, text: String? = nil, question: DissertationQuestion? = nil, completion: @escaping (DissertationAnswer?, DataAccessError?) -> (Void)) {
         
-        if let updatedText = text {
+        if let updatedText = text, let updatedQuestion = question {
             answer.text = updatedText
-        }
-        
-        if let updatedQuestion = question {
             answer.question?.removeFromAnswers(answer)
             answer.question = updatedQuestion
             updatedQuestion.addToAnswers(answer)
+            
+            CoreDataManager.shared.saveContext()
+            completion(answer, nil)
+        } else {
+            completion(nil, DataAccessError(message: "Error when updating new answer"))
         }
-        
-        CoreDataManager.shared.saveContext()
-        
     }
     
 }

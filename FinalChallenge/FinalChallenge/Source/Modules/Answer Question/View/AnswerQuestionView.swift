@@ -68,16 +68,25 @@ class AnswerQuestionView: UIViewController, AnswerQuestionPresenterOutputProtoco
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.dissertativeAnswerCellIdentifier, for: indexPath)
+        let cell: UITableViewCell
         
-        //        if let dailyCell = cell as? DailyQuestionCollectionViewCell {
-        //            let question: Question = self.presenter.item(at: indexPath.row)
-        //
-        //            dailyCell.categoryLabel.text = question.category?.name
-        //            dailyCell.dailyQuestionLabel.text = question.questionText
-        //
-        //            return dailyCell
-        //        }
+        switch self.presenter.questionType() {
+        case .dissertative:
+            cell = tableView.dequeueReusableCell(withIdentifier: self.dissertativeAnswerCellIdentifier, for: indexPath)
+        case .checkbox:
+            cell = tableView.dequeueReusableCell(withIdentifier: self.checkboxAnswerCellIdentifier, for: indexPath)
+        case .radiobox:
+            cell = tableView.dequeueReusableCell(withIdentifier: self.radioboxAnswerCellIdentifier, for: indexPath)
+        }
+        
+        if let dailyCell = cell as? DissertationAnswerTableViewCell {
+            if let answer = self.presenter.currentAnswer(), let dissertationAnswer = answer as? DissertationAnswer {
+                dailyCell.answerTextView.text = dissertationAnswer.text
+            } else {
+                dailyCell.answerTextView.text = self.presenter.item(at: indexPath.row)
+            }
+            return dailyCell
+        }
         
         return cell
     }
@@ -110,7 +119,7 @@ class AnswerQuestionView: UIViewController, AnswerQuestionPresenterOutputProtoco
     }
     
     @objc func keyboardWillHide(notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+        if ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil {
             if self.isKeyboardAvailable {
                 self.isKeyboardAvailable = false
                 self.answerTableView.beginUpdates()
@@ -125,7 +134,11 @@ class AnswerQuestionView: UIViewController, AnswerQuestionPresenterOutputProtoco
     }
     
     @IBAction func touchSaveButton(_ sender: RoundedUIButton) {
-        self.presenter.didTouchSaveButton(with: ["teste"])
+        if let firstCell = self.answerTableView.visibleCells.first, let dissertationCell = firstCell as? DissertationAnswerTableViewCell {
+            guard let answerText = dissertationCell.answerTextView.text else { return }
+            self.presenter.didTouchSaveButton(with: [answerText])
+        }
+        
     }
 
 }

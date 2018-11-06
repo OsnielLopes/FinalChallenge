@@ -61,6 +61,13 @@ class AnswerQuestionPresenter: NSObject, AnswerQuestionPresenterInputProtocol, A
         //FIXME: create functions to radio and checkbox (?)
     }
     
+    func currentAnswer() -> Answer? {
+        return self.question?.answers?.first(where: { (answer) -> Bool in
+            let aAnswer = answer as! Answer
+            return Calendar.current.isDateInToday(aAnswer.date! as Date)
+        }) as? Answer
+    }
+    
     // MARK: - AnswerQuestionPresenterInteractorOutputProtocol
     func handleFetchSuccess(with result: Question) {
         self.question = result

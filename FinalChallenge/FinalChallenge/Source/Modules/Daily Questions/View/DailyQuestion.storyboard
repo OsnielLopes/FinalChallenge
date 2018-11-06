@@ -106,10 +106,10 @@
                                             <constraint firstAttribute="bottom" secondItem="aQL-cb-97R" secondAttribute="bottom" id="wah-mP-6ot"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="categoryLabel" destination="EVc-Y7-mFC" id="XTZ-SJ-zSg"/>
+                                            <outlet property="categoryLabel" destination="EVc-Y7-mFC" id="ugA-zV-3HS"/>
                                             <outlet property="cornerView" destination="aQL-cb-97R" id="rb8-Dj-o92"/>
                                             <outlet property="dailyQuestionLabel" destination="TP3-jm-zad" id="3VP-f4-ApL"/>
-                                            <outlet property="questionAnswerLabel" destination="EVc-Y7-mFC" id="p1l-44-YEn"/>
+                                            <outlet property="questionAnswerLabel" destination="lXY-T0-7py" id="Oga-M8-YlG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
