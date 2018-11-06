@@ -377,7 +377,6 @@
 			isa = PBXGroup;
 			children = (
 				BDAF3ABA218B829500EFD2A9 /* Question Answers */,
-				BD3635DD218A186800E4A6EA /* Questions Historic */,
 				4925B40D217571D100413181 /* Main */,
 				BDB7C53721823724009A8206 /* Day Summary View */,
 				453953EE21766CD900CF71EC /* Daily Questions */,
@@ -936,6 +935,8 @@
 				BD974A462167F01800612838 /* Sources */,
 				BD974A472167F01800612838 /* Frameworks */,
 				BD974A482167F01800612838 /* Resources */,
+				D9D77535E275EB9372A014E0 /* [CP] Embed Pods Frameworks */,
+				1254B8AF3604CFAC806279B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
