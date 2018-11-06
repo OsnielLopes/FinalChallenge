@@ -25,7 +25,9 @@ class InsertTableViewCell: UITableViewCell {
         
         self.insertButton.layer.cornerRadius = self.insertButton.frame.height / 2
         self.insertButton.clipsToBounds = true
-        self.insertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)        
+        self.insertButton.dropShadow(color: .black, opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)
+        
+        
     }
     
     func setButtons(forMoodTypes moodTypes: [MoodType]) {
