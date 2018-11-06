@@ -31,6 +31,10 @@ class BreathingViewController: UIViewController {
         
         self.openAnimation()
         
+        
+        self.view.hero.id = "insertQuestionButtonId"
+        self.view.hero.modifiers = [.arc, .source(heroID: "insertQuestionButtonId")]
+
     }
 
     @IBAction func didTapViewToContinue(_ sender: Any) {
