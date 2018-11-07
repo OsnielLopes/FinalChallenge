@@ -32,6 +32,7 @@
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
+		496B3DBE2191FC9C00204C8E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 496B3DBD2191FC9C00204C8E /* Intents.intentdefinition */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
@@ -165,6 +166,7 @@
 		4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewController.swift; sourceTree = "<group>"; };
 		494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
+		496B3DBD2191FC9C00204C8E /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		49AB023821752D79002B8140 /* QuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 		454DF7A821655D200091E792 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				496B3DBD2191FC9C00204C8E /* Intents.intentdefinition */,
 				450ED4C82177D7FE00195CAE /* Localizable */,
 				451A751F216D3E7600CA0760 /* Assets.xcassets */,
 				49AE2B242163DD5200055136 /* Info.plist */,
@@ -460,6 +463,23 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		496B3DBC2191FC6C00204C8E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */,
+				BD3635E0218A19FF00E4A6EA /* QuestionsHistoricRouter.swift */,
+				BD3635E2218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift */,
+				BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */,
+				BD3635E1218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift */,
+				BD3635DF218A19FF00E4A6EA /* QuestionsHistoricPresenter.swift */,
+				BD3635E3218A19FF00E4A6EA /* QuestionsHistoricView.swift */,
+				BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */,
+				BD3635F0218A1DC000E4A6EA /* QuestionsHistoricHeader.xib */,
+				BD3635DE218A19FF00E4A6EA /* QuestionsHistoric.storyboard */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		49AE2B0C2163DD4F00055136 = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +488,7 @@
 				49AE2B162163DD4F00055136 /* Products */,
 				9CFB28AB508E1000AD315491 /* Pods */,
 				F84F77F27EDB0EC1035497DF /* Frameworks */,
+				496B3DBC2191FC6C00204C8E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1160,6 +1181,7 @@
 				BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
 				BD3E3C782187804100539ADB /* MainProtocols.swift in Sources */,
 				491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */,
+				496B3DBE2191FC9C00204C8E /* Intents.intentdefinition in Sources */,
 				453953F921766D0F00CF71EC /* DailyQuestionInteractor.swift in Sources */,
 				BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */,
 				BD290C4A216D352D001F16EA /* MoodDAO.swift in Sources */,
