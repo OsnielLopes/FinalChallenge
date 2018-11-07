@@ -118,6 +118,12 @@
 		BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */; };
 		BDAF3ACC218B87C000EFD2A9 /* QuestionTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */; };
 		BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */; };
+		BDD81C402193416F00880601 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD81C3A2193416F00880601 /* Profile.storyboard */; };
+		BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3B2193416F00880601 /* ProfilePresenter.swift */; };
+		BDD81C422193416F00880601 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3C2193416F00880601 /* ProfileRouter.swift */; };
+		BDD81C432193416F00880601 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3D2193416F00880601 /* ProfileProtocols.swift */; };
+		BDD81C442193416F00880601 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3E2193416F00880601 /* ProfileInteractor.swift */; };
+		BDD81C452193416F00880601 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3F2193416F00880601 /* ProfileView.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
@@ -256,6 +262,12 @@
 		BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswersView.swift; sourceTree = "<group>"; };
 		BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTextCell.swift; sourceTree = "<group>"; };
 		BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		BDD81C3A2193416F00880601 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		BDD81C3B2193416F00880601 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		BDD81C3C2193416F00880601 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		BDD81C3D2193416F00880601 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		BDD81C3E2193416F00880601 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		BDD81C3F2193416F00880601 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
@@ -380,6 +392,7 @@
 				BDB7C53721823724009A8206 /* Day Summary View */,
 				453953EE21766CD900CF71EC /* Daily Questions */,
 				458F8FF42190A1ED009F31A8 /* Answer Question */,
+				BDD81C462193417300880601 /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -845,6 +858,51 @@
 			path = "Day Summary View";
 			sourceTree = "<group>";
 		};
+		BDD81C462193417300880601 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C3D2193416F00880601 /* ProfileProtocols.swift */,
+				BDD81C482193418700880601 /* Router */,
+				BDD81C4A219341A000880601 /* Interactor */,
+				BDD81C472193418200880601 /* Presenter */,
+				BDD81C492193419700880601 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BDD81C472193418200880601 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C3B2193416F00880601 /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDD81C482193418700880601 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C3C2193416F00880601 /* ProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BDD81C492193419700880601 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C3A2193416F00880601 /* Profile.storyboard */,
+				BDD81C3F2193416F00880601 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDD81C4A219341A000880601 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C3E2193416F00880601 /* ProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		BDE468312180F709002BDE93 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1001,6 +1059,7 @@
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
 				BD4E0E7B2179159700DEA2F5 /* Breathing.storyboard in Resources */,
 				BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */,
+				BDD81C402193416F00880601 /* Profile.storyboard in Resources */,
 				BDAF3AC1218B82D900EFD2A9 /* QuestionAnswers.storyboard in Resources */,
 				49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */,
 			);
@@ -1107,6 +1166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD81C422193416F00880601 /* ProfileRouter.swift in Sources */,
 				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BDAF3AC2218B82D900EFD2A9 /* QuestionAnswersPresenter.swift in Sources */,
 				BD3E3C7F2187812900539ADB /* MainView.swift in Sources */,
@@ -1135,6 +1195,7 @@
 				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
+				BDD81C432193416F00880601 /* ProfileProtocols.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD3635F6218A204700E4A6EA /* QuestionsHistoricCell.swift in Sources */,
@@ -1169,17 +1230,20 @@
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
+				BDD81C452193416F00880601 /* ProfileView.swift in Sources */,
 				BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
 				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
 				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
+				BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */,
 				BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
 				BD3635E9218A19FF00E4A6EA /* QuestionsHistoricView.swift in Sources */,
 				458F8FF12190A1E6009F31A8 /* AnswerQuestionProtocols.swift in Sources */,
 				BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
+				BDD81C442193416F00880601 /* ProfileInteractor.swift in Sources */,
 				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
 				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
 				458F8FF02190A1E6009F31A8 /* AnswerQuestionRouter.swift in Sources */,
