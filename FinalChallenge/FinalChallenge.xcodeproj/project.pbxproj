@@ -124,6 +124,7 @@
 		BDD81C432193416F00880601 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3D2193416F00880601 /* ProfileProtocols.swift */; };
 		BDD81C442193416F00880601 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3E2193416F00880601 /* ProfileInteractor.swift */; };
 		BDD81C452193416F00880601 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3F2193416F00880601 /* ProfileView.swift */; };
+		BDD81C4C2193503300880601 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4B2193503300880601 /* UserProfileCell.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
@@ -268,6 +269,7 @@
 		BDD81C3D2193416F00880601 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
 		BDD81C3E2193416F00880601 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		BDD81C3F2193416F00880601 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BDD81C4B2193503300880601 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
@@ -891,6 +893,7 @@
 			children = (
 				BDD81C3A2193416F00880601 /* Profile.storyboard */,
 				BDD81C3F2193416F00880601 /* ProfileView.swift */,
+				BDD81C4B2193503300880601 /* UserProfileCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1182,6 +1185,7 @@
 				BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 				BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */,
 				450ED4C52177ABA700195CAE /* Constants.swift in Sources */,
+				BDD81C4C2193503300880601 /* UserProfileCell.swift in Sources */,
 				BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */,
 				BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */,
 				BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
