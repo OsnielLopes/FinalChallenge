@@ -28,7 +28,7 @@
 		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
-		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		4943FDD82165355600FE2045 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
@@ -125,6 +125,7 @@
 		BDD81C442193416F00880601 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3E2193416F00880601 /* ProfileInteractor.swift */; };
 		BDD81C452193416F00880601 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3F2193416F00880601 /* ProfileView.swift */; };
 		BDD81C4C2193503300880601 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4B2193503300880601 /* UserProfileCell.swift */; };
+		BDD81C4E219394ED00880601 /* EmotionsChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
@@ -270,6 +271,7 @@
 		BDD81C3E2193416F00880601 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		BDD81C3F2193416F00880601 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BDD81C4B2193503300880601 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
+		BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsChartCell.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
@@ -894,6 +896,7 @@
 				BDD81C3A2193416F00880601 /* Profile.storyboard */,
 				BDD81C3F2193416F00880601 /* ProfileView.swift */,
 				BDD81C4B2193503300880601 /* UserProfileCell.swift */,
+				BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1088,12 +1091,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1170,6 +1175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD81C422193416F00880601 /* ProfileRouter.swift in Sources */,
+				BDD81C4E219394ED00880601 /* EmotionsChartCell.swift in Sources */,
 				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BDAF3AC2218B82D900EFD2A9 /* QuestionAnswersPresenter.swift in Sources */,
 				BD3E3C7F2187812900539ADB /* MainView.swift in Sources */,
@@ -1259,7 +1265,7 @@
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */,
-				4943FDD82165355600FE2045 /* (null) in Sources */,
+				4943FDD82165355600FE2045 /* BuildFile in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,
