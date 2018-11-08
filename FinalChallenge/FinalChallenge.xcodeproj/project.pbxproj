@@ -28,7 +28,7 @@
 		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
-		4943FDD82165355600FE2045 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
@@ -126,6 +126,11 @@
 		BDD81C452193416F00880601 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3F2193416F00880601 /* ProfileView.swift */; };
 		BDD81C4C2193503300880601 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4B2193503300880601 /* UserProfileCell.swift */; };
 		BDD81C4E219394ED00880601 /* EmotionsChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */; };
+		BDD81C502194933D00880601 /* EmotionChartViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4F2194933D00880601 /* EmotionChartViewObject.swift */; };
+		BDD81C5421949AC300880601 /* StatisticsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5321949AC300880601 /* StatisticsDTO.swift */; };
+		BDD81C5721949BC400880601 /* MindfullnessTimeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */; };
+		BDD81C5921949E8100880601 /* EmotionChartDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5821949E8100880601 /* EmotionChartDTO.swift */; };
+		BDD81C5B21949EF700880601 /* InputedEmotionsReportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5A21949EF700880601 /* InputedEmotionsReportFactory.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
@@ -272,6 +277,11 @@
 		BDD81C3F2193416F00880601 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BDD81C4B2193503300880601 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsChartCell.swift; sourceTree = "<group>"; };
+		BDD81C4F2194933D00880601 /* EmotionChartViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionChartViewObject.swift; sourceTree = "<group>"; };
+		BDD81C5321949AC300880601 /* StatisticsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDTO.swift; sourceTree = "<group>"; };
+		BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfullnessTimeDTO.swift; sourceTree = "<group>"; };
+		BDD81C5821949E8100880601 /* EmotionChartDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionChartDTO.swift; sourceTree = "<group>"; };
+		BDD81C5A21949EF700880601 /* InputedEmotionsReportFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputedEmotionsReportFactory.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
@@ -450,6 +460,8 @@
 			isa = PBXGroup;
 			children = (
 				BD974A282163FD4C00612838 /* Managers */,
+				BDD81C5C21949EFE00880601 /* Factories */,
+				BDD81C5521949AE600880601 /* Data Transfer Objects */,
 				BD974A3521654B4100612838 /* Data Access Objects */,
 			);
 			path = Services;
@@ -895,8 +907,8 @@
 			children = (
 				BDD81C3A2193416F00880601 /* Profile.storyboard */,
 				BDD81C3F2193416F00880601 /* ProfileView.swift */,
-				BDD81C4B2193503300880601 /* UserProfileCell.swift */,
-				BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */,
+				BDD81C512194945A00880601 /* Table View */,
+				BDD81C522194946200880601 /* View Objects */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -907,6 +919,41 @@
 				BDD81C3E2193416F00880601 /* ProfileInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BDD81C512194945A00880601 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C4B2193503300880601 /* UserProfileCell.swift */,
+				BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		BDD81C522194946200880601 /* View Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C4F2194933D00880601 /* EmotionChartViewObject.swift */,
+			);
+			path = "View Objects";
+			sourceTree = "<group>";
+		};
+		BDD81C5521949AE600880601 /* Data Transfer Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C5321949AC300880601 /* StatisticsDTO.swift */,
+				BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */,
+				BDD81C5821949E8100880601 /* EmotionChartDTO.swift */,
+			);
+			path = "Data Transfer Objects";
+			sourceTree = "<group>";
+		};
+		BDD81C5C21949EFE00880601 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BDD81C5A21949EF700880601 /* InputedEmotionsReportFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		BDE468312180F709002BDE93 /* View */ = {
@@ -1205,12 +1252,15 @@
 				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
+				BDD81C5921949E8100880601 /* EmotionChartDTO.swift in Sources */,
 				BDD81C432193416F00880601 /* ProfileProtocols.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD3635F6218A204700E4A6EA /* QuestionsHistoricCell.swift in Sources */,
 				BDAF3AC4218B82D900EFD2A9 /* QuestionAnswersProtocols.swift in Sources */,
+				BDD81C502194933D00880601 /* EmotionChartViewObject.swift in Sources */,
 				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
+				BDD81C5721949BC400880601 /* MindfullnessTimeDTO.swift in Sources */,
 				BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
 				BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
 				BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */,
@@ -1245,12 +1295,14 @@
 				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
 				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
+				BDD81C5B21949EF700880601 /* InputedEmotionsReportFactory.swift in Sources */,
 				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */,
 				BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
 				BD3635E9218A19FF00E4A6EA /* QuestionsHistoricView.swift in Sources */,
+				BDD81C5421949AC300880601 /* StatisticsDTO.swift in Sources */,
 				458F8FF12190A1E6009F31A8 /* AnswerQuestionProtocols.swift in Sources */,
 				BD290C0C216BE6EF001F16EA /* Answer+CoreDataClass.swift in Sources */,
 				BDD81C442193416F00880601 /* ProfileInteractor.swift in Sources */,
@@ -1265,7 +1317,7 @@
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */,
-				4943FDD82165355600FE2045 /* BuildFile in Sources */,
+				4943FDD82165355600FE2045 /* (null) in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,

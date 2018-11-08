@@ -18,6 +18,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     // MARK: - Properties
     let profileCellIdentifier = "userProfileCell"
+    let emotionsChartCell = "emotionsChartCell"
     
     // MARK: - Override methods
 	override func viewDidLoad() {
@@ -39,7 +40,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,6 +51,11 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
                 return UITableViewCell()
             }
             return userProfileCell
+        case 1:
+            guard let emotionsChartCell = tableView.dequeueReusableCell(withIdentifier: self.emotionsChartCell, for: indexPath) as? EmotionsChartCell else {
+                return UITableViewCell()
+            }            
+            return emotionsChartCell
         default:
             break
         }

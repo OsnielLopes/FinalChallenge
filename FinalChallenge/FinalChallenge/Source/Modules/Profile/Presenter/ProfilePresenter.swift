@@ -18,6 +18,11 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
     // MARK: - ProfilePresenterInputProtocol
 
     // MARK: - ProfilePresenterInteractorOutputProtocol
+    func handleSuccessFetchedMood(with results: [MoodInput]) {
+    }
+    
+    func handleFailureFetchedMood(with message: String) {
+    }
 
 	// MARK: - Private Methods
 

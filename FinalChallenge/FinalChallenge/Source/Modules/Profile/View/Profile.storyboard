@@ -189,8 +189,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cardView" destination="zrg-7d-Kub" id="x8Z-6G-6T2"/>
-                                            <outlet property="chartTitleLabel" destination="e63-Az-ryQ" id="ZtG-xb-u8D"/>
-                                            <outlet property="chartView" destination="zrg-7d-Kub" id="rDc-nR-u4X"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
