@@ -15,10 +15,11 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var chartTitleLabel: UILabel!
     @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var segmentedControlShowOptions: UISegmentedControl!
     
     // MARK: - Properties
     var graphView: ScrollableGraphView!
-    var values: [EmotionChartViewObject] = []
+    var data: EmotionChartDTO!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,32 +27,44 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         self.cardView.layer.cornerRadius = self.cardView.frame.width / 30
         self.cardView.dropShadow(color: #colorLiteral(red: 0.01960784314, green: 0.06274509804, blue: 0.07843137255, alpha: 1), opacity: 0.25, offSet: CGSize(width: 0, height: 5), radius: 5, scale: true, shouldFollowPath: false)
         
+    }
+    
+    func setChart(forData data: EmotionChartDTO) {
+        self.data = data
+        
         self.graphView = ScrollableGraphView(frame: self.chartView.frame)
         
+        self.graphView.rangeMax = self.data.rangeMax
+        self.graphView.rangeMin = self.data.rangeMin
+        self.graphView.direction = .rightToLeft
+        self.graphView.contentOffset.x = self.graphView.contentSize.width - self.graphView.layer.frame.size.width
+        self.graphView.contentOffset.y = 0
+        
         let linePlot = LinePlot(identifier: "LinePlot")
-        linePlot.lineStyle_ = ScrollableGraphViewLineStyle.straight.rawValue
+        linePlot.lineStyle = ScrollableGraphViewLineStyle.smooth
         
         let referenceLines = ReferenceLines()
         referenceLines.referenceLinePosition = .right
+        referenceLines.shouldShowLabels = false
+        
         
         self.graphView.addPlot(plot: linePlot)
         self.graphView.addReferenceLines(referenceLines: referenceLines)
         
         self.graphView.rightmostPointPadding = 0.0
         self.chartView.addSubview(self.graphView)
-        
     }
     
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        return self.values[pointIndex].value
+        return self.data.values[pointIndex].value
     }
     
     func label(atIndex pointIndex: Int) -> String {
-        return self.values[pointIndex].time
+        return self.data.values[pointIndex].label
     }
     
     func numberOfPoints() -> Int {
-        return self.values.count
+        return self.data.values.count
     }
 
 }

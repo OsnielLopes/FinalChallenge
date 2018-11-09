@@ -35,16 +35,16 @@ protocol ProfilePresenterInputProtocol: class {
     
     // MARK: Getters
     func getStatistics() -> StatisticsDTO
-    func getInputedEmotions() -> [EmotionChartViewObject]
-    func getGuessedEmotions() -> [EmotionChartViewObject]
+    func getInputedEmotions() -> EmotionChartDTO
+    func getGuessedEmotions() -> EmotionChartDTO
     func getMindfullnessTime() -> [MindfullnessTimeDTO]
 }
 
 protocol ProfileInteractorOutputProtocol: class {
-    func handleSuccessFetchedInputedMood(with results: [MoodInput])
+    func handleSuccessFetchedInputedMood(with results: EmotionChartDTO)
     func handleFailureFetchedInputedMood(with message: String)
     
-    func handleSuccessFetchedGuessedMood(with results: [MoodInput])
+    func handleSuccessFetchedGuessedMood(with results: EmotionChartDTO)
     func handleFailureFetchedGuessedMood(with message: String)
     
     func handleSuccessFetchedMindfullnessTime(with results: MindfullnessTimeDTO)

@@ -147,18 +147,18 @@
                                             <outlet property="usernameLabel" destination="BhY-CL-aYa" id="VYK-kE-9Ih"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emotionsChartCell" rowHeight="258" id="p14-sg-jom" customClass="EmotionsChartCell" customModule="FinalChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="385" width="375" height="258"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emotionsChartCell" rowHeight="300" id="p14-sg-jom" customClass="EmotionsChartCell" customModule="FinalChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="385" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p14-sg-jom" id="oZM-GF-ZVn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-7d-Kub">
-                                                    <rect key="frame" x="20" y="20" width="335" height="218"/>
+                                                    <rect key="frame" x="20" y="20" width="335" height="260"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icB-Jy-BOd">
-                                                            <rect key="frame" x="15" y="37" width="305" height="166"/>
+                                                            <rect key="frame" x="15" y="42" width="305" height="170"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do gráfico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e63-Az-ryQ">
@@ -167,16 +167,27 @@
                                                             <color key="textColor" name="color-black"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZrM-QZ-wE6">
+                                                            <rect key="frame" x="20" y="222" width="140" height="29"/>
+                                                            <segments>
+                                                                <segment title="Week"/>
+                                                                <segment title="Month"/>
+                                                            </segments>
+                                                            <color key="tintColor" name="color-yellow"/>
+                                                        </segmentedControl>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="e63-Az-ryQ" secondAttribute="trailing" id="IEU-hs-WnA"/>
-                                                        <constraint firstAttribute="bottom" secondItem="icB-Jy-BOd" secondAttribute="bottom" constant="15" id="Q2t-e9-dBy"/>
+                                                        <constraint firstItem="ZrM-QZ-wE6" firstAttribute="top" secondItem="icB-Jy-BOd" secondAttribute="bottom" constant="10" id="7GJ-Jd-xLN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="e63-Az-ryQ" secondAttribute="trailing" id="N8M-Xn-AUq"/>
+                                                        <constraint firstItem="ZrM-QZ-wE6" firstAttribute="leading" secondItem="zrg-7d-Kub" secondAttribute="leading" constant="20" id="NwZ-mb-pg2"/>
                                                         <constraint firstItem="e63-Az-ryQ" firstAttribute="top" secondItem="zrg-7d-Kub" secondAttribute="top" constant="10" id="ZvU-MS-l3p"/>
                                                         <constraint firstItem="e63-Az-ryQ" firstAttribute="leading" secondItem="zrg-7d-Kub" secondAttribute="leading" constant="20" id="f0S-9m-YD5"/>
                                                         <constraint firstItem="icB-Jy-BOd" firstAttribute="leading" secondItem="zrg-7d-Kub" secondAttribute="leading" constant="15" id="fkn-zf-6cN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ZrM-QZ-wE6" secondAttribute="bottom" constant="10" id="i7H-ZW-H6p"/>
                                                         <constraint firstAttribute="trailing" secondItem="icB-Jy-BOd" secondAttribute="trailing" constant="15" id="lPe-Vg-eMK"/>
-                                                        <constraint firstItem="icB-Jy-BOd" firstAttribute="top" secondItem="e63-Az-ryQ" secondAttribute="bottom" constant="10" id="zWj-Ag-zGV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZrM-QZ-wE6" secondAttribute="trailing" constant="175" id="qs9-TM-KRn"/>
+                                                        <constraint firstItem="icB-Jy-BOd" firstAttribute="top" secondItem="e63-Az-ryQ" secondAttribute="bottom" constant="15" id="zWj-Ag-zGV"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -189,6 +200,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cardView" destination="zrg-7d-Kub" id="x8Z-6G-6T2"/>
+                                            <outlet property="chartTitleLabel" destination="e63-Az-ryQ" id="kZ5-DS-r9A"/>
+                                            <outlet property="chartView" destination="icB-Jy-BOd" id="o31-wv-Sco"/>
+                                            <outlet property="segmentedControlShowOptions" destination="ZrM-QZ-wE6" id="SK5-XP-oMa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -220,6 +234,9 @@
         </namedColor>
         <namedColor name="color-white">
             <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color-yellow">
+            <color red="0.93725490196078431" green="0.81960784313725488" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

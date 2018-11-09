@@ -108,7 +108,6 @@
 		BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */; };
 		BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 		BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A782167F86900612838 /* CategoryDAOTests.swift */; };
-		BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 		BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
 		BDAF3AC1218B82D900EFD2A9 /* QuestionAnswers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAF3ABB218B82D900EFD2A9 /* QuestionAnswers.storyboard */; };
 		BDAF3AC2218B82D900EFD2A9 /* QuestionAnswersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ABC218B82D900EFD2A9 /* QuestionAnswersPresenter.swift */; };
@@ -126,11 +125,10 @@
 		BDD81C452193416F00880601 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3F2193416F00880601 /* ProfileView.swift */; };
 		BDD81C4C2193503300880601 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4B2193503300880601 /* UserProfileCell.swift */; };
 		BDD81C4E219394ED00880601 /* EmotionsChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */; };
-		BDD81C502194933D00880601 /* EmotionChartViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4F2194933D00880601 /* EmotionChartViewObject.swift */; };
 		BDD81C5421949AC300880601 /* StatisticsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5321949AC300880601 /* StatisticsDTO.swift */; };
 		BDD81C5721949BC400880601 /* MindfullnessTimeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */; };
 		BDD81C5921949E8100880601 /* EmotionChartDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5821949E8100880601 /* EmotionChartDTO.swift */; };
-		BDD81C5B21949EF700880601 /* InputedEmotionsReportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5A21949EF700880601 /* InputedEmotionsReportFactory.swift */; };
+		BDD81C6521961ED100880601 /* ChartDisplayOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C6421961ED100880601 /* ChartDisplayOptions.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
@@ -277,11 +275,10 @@
 		BDD81C3F2193416F00880601 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BDD81C4B2193503300880601 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsChartCell.swift; sourceTree = "<group>"; };
-		BDD81C4F2194933D00880601 /* EmotionChartViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionChartViewObject.swift; sourceTree = "<group>"; };
 		BDD81C5321949AC300880601 /* StatisticsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDTO.swift; sourceTree = "<group>"; };
 		BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfullnessTimeDTO.swift; sourceTree = "<group>"; };
 		BDD81C5821949E8100880601 /* EmotionChartDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionChartDTO.swift; sourceTree = "<group>"; };
-		BDD81C5A21949EF700880601 /* InputedEmotionsReportFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputedEmotionsReportFactory.swift; sourceTree = "<group>"; };
+		BDD81C6421961ED100880601 /* ChartDisplayOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDisplayOptions.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
@@ -460,7 +457,6 @@
 			isa = PBXGroup;
 			children = (
 				BD974A282163FD4C00612838 /* Managers */,
-				BDD81C5C21949EFE00880601 /* Factories */,
 				BDD81C5521949AE600880601 /* Data Transfer Objects */,
 				BD974A3521654B4100612838 /* Data Access Objects */,
 			);
@@ -907,8 +903,8 @@
 			children = (
 				BDD81C3A2193416F00880601 /* Profile.storyboard */,
 				BDD81C3F2193416F00880601 /* ProfileView.swift */,
+				BDD81C6421961ED100880601 /* ChartDisplayOptions.swift */,
 				BDD81C512194945A00880601 /* Table View */,
-				BDD81C522194946200880601 /* View Objects */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -930,14 +926,6 @@
 			path = "Table View";
 			sourceTree = "<group>";
 		};
-		BDD81C522194946200880601 /* View Objects */ = {
-			isa = PBXGroup;
-			children = (
-				BDD81C4F2194933D00880601 /* EmotionChartViewObject.swift */,
-			);
-			path = "View Objects";
-			sourceTree = "<group>";
-		};
 		BDD81C5521949AE600880601 /* Data Transfer Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -946,14 +934,6 @@
 				BDD81C5821949E8100880601 /* EmotionChartDTO.swift */,
 			);
 			path = "Data Transfer Objects";
-			sourceTree = "<group>";
-		};
-		BDD81C5C21949EFE00880601 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				BDD81C5A21949EF700880601 /* InputedEmotionsReportFactory.swift */,
-			);
-			path = Factories;
 			sourceTree = "<group>";
 		};
 		BDE468312180F709002BDE93 /* View */ = {
@@ -1258,7 +1238,6 @@
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
 				BD3635F6218A204700E4A6EA /* QuestionsHistoricCell.swift in Sources */,
 				BDAF3AC4218B82D900EFD2A9 /* QuestionAnswersProtocols.swift in Sources */,
-				BDD81C502194933D00880601 /* EmotionChartViewObject.swift in Sources */,
 				BD290C16216BE6EF001F16EA /* DissertationQuestion+CoreDataProperties.swift in Sources */,
 				BDD81C5721949BC400880601 /* MindfullnessTimeDTO.swift in Sources */,
 				BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */,
@@ -1281,6 +1260,7 @@
 				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
 				BD3E3C762187804100539ADB /* MainPresenter.swift in Sources */,
+				BDD81C6521961ED100880601 /* ChartDisplayOptions.swift in Sources */,
 				453953FA21766D0F00CF71EC /* DailyQuestionView.swift in Sources */,
 				BD3E3C5A2183AE0900539ADB /* BreathingPresenter.swift in Sources */,
 				BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
@@ -1295,7 +1275,6 @@
 				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
 				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
-				BDD81C5B21949EF700880601 /* InputedEmotionsReportFactory.swift in Sources */,
 				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */,
@@ -1334,7 +1313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD974A7A2167F89400612838 /* CategoryDAO.swift in Sources */,
 				BD290C2A216BEFFD001F16EA /* CheckboxQuestionDAOTests.swift in Sources */,
 				BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */,
 				BD290C35216D1A90001F16EA /* AuthorDAOTests.swift in Sources */,
@@ -1548,7 +1526,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallengeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1569,7 +1547,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallengeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

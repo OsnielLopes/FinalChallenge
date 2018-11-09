@@ -13,7 +13,7 @@ import CoreData
 
 class CategoryDAOTests: XCTestCase {
     
-    var createdCategories: [Category]!
+    var createdCategories: [FinalChallenge.Category]!
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle(for: type(of: self))] )!
@@ -41,7 +41,7 @@ class CategoryDAOTests: XCTestCase {
     func generateData() {
         self.createdCategories = []
         for i in 0...5 {
-            let c = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! Category
+            let c = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! FinalChallenge.Category
             c.name = "Category\(i)"
             c.questions = NSSet(array: [])
             self.createdCategories.append(c)
@@ -52,7 +52,7 @@ class CategoryDAOTests: XCTestCase {
     func flushData() {
         self.createdCategories = []
         let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Category")
-        let all = try! self.mockPersistantContainer.viewContext.fetch(request) as! [Category]
+        let all = try! self.mockPersistantContainer.viewContext.fetch(request) as! [FinalChallenge.Category]
         for i in all {
             self.mockPersistantContainer.viewContext.delete(i)
         }

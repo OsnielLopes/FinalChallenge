@@ -15,7 +15,7 @@ class QuestionsDAOTests: XCTestCase {
     
     var questions: [Question]!
     
-    var category: Category!
+    var category: FinalChallenge.Category!
     
     var author: Author!
     
@@ -47,7 +47,7 @@ class QuestionsDAOTests: XCTestCase {
         auth.name = "System"
         self.author = auth
         
-        let cat = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! Category
+        let cat = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! FinalChallenge.Category
         cat.name = "Família"
         self.category = cat
         

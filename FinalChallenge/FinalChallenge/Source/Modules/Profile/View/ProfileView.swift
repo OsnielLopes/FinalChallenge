@@ -19,6 +19,11 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     // MARK: - Properties
     let profileCellIdentifier = "userProfileCell"
     let emotionsChartCell = "emotionsChartCell"
+    var userProfileCell: UserProfileCell?
+    var inputedMoodsCell: EmotionsChartCell?
+    var guessedMoodsCell: EmotionsChartCell?
+//    var midnfullnesTimeCel: MindfullnessTimeChartCell?
+    
     
     // MARK: - Override methods
 	override func viewDidLoad() {
@@ -30,12 +35,24 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
         
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
-        self.loadData()
+        self.tableView.reloadData()
     }
 
     // MARK: - ProfilePresenterOutputProtocol
-    func loadData() {
-        self.tableView.reloadData()
+    func loadInputedMoodsData() {
+        fatalError()
+    }
+    
+    func loadGuessedEmotions() {
+        fatalError()
+    }
+    
+    func loadMindfullnessTime() {
+        fatalError()
+    }
+    
+    func loadStatistics() {
+        fatalError()
     }
     
     // MARK: - UITableViewDataSource
@@ -50,11 +67,14 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             guard let userProfileCell = tableView.dequeueReusableCell(withIdentifier: self.profileCellIdentifier, for: indexPath) as? UserProfileCell else {
                 return UITableViewCell()
             }
+            self.userProfileCell = userProfileCell
             return userProfileCell
         case 1:
             guard let emotionsChartCell = tableView.dequeueReusableCell(withIdentifier: self.emotionsChartCell, for: indexPath) as? EmotionsChartCell else {
                 return UITableViewCell()
-            }            
+            }
+            self.presenter.fetchInputedEmotions(sinceDate: Calendar.current.date(byAdding: .day, value: -30, to: Date()) ?? Date())
+            self.inputedMoodsCell = emotionsChartCell
             return emotionsChartCell
         default:
             break
@@ -67,6 +87,8 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
         switch indexPath.row {
         case 0:
             return 357
+        case 1, 2, 3:
+            return 260
         default:
             return UITableView.automaticDimension
         }

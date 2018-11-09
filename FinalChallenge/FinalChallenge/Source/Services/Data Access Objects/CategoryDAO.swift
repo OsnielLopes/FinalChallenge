@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 
+@testable import FinalChallenge
+
 class CategoryDAO {
     
     static let shared = CategoryDAO()
