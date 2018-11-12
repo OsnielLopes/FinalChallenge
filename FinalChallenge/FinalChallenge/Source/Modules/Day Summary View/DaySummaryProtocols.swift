@@ -63,5 +63,5 @@ protocol DaySummaryPresenterOutputProtocol: class {
     func showError(message: String)
     func didFetchEntries()
     func didFetch(moodTypes: [MoodType])
-    func didAddedMood()
+    func didAddedMood(_ mood: MoodInput)
 }

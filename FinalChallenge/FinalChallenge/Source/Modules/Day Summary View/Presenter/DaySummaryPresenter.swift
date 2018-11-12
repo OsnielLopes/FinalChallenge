@@ -63,7 +63,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     func handleSuccessAddedMood(with results: MoodInput) {
         self.entries.append(results)
         self.sortEntries()
-        self.view.didAddedMood()
+        self.view.didAddedMood(results)
     }
     
     func handleFailureAddedMood(with message: String) {
@@ -97,6 +97,11 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func item(at indexPath: Int) -> Any {
+        
+        self.entries.forEach({
+            print(($0 as! MoodInput).moodType!.typeText!)
+        })
+        
         return self.entries[indexPath - (self.shouldShowAddButton() ? 1 : 0)]
     }
     
@@ -148,7 +153,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
                 date2 = (entry2 as! Answer).date!
             }
             
-            return (date1 as Date) > (date2 as Date)
+            return (date1 as Date) >= (date2 as Date)
         })
     }
     

@@ -100,8 +100,9 @@ class DailySummaryViewController: UIViewController, DaySummaryPresenterOutputPro
         self.daySummaryTableViewController.didFetch(moodTypes: moodTypes)
     }
     
-    func didAddedMood() {
-        self.daySummaryTableViewController.didAddedMood()
+
+    func didAddedMood(_ mood: MoodInput) {
+        self.daySummaryTableViewController.didAddedMood(mood)
     }
     
     func setCurrentDate(_ date: Date) {
