@@ -52,6 +52,13 @@ class DailyQuestionPresenter: NSObject, DailyQuestionPresenterInputProtocol, Dai
         self.questions.remove(at: indexPath)
         self.view.reloadData()
     }
+    
+    func currentAnswer(for question: Question) -> Answer? {
+        return question.answers?.first(where: { (answer) -> Bool in
+            let aAnswer = answer as! Answer
+            return Calendar.current.isDateInToday(aAnswer.date! as Date)
+        }) as? Answer
+    }
 
     // MARK: - DailyQuestionPresenterInteractorOutputProtocol
     func handleSuccess(with results: [Question]) {

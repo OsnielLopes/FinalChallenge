@@ -26,13 +26,28 @@ class AnswerQuestionInteractor: NSObject, AnswerQuestionInteractorInputProtocol 
         
         switch type {
         case .dissertative:
-            guard let dissertativeQuestion = question as? DissertationQuestion else { return }
             
-            DissertationAnswersDAO.shared.create(question: dissertativeQuestion, text: answers[0], date: Date()) { (answer, error) -> (Void) in
-                if answer != nil {
-                    self.output.handleSaveSuccess()
+            guard let dissertativeQuestion = self.question as? DissertationQuestion else { return }
+            
+            let answerForToday = self.question.answers?.first(where: { (answer) -> Bool in
+                let aAnswer = answer as! Answer
+                return Calendar.current.isDateInToday(aAnswer.date! as Date)
+            }) as? Answer
+            
+            if let aAnswerForToday = answerForToday, let dissertativeAnswer = aAnswerForToday as? DissertationAnswer {
+                DissertationAnswersDAO.shared.update(answer: dissertativeAnswer, text: answers[0], question: dissertativeQuestion) { (answer, error) -> (Void) in
+                    if answer != nil {
+                        self.output.handleSaveSuccess()
+                    }
+                }
+            } else {
+                DissertationAnswersDAO.shared.create(question: dissertativeQuestion, text: answers[0], date: Date()) { (answer, error) -> (Void) in
+                    if answer != nil {
+                        self.output.handleSaveSuccess()
+                    }
                 }
             }
+            
         case .checkbox:
             break
         case .radiobox:

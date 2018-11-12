@@ -14,21 +14,20 @@ fileprivate let addCellIdentifier = "addCellIdentifier"
 
 class DaySummaryTableViewController: UITableViewController {
     
-    
     var insertTableViewCell: InsertTableViewCell?
     var summaryView: DailySummaryViewController!
     var dailySummaryParentViewController: DailySummaryViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.dailySummaryParentViewController.loadTodayEntries()
     }
     
     // MARK: - UITableViewControllerDelegate and UITableViewControllerDataSource
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.dailySummaryParentViewController.numberOfSections()
@@ -57,7 +56,7 @@ class DaySummaryTableViewController: UITableViewController {
         let entry = self.dailySummaryParentViewController.item(at: indexPath.row)
         
         if let entryMood = entry as? MoodInput {
-            if let moodCell = tableView.dequeueReusableCell(withIdentifier: moodCellIdentifier, for: indexPath) as? MoodInputTableViewCell {
+            if let moodCell = tableView.dequeueReusableCell(withIdentifier: moodCellIdentifier) as? MoodInputTableViewCell {
                 moodCell.setMood(entryMood)
                 moodCell.lineView.isHidden = self.dailySummaryParentViewController.shouldDisplayLine(for: indexPath.row)
                 return moodCell
@@ -125,13 +124,13 @@ class DaySummaryTableViewController: UITableViewController {
         self.insertTableViewCell?.setButtons(forMoodTypes: moodTypes)
     }
     
-    func didAddedMood() {
+    func didAddedMood(_ result: MoodInput) {
         self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [IndexPath.init(row: 1, section: 0)], with: UITableView.RowAnimation.top)
+        self.tableView.insertRows(at: [IndexPath(row: 1, section: 0)], with: UITableView.RowAnimation.top)
+        self.tableView.endUpdates()
         if let insertCell = self.tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as? InsertTableViewCell {
             insertCell.lineView.isHidden = self.dailySummaryParentViewController.shouldDisplayLine(for: 0)
         }
-        self.tableView.endUpdates()
     }
     
 }

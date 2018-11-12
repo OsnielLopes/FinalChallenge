@@ -33,6 +33,8 @@ protocol DailyQuestionPresenterInputProtocol: class {
     func item(at indexPath: Int) -> Question
     func didSelectItem(at indexPath: Int)
     
+    func currentAnswer(for question: Question) -> Answer?
+    
     func didTouchBackButton()
     func loadNewQuestion()
     func removeQuestion(at indexPath: Int)
