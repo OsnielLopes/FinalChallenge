@@ -101,7 +101,8 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func shouldShowAddButton() -> Bool {
-        return Calendar.current.isDateInToday(self.currentDate)
+        return true
+//        return Calendar.current.isDateInToday(self.currentDate)
     }
     
     func shouldDisplayLine(for index: Int) -> Bool {
