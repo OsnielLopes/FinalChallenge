@@ -23,13 +23,15 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
 	// MARK: - Override methods
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         self.presenter.loadDailyQuestions()
         
         self.prepareViewController()
         self.prepareButtons()
     }
-
+    
     // MARK: - DailyQuestionPresenterOutputProtocol
     func showLoading(_ loading: Bool) {
         //FIXME: add activity controll on view if loading is true, otherwise, remove loading
@@ -61,6 +63,11 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
             
             dailyCell.categoryLabel.text = question.category?.name
             dailyCell.dailyQuestionLabel.text = question.questionText
+            
+            if let dissertativeAnswer = self.presenter.currentAnswer(for: question) as? DissertationAnswer {
+                dailyCell.questionAnswerLabel.isHidden = false
+                dailyCell.questionAnswerLabel.text = dissertativeAnswer.text
+            }
             
             return dailyCell
         }

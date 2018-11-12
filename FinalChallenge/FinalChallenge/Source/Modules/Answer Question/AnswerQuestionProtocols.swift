@@ -33,6 +33,8 @@ protocol AnswerQuestionPresenterInputProtocol: class {
     
     func item(at indexPath: Int) -> String
     func didSelectItem(at indexPath: Int)
+    
+    func currentAnswer() -> Answer?
 }
 
 protocol AnswerQuestionInteractorOutputProtocol: class {
