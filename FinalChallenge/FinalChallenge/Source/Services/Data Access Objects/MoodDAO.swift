@@ -32,25 +32,11 @@ class MoodDAO {
     
     func initializeMoodTypes() {
         
-        self.createMoodType(text: "Awesome", icon: "mood5-icon", completion: { type, err in
-            guard let newType = type, err == nil else {
-                print("Error when creating Awesome mood type")
-                return
-            }
-            self.moodTypes.append(newType)
-        })
+        // Do not mess with this order
         
-        self.createMoodType(text: "Happy", icon: "mood4-icon", completion: { type, err in
+        self.createMoodType(text: "Miserable", icon: "mood1-icon", completion: { type, err in
             guard let newType = type, err == nil else {
-                print("Error when creating Happy mood type")
-                return
-            }
-            self.moodTypes.append(newType)
-        })
-        
-        self.createMoodType(text: "Indifferent", icon: "mood3-icon", completion: { type, err in
-            guard let newType = type, err == nil else {
-                print("Error when creating Indifferent mood type")
+                print("Error when creating Miserable mood type")
                 return
             }
             self.moodTypes.append(newType)
@@ -64,9 +50,25 @@ class MoodDAO {
             self.moodTypes.append(newType)
         })
         
-        self.createMoodType(text: "Miserable", icon: "mood1-icon", completion: { type, err in
+        self.createMoodType(text: "Indifferent", icon: "mood3-icon", completion: { type, err in
             guard let newType = type, err == nil else {
-                print("Error when creating Miserable mood type")
+                print("Error when creating Indifferent mood type")
+                return
+            }
+            self.moodTypes.append(newType)
+        })
+        
+        self.createMoodType(text: "Happy", icon: "mood4-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Happy mood type")
+                return
+            }
+            self.moodTypes.append(newType)
+        })
+        
+        self.createMoodType(text: "Awesome", icon: "mood5-icon", completion: { type, err in
+            guard let newType = type, err == nil else {
+                print("Error when creating Awesome mood type")
                 return
             }
             self.moodTypes.append(newType)

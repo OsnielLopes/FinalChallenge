@@ -69,7 +69,6 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         
         self.graphView!.rightmostPointPadding = 0.0
         self.chartView!.addSubview(self.graphView!)
-        self.chartView!.layoutSubviews()
     }
     
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {

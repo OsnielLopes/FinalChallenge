@@ -97,11 +97,6 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func item(at indexPath: Int) -> Any {
-        
-        self.entries.forEach({
-            print(($0 as! MoodInput).moodType!.typeText!)
-        })
-        
         return self.entries[indexPath - (self.shouldShowAddButton() ? 1 : 0)]
     }
     
