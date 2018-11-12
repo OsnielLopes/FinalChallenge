@@ -8,5 +8,10 @@
 
 import Foundation
 
-class StatisticsDTO {
+struct StatisticsDTO {
+    
+    let daysInARow: Int
+    let questionsAnswered: Int
+    let moodsInputed: Int
+    
 }

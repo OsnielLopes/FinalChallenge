@@ -14,10 +14,15 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
     weak var view: ProfilePresenterOutputProtocol!
     var interactor: ProfileInteractorInputProtocol!
     var router: ProfileRouterProtocol!
+    
+    // MARK: - Properties
+    var inputedMoodEmotionChartDTO: EmotionChartDTO?
+    var guessedMoodEmotionChartDTO: EmotionChartDTO?
 
     // MARK: - ProfilePresenterInputProtocol
-    func fetchInputedEmotions(sinceDate: Date) {
-        self.interactor.fetchInputedMoods(sinceDate: sinceDate)
+    func fetchInputedEmotions(withOption option: ChartDisplayOptions) {
+        self.view.showLoadInputedMoodsData(true)
+        self.interactor.fetchInputedMoods(sinceDate: Calendar.current.date(byAdding: .day, value: -1 * option.rawValue, to: Date())!)
     }
     
     func fetchGuessedEmotions(sinceDate: Date) {
@@ -50,19 +55,27 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
 
     // MARK: - ProfilePresenterInteractorOutputProtocol
     func handleSuccessFetchedInputedMood(with results: EmotionChartDTO) {
-        fatalError()
+        self.view.showLoadInputedMoodsData(false)
+        self.inputedMoodEmotionChartDTO = results
+        self.view.didFetchInputedMoodsData(results)
     }
     
     func handleFailureFetchedInputedMood(with message: String) {
-        fatalError()
+        self.view.showLoadInputedMoodsData(false)
+        self.inputedMoodEmotionChartDTO = nil
+        self.view.showError(message: message)
     }
     
     func handleSuccessFetchedGuessedMood(with results: EmotionChartDTO) {
-        fatalError()
+        self.view.showLoadGuessedEmotions(false)
+        self.guessedMoodEmotionChartDTO = results
+        self.view.didFetchGuessedEmotions(results)
     }
     
     func handleFailureFetchedGuessedMood(with message: String) {
-        fatalError()
+        self.view.showLoadGuessedEmotions(false)
+        self.guessedMoodEmotionChartDTO = nil
+        self.view.showError(message: message)
     }
     
     func handleSuccessFetchedMindfullnessTime(with results: MindfullnessTimeDTO) {

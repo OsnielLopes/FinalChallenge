@@ -18,8 +18,8 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     @IBOutlet weak var segmentedControlShowOptions: UISegmentedControl!
     
     // MARK: - Properties
-    var graphView: ScrollableGraphView!
-    var data: EmotionChartDTO!
+    var graphView: ScrollableGraphView?
+    var data: EmotionChartDTO?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,16 +29,32 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         
     }
     
+    func getSelectedDisplayOption() -> ChartDisplayOptions {
+        switch self.segmentedControlShowOptions.selectedSegmentIndex {
+        case 0:
+            return .week
+        case 1:
+            return .month
+        default:
+            fatalError("Should update getSelectedDisplayOption function in EmotionsChartCell to comport new option")
+        }
+    }
+    
     func setChart(forData data: EmotionChartDTO) {
+        
+        self.graphView?.removeFromSuperview()
+        
         self.data = data
         
-        self.graphView = ScrollableGraphView(frame: self.chartView.frame)
+        self.graphView = ScrollableGraphView(frame: CGRect(origin: CGPoint.zero, size: self.chartView.frame.size))
         
-        self.graphView.rangeMax = self.data.rangeMax
-        self.graphView.rangeMin = self.data.rangeMin
-        self.graphView.direction = .rightToLeft
-        self.graphView.contentOffset.x = self.graphView.contentSize.width - self.graphView.layer.frame.size.width
-        self.graphView.contentOffset.y = 0
+        self.graphView?.dataSource = self
+        
+        self.graphView!.rangeMax = self.data!.rangeMax
+        self.graphView!.rangeMin = self.data!.rangeMin
+        self.graphView!.direction = .rightToLeft
+        self.graphView!.contentOffset.x = self.graphView!.contentSize.width - self.graphView!.layer.frame.size.width
+        self.graphView!.contentOffset.y = 0
         
         let linePlot = LinePlot(identifier: "LinePlot")
         linePlot.lineStyle = ScrollableGraphViewLineStyle.smooth
@@ -48,23 +64,24 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         referenceLines.shouldShowLabels = false
         
         
-        self.graphView.addPlot(plot: linePlot)
-        self.graphView.addReferenceLines(referenceLines: referenceLines)
+        self.graphView!.addPlot(plot: linePlot)
+        self.graphView!.addReferenceLines(referenceLines: referenceLines)
         
-        self.graphView.rightmostPointPadding = 0.0
-        self.chartView.addSubview(self.graphView)
+        self.graphView!.rightmostPointPadding = 0.0
+        self.chartView!.addSubview(self.graphView!)
+        self.chartView!.layoutSubviews()
     }
     
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        return self.data.values[pointIndex].value
+        return self.data!.values[pointIndex].value
     }
     
     func label(atIndex pointIndex: Int) -> String {
-        return self.data.values[pointIndex].label
+        return self.data!.values[pointIndex].label
     }
     
     func numberOfPoints() -> Int {
-        return self.data.values.count
+        return self.data!.values.count
     }
 
 }

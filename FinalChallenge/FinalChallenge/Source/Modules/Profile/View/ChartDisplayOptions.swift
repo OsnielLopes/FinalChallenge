@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ChartDisplayOptions {
+enum ChartDisplayOptions: Int {
     case week = 7
     case month = 30
 }

@@ -31,27 +31,52 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.tableView.reloadData()
     }
 
     // MARK: - ProfilePresenterOutputProtocol
-    func loadInputedMoodsData() {
+    func showError(message: String) {
+        //FIXME: present the error message on view!
+    }
+    func showLoadInputedMoodsData(_ loading: Bool) {
+        //FIXME: add activity controll on view if loading is true, otherwise, remove loading
+    }
+    
+    func showLoadGuessedEmotions(_ loading: Bool) {
+        //FIXME: add activity controll on view if loading is true, otherwise, remove loading
+    }
+    
+    func showLoadMindfullnessTime(_ loading: Bool) {
+        //FIXME: add activity controll on view if loading is true, otherwise, remove loading
+    }
+    
+    func showLoadStatistics(_ loading: Bool) {
+        //FIXME: add activity controll on view if loading is true, otherwise, remove loading
+    }
+    
+    func didFetchInputedMoodsData(_ results: EmotionChartDTO) {
+        self.inputedMoodsCell?.setChart(forData: results)
+        self.inputedMoodsCell?.layoutSubviews()
+    }
+    
+    func didFetchGuessedEmotions(_ results: EmotionChartDTO) {
+        self.guessedMoodsCell?.setChart(forData: results)
+    }
+    
+    func didFetchMindfullnessTime(_ results: MindfullnessTimeDTO) {
         fatalError()
     }
     
-    func loadGuessedEmotions() {
-        fatalError()
-    }
-    
-    func loadMindfullnessTime() {
-        fatalError()
-    }
-    
-    func loadStatistics() {
+    func didFetchStatistics(_ results: StatisticsDTO) {
         fatalError()
     }
     
@@ -73,8 +98,8 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             guard let emotionsChartCell = tableView.dequeueReusableCell(withIdentifier: self.emotionsChartCell, for: indexPath) as? EmotionsChartCell else {
                 return UITableViewCell()
             }
-            self.presenter.fetchInputedEmotions(sinceDate: Calendar.current.date(byAdding: .day, value: -30, to: Date()) ?? Date())
             self.inputedMoodsCell = emotionsChartCell
+            self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
             return emotionsChartCell
         default:
             break
