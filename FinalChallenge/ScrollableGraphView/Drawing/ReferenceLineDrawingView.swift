@@ -34,7 +34,7 @@ class ReferenceLineDrawingView : UIView {
     }
     
     // Layers
-    var labels = [UILabel]()
+    var labels = [UIView]()
     private let referenceLineLayer = CAShapeLayer()
     private let referenceLinePath = UIBezierPath()
     
@@ -169,9 +169,23 @@ class ReferenceLineDrawingView : UIView {
     
     private func addLine(withTag tag: String, from: CGPoint, to: CGPoint, in path: UIBezierPath) {
         
-        let boundingSize = self.boundingSize(forText: tag)
-        let leftLabel = createLabel(withText: tag)
-        let rightLabel = createLabel(withText: tag)
+        let boundingSize: CGSize!
+        if let size = self.settings.sizeForImage {
+            boundingSize = size()
+        } else {
+            boundingSize = self.boundingSize(forText: tag)
+        }
+        
+        let leftLabel: UIView!
+        let rightLabel: UIView!
+        
+        if let imageViewForLabelTag = self.settings.imageViewForLabelTag {
+            leftLabel = imageViewForLabelTag(tag)
+            rightLabel = imageViewForLabelTag(tag)
+        } else {
+            leftLabel = createLabel(withText: tag)
+            rightLabel = createLabel(withText: tag)
+        }
         
         // Left label gap.
         leftLabel.frame = CGRect(

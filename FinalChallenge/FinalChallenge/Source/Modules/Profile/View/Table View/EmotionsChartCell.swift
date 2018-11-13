@@ -28,6 +28,10 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+        
     func getSelectedDisplayOption() -> ChartDisplayOptions {
         switch self.segmentedControlShowOptions.selectedSegmentIndex {
         case 0:
@@ -56,30 +60,40 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         self.graphView!.contentOffset.x = self.graphView!.contentSize.width - self.graphView!.layer.frame.size.width
         self.graphView!.contentOffset.y = 0
         self.graphView!.leftmostPointPadding = 0
-        self.graphView!.rightmostPointPadding = 20
+        self.graphView!.rightmostPointPadding = 50
         self.graphView!.shouldAnimateOnStartup = true
+        self.graphView!.dataPointSpacing = 60
         
         let linePlot = LinePlot(identifier: "LinePlot")
         linePlot.lineStyle = .smooth
         linePlot.animationDuration = 0.5
         linePlot.adaptAnimationType = .easeOut
+        linePlot.lineColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
         
         let referenceLines = ReferenceLines()
         referenceLines.referenceLinePosition = .right
-        referenceLines.shouldShowLabels = true
-        referenceLines.positionType = .absolute
-        referenceLines.includeMinMax = false
+        referenceLines.referenceLineColor = #colorLiteral(red: 0.6274509804, green: 0.8431372549, blue: 0.9215686275, alpha: 1)
+        referenceLines.dataPointLabelFont = UIFont.italicSystemFont(ofSize: 10)
+        referenceLines.sizeForImage = {
+            return CGSize(width: 20, height: 20)
+        }
+        referenceLines.imageViewForLabelTag = { tag in
+            let moodType = data.moodTypeValues.first(where: { $0.value == Double(tag)! })!
+            
+            let imageView = UIImageView(image: UIImage(named: moodType.moodType.typeIcon!)!)
+            imageView.backgroundColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
+            imageView.contentMode = .scaleAspectFit
+            imageView.layer.cornerRadius = 10
+            imageView.clipsToBounds = true
+            
+            return imageView
+        }
+        
         
         self.graphView!.addPlot(plot: linePlot)
         self.graphView!.addReferenceLines(referenceLines: referenceLines)
         
-        self.graphView!.referenceLineView?.labels.forEach({
-            $0.isHidden = true
-            
-        })
-        
         self.chartView!.addSubview(self.graphView!)
-        
     }
     
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {

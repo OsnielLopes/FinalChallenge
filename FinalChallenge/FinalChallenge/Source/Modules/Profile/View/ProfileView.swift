@@ -36,6 +36,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.contentOffset = CGPoint.zero
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -113,7 +114,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
         case 0:
             return 357
         case 1, 2, 3:
-            return 260
+            return 350
         default:
             return UITableView.automaticDimension
         }

@@ -30,6 +30,9 @@ open class ReferenceLines {
     @IBInspectable open var absolutePositions: [Double] = [25, 50, 75]
     @IBInspectable open var includeMinMax: Bool = true
     
+    @IBInspectable open var imageViewForLabelTag: ((String) -> (UIImageView))?
+    @IBInspectable open var sizeForImage: (() -> (CGSize))?
+    
     /// Whether or not to add labels to the intermediate reference lines.
     @IBInspectable open var shouldAddLabelsToIntermediateReferenceLines: Bool = true
     /// Whether or not to add units specified by the referenceLineUnits variable to the labels on the intermediate reference lines.
@@ -42,6 +45,7 @@ open class ReferenceLines {
     open var referenceLineLabelFont = UIFont.systemFont(ofSize: 8)
     /// The colour of the reference line labels.
     @IBInspectable open var referenceLineLabelColor: UIColor = UIColor.black
+    /// The image content mode
     
     /// Whether or not to show the units on the reference lines.
     @IBInspectable open var shouldShowReferenceLineUnits: Bool = true
