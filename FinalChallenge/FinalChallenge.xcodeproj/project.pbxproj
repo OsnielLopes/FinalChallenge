@@ -690,8 +690,8 @@
 		BD9692E9219B3E3A005D6D26 /* ScrollableGraphView */ = {
 			isa = PBXGroup;
 			children = (
-				BD9692EA219B3E3A005D6D26 /* Drawing */,
 				BD9692F2219B3E3A005D6D26 /* ScrollableGraphView.swift */,
+				BD9692EA219B3E3A005D6D26 /* Drawing */,
 				BD9692F3219B3E3A005D6D26 /* Protocols */,
 				BD9692F6219B3E3A005D6D26 /* Reference */,
 				BD9692F9219B3E3A005D6D26 /* Plots */,

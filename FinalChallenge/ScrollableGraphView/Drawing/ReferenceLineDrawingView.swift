@@ -1,7 +1,7 @@
 
 import UIKit
 
-internal class ReferenceLineDrawingView : UIView {
+class ReferenceLineDrawingView : UIView {
     
     var settings: ReferenceLines = ReferenceLines()
     
@@ -34,7 +34,7 @@ internal class ReferenceLineDrawingView : UIView {
     }
     
     // Layers
-    private var labels = [UILabel]()
+    var labels = [UILabel]()
     private let referenceLineLayer = CAShapeLayer()
     private let referenceLinePath = UIBezierPath()
     

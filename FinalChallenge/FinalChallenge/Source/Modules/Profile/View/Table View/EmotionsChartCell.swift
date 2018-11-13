@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ScrollableGraphView
 
 class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     
@@ -73,6 +72,11 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         
         self.graphView!.addPlot(plot: linePlot)
         self.graphView!.addReferenceLines(referenceLines: referenceLines)
+        
+        self.graphView!.referenceLineView?.labels.forEach({
+            $0.isHidden = true
+            
+        })
         
         self.chartView!.addSubview(self.graphView!)
         

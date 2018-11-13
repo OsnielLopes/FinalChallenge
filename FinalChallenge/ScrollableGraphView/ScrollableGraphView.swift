@@ -89,7 +89,7 @@ import UIKit
     private var plots: [Plot] = [Plot]()
     
     // Reference Lines
-    private var referenceLineView: ReferenceLineDrawingView?
+    var referenceLineView: ReferenceLineDrawingView?
     
     // Labels
     private var labelsView = UIView()
