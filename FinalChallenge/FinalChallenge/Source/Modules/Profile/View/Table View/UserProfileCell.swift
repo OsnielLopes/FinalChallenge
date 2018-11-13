@@ -32,8 +32,9 @@ class UserProfileCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-//    func setUsername(_ user: User) {
-//    }
+    func setUsername(_ user: User) {
+        
+    }
     
     func setStatistics(_ stats: StatisticsDTO) {
         self.daysInRowLabel.text = "\(stats.daysInARow)"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Answer" representedClassName=".Answer" isAbstract="YES" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="question" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="answers" inverseEntity="Question" syncable="YES"/>
@@ -43,8 +43,12 @@
     <entity name="RadioboxQuestion" representedClassName=".RadioboxQuestion" parentEntity="Question" syncable="YES">
         <attribute name="options" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
     </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileIcon" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Answer" positionX="183.8359375" positionY="-393.1875" width="128" height="73"/>
+        <element name="Answer" positionX="183.8359375" positionY="-393.1875" width="128" height="75"/>
         <element name="Author" positionX="50.00390625" positionY="-516.01171875" width="128" height="73"/>
         <element name="Category" positionX="-283.59765625" positionY="-413.1875" width="128" height="73"/>
         <element name="CheckboxAnswer" positionX="300.1484375" positionY="-171.50390625" width="128" height="58"/>
@@ -56,5 +60,6 @@
         <element name="Question" positionX="-90.66796875" positionY="-392.890625" width="99.1875" height="103"/>
         <element name="RadioboxAnswer" positionX="143.2109375" positionY="-128.93359375" width="128" height="58"/>
         <element name="RadioboxQuestion" positionX="-183.484375" positionY="-86.52734375" width="128" height="58"/>
+        <element name="User" positionX="-144" positionY="-360" width="128" height="75"/>
     </elements>
 </model>

@@ -119,6 +119,8 @@
 		BD969310219B3E3A005D6D26 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692FE219B3E3A005D6D26 /* Plot.swift */; };
 		BD969311219B3E3A005D6D26 /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692FF219B3E3A005D6D26 /* LinePlot.swift */; };
 		BD969312219B3E3A005D6D26 /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD969300219B3E3A005D6D26 /* DotPlot.swift */; };
+		BD969315219B6313005D6D26 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD969313219B6313005D6D26 /* User+CoreDataClass.swift */; };
+		BD969316219B6313005D6D26 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD969314219B6313005D6D26 /* User+CoreDataProperties.swift */; };
 		BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
 		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
@@ -285,6 +287,8 @@
 		BD9692FE219B3E3A005D6D26 /* Plot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
 		BD9692FF219B3E3A005D6D26 /* LinePlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinePlot.swift; sourceTree = "<group>"; };
 		BD969300219B3E3A005D6D26 /* DotPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotPlot.swift; sourceTree = "<group>"; };
+		BD969313219B6313005D6D26 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD969314219B6313005D6D26 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalChallengeDatabase.xcdatamodel; sourceTree = "<group>"; };
 		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
@@ -755,6 +759,8 @@
 		BD974A252163F74B00612838 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BD969313219B6313005D6D26 /* User+CoreDataClass.swift */,
+				BD969314219B6313005D6D26 /* User+CoreDataProperties.swift */,
 				BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */,
 				BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */,
 				BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */,
@@ -1381,6 +1387,7 @@
 				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
 				BD3E3C762187804100539ADB /* MainPresenter.swift in Sources */,
 				BDD81C6521961ED100880601 /* ChartDisplayOptions.swift in Sources */,
+				BD969315219B6313005D6D26 /* User+CoreDataClass.swift in Sources */,
 				BD969310219B3E3A005D6D26 /* Plot.swift in Sources */,
 				BD96930C219B3E3A005D6D26 /* LabelPool.swift in Sources */,
 				453953FA21766D0F00CF71EC /* DailyQuestionView.swift in Sources */,
@@ -1391,6 +1398,7 @@
 				458F8FEF2190A1E6009F31A8 /* AnswerQuestionPresenter.swift in Sources */,
 				458F8FF32190A1E6009F31A8 /* AnswerQuestionView.swift in Sources */,
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
+				BD969316219B6313005D6D26 /* User+CoreDataProperties.swift in Sources */,
 				BD969311219B3E3A005D6D26 /* LinePlot.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
