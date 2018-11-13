@@ -3,27 +3,23 @@ PODS:
     - Fabric (~> 1.8.0)
   - Fabric (1.8.0)
   - Hero (1.4.0)
-  - ScrollableGraphView (4.0.6)
 
 DEPENDENCIES:
   - Crashlytics
   - Fabric
   - Hero
-  - ScrollableGraphView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Crashlytics
     - Fabric
     - Hero
-    - ScrollableGraphView
 
 SPEC CHECKSUMS:
   Crashlytics: 1448070c1d2731ab71ea7c3faf84ac0f69657287
   Fabric: 4ac1cdfef3004ccd83ce0959b91eda8a6e37df72
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
-  ScrollableGraphView: 4af35d4ea9ecdec665d34a74da51da161ddff8ac
 
-PODFILE CHECKSUM: 3ae930cbf0550adf9155478f9e0782ddb5c8af74
+PODFILE CHECKSUM: b119b5ddb69c8462e08397354bb612c05a9daec1
 
 COCOAPODS: 1.5.3

@@ -29,7 +29,7 @@
 		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
-		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		4943FDD82165355600FE2045 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
@@ -101,6 +101,26 @@
 		BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
 		BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
 		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
+		BD9692D5219B3D46005D6D26 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BD9692BB219B3D45005D6D26 /* LICENSE */; };
+		BD9692D6219B3D46005D6D26 /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692BE219B3D45005D6D26 /* ReferenceLineDrawingView.swift */; };
+		BD9692D7219B3D46005D6D26 /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692BF219B3D45005D6D26 /* BarDrawingLayer.swift */; };
+		BD9692D8219B3D46005D6D26 /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692C0219B3D45005D6D26 /* GradientDrawingLayer.swift */; };
+		BD9692D9219B3D46005D6D26 /* DotDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692C1219B3D45005D6D26 /* DotDrawingLayer.swift */; };
+		BD9692DA219B3D46005D6D26 /* ScrollableGraphViewDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692C2219B3D45005D6D26 /* ScrollableGraphViewDrawingLayer.swift */; };
+		BD9692DB219B3D46005D6D26 /* LineDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692C3219B3D45005D6D26 /* LineDrawingLayer.swift */; };
+		BD9692DC219B3D46005D6D26 /* FillDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692C4219B3D45005D6D26 /* FillDrawingLayer.swift */; };
+		BD9692DD219B3D46005D6D26 /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692C5219B3D45005D6D26 /* ScrollableGraphView.swift */; };
+		BD9692DE219B3D46005D6D26 /* ScrollableGraphViewDrawingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692C7219B3D45005D6D26 /* ScrollableGraphViewDrawingDelegate.swift */; };
+		BD9692DF219B3D46005D6D26 /* ScrollableGraphViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692C8219B3D45005D6D26 /* ScrollableGraphViewDataSource.swift */; };
+		BD9692E0219B3D46005D6D26 /* ReferenceLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692CA219B3D45005D6D26 /* ReferenceLines.swift */; };
+		BD9692E1219B3D46005D6D26 /* LabelPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692CB219B3D45005D6D26 /* LabelPool.swift */; };
+		BD9692E2219B3D46005D6D26 /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692CD219B3D45005D6D26 /* BarPlot.swift */; };
+		BD9692E3219B3D46005D6D26 /* GraphPointAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692CF219B3D45005D6D26 /* GraphPointAnimation.swift */; };
+		BD9692E4219B3D46005D6D26 /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692D0219B3D45005D6D26 /* GraphPoint.swift */; };
+		BD9692E5219B3D46005D6D26 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692D1219B3D45005D6D26 /* Plot.swift */; };
+		BD9692E6219B3D46005D6D26 /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692D2219B3D45005D6D26 /* LinePlot.swift */; };
+		BD9692E7219B3D46005D6D26 /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692D3219B3D45005D6D26 /* DotPlot.swift */; };
+		BD9692E8219B3D46005D6D26 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BD9692D4219B3D45005D6D26 /* README.md */; };
 		BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
 		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
@@ -249,6 +269,26 @@
 		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
 		BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
+		BD9692BB219B3D45005D6D26 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BD9692BE219B3D45005D6D26 /* ReferenceLineDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLineDrawingView.swift; sourceTree = "<group>"; };
+		BD9692BF219B3D45005D6D26 /* BarDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDrawingLayer.swift; sourceTree = "<group>"; };
+		BD9692C0219B3D45005D6D26 /* GradientDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientDrawingLayer.swift; sourceTree = "<group>"; };
+		BD9692C1219B3D45005D6D26 /* DotDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotDrawingLayer.swift; sourceTree = "<group>"; };
+		BD9692C2219B3D45005D6D26 /* ScrollableGraphViewDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphViewDrawingLayer.swift; sourceTree = "<group>"; };
+		BD9692C3219B3D45005D6D26 /* LineDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineDrawingLayer.swift; sourceTree = "<group>"; };
+		BD9692C4219B3D45005D6D26 /* FillDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillDrawingLayer.swift; sourceTree = "<group>"; };
+		BD9692C5219B3D45005D6D26 /* ScrollableGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphView.swift; sourceTree = "<group>"; };
+		BD9692C7219B3D45005D6D26 /* ScrollableGraphViewDrawingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphViewDrawingDelegate.swift; sourceTree = "<group>"; };
+		BD9692C8219B3D45005D6D26 /* ScrollableGraphViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphViewDataSource.swift; sourceTree = "<group>"; };
+		BD9692CA219B3D45005D6D26 /* ReferenceLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLines.swift; sourceTree = "<group>"; };
+		BD9692CB219B3D45005D6D26 /* LabelPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPool.swift; sourceTree = "<group>"; };
+		BD9692CD219B3D45005D6D26 /* BarPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarPlot.swift; sourceTree = "<group>"; };
+		BD9692CF219B3D45005D6D26 /* GraphPointAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphPointAnimation.swift; sourceTree = "<group>"; };
+		BD9692D0219B3D45005D6D26 /* GraphPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphPoint.swift; sourceTree = "<group>"; };
+		BD9692D1219B3D45005D6D26 /* Plot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
+		BD9692D2219B3D45005D6D26 /* LinePlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinePlot.swift; sourceTree = "<group>"; };
+		BD9692D3219B3D45005D6D26 /* DotPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotPlot.swift; sourceTree = "<group>"; };
+		BD9692D4219B3D45005D6D26 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalChallengeDatabase.xcdatamodel; sourceTree = "<group>"; };
 		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
@@ -500,6 +540,7 @@
 			children = (
 				49AE2B172163DD4F00055136 /* FinalChallenge */,
 				BD974A4B2167F01800612838 /* FinalChallengeTests */,
+				BD9692BA219B3D45005D6D26 /* ScrollableGraphView */,
 				49AE2B162163DD4F00055136 /* Products */,
 				9CFB28AB508E1000AD315491 /* Pods */,
 				F84F77F27EDB0EC1035497DF /* Frameworks */,
@@ -648,6 +689,82 @@
 				BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */,
 			);
 			path = Bullshit;
+			sourceTree = "<group>";
+		};
+		BD9692BA219B3D45005D6D26 /* ScrollableGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				BD9692BB219B3D45005D6D26 /* LICENSE */,
+				BD9692BC219B3D45005D6D26 /* Classes */,
+				BD9692D4219B3D45005D6D26 /* README.md */,
+			);
+			name = ScrollableGraphView;
+			path = Pods/ScrollableGraphView;
+			sourceTree = "<group>";
+		};
+		BD9692BC219B3D45005D6D26 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BD9692BD219B3D45005D6D26 /* Drawing */,
+				BD9692C5219B3D45005D6D26 /* ScrollableGraphView.swift */,
+				BD9692C6219B3D45005D6D26 /* Protocols */,
+				BD9692C9219B3D45005D6D26 /* Reference */,
+				BD9692CC219B3D45005D6D26 /* Plots */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BD9692BD219B3D45005D6D26 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				BD9692BE219B3D45005D6D26 /* ReferenceLineDrawingView.swift */,
+				BD9692BF219B3D45005D6D26 /* BarDrawingLayer.swift */,
+				BD9692C0219B3D45005D6D26 /* GradientDrawingLayer.swift */,
+				BD9692C1219B3D45005D6D26 /* DotDrawingLayer.swift */,
+				BD9692C2219B3D45005D6D26 /* ScrollableGraphViewDrawingLayer.swift */,
+				BD9692C3219B3D45005D6D26 /* LineDrawingLayer.swift */,
+				BD9692C4219B3D45005D6D26 /* FillDrawingLayer.swift */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		BD9692C6219B3D45005D6D26 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BD9692C7219B3D45005D6D26 /* ScrollableGraphViewDrawingDelegate.swift */,
+				BD9692C8219B3D45005D6D26 /* ScrollableGraphViewDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BD9692C9219B3D45005D6D26 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				BD9692CA219B3D45005D6D26 /* ReferenceLines.swift */,
+				BD9692CB219B3D45005D6D26 /* LabelPool.swift */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		BD9692CC219B3D45005D6D26 /* Plots */ = {
+			isa = PBXGroup;
+			children = (
+				BD9692CD219B3D45005D6D26 /* BarPlot.swift */,
+				BD9692CE219B3D45005D6D26 /* Animation */,
+				BD9692D1219B3D45005D6D26 /* Plot.swift */,
+				BD9692D2219B3D45005D6D26 /* LinePlot.swift */,
+				BD9692D3219B3D45005D6D26 /* DotPlot.swift */,
+			);
+			path = Plots;
+			sourceTree = "<group>";
+		};
+		BD9692CE219B3D45005D6D26 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				BD9692CF219B3D45005D6D26 /* GraphPointAnimation.swift */,
+				BD9692D0219B3D45005D6D26 /* GraphPoint.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		BD974A252163F74B00612838 /* Models */ = {
@@ -1101,6 +1218,8 @@
 				BD3E3C752187804100539ADB /* Main.storyboard in Resources */,
 				BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */,
 				451A7520216D3E7600CA0760 /* Assets.xcassets in Resources */,
+				BD9692D5219B3D46005D6D26 /* LICENSE in Resources */,
+				BD9692E8219B3D46005D6D26 /* README.md in Resources */,
 				BD4E0E7B2179159700DEA2F5 /* Breathing.storyboard in Resources */,
 				BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */,
 				BDD81C402193416F00880601 /* Profile.storyboard in Resources */,
@@ -1129,14 +1248,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
-				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1228,19 +1345,24 @@
 				BD3635E6218A19FF00E4A6EA /* QuestionsHistoricRouter.swift in Sources */,
 				BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 				BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */,
+				BD9692E3219B3D46005D6D26 /* GraphPointAnimation.swift in Sources */,
 				450ED4C52177ABA700195CAE /* Constants.swift in Sources */,
+				BD9692E7219B3D46005D6D26 /* DotPlot.swift in Sources */,
 				BDD81C4C2193503300880601 /* UserProfileCell.swift in Sources */,
 				BD290C44216D3085001F16EA /* DissertationAnswersDAO.swift in Sources */,
 				BD290C48216D33C6001F16EA /* RadioboxAnswerDAO.swift in Sources */,
 				BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */,
 				BD290C2E216D15E0001F16EA /* RadioboxQuestionDAO.swift in Sources */,
+				BD9692D7219B3D46005D6D26 /* BarDrawingLayer.swift in Sources */,
 				BD3635E8218A19FF00E4A6EA /* QuestionsHistoricInteractor.swift in Sources */,
 				BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */,
+				BD9692DF219B3D46005D6D26 /* ScrollableGraphViewDataSource.swift in Sources */,
 				BD3E3C5C2183AE0900539ADB /* BreathingProtocols.swift in Sources */,
 				BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */,
 				BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
 				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
+				BD9692DC219B3D46005D6D26 /* FillDrawingLayer.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
 				BDD81C5921949E8100880601 /* EmotionChartDTO.swift in Sources */,
@@ -1261,7 +1383,9 @@
 				453953F721766D0F00CF71EC /* DailyQuestionRouter.swift in Sources */,
 				BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
 				BDAF3AC5218B82D900EFD2A9 /* QuestionAnswersInteractor.swift in Sources */,
+				BD9692D9219B3D46005D6D26 /* DotDrawingLayer.swift in Sources */,
 				BD290C06216BE6EF001F16EA /* RadioboxAnswer+CoreDataProperties.swift in Sources */,
+				BD9692D8219B3D46005D6D26 /* GradientDrawingLayer.swift in Sources */,
 				45A5C8462191F68900332E94 /* DissertationAnswerTableViewCell.swift in Sources */,
 				BD3635E7218A19FF00E4A6EA /* QuestionsHistoricProtocols.swift in Sources */,
 				BD3635E5218A19FF00E4A6EA /* QuestionsHistoricPresenter.swift in Sources */,
@@ -1269,17 +1393,22 @@
 				453953F621766D0F00CF71EC /* DailyQuestionPresenter.swift in Sources */,
 				BD3E3C772187804100539ADB /* MainRouter.swift in Sources */,
 				BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */,
+				BD9692E4219B3D46005D6D26 /* GraphPoint.swift in Sources */,
 				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
 				BD3E3C762187804100539ADB /* MainPresenter.swift in Sources */,
 				BDD81C6521961ED100880601 /* ChartDisplayOptions.swift in Sources */,
+				BD9692E5219B3D46005D6D26 /* Plot.swift in Sources */,
+				BD9692E1219B3D46005D6D26 /* LabelPool.swift in Sources */,
 				453953FA21766D0F00CF71EC /* DailyQuestionView.swift in Sources */,
 				BD3E3C5A2183AE0900539ADB /* BreathingPresenter.swift in Sources */,
 				BD290C18216BE6EF001F16EA /* MoodType+CoreDataClass.swift in Sources */,
+				BD9692DA219B3D46005D6D26 /* ScrollableGraphViewDrawingLayer.swift in Sources */,
 				BD290C26216BE6EF001F16EA /* Question+CoreDataProperties.swift in Sources */,
 				458F8FEF2190A1E6009F31A8 /* AnswerQuestionPresenter.swift in Sources */,
 				458F8FF32190A1E6009F31A8 /* AnswerQuestionView.swift in Sources */,
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
+				BD9692E6219B3D46005D6D26 /* LinePlot.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
 				BDD81C452193416F00880601 /* ProfileView.swift in Sources */,
@@ -1290,6 +1419,7 @@
 				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */,
+				BD9692DB219B3D46005D6D26 /* LineDrawingLayer.swift in Sources */,
 				BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,
 				BD3635E9218A19FF00E4A6EA /* QuestionsHistoricView.swift in Sources */,
@@ -1301,14 +1431,16 @@
 				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
 				458F8FF02190A1E6009F31A8 /* AnswerQuestionRouter.swift in Sources */,
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
+				BD9692E0219B3D46005D6D26 /* ReferenceLines.swift in Sources */,
 				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */,
 				BD3635F8218A387B00E4A6EA /* QuestionsCategoryViewObject.swift in Sources */,
+				BD9692DE219B3D46005D6D26 /* ScrollableGraphViewDrawingDelegate.swift in Sources */,
 				BD290C52216E9764001F16EA /* DaySummaryTableViewController.swift in Sources */,
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */,
-				4943FDD82165355600FE2045 /* (null) in Sources */,
+				4943FDD82165355600FE2045 /* BuildFile in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,
@@ -1316,8 +1448,11 @@
 				BDAF3ACC218B87C000EFD2A9 /* QuestionTextCell.swift in Sources */,
 				4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,
+				BD9692E2219B3D46005D6D26 /* BarPlot.swift in Sources */,
 				BD290C1A216BE6EF001F16EA /* MoodType+CoreDataProperties.swift in Sources */,
 				494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */,
+				BD9692DD219B3D46005D6D26 /* ScrollableGraphView.swift in Sources */,
+				BD9692D6219B3D46005D6D26 /* ReferenceLineDrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1500,7 +1635,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1519,7 +1654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

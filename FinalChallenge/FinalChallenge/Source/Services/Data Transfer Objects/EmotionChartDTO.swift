@@ -10,13 +10,16 @@ import Foundation
 
 class EmotionChartDTO {
     
+    var chartTitle: String
     var values: [EmotionChartPlot]
     var rangeMin: Double
     var rangeMax: Double
     
-    init(moods: [MoodInput], possible moodTypes: [MoodType]) {
+    init(chartTitle: String, moods: [MoodInput], possible moodTypes: [MoodType]) {
         
         // Setting up mood types to values
+        self.chartTitle = chartTitle
+        
         var moodTypesValues: [MoodTypeValues] = []
         var i: Double = 0.0
         for type in moodTypes {
@@ -48,8 +51,10 @@ class EmotionChartDTO {
             // Instantiating the value
             let value = moodTypesValues.filter({ greatestValue == $0.moodType }).first!.value
             let dateString = formatter.string(from: v[0].date! as Date)
-            self.values.append(EmotionChartPlot(value: value, label: dateString))
+            self.values.append(EmotionChartPlot(value: value, label: dateString, date: v[0].date! as Date))
         })
+        
+        self.values.sort(by: { $0.date <= $1.date })
         
     }
     
@@ -63,4 +68,5 @@ class EmotionChartDTO {
 struct EmotionChartPlot {
     var value: Double
     var label: String
+    var date: Date
 }

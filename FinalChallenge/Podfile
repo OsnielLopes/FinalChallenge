@@ -9,7 +9,6 @@ target 'FinalChallenge' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'Hero'
-  pod 'ScrollableGraphView'
 
   target 'FinalChallengeTests' do
     inherit! :search_paths

@@ -22,7 +22,8 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
     // MARK: - ProfilePresenterInputProtocol
     func fetchInputedEmotions(withOption option: ChartDisplayOptions) {
         self.view.showLoadInputedMoodsData(true)
-        self.interactor.fetchInputedMoods(sinceDate: Calendar.current.date(byAdding: .day, value: -1 * option.rawValue, to: Date())!)
+        let date = Calendar.current.date(byAdding: .day, value: -1 * option.rawValue, to: Date())!
+        self.interactor.fetchInputedMoods(sinceDate: date)
     }
     
     func fetchGuessedEmotions(sinceDate: Date) {

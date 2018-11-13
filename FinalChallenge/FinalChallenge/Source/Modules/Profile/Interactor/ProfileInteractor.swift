@@ -25,7 +25,7 @@ class ProfileInteractor: NSObject, ProfileInteractorInputProtocol {
         
         let didFinishFetching = {
             if didFinishFetchingMoods && didFinishFetchingTypes {
-                self.inputedMoodChartData = EmotionChartDTO(moods: moods, possible: types)
+                self.inputedMoodChartData = EmotionChartDTO(chartTitle: "Inputed Moods", moods: moods, possible: types)
                 self.output.handleSuccessFetchedInputedMood(with: self.inputedMoodChartData!)
             }
         }

@@ -44,6 +44,7 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         
         self.graphView?.removeFromSuperview()
         
+        self.chartTitleLabel.text = data.chartTitle
         self.data = data
         
         self.graphView = ScrollableGraphView(frame: CGRect(origin: CGPoint.zero, size: self.chartView.frame.size))
@@ -55,23 +56,30 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         self.graphView!.direction = .rightToLeft
         self.graphView!.contentOffset.x = self.graphView!.contentSize.width - self.graphView!.layer.frame.size.width
         self.graphView!.contentOffset.y = 0
+        self.graphView!.leftmostPointPadding = 0
+        self.graphView!.rightmostPointPadding = 20
+        self.graphView!.shouldAnimateOnStartup = true
         
         let linePlot = LinePlot(identifier: "LinePlot")
-        linePlot.lineStyle = ScrollableGraphViewLineStyle.smooth
+        linePlot.lineStyle = .smooth
+        linePlot.animationDuration = 0.5
+        linePlot.adaptAnimationType = .easeOut
         
         let referenceLines = ReferenceLines()
         referenceLines.referenceLinePosition = .right
-        referenceLines.shouldShowLabels = false
-        
+        referenceLines.shouldShowLabels = true
+        referenceLines.positionType = .absolute
+        referenceLines.includeMinMax = false
         
         self.graphView!.addPlot(plot: linePlot)
         self.graphView!.addReferenceLines(referenceLines: referenceLines)
         
-        self.graphView!.rightmostPointPadding = 0.0
         self.chartView!.addSubview(self.graphView!)
+        
     }
     
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
+        
         return self.data!.values[pointIndex].value
     }
     

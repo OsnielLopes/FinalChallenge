@@ -124,7 +124,7 @@ class MoodDAO {
     
     func fetchSinceDay(_ day: Date, completion: @escaping ([MoodInput]?, DataAccessError?) -> (Void)) {
         self.fetchAll(completion: { moodInputs, err in
-            completion(moodInputs?.filter({ day <= $0.date! as Date }), err)
+            completion(moodInputs?.filter({ day < $0.date! as Date }), err)
         })
     }
     
