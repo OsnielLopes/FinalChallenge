@@ -66,7 +66,6 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     func didFetchInputedMoodsData(_ results: EmotionChartDTO) {
         self.inputedMoodsCell?.setChart(forData: results)
-        self.inputedMoodsCell?.layoutSubviews()
     }
     
     func didFetchGuessedEmotions(_ results: EmotionChartDTO) {
@@ -100,6 +99,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
                 return UITableViewCell()
             }
             self.inputedMoodsCell = emotionsChartCell
+            self.inputedMoodsCell!.profileView = self
             self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
             return emotionsChartCell
         default:
@@ -118,6 +118,12 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
         default:
             return UITableView.automaticDimension
         }
+    }
+    
+    // MARK: - Public methods
+    
+    func fetchInputedEmotions(with option: ChartDisplayOptions) {
+        self.presenter.fetchInputedEmotions(withOption: option)
     }
 
 	// MARK: - Private Methods

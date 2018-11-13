@@ -19,6 +19,7 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     // MARK: - Properties
     var graphView: ScrollableGraphView?
     var data: EmotionChartDTO?
+    var profileView: ProfileView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,10 +29,6 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-        
     func getSelectedDisplayOption() -> ChartDisplayOptions {
         switch self.segmentedControlShowOptions.selectedSegmentIndex {
         case 0:
@@ -59,7 +56,7 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         self.graphView!.direction = .rightToLeft
         self.graphView!.contentOffset.x = self.graphView!.contentSize.width - self.graphView!.layer.frame.size.width
         self.graphView!.contentOffset.y = 0
-        self.graphView!.leftmostPointPadding = 0
+        self.graphView!.leftmostPointPadding = 25
         self.graphView!.rightmostPointPadding = 50
         self.graphView!.shouldAnimateOnStartup = true
         self.graphView!.dataPointSpacing = 60
@@ -108,5 +105,8 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     func numberOfPoints() -> Int {
         return self.data!.values.count
     }
-
+    @IBAction func didChangeSegmentControl(_ sender: UISegmentedControl) {
+        self.profileView.fetchInputedEmotions(with: self.getSelectedDisplayOption())
+    }
+    
 }

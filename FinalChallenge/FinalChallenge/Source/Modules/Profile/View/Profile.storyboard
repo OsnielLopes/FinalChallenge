@@ -175,6 +175,9 @@
                                                                 <segment title="Month"/>
                                                             </segments>
                                                             <color key="tintColor" name="color-yellow"/>
+                                                            <connections>
+                                                                <action selector="didChangeSegmentControl:" destination="p14-sg-jom" eventType="valueChanged" id="gXY-JP-j6Z"/>
+                                                            </connections>
                                                         </segmentedControl>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
