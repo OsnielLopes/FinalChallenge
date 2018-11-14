@@ -8,10 +8,18 @@
 
 import Foundation
 
-struct StatisticsDTO {
+class StatisticsDTO {
     
-    let daysInARow: Int
-    let questionsAnswered: Int
-    let moodsInputed: Int
+    var user: User
+    var daysInARow: Int
+    var questionsAnswered: Int
+    var moodsInputed: Int
+    
+    init(user: User, daysInARow: Int, questionsAnswered: Int, moodsInputed: Int) {
+        self.user = user
+        self.daysInARow = daysInARow
+        self.questionsAnswered = questionsAnswered
+        self.moodsInputed = moodsInputed
+    }
     
 }

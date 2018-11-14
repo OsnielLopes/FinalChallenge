@@ -2,7 +2,7 @@
 //  User+CoreDataClass.swift
 //  FinalChallenge
 //
-//  Created by Guilherme Paciulli on 13/11/18.
+//  Created by Guilherme Paciulli on 14/11/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 //

@@ -119,8 +119,6 @@
 		BD969310219B3E3A005D6D26 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692FE219B3E3A005D6D26 /* Plot.swift */; };
 		BD969311219B3E3A005D6D26 /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692FF219B3E3A005D6D26 /* LinePlot.swift */; };
 		BD969312219B3E3A005D6D26 /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD969300219B3E3A005D6D26 /* DotPlot.swift */; };
-		BD969315219B6313005D6D26 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD969313219B6313005D6D26 /* User+CoreDataClass.swift */; };
-		BD969316219B6313005D6D26 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD969314219B6313005D6D26 /* User+CoreDataProperties.swift */; };
 		BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD9749F22163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld */; };
 		BD974A3721654E3800612838 /* DataAccessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A3621654E3800612838 /* DataAccessError.swift */; };
 		BD974A39216681F200612838 /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A38216681F100612838 /* QuestionDAO.swift */; };
@@ -155,6 +153,10 @@
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
 		BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */; };
 		BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */; };
+		BDE84942219C76B700603B97 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84941219C76B700603B97 /* UserDAO.swift */; };
+		BDE84945219C7B0100603B97 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84943219C7B0100603B97 /* User+CoreDataClass.swift */; };
+		BDE84946219C7B0100603B97 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84944219C7B0100603B97 /* User+CoreDataProperties.swift */; };
+		BDE84948219C97BB00603B97 /* StatisticsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84947219C97BB00603B97 /* StatisticsFactory.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -287,8 +289,6 @@
 		BD9692FE219B3E3A005D6D26 /* Plot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
 		BD9692FF219B3E3A005D6D26 /* LinePlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinePlot.swift; sourceTree = "<group>"; };
 		BD969300219B3E3A005D6D26 /* DotPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotPlot.swift; sourceTree = "<group>"; };
-		BD969313219B6313005D6D26 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BD969314219B6313005D6D26 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BD9749F32163E4E200612838 /* FinalChallengeDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalChallengeDatabase.xcdatamodel; sourceTree = "<group>"; };
 		BD974A262163FD4600612838 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		BD974A3621654E3800612838 /* DataAccessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessError.swift; sourceTree = "<group>"; };
@@ -326,6 +326,10 @@
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
 		BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryInteractor.swift; sourceTree = "<group>"; };
 		BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryRouter.swift; sourceTree = "<group>"; };
+		BDE84941219C76B700603B97 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		BDE84943219C7B0100603B97 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDE84944219C7B0100603B97 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDE84947219C97BB00603B97 /* StatisticsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsFactory.swift; sourceTree = "<group>"; };
 		C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6C0D3FE9A09DAE3E9ADCF /* Pods-FinalChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -508,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				BD974A282163FD4C00612838 /* Managers */,
+				BDE84949219C97C200603B97 /* Factories */,
 				BDD81C5521949AE600880601 /* Data Transfer Objects */,
 				BD974A3521654B4100612838 /* Data Access Objects */,
 			);
@@ -759,8 +764,8 @@
 		BD974A252163F74B00612838 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BD969313219B6313005D6D26 /* User+CoreDataClass.swift */,
-				BD969314219B6313005D6D26 /* User+CoreDataProperties.swift */,
+				BDE84943219C7B0100603B97 /* User+CoreDataClass.swift */,
+				BDE84944219C7B0100603B97 /* User+CoreDataProperties.swift */,
 				BD290BE4216BE6EF001F16EA /* Author+CoreDataClass.swift */,
 				BD290BE5216BE6EF001F16EA /* Author+CoreDataProperties.swift */,
 				BD290BF4216BE6EF001F16EA /* Category+CoreDataClass.swift */,
@@ -786,6 +791,7 @@
 			isa = PBXGroup;
 			children = (
 				BD974A3621654E3800612838 /* DataAccessError.swift */,
+				BDE84941219C76B700603B97 /* UserDAO.swift */,
 				BD974A742167F4F700612838 /* CategoryDAO.swift */,
 				BD290C36216D1B60001F16EA /* AuthorDAO.swift */,
 				BD290C49216D352D001F16EA /* MoodDAO.swift */,
@@ -1104,6 +1110,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BDE84949219C97C200603B97 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BDE84947219C97BB00603B97 /* StatisticsFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		F84F77F27EDB0EC1035497DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1382,12 +1396,12 @@
 				453953F621766D0F00CF71EC /* DailyQuestionPresenter.swift in Sources */,
 				BD3E3C772187804100539ADB /* MainRouter.swift in Sources */,
 				BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */,
+				BDE84946219C7B0100603B97 /* User+CoreDataProperties.swift in Sources */,
 				BD96930F219B3E3A005D6D26 /* GraphPoint.swift in Sources */,
 				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
 				BD3E3C762187804100539ADB /* MainPresenter.swift in Sources */,
 				BDD81C6521961ED100880601 /* ChartDisplayOptions.swift in Sources */,
-				BD969315219B6313005D6D26 /* User+CoreDataClass.swift in Sources */,
 				BD969310219B3E3A005D6D26 /* Plot.swift in Sources */,
 				BD96930C219B3E3A005D6D26 /* LabelPool.swift in Sources */,
 				453953FA21766D0F00CF71EC /* DailyQuestionView.swift in Sources */,
@@ -1398,12 +1412,12 @@
 				458F8FEF2190A1E6009F31A8 /* AnswerQuestionPresenter.swift in Sources */,
 				458F8FF32190A1E6009F31A8 /* AnswerQuestionView.swift in Sources */,
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
-				BD969316219B6313005D6D26 /* User+CoreDataProperties.swift in Sources */,
 				BD969311219B3E3A005D6D26 /* LinePlot.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
 				BDD81C452193416F00880601 /* ProfileView.swift in Sources */,
 				BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
+				BDE84942219C76B700603B97 /* UserDAO.swift in Sources */,
 				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
 				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
@@ -1423,6 +1437,7 @@
 				458F8FF02190A1E6009F31A8 /* AnswerQuestionRouter.swift in Sources */,
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD96930B219B3E3A005D6D26 /* ReferenceLines.swift in Sources */,
+				BDE84945219C7B0100603B97 /* User+CoreDataClass.swift in Sources */,
 				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */,
 				BD3635F8218A387B00E4A6EA /* QuestionsCategoryViewObject.swift in Sources */,
@@ -1434,6 +1449,7 @@
 				4943FDD82165355600FE2045 /* (null) in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
+				BDE84948219C97BB00603B97 /* StatisticsFactory.swift in Sources */,
 				49AE2B2D2163DF1900055136 /* CalendarViewController.swift in Sources */,
 				BDAF3AC3218B82D900EFD2A9 /* QuestionAnswersRouter.swift in Sources */,
 				BDAF3ACC218B87C000EFD2A9 /* QuestionTextCell.swift in Sources */,

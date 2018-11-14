@@ -59,7 +59,10 @@ class ProfileInteractor: NSObject, ProfileInteractorInputProtocol {
     }
     
     func fetchStatistics() {
-        fatalError()
+        let didFinishFetchingUser = false
+        let didFinishFetchingDaysInARow = false
+        
+        
     }
 
     // MARK: - Private Methods

@@ -12,8 +12,10 @@ class UserProfileCell: UITableViewCell {
     
     // MARK: - IBOutlets
     @IBOutlet weak var userProfileImage: UIImageView!
-    @IBOutlet weak var statisticsView: UIView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var statisticsView: UIView!
     @IBOutlet weak var daysInRowLabel: UILabel!
     @IBOutlet weak var questionsAnsweredLabel: UILabel!
     @IBOutlet weak var moodsInputedLabel: UILabel!
@@ -32,11 +34,10 @@ class UserProfileCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setUsername(_ user: User) {
-        
-    }
-    
     func setStatistics(_ stats: StatisticsDTO) {
+        self.userProfileImage.image = stats.user.getProfileIcon()
+        self.usernameLabel.text = stats.user.name!
+        self.backgroundImage.image = stats.user.getbackgroundImage()
         self.daysInRowLabel.text = "\(stats.daysInARow)"
         self.questionsAnsweredLabel.text = "\(stats.questionsAnswered)"
         self.moodsInputedLabel.text = "\(stats.moodsInputed)"

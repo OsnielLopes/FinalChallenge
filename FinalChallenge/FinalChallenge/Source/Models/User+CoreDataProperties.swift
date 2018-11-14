@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  FinalChallenge
 //
-//  Created by Guilherme Paciulli on 13/11/18.
+//  Created by Guilherme Paciulli on 14/11/18.
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 //
@@ -20,13 +20,22 @@ extension User {
 
     @NSManaged public var name: String?
     @NSManaged public var profileIcon: NSData?
-    
-    func set(image: UIImage) {
-        self.profileIcon = NSData(data: image.jpegData(compressionQuality: 1)!)
+    @NSManaged public var backgroundImage: NSData?
+
+    func set(profileIcon: UIImage) {
+        self.profileIcon = NSData(data: profileIcon.jpegData(compressionQuality: 1)!)
     }
     
-    func getImage() -> UIImage {
+    func getProfileIcon() -> UIImage {
         return UIImage(data: self.profileIcon! as Data)!
     }
-
+    
+    func set(backgroundImage: UIImage) {
+        self.profileIcon = NSData(data: backgroundImage.jpegData(compressionQuality: 1)!)
+    }
+    
+    func getbackgroundImage() -> UIImage {
+        return UIImage(data: self.profileIcon! as Data)!
+    }
+    
 }
