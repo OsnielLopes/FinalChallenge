@@ -27,17 +27,10 @@ protocol ProfileInteractorInputProtocol {
 // MARK: - Presenter
 protocol ProfilePresenterInputProtocol: class {
     
-    // MARK: - Fetches
     func fetchInputedEmotions(withOption option: ChartDisplayOptions)
     func fetchGuessedEmotions(sinceDate: Date)
     func fetchMindfullnessTime(sinceDate: Date)
     func fetchStatistics()
-    
-    // MARK: Getters
-    func getStatistics() -> StatisticsDTO
-    func getInputedEmotions() -> EmotionChartDTO
-    func getGuessedEmotions() -> EmotionChartDTO
-    func getMindfullnessTime() -> [MindfullnessTimeDTO]
 }
 
 protocol ProfileInteractorOutputProtocol: class {

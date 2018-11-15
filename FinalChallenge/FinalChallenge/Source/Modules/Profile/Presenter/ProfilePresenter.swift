@@ -36,23 +36,7 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
     }
     
     func fetchStatistics() {
-        fatalError()
-    }
-    
-    func getStatistics() -> StatisticsDTO {
-        fatalError()
-    }
-    
-    func getInputedEmotions() -> EmotionChartDTO {
-        fatalError()
-    }
-    
-    func getGuessedEmotions() -> EmotionChartDTO {
-        fatalError()
-    }
-    
-    func getMindfullnessTime() -> [MindfullnessTimeDTO] {
-        fatalError()
+        self.interactor.fetchStatistics()
     }
 
     // MARK: - ProfilePresenterInteractorOutputProtocol

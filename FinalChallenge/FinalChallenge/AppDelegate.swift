@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !UserDefaults.standard.bool(forKey: Project.UserSettings.appHasBeenUsed.rawValue) {
             QuestionsManager.shared.createAllQuestions()
             UserDefaults.standard.set(true, forKey: Project.UserSettings.appHasBeenUsed.rawValue)
+            
+            UserDAO.shared.create(name: "Ernesto Capivara", profilePicture: #imageLiteral(resourceName: "eu2.jpg"), backgroundImage: #imageLiteral(resourceName: "_MG_1711.jpg"), completion: { _, _ in
+                
+            })
+            
         }
         
         let router = MainRouter()

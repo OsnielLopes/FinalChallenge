@@ -71,6 +71,7 @@ class StatisticsFactory {
             }
             daysInARow = days
             questionsAnswered = answeredQuestions.count
+            finishedWithSuccess()
         })
         
         MoodDAO.shared.fetchAll(completion: { fetchedMoodInputs, err in

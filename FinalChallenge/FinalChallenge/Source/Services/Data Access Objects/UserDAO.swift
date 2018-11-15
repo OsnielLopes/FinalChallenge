@@ -12,12 +12,15 @@ import UIKit
 class UserDAO {
     
     static let shared = UserDAO()
+
+    private var sampleProfilePicture: UIImage
     
-    private let sampleProfilePicture = #imageLiteral(resourceName: "28167931_1641063465928857_3390759292742189419_n.jpg")
+    private var sampleBackgroundImage: UIImage
     
-    private let sampleBackgroundImage = #imageLiteral(resourceName: "_MG_0411.jpg")
-    
-    private init() {}
+    private init() {
+        self.sampleProfilePicture = UIImage(named: "user-placeholder")!
+        self.sampleBackgroundImage = UIImage(named: "bg1")!
+    }
     
     func fetch(completion: @escaping (User?, DataAccessError?) -> ()) {
         if let user = CoreDataManager.shared.fetch(User.self)?.first {
