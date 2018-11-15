@@ -18,6 +18,7 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
     // MARK: - Properties
     var inputedMoodEmotionChartDTO: EmotionChartDTO?
     var guessedMoodEmotionChartDTO: EmotionChartDTO?
+    var statistics: StatisticsDTO?
 
     // MARK: - ProfilePresenterInputProtocol
     func fetchInputedEmotions(withOption option: ChartDisplayOptions) {
@@ -91,8 +92,9 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
         fatalError()
     }
     
-    func handleFailureFetchedStatistics(with message: String) {
-        fatalError()
+    func handleFailureFetchedStatistics(with message: [String]) {
+        self.view.showLoadStatistics(false)
+        self.statistics = nil
     }
 
 	// MARK: - Private Methods

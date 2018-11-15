@@ -22,22 +22,66 @@ class StatisticsFactory {
         var errors: [DataAccessError] = []
 
         var didFinishFetchingUser = false
-        var didFinishFetchingDaysInARow = false
-        var didFinishFetchingQuestionsAnswered = false
+        var didFinishFetchingAnswers = false
         var didFinishFetchingMoodsInputed = false
         
-        let finish = {
-            if didFinishFetchingUser && didFinishFetchingDaysInARow && didFinishFetchingQuestionsAnswered && didFinishFetchingMoodsInputed {
+        let finishedWithSuccess = {
+            if didFinishFetchingUser && didFinishFetchingAnswers && didFinishFetchingMoodsInputed {
                 completion(StatisticsDTO(user: user, daysInARow: daysInARow, questionsAnswered: questionsAnswered, moodsInputed: moodsInputed), nil)
             }
         }
         
+        let finishedWithFailure = {
+            if didFinishFetchingUser && didFinishFetchingAnswers && didFinishFetchingMoodsInputed {
+                completion(nil, errors)
+            }
+        }
+        
         UserDAO.shared.fetch(completion: { fetchedUser, err in
+            didFinishFetchingUser = true
             guard let fetchedUser = fetchedUser, err == nil else {
                 errors.append(err!)
+                finishedWithFailure()
                 return
             }
             user = fetchedUser
+            finishedWithSuccess()
+        })
+        
+        AnswerDAO.shared.fetchAll(completion: { fetchedAnswers, err in
+            didFinishFetchingAnswers = true
+            guard var fetchedAnswers = fetchedAnswers, err == nil else {
+                errors.append(err!)
+                finishedWithFailure()
+                return
+            }
+            var answeredQuestions: [Question] = []
+            fetchedAnswers.sort(by: { $0.date! as Date > $1.date! as Date })
+            var days = 0
+            for a in fetchedAnswers {
+                let comparableDate = Calendar.current.date(byAdding: .day, value: -1 * days, to: Date())!
+                if Calendar.current.isDate(a.date! as Date, inSameDayAs: comparableDate) {
+                    days += 1
+                } else {
+                    break
+                }
+                if !answeredQuestions.contains(a.question!) {
+                    answeredQuestions.append(a.question!)
+                }
+            }
+            daysInARow = days
+            questionsAnswered = answeredQuestions.count
+        })
+        
+        MoodDAO.shared.fetchAll(completion: { fetchedMoodInputs, err in
+            didFinishFetchingMoodsInputed = true
+            guard let fetchedMoodInputs = fetchedMoodInputs, err == nil else {
+                errors.append(err!)
+                finishedWithFailure()
+                return
+            }
+            moodsInputed = fetchedMoodInputs.count
+            finishedWithSuccess()
         })
         
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableViewDelegate, UITableViewDataSource {
+    
 
 	// MARK: - Viper Module Properties
 	var presenter: ProfilePresenterInputProtocol!
@@ -45,9 +46,15 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     }
 
     // MARK: - ProfilePresenterOutputProtocol
+    
     func showError(message: String) {
         //FIXME: present the error message on view!
     }
+    
+    func showErrors(message: [String]) {
+        //FIXME: present the error message on view!
+    }
+    
     func showLoadInputedMoodsData(_ loading: Bool) {
         //FIXME: add activity controll on view if loading is true, otherwise, remove loading
     }
@@ -77,7 +84,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     }
     
     func didFetchStatistics(_ results: StatisticsDTO) {
-        fatalError()
+        self.userProfileCell?.setStatistics(results)
     }
     
     // MARK: - UITableViewDataSource
@@ -93,6 +100,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
                 return UITableViewCell()
             }
             self.userProfileCell = userProfileCell
+            self.presenter.fetchStatistics()
             return userProfileCell
         case 1:
             guard let emotionsChartCell = tableView.dequeueReusableCell(withIdentifier: self.emotionsChartCell, for: indexPath) as? EmotionsChartCell else {

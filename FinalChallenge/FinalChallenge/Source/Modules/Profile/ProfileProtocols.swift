@@ -51,12 +51,13 @@ protocol ProfileInteractorOutputProtocol: class {
     func handleFailureFetchedMindfullnessTime(with message: String)
     
     func handleSuccessFetchedStatistics(with results: StatisticsDTO)
-    func handleFailureFetchedStatistics(with message: String)
+    func handleFailureFetchedStatistics(with message: [String])
 }
 
 // MARK: - View
 protocol ProfilePresenterOutputProtocol: class {
     func showError(message: String)
+    func showErrors(message: [String])
     
     func showLoadInputedMoodsData(_ loading: Bool)
     func showLoadGuessedEmotions(_ loading: Bool)

@@ -59,10 +59,13 @@ class ProfileInteractor: NSObject, ProfileInteractorInputProtocol {
     }
     
     func fetchStatistics() {
-        let didFinishFetchingUser = false
-        let didFinishFetchingDaysInARow = false
-        
-        
+        StatisticsFactory.shared.generateStatistics(completion: { fetchedStats, error in
+            guard let stats = fetchedStats, error == nil else {
+                self.output.handleFailureFetchedStatistics(with: error!.map({ $0.message }))
+                return
+            }
+            self.output.handleSuccessFetchedStatistics(with: stats)
+        })
     }
 
     // MARK: - Private Methods
