@@ -21,40 +21,39 @@ class StatisticsFactory {
         var moodsInputed: Int!
         var errors: [DataAccessError] = []
 
-        var didFinishFetchingUser = false
-        var didFinishFetchingAnswers = false
-        var didFinishFetchingMoodsInputed = false
+        var didFinishFetchingUserSucc = false
+        var didFinishFetchingAnswersSucc = false
+        var didFinishFetchingMoodsInputedSucc = false
         
         let finishedWithSuccess = {
-            if didFinishFetchingUser && didFinishFetchingAnswers && didFinishFetchingMoodsInputed {
+            if didFinishFetchingUserSucc && didFinishFetchingAnswersSucc && didFinishFetchingMoodsInputedSucc {
                 completion(StatisticsDTO(user: user, daysInARow: daysInARow, questionsAnswered: questionsAnswered, moodsInputed: moodsInputed), nil)
             }
         }
         
         let finishedWithFailure = {
-            if didFinishFetchingUser && didFinishFetchingAnswers && didFinishFetchingMoodsInputed {
-                completion(nil, errors)
-            }
+            completion(nil, errors)
         }
         
         UserDAO.shared.fetch(completion: { fetchedUser, err in
-            didFinishFetchingUser = true
-            guard let fetchedUser = fetchedUser, err == nil else {
+            guard let fUser = fetchedUser, err == nil else {
                 errors.append(err!)
                 finishedWithFailure()
                 return
             }
-            user = fetchedUser
+            didFinishFetchingUserSucc = true
+            user = fUser
             finishedWithSuccess()
         })
         
         AnswerDAO.shared.fetchAll(completion: { fetchedAnswers, err in
-            didFinishFetchingAnswers = true
             guard var fetchedAnswers = fetchedAnswers, err == nil else {
                 errors.append(err!)
                 finishedWithFailure()
                 return
             }
+            didFinishFetchingAnswersSucc = true
+
             var answeredQuestions: [Question] = []
             fetchedAnswers.sort(by: { $0.date! as Date > $1.date! as Date })
             var days = 0
@@ -75,12 +74,13 @@ class StatisticsFactory {
         })
         
         MoodDAO.shared.fetchAll(completion: { fetchedMoodInputs, err in
-            didFinishFetchingMoodsInputed = true
             guard let fetchedMoodInputs = fetchedMoodInputs, err == nil else {
                 errors.append(err!)
                 finishedWithFailure()
                 return
             }
+            didFinishFetchingMoodsInputedSucc = true
+
             moodsInputed = fetchedMoodInputs.count
             finishedWithSuccess()
         })

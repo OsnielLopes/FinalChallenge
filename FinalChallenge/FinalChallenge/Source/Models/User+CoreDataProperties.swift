@@ -31,11 +31,11 @@ extension User {
     }
     
     func set(backgroundImage: UIImage) {
-        self.profileIcon = NSData(data: backgroundImage.jpegData(compressionQuality: 1)!)
+        self.backgroundImage = NSData(data: backgroundImage.jpegData(compressionQuality: 1)!)
     }
     
     func getbackgroundImage() -> UIImage {
-        return UIImage(data: self.profileIcon! as Data)!
+        return UIImage(data: self.backgroundImage! as Data)!
     }
     
 }

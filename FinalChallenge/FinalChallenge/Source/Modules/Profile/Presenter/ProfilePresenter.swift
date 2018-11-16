@@ -73,7 +73,9 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
     }
     
     func handleSuccessFetchedStatistics(with results: StatisticsDTO) {
-        fatalError()
+        self.view.showLoadStatistics(false)
+        self.statistics = results
+        self.view.didFetchStatistics(results)
     }
     
     func handleFailureFetchedStatistics(with message: [String]) {
