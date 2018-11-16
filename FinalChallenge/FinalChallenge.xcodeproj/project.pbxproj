@@ -102,6 +102,8 @@
 		BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
 		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
 		BD693C07219E5B7800C3E5F5 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693C06219E5B7800C3E5F5 /* HealthKitManager.swift */; };
+		BD693C0D219F62A200C3E5F5 /* EmotionChartDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693C0C219F62A100C3E5F5 /* EmotionChartDTO.swift */; };
+		BD693C0F219F633000C3E5F5 /* MindfullnessTimeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693C0E219F633000C3E5F5 /* MindfullnessTimeFactory.swift */; };
 		BD969301219B3E3A005D6D26 /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692EB219B3E3A005D6D26 /* ReferenceLineDrawingView.swift */; };
 		BD969302219B3E3A005D6D26 /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692EC219B3E3A005D6D26 /* BarDrawingLayer.swift */; };
 		BD969303219B3E3A005D6D26 /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692ED219B3E3A005D6D26 /* GradientDrawingLayer.swift */; };
@@ -147,7 +149,6 @@
 		BDD81C4E219394ED00880601 /* EmotionsChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */; };
 		BDD81C5421949AC300880601 /* StatisticsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5321949AC300880601 /* StatisticsDTO.swift */; };
 		BDD81C5721949BC400880601 /* MindfullnessTimeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */; };
-		BDD81C5921949E8100880601 /* EmotionChartDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5821949E8100880601 /* EmotionChartDTO.swift */; };
 		BDD81C6521961ED100880601 /* ChartDisplayOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C6421961ED100880601 /* ChartDisplayOptions.swift */; };
 		BDE4682F2180F6DD002BDE93 /* DaySummary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */; };
 		BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */; };
@@ -273,6 +274,8 @@
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
 		BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
 		BD693C06219E5B7800C3E5F5 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		BD693C0C219F62A100C3E5F5 /* EmotionChartDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionChartDTO.swift; sourceTree = "<group>"; };
+		BD693C0E219F633000C3E5F5 /* MindfullnessTimeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfullnessTimeFactory.swift; sourceTree = "<group>"; };
 		BD9692EB219B3E3A005D6D26 /* ReferenceLineDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLineDrawingView.swift; sourceTree = "<group>"; };
 		BD9692EC219B3E3A005D6D26 /* BarDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDrawingLayer.swift; sourceTree = "<group>"; };
 		BD9692ED219B3E3A005D6D26 /* GradientDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientDrawingLayer.swift; sourceTree = "<group>"; };
@@ -321,7 +324,6 @@
 		BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsChartCell.swift; sourceTree = "<group>"; };
 		BDD81C5321949AC300880601 /* StatisticsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDTO.swift; sourceTree = "<group>"; };
 		BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfullnessTimeDTO.swift; sourceTree = "<group>"; };
-		BDD81C5821949E8100880601 /* EmotionChartDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionChartDTO.swift; sourceTree = "<group>"; };
 		BDD81C6421961ED100880601 /* ChartDisplayOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDisplayOptions.swift; sourceTree = "<group>"; };
 		BDE4682E2180F6DD002BDE93 /* DaySummary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DaySummary.storyboard; sourceTree = "<group>"; };
 		BDE468322180F777002BDE93 /* DaySummaryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryProtocols.swift; sourceTree = "<group>"; };
@@ -1059,7 +1061,7 @@
 			children = (
 				BDD81C5321949AC300880601 /* StatisticsDTO.swift */,
 				BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */,
-				BDD81C5821949E8100880601 /* EmotionChartDTO.swift */,
+				BD693C0C219F62A100C3E5F5 /* EmotionChartDTO.swift */,
 			);
 			path = "Data Transfer Objects";
 			sourceTree = "<group>";
@@ -1117,6 +1119,7 @@
 			isa = PBXGroup;
 			children = (
 				BDE84947219C97BB00603B97 /* StatisticsFactory.swift */,
+				BD693C0E219F633000C3E5F5 /* MindfullnessTimeFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -1371,7 +1374,6 @@
 				BD969307219B3E3A005D6D26 /* FillDrawingLayer.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
-				BDD81C5921949E8100880601 /* EmotionChartDTO.swift in Sources */,
 				BDD81C432193416F00880601 /* ProfileProtocols.swift in Sources */,
 				BD290C08216BE6EF001F16EA /* CheckboxQuestion+CoreDataClass.swift in Sources */,
 				BD974A3721654E3800612838 /* DataAccessError.swift in Sources */,
@@ -1421,6 +1423,7 @@
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
 				BDD81C452193416F00880601 /* ProfileView.swift in Sources */,
 				BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
+				BD693C0D219F62A200C3E5F5 /* EmotionChartDTO.swift in Sources */,
 				BDE84942219C76B700603B97 /* UserDAO.swift in Sources */,
 				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
@@ -1428,6 +1431,7 @@
 				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */,
+				BD693C0F219F633000C3E5F5 /* MindfullnessTimeFactory.swift in Sources */,
 				BD969306219B3E3A005D6D26 /* LineDrawingLayer.swift in Sources */,
 				BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C14216BE6EF001F16EA /* DissertationQuestion+CoreDataClass.swift in Sources */,

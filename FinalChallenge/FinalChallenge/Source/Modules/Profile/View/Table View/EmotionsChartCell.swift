@@ -75,7 +75,7 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
             return CGSize(width: 20, height: 20)
         }
         referenceLines.imageViewForLabelTag = { tag in
-            let moodType = data.moodTypeValues.first(where: { $0.value == Double(tag)! })!
+            let moodType = data.rangeValues.first(where: { $0.value == Double(tag)! })!
             
             let imageView = UIImageView(image: UIImage(named: moodType.moodType.typeIcon!)!)
             imageView.backgroundColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)

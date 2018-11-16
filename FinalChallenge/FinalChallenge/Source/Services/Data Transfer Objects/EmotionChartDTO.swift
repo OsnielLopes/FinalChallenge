@@ -11,24 +11,24 @@ import Foundation
 class EmotionChartDTO {
     
     var chartTitle: String
-    var values: [EmotionChartPlot]
-    var moodTypeValues: [MoodTypeValues]
     var rangeMin: Double
     var rangeMax: Double
+    var values: [EmotionChartPlot]
+    var rangeValues: [MoodTypeRangeValues]
     
     init(chartTitle: String, moods: [MoodInput], possible moodTypes: [MoodType]) {
         
         // Setting up mood types to values
         self.chartTitle = chartTitle
         
-        self.moodTypeValues = []
+        self.rangeValues = []
         var i: Double = 0.0
         for type in moodTypes {
-            self.moodTypeValues.append(MoodTypeValues(moodType: type, value: i))
+            self.rangeValues.append(MoodTypeRangeValues(moodType: type, value: i))
             i += 1
         }
-        self.rangeMin = self.moodTypeValues.first!.value
-        self.rangeMax = self.moodTypeValues.last!.value
+        self.rangeMin = self.rangeValues.first!.value
+        self.rangeMax = self.rangeValues.last!.value
         
         let cal = Calendar.current
         let moodInputs = Dictionary.init(grouping: moods, by: { cal.startOfDay(for: $0.date! as Date)})
@@ -50,7 +50,7 @@ class EmotionChartDTO {
             })
             
             // Instantiating the value
-            let value = self.moodTypeValues.filter({ greatestValue == $0.moodType }).first!.value
+            let value = self.rangeValues.filter({ greatestValue == $0.moodType }).first!.value
             let dateString = formatter.string(from: v[0].date! as Date)
             self.values.append(EmotionChartPlot(value: value, label: dateString, date: v[0].date! as Date))
         })
@@ -65,9 +65,10 @@ struct EmotionChartPlot {
     var value: Double
     var label: String
     var date: Date
+
 }
 
-struct MoodTypeValues {
+struct MoodTypeRangeValues {
     let moodType: MoodType
     let value: Double
 }
