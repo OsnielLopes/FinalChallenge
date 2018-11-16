@@ -101,6 +101,7 @@
 		BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
 		BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
 		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
+		BD693C07219E5B7800C3E5F5 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693C06219E5B7800C3E5F5 /* HealthKitManager.swift */; };
 		BD969301219B3E3A005D6D26 /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692EB219B3E3A005D6D26 /* ReferenceLineDrawingView.swift */; };
 		BD969302219B3E3A005D6D26 /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692EC219B3E3A005D6D26 /* BarDrawingLayer.swift */; };
 		BD969303219B3E3A005D6D26 /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9692ED219B3E3A005D6D26 /* GradientDrawingLayer.swift */; };
@@ -271,6 +272,7 @@
 		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
 		BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
+		BD693C06219E5B7800C3E5F5 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		BD9692EB219B3E3A005D6D26 /* ReferenceLineDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLineDrawingView.swift; sourceTree = "<group>"; };
 		BD9692EC219B3E3A005D6D26 /* BarDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDrawingLayer.swift; sourceTree = "<group>"; };
 		BD9692ED219B3E3A005D6D26 /* GradientDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientDrawingLayer.swift; sourceTree = "<group>"; };
@@ -783,6 +785,7 @@
 			children = (
 				49AB023821752D79002B8140 /* QuestionsManager.swift */,
 				BD974A262163FD4600612838 /* CoreDataManager.swift */,
+				BD693C06219E5B7800C3E5F5 /* HealthKitManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1412,6 +1415,7 @@
 				458F8FEF2190A1E6009F31A8 /* AnswerQuestionPresenter.swift in Sources */,
 				458F8FF32190A1E6009F31A8 /* AnswerQuestionView.swift in Sources */,
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
+				BD693C07219E5B7800C3E5F5 /* HealthKitManager.swift in Sources */,
 				BD969311219B3E3A005D6D26 /* LinePlot.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
