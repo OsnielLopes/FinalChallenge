@@ -55,7 +55,13 @@ class ProfileInteractor: NSObject, ProfileInteractorInputProtocol {
     }
     
     func fetchMindfullnessTime(sinceDate date: Date) {
-        fatalError()
+        MindfullnessTimeFactory.shared.generateMindfullnessTime(from: date, to: Date(), striding: 2, stridingType: .day, completion: { data, err in
+            guard let mindData = data, err == nil else {
+                self.output.handleFailureFetchedMindfullnessTime(with: err!.message)
+                return
+            }
+            self.output.handleSuccessFetchedMindfullnessTime(with: mindData)
+        })
     }
     
     func fetchStatistics() {

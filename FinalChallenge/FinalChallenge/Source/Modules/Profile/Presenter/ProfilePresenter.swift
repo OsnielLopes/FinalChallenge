@@ -18,6 +18,7 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
     // MARK: - Properties
     var inputedMoodEmotionChartDTO: EmotionChartDTO?
     var guessedMoodEmotionChartDTO: EmotionChartDTO?
+    var mindfullnessTimeChartDTO: MindfullnessTimeDTO?
     var statistics: StatisticsDTO?
 
     // MARK: - ProfilePresenterInputProtocol
@@ -27,12 +28,14 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
         self.interactor.fetchInputedMoods(sinceDate: date)
     }
     
-    func fetchGuessedEmotions(sinceDate: Date) {
+    func fetchGuessedEmotions(withOption option: ChartDisplayOptions) {
         fatalError()
     }
     
-    func fetchMindfullnessTime(sinceDate: Date) {
-        fatalError()
+    func fetchMindfullnessTime(withOption option: ChartDisplayOptions) {
+        self.view.showLoadInputedMoodsData(true)
+        let date = Calendar.current.date(byAdding: .day, value: -1 * option.rawValue, to: Date())!
+        self.interactor.fetchMindfullnessTime(sinceDate: date)
     }
     
     func fetchStatistics() {
@@ -65,11 +68,15 @@ class ProfilePresenter: NSObject, ProfilePresenterInputProtocol, ProfileInteract
     }
     
     func handleSuccessFetchedMindfullnessTime(with results: MindfullnessTimeDTO) {
-        fatalError()
+        self.view.showLoadMindfullnessTime(false)
+        self.mindfullnessTimeChartDTO = results
+        self.view.didFetchMindfullnessTime(results)
     }
     
     func handleFailureFetchedMindfullnessTime(with message: String) {
-        fatalError()
+        self.view.showLoadMindfullnessTime(false)
+        self.mindfullnessTimeChartDTO = nil
+        self.view.showError(message: message)
     }
     
     func handleSuccessFetchedStatistics(with results: StatisticsDTO) {

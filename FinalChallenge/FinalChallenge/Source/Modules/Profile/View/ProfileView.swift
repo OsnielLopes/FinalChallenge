@@ -19,11 +19,11 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     // MARK: - Properties
     let profileCellIdentifier = "userProfileCell"
-    let emotionsChartCell = "emotionsChartCell"
+    let chartCell = "chartCell"
     var userProfileCell: UserProfileCell?
-    var inputedMoodsCell: EmotionsChartCell?
-    var guessedMoodsCell: EmotionsChartCell?
-//    var midnfullnesTimeCel: MindfullnessTimeChartCell?
+    var inputedMoodsCell: ChartCell?
+    var guessedMoodsCell: ChartCell?
+    var midnfullnesTimeCell: ChartCell?
     
     
     // MARK: - Override methods
@@ -43,6 +43,9 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        // MARK: - TEMPORARY
+        HealthKitManager.shared.askForPermission(completion: { _, _ in })
     }
 
     // MARK: - ProfilePresenterOutputProtocol
@@ -80,7 +83,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     }
     
     func didFetchMindfullnessTime(_ results: MindfullnessTimeDTO) {
-        fatalError()
+        self.midnfullnesTimeCell?.setChart(forData: results)
     }
     
     func didFetchStatistics(_ results: StatisticsDTO) {
@@ -89,7 +92,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,13 +106,21 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             self.presenter.fetchStatistics()
             return userProfileCell
         case 1:
-            guard let emotionsChartCell = tableView.dequeueReusableCell(withIdentifier: self.emotionsChartCell, for: indexPath) as? EmotionsChartCell else {
+            guard let emotionsChartCell = tableView.dequeueReusableCell(withIdentifier: self.chartCell, for: indexPath) as? ChartCell else {
                 return UITableViewCell()
             }
             self.inputedMoodsCell = emotionsChartCell
             self.inputedMoodsCell!.profileView = self
             self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
             return emotionsChartCell
+        case 2:
+            guard let mindfullnessChartCell = tableView.dequeueReusableCell(withIdentifier: self.chartCell, for: indexPath) as? ChartCell else {
+                return UITableViewCell()
+            }
+            self.midnfullnesTimeCell = mindfullnessChartCell
+            self.midnfullnesTimeCell!.profileView = self
+            self.presenter.fetchMindfullnessTime(withOption: mindfullnessChartCell.getSelectedDisplayOption())
+            return mindfullnessChartCell
         default:
             break
         }

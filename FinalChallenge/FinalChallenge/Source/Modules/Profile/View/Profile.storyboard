@@ -149,7 +149,7 @@
                                             <outlet property="usernameLabel" destination="BhY-CL-aYa" id="XrX-84-C8L"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emotionsChartCell" rowHeight="300" id="p14-sg-jom" customClass="EmotionsChartCell" customModule="FinalChallenge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chartCell" rowHeight="300" id="p14-sg-jom" customClass="ChartCell" customModule="FinalChallenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="385" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p14-sg-jom" id="oZM-GF-ZVn">

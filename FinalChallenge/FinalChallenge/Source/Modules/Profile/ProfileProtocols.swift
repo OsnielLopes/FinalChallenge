@@ -28,8 +28,8 @@ protocol ProfileInteractorInputProtocol {
 protocol ProfilePresenterInputProtocol: class {
     
     func fetchInputedEmotions(withOption option: ChartDisplayOptions)
-    func fetchGuessedEmotions(sinceDate: Date)
-    func fetchMindfullnessTime(sinceDate: Date)
+    func fetchGuessedEmotions(withOption option: ChartDisplayOptions)
+    func fetchMindfullnessTime(withOption option: ChartDisplayOptions)
     func fetchStatistics()
 }
 

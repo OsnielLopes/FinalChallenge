@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
+class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     
     // MARK: - IBOutlets
     @IBOutlet weak var cardView: UIView!
@@ -40,6 +40,7 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         }
     }
     
+    // MARK: - FIXME
     func setChart(forData data: ChartDTO) {
         self.graphView?.removeFromSuperview()
         
@@ -69,7 +70,8 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         self.chartView!.addSubview(self.graphView!)
     }
     
-    func setChart(forData data: EmotionChartDTO) {
+    // MARK: - FIXME
+    private func setChart(forData data: EmotionChartDTO) {
         
         let linePlot = LinePlot(identifier: "LinePlot")
         linePlot.lineStyle = .smooth
@@ -101,7 +103,8 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
 
     }
     
-    func setChart(for data: MindfullnessTimeDTO) {
+    // MARK: - FIXME
+    private func setChart(for data: MindfullnessTimeDTO) {
         let linePlot = LinePlot(identifier: "LinePlot")
         linePlot.lineStyle = .smooth
         linePlot.animationDuration = 0.5
@@ -113,16 +116,21 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         referenceLines.referenceLineColor = #colorLiteral(red: 0.6274509804, green: 0.8431372549, blue: 0.9215686275, alpha: 1)
         referenceLines.dataPointLabelFont = UIFont.italicSystemFont(ofSize: 10)
         
+        self.graphView!.addReferenceLines(referenceLines: referenceLines)
+        self.graphView!.addPlot(plot: linePlot)
     }
     
+    // MARK: - FIXME
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
         return self.data!.values[pointIndex].value
     }
     
+    // MARK: - FIXME
     func label(atIndex pointIndex: Int) -> String {
         return self.data!.values[pointIndex].label
     }
     
+    // MARK: - FIXME
     func numberOfPoints() -> Int {
         return self.data!.values.count
     }

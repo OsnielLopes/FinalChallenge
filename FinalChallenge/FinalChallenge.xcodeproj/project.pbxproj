@@ -147,7 +147,7 @@
 		BDD81C442193416F00880601 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3E2193416F00880601 /* ProfileInteractor.swift */; };
 		BDD81C452193416F00880601 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3F2193416F00880601 /* ProfileView.swift */; };
 		BDD81C4C2193503300880601 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4B2193503300880601 /* UserProfileCell.swift */; };
-		BDD81C4E219394ED00880601 /* EmotionsChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */; };
+		BDD81C4E219394ED00880601 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C4D219394ED00880601 /* ChartCell.swift */; };
 		BDD81C5421949AC300880601 /* StatisticsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5321949AC300880601 /* StatisticsDTO.swift */; };
 		BDD81C5721949BC400880601 /* MindfullnessTimeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */; };
 		BDD81C6521961ED100880601 /* ChartDisplayOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C6421961ED100880601 /* ChartDisplayOptions.swift */; };
@@ -323,7 +323,7 @@
 		BDD81C3E2193416F00880601 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		BDD81C3F2193416F00880601 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BDD81C4B2193503300880601 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
-		BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsChartCell.swift; sourceTree = "<group>"; };
+		BDD81C4D219394ED00880601 /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
 		BDD81C5321949AC300880601 /* StatisticsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDTO.swift; sourceTree = "<group>"; };
 		BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfullnessTimeDTO.swift; sourceTree = "<group>"; };
 		BDD81C6421961ED100880601 /* ChartDisplayOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDisplayOptions.swift; sourceTree = "<group>"; };
@@ -1053,7 +1053,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD81C4B2193503300880601 /* UserProfileCell.swift */,
-				BDD81C4D219394ED00880601 /* EmotionsChartCell.swift */,
+				BDD81C4D219394ED00880601 /* ChartCell.swift */,
 			);
 			path = "Table View";
 			sourceTree = "<group>";
@@ -1342,7 +1342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD81C422193416F00880601 /* ProfileRouter.swift in Sources */,
-				BDD81C4E219394ED00880601 /* EmotionsChartCell.swift in Sources */,
+				BDD81C4E219394ED00880601 /* ChartCell.swift in Sources */,
 				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BDAF3AC2218B82D900EFD2A9 /* QuestionAnswersPresenter.swift in Sources */,
 				BD3E3C7F2187812900539ADB /* MainView.swift in Sources */,
