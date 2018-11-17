@@ -8,20 +8,12 @@
 
 import Foundation
 
-class MindfullnessTimeDTO {
+class MindfullnessTimeDTO: ChartDTO {
     
-    var chartTitle: String
-    var values: [MindfullnessTimeChartPlot]
     
-    init(values: [MindfullnessTimeChartPlot]) {
-        self.chartTitle = "Mindfullness Time"
-        self.values = values
+    init(values: [ChartPlot]) {
+        let valuesDouble = values.map({ $0.value })
+        super.init(chartTitle: "Mindfullness Time", rangeMin: valuesDouble.min()!, rangeMax: valuesDouble.max()!, plots: values)
     }
     
-}
-
-struct MindfullnessTimeChartPlot {
-    var value: Double
-    var label: String
-    var date: Date
 }

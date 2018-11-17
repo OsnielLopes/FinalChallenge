@@ -8,34 +8,29 @@
 
 import Foundation
 
-class EmotionChartDTO {
+class EmotionChartDTO: ChartDTO {
     
-    var chartTitle: String
-    var rangeMin: Double
-    var rangeMax: Double
-    var values: [EmotionChartPlot]
-    var rangeValues: [MoodTypeRangeValues]
+    var rangeValues: [MoodTypeRangeValues]!
     
     init(chartTitle: String, moods: [MoodInput], possible moodTypes: [MoodType]) {
-        
+                
         // Setting up mood types to values
-        self.chartTitle = chartTitle
         
-        self.rangeValues = []
+        var rangeValues: [MoodTypeRangeValues] = []
         var i: Double = 0.0
         for type in moodTypes {
-            self.rangeValues.append(MoodTypeRangeValues(moodType: type, value: i))
+            rangeValues.append(MoodTypeRangeValues(moodType: type, value: i))
             i += 1
         }
-        self.rangeMin = self.rangeValues.first!.value
-        self.rangeMax = self.rangeValues.last!.value
+        let rangeMin = rangeValues.first!.value
+        let rangeMax = rangeValues.last!.value
         
         let cal = Calendar.current
         let moodInputs = Dictionary.init(grouping: moods, by: { cal.startOfDay(for: $0.date! as Date)})
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM"
         
-        self.values = []
+        var values: [ChartPlot] = []
         moodInputs.forEach({ k, v in
             
             // Finding the fashion
@@ -50,22 +45,16 @@ class EmotionChartDTO {
             })
             
             // Instantiating the value
-            let value = self.rangeValues.filter({ greatestValue == $0.moodType }).first!.value
+            let value = rangeValues.filter({ greatestValue == $0.moodType }).first!.value
             let dateString = formatter.string(from: v[0].date! as Date)
-            self.values.append(EmotionChartPlot(value: value, label: dateString, date: v[0].date! as Date))
+            values.append(ChartPlot(value: value, label: dateString, date: v[0].date! as Date))
         })
         
-        self.values.sort(by: { $0.date <= $1.date })
-        
+        values.sort(by: { $0.date <= $1.date })
+        super.init(chartTitle: chartTitle, rangeMin: rangeMin, rangeMax: rangeMax, plots: values)
+        self.rangeValues = rangeValues
     }
     
-}
-
-struct EmotionChartPlot {
-    var value: Double
-    var label: String
-    var date: Date
-
 }
 
 struct MoodTypeRangeValues {

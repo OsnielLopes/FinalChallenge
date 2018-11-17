@@ -37,12 +37,12 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.contentOffset = CGPoint.zero
+//        self.tableView.contentOffset = CGPoint.zero
+        self.tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.tableView.reloadData()
     }
 
     // MARK: - ProfilePresenterOutputProtocol

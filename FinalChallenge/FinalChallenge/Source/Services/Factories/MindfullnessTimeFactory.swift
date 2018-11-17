@@ -23,7 +23,7 @@ class MindfullnessTimeFactory {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM"
         
-        var plots: [MindfullnessTimeChartPlot] = []
+        var plots: [ChartPlot] = []
         
         var shouldContinue = true
         let workingDate = to
@@ -43,13 +43,17 @@ class MindfullnessTimeFactory {
                     return
                 }
                 let dateString = formatter.string(from: workingDate)
-                plots.append(MindfullnessTimeChartPlot(value: time, label: dateString, date: workingDate))
+                plots.append(ChartPlot(value: time, label: dateString, date: workingDate))
                 
                 if isLast && shouldContinue {
                     plots.sort(by: { $0.date <= $1.date })
                     completion(MindfullnessTimeDTO(values: plots), nil)
                 }
             })
+            
+            if isLast {
+                break
+            }
             
         }
         

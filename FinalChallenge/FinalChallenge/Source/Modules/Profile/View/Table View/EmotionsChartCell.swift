@@ -18,7 +18,7 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     
     // MARK: - Properties
     var graphView: ScrollableGraphView?
-    var data: EmotionChartDTO?
+    var data: ChartDTO?
     var profileView: ProfileView!
     
     override func awakeFromNib() {
@@ -40,8 +40,7 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         }
     }
     
-    func setChart(forData data: EmotionChartDTO) {
-        
+    func setChart(forData data: ChartDTO) {
         self.graphView?.removeFromSuperview()
         
         self.chartTitleLabel.text = data.chartTitle
@@ -51,15 +50,26 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         
         self.graphView?.dataSource = self
         
-        self.graphView!.rangeMax = self.data!.rangeMax
-        self.graphView!.rangeMin = self.data!.rangeMin
         self.graphView!.direction = .rightToLeft
         self.graphView!.contentOffset.x = self.graphView!.contentSize.width - self.graphView!.layer.frame.size.width
         self.graphView!.contentOffset.y = 0
         self.graphView!.leftmostPointPadding = 25
         self.graphView!.rightmostPointPadding = 50
-        self.graphView!.shouldAnimateOnStartup = true
+        self.graphView!.shouldAnimateOnStartup = false
         self.graphView!.dataPointSpacing = 60
+        self.graphView!.rangeMax = self.data!.rangeMax
+        self.graphView!.rangeMin = self.data!.rangeMin
+        
+        if let emotionData = data as? EmotionChartDTO {
+            self.setChart(forData: emotionData)
+        } else if let mindfullnessData = data as? MindfullnessTimeDTO {
+            self.setChart(for: mindfullnessData)
+        }
+        
+        self.chartView!.addSubview(self.graphView!)
+    }
+    
+    func setChart(forData data: EmotionChartDTO) {
         
         let linePlot = LinePlot(identifier: "LinePlot")
         linePlot.lineStyle = .smooth
@@ -86,15 +96,26 @@ class EmotionsChartCell: UITableViewCell, ScrollableGraphViewDataSource {
             return imageView
         }
         
-        
-        self.graphView!.addPlot(plot: linePlot)
         self.graphView!.addReferenceLines(referenceLines: referenceLines)
+        self.graphView!.addPlot(plot: linePlot)
+
+    }
+    
+    func setChart(for data: MindfullnessTimeDTO) {
+        let linePlot = LinePlot(identifier: "LinePlot")
+        linePlot.lineStyle = .smooth
+        linePlot.animationDuration = 0.5
+        linePlot.adaptAnimationType = .easeOut
+        linePlot.lineColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
         
-        self.chartView!.addSubview(self.graphView!)
+        let referenceLines = ReferenceLines()
+        referenceLines.referenceLinePosition = .right
+        referenceLines.referenceLineColor = #colorLiteral(red: 0.6274509804, green: 0.8431372549, blue: 0.9215686275, alpha: 1)
+        referenceLines.dataPointLabelFont = UIFont.italicSystemFont(ofSize: 10)
+        
     }
     
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        
         return self.data!.values[pointIndex].value
     }
     

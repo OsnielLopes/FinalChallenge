@@ -87,6 +87,7 @@
 		BD3635F3218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */; };
 		BD3635F6218A204700E4A6EA /* QuestionsHistoricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */; };
 		BD3635F8218A387B00E4A6EA /* QuestionsCategoryViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */; };
+		BD3B9AFB21A03F3300DEE8CA /* ChartDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3B9AFA21A03F3300DEE8CA /* ChartDTO.swift */; };
 		BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB023821752D79002B8140 /* QuestionsManager.swift */; };
 		BD3E3C2721824B8A00539ADB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A262163FD4600612838 /* CoreDataManager.swift */; };
 		BD3E3C5A2183AE0900539ADB /* BreathingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */; };
@@ -261,6 +262,7 @@
 		BD3635F2218A1E3400E4A6EA /* QuestionsHistoricHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricHeaderView.swift; path = "FinalChallenge/Source/Modules/Questions Historic/View/Table View/QuestionsHistoricHeaderView.swift"; sourceTree = "<group>"; };
 		BD3635F5218A204700E4A6EA /* QuestionsHistoricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsHistoricCell.swift; path = "FinalChallenge/Source/Modules/Questions Historic/View/Table View/QuestionsHistoricCell.swift"; sourceTree = "<group>"; };
 		BD3635F7218A387B00E4A6EA /* QuestionsCategoryViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsCategoryViewObject.swift; path = "FinalChallenge/Source/Modules/Questions Historic/View/View Object/QuestionsCategoryViewObject.swift"; sourceTree = "<group>"; };
+		BD3B9AFA21A03F3300DEE8CA /* ChartDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDTO.swift; sourceTree = "<group>"; };
 		BD3E3C542183AE0900539ADB /* BreathingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingPresenter.swift; sourceTree = "<group>"; };
 		BD3E3C552183AE0900539ADB /* BreathingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingRouter.swift; sourceTree = "<group>"; };
 		BD3E3C562183AE0900539ADB /* BreathingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingProtocols.swift; sourceTree = "<group>"; };
@@ -1062,6 +1064,7 @@
 				BDD81C5321949AC300880601 /* StatisticsDTO.swift */,
 				BDD81C5621949BC400880601 /* MindfullnessTimeDTO.swift */,
 				BD693C0C219F62A100C3E5F5 /* EmotionChartDTO.swift */,
+				BD3B9AFA21A03F3300DEE8CA /* ChartDTO.swift */,
 			);
 			path = "Data Transfer Objects";
 			sourceTree = "<group>";
@@ -1405,6 +1408,7 @@
 				BD96930F219B3E3A005D6D26 /* GraphPoint.swift in Sources */,
 				BD9749F42163E4E200612838 /* FinalChallengeDatabase.xcdatamodeld in Sources */,
 				BD290C20216BE6EF001F16EA /* Category+CoreDataClass.swift in Sources */,
+				BD3B9AFB21A03F3300DEE8CA /* ChartDTO.swift in Sources */,
 				BD3E3C762187804100539ADB /* MainPresenter.swift in Sources */,
 				BDD81C6521961ED100880601 /* ChartDisplayOptions.swift in Sources */,
 				BD969310219B3E3A005D6D26 /* Plot.swift in Sources */,
