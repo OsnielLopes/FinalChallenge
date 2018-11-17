@@ -18,9 +18,10 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         var items: [WKPickerItem] = []
-        for i in 1...5 {
+        for i in stride(from: 5, to: 1, by: -1) {
             let item = WKPickerItem()
             item.contentImage = WKImage(imageName: "mood\(i)-icon")
+            item.title = "Mood \(i)"
             items.append(item)
         }
         picker.setItems(items)
@@ -38,6 +39,9 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func didTapSave() {
+        self.presentAlert(withTitle: "Humor inserido com sucesso!", message: nil, preferredStyle: .alert, actions: [WKAlertAction(title: "Ok", style: .default, handler: {
+            self.dismiss()
+        })])
         print("Opa aqui a gente tem que implementar a rotina pra salvar o humor selecionado")
     }
     
