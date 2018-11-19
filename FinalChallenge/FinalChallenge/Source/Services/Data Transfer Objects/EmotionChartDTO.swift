@@ -22,8 +22,8 @@ class EmotionChartDTO: ChartDTO {
             rangeValues.append(MoodTypeRangeValues(moodType: type, value: i))
             i += 1
         }
-        let rangeMin = rangeValues.first!.value
-        let rangeMax = rangeValues.last!.value
+        let rangeMin = rangeValues.last!.value 
+        let rangeMax = rangeValues.first!.value
         
         let cal = Calendar.current
         let moodInputs = Dictionary.init(grouping: moods, by: { cal.startOfDay(for: $0.date! as Date)})

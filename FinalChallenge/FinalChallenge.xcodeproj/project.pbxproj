@@ -274,7 +274,6 @@
 		BD3E3C712187804000539ADB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		BD3E3C722187804000539ADB /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
 		BD3E3C7E2187812900539ADB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		BD457FFB21A0938A0031B032 /* FinalChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalChallenge.entitlements; sourceTree = "<group>"; };
 		BD4E0E7A2179159700DEA2F5 /* Breathing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Breathing.storyboard; sourceTree = "<group>"; };
 		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
@@ -1156,7 +1155,6 @@
 				49AE2B132163DD4F00055136 /* Resources */,
 				459BB046217674CF0065630F /* ShellScript */,
 				0FB95A037A88AA29005B8E95 /* [CP] Embed Pods Frameworks */,
-				0B83458AEF4A025213A55375 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1175,8 +1173,6 @@
 				BD974A462167F01800612838 /* Sources */,
 				BD974A472167F01800612838 /* Frameworks */,
 				BD974A482167F01800612838 /* Resources */,
-				39D58E2D7C8F614567E3EBFE /* [CP] Embed Pods Frameworks */,
-				2CE9AD8E3378790AA9E65861 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1265,25 +1261,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B83458AEF4A025213A55375 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0FB95A037A88AA29005B8E95 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1304,44 +1281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2CE9AD8E3378790AA9E65861 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		39D58E2D7C8F614567E3EBFE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		459BB046217674CF0065630F /* ShellScript */ = {
@@ -1733,7 +1672,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1753,7 +1692,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

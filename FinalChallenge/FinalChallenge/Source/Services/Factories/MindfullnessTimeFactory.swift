@@ -39,11 +39,14 @@ class MindfullnessTimeFactory {
             HealthKitManager.shared.retrieveMindfullness(from: fromDate, to: workingDate, completion: { fetchedTime, err in
                 guard let time = fetchedTime, err == nil else {
                     shouldContinue = false
-                    completion(nil, err)
+                    completion(MindfullnessTimeDTO(values: []), err)
                     return
                 }
-                let dateString = formatter.string(from: workingDate)
-                plots.append(ChartPlot(value: time, label: dateString, date: workingDate))
+                
+                if time != 0 {
+                    let dateString = formatter.string(from: workingDate)
+                    plots.append(ChartPlot(value: time, label: dateString, date: workingDate))
+                }
                 
                 if isLast && shouldContinue {
                     plots.sort(by: { $0.date <= $1.date })

@@ -163,6 +163,12 @@
                                                             <rect key="frame" x="10" y="42" width="315" height="170"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb8-rs-weq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="260"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                                            <color key="textColor" name="color-black"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do gráfico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e63-Az-ryQ">
                                                             <rect key="frame" x="20" y="10" width="315" height="17"/>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
@@ -184,11 +190,15 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="ZrM-QZ-wE6" firstAttribute="top" secondItem="icB-Jy-BOd" secondAttribute="bottom" constant="10" id="7GJ-Jd-xLN"/>
+                                                        <constraint firstItem="pb8-rs-weq" firstAttribute="height" secondItem="zrg-7d-Kub" secondAttribute="height" id="DW0-5h-C3r"/>
                                                         <constraint firstAttribute="trailing" secondItem="e63-Az-ryQ" secondAttribute="trailing" id="N8M-Xn-AUq"/>
                                                         <constraint firstItem="ZrM-QZ-wE6" firstAttribute="leading" secondItem="zrg-7d-Kub" secondAttribute="leading" constant="20" id="NwZ-mb-pg2"/>
+                                                        <constraint firstItem="pb8-rs-weq" firstAttribute="centerX" secondItem="zrg-7d-Kub" secondAttribute="centerX" id="S7y-6r-nBG"/>
+                                                        <constraint firstItem="pb8-rs-weq" firstAttribute="centerY" secondItem="zrg-7d-Kub" secondAttribute="centerY" id="Zl3-Ka-FAZ"/>
                                                         <constraint firstItem="e63-Az-ryQ" firstAttribute="top" secondItem="zrg-7d-Kub" secondAttribute="top" constant="10" id="ZvU-MS-l3p"/>
                                                         <constraint firstItem="e63-Az-ryQ" firstAttribute="leading" secondItem="zrg-7d-Kub" secondAttribute="leading" constant="20" id="f0S-9m-YD5"/>
                                                         <constraint firstItem="icB-Jy-BOd" firstAttribute="leading" secondItem="zrg-7d-Kub" secondAttribute="leading" constant="10" id="fkn-zf-6cN"/>
+                                                        <constraint firstItem="pb8-rs-weq" firstAttribute="width" secondItem="zrg-7d-Kub" secondAttribute="width" id="hLY-9b-ewP"/>
                                                         <constraint firstAttribute="bottom" secondItem="ZrM-QZ-wE6" secondAttribute="bottom" constant="10" id="i7H-ZW-H6p"/>
                                                         <constraint firstAttribute="trailing" secondItem="ZrM-QZ-wE6" secondAttribute="trailing" constant="175" id="qs9-TM-KRn"/>
                                                         <constraint firstAttribute="trailing" secondItem="icB-Jy-BOd" secondAttribute="trailing" constant="10" id="wRx-2k-ifx"/>
@@ -207,6 +217,7 @@
                                             <outlet property="cardView" destination="zrg-7d-Kub" id="x8Z-6G-6T2"/>
                                             <outlet property="chartTitleLabel" destination="e63-Az-ryQ" id="kZ5-DS-r9A"/>
                                             <outlet property="chartView" destination="icB-Jy-BOd" id="o31-wv-Sco"/>
+                                            <outlet property="noDataLabel" destination="pb8-rs-weq" id="AqN-v1-6Og"/>
                                             <outlet property="segmentedControlShowOptions" destination="ZrM-QZ-wE6" id="SK5-XP-oMa"/>
                                         </connections>
                                     </tableViewCell>

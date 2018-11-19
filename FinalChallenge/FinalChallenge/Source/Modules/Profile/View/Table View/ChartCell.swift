@@ -15,6 +15,7 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     @IBOutlet weak var chartTitleLabel: UILabel!
     @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var segmentedControlShowOptions: UISegmentedControl!
+    @IBOutlet weak var noDataLabel: UILabel!
     
     // MARK: - Properties
     var graphView: ScrollableGraphView?
@@ -27,6 +28,7 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         
         self.cardView.layer.cornerRadius = self.cardView.frame.width / 30
         self.cardView.dropShadow(color: #colorLiteral(red: 0.01960784314, green: 0.06274509804, blue: 0.07843137255, alpha: 1), opacity: 0.25, offSet: CGSize(width: 0, height: 5), radius: 5, scale: true, shouldFollowPath: false)
+        self.noDataLabel.isHidden = true
         
     }
     
@@ -53,33 +55,43 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     
     // MARK: - FIXME
     func setChart(forData data: ChartDTO) {
-        
-        self.graphView?.removeFromSuperview()
-        
-        self.chartTitleLabel.text = data.chartTitle
-        self.data = data
-        
-        self.graphView = ScrollableGraphView(frame: CGRect(origin: CGPoint.zero, size: self.chartView.frame.size))
-        
-        self.graphView?.dataSource = self
-        
-        self.graphView!.direction = .rightToLeft
-        self.graphView!.contentOffset.x = self.graphView!.contentSize.width - self.graphView!.layer.frame.size.width
-        self.graphView!.contentOffset.y = 0
-        self.graphView!.leftmostPointPadding = 25
-        self.graphView!.rightmostPointPadding = 50
-        self.graphView!.shouldAnimateOnStartup = false
-        self.graphView!.dataPointSpacing = 60
-        self.graphView!.rangeMax = self.data!.rangeMax
-        self.graphView!.rangeMin = self.data!.rangeMin
-        
-        if let emotionData = data as? EmotionChartDTO {
-            self.setChart(forData: emotionData)
-        } else if let mindfullnessData = data as? MindfullnessTimeDTO {
-            self.setChart(for: mindfullnessData)
+        DispatchQueue.main.async {
+            
+            self.chartTitleLabel.text = data.chartTitle
+            self.graphView?.removeFromSuperview()
+            
+            if data.values.count == 0 {
+                self.noDataLabel.isHidden = false
+                return 
+            } else {
+                self.noDataLabel.isHidden = true
+            }
+            
+            
+            self.data = data
+            
+            self.graphView = ScrollableGraphView(frame: CGRect(origin: CGPoint.zero, size: self.chartView.frame.size))
+            
+            self.graphView?.dataSource = self
+            
+            self.graphView!.direction = .rightToLeft
+            self.graphView!.contentOffset.x = self.graphView!.contentSize.width - self.graphView!.layer.frame.size.width
+            self.graphView!.contentOffset.y = 0
+            self.graphView!.leftmostPointPadding = 25
+            self.graphView!.rightmostPointPadding = 50
+            self.graphView!.shouldAnimateOnStartup = false
+            self.graphView!.dataPointSpacing = 60
+            self.graphView!.rangeMax = self.data!.rangeMax
+            self.graphView!.rangeMin = self.data!.rangeMin
+            
+            if let emotionData = data as? EmotionChartDTO {
+                self.setChart(forData: emotionData)
+            } else if let mindfullnessData = data as? MindfullnessTimeDTO {
+                self.setChart(for: mindfullnessData)
+            }
+            
+            self.chartView!.addSubview(self.graphView!)
         }
-        
-        self.chartView!.addSubview(self.graphView!)
     }
     
     // MARK: - FIXME

@@ -13,7 +13,7 @@ class MindfullnessTimeDTO: ChartDTO {
     
     init(values: [ChartPlot]) {
         let valuesDouble = values.map({ $0.value })
-        super.init(chartTitle: "Mindfullness Time", rangeMin: valuesDouble.min()!, rangeMax: valuesDouble.max()!, plots: values)
+        super.init(chartTitle: "Mindfullness Time", rangeMin: valuesDouble.max() ?? 0, rangeMax: 1, plots: values)
     }
     
 }

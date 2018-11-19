@@ -39,8 +39,8 @@ class HealthKitManager {
         
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
 
-        let endDate = from
-        let startDate = to
+        let endDate = to
+        let startDate = from
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: [])
 
         let query = HKSampleQuery(sampleType: self.mindfulType!, predicate: predicate, limit: 0, sortDescriptors: [sortDescriptor], resultsHandler: completion)
@@ -49,7 +49,7 @@ class HealthKitManager {
     }
     
     func retrieveMindfullness(from: Date, to: Date, completion: @escaping (TimeInterval?, DataAccessError?) -> ()) {
-        if self.isHealthDatAvailable() {
+        if !self.isHealthDatAvailable() {
             completion(nil, DataAccessError(message: "You didn't grant access to your health data"))
         }
         self.retrieveMindfullnessHealthData(from: from, to: to, completion: { query, samples, err in
@@ -57,6 +57,9 @@ class HealthKitManager {
                 completion(nil, DataAccessError(message: err!.localizedDescription))
                 return
             }
+            
+            
+            
             completion(hksamples.map(self.calculateTime).reduce(0, { $0 + $1 }), nil)
         })
     }
