@@ -44,12 +44,12 @@ class MindfullnessTimeFactory {
                 }
                 
                 if time != 0 {
-                    let dateString = formatter.string(from: workingDate)
+                    let dateString = formatter.string(from: fromDate)
                     plots.append(ChartPlot(value: time, label: dateString, date: workingDate))
                 }
                 
                 if isLast && shouldContinue {
-                    plots.sort(by: { $0.date <= $1.date })
+                    plots.sort(by: { $0.date > $1.date })
                     completion(MindfullnessTimeDTO(values: plots), nil)
                 }
             })

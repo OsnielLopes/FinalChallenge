@@ -35,11 +35,6 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.shouldRecalculateChart = false
-        
-        if let graphView = self.graphView {
-            graphView.contentOffset.x = graphView.contentSize.width - graphView.layer.frame.size.width
-            graphView.contentOffset.y = 0
-        }
     }
     
     func getSelectedDisplayOption() -> ChartDisplayOptions {
@@ -58,7 +53,10 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         DispatchQueue.main.async {
             
             self.chartTitleLabel.text = data.chartTitle
-            self.graphView?.removeFromSuperview()
+            
+            if !self.shouldRecalculateChart {
+                return
+            }
             
             if data.values.count == 0 {
                 self.noDataLabel.isHidden = false
@@ -67,7 +65,7 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
                 self.noDataLabel.isHidden = true
             }
             
-            
+            self.graphView?.removeFromSuperview()
             self.data = data
             
             self.graphView = ScrollableGraphView(frame: CGRect(origin: CGPoint.zero, size: self.chartView.frame.size))
@@ -94,14 +92,28 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         }
     }
     
+    func setChartContentOffset() {
+        if let graphView = self.graphView {
+            graphView.contentOffset.x = graphView.contentSize.width - graphView.layer.frame.size.width
+            graphView.contentOffset.y = 0
+        }
+    }
+    
     // MARK: - FIXME
     private func setChart(forData data: EmotionChartDTO) {
         
-        let linePlot = LinePlot(identifier: "LinePlot")
-        linePlot.lineStyle = .smooth
-        linePlot.animationDuration = 0.5
-        linePlot.adaptAnimationType = .easeOut
-        linePlot.lineColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
+        if data.values.count > 1 {
+            let linePlot = LinePlot(identifier: "LinePlot")
+            linePlot.lineStyle = .smooth
+            linePlot.animationDuration = 0.5
+            linePlot.adaptAnimationType = .easeOut
+            linePlot.lineColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
+            self.graphView!.addPlot(plot: linePlot)
+        } else {
+            let pointPlot = DotPlot.init(identifier: "DotPlot")
+            pointPlot.dataPointFillColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
+            self.graphView!.addPlot(plot: pointPlot)
+        }
         
         let referenceLines = ReferenceLines()
         referenceLines.referenceLinePosition = .right
@@ -123,8 +135,6 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         }
         
         self.graphView!.addReferenceLines(referenceLines: referenceLines)
-        self.graphView!.addPlot(plot: linePlot)
-
     }
     
     // MARK: - FIXME

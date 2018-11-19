@@ -33,12 +33,14 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.tableView.contentOffset = CGPoint.zero
-        self.tableView.reloadData()
+        self.inputedMoodsCell?.setChartContentOffset()
+        self.guessedMoodsCell?.setChartContentOffset()
+        self.midnfullnesTimeCell?.setChartContentOffset()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -115,10 +117,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             }
             self.inputedMoodsCell = emotionsChartCell
             self.inputedMoodsCell!.profileView = self
-            
-            if emotionsChartCell.shouldRecalculateChart {
-                self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
-            }
+            self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
             
             return emotionsChartCell
         case 2:
@@ -127,10 +126,7 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             }
             self.midnfullnesTimeCell = mindfullnessChartCell
             self.midnfullnesTimeCell!.profileView = self
-            
-            if mindfullnessChartCell.shouldRecalculateChart {
-                self.presenter.fetchMindfullnessTime(withOption: mindfullnessChartCell.getSelectedDisplayOption())
-            }
+            self.presenter.fetchMindfullnessTime(withOption: mindfullnessChartCell.getSelectedDisplayOption())
             
             return mindfullnessChartCell
         default:
