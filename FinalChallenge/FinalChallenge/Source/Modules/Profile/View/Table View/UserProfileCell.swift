@@ -20,6 +20,9 @@ class UserProfileCell: UITableViewCell {
     @IBOutlet weak var questionsAnsweredLabel: UILabel!
     @IBOutlet weak var moodsInputedLabel: UILabel!
     
+    // MARK: - Properties
+    var shouldRecalculateStats = true
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -32,6 +35,11 @@ class UserProfileCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.shouldRecalculateStats = false
     }
     
     func setStatistics(_ stats: StatisticsDTO) {

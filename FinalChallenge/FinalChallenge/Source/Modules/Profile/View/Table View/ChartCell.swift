@@ -20,6 +20,7 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     var graphView: ScrollableGraphView?
     var data: ChartDTO?
     var profileView: ProfileView!
+    var shouldRecalculateChart = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +28,16 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         self.cardView.layer.cornerRadius = self.cardView.frame.width / 30
         self.cardView.dropShadow(color: #colorLiteral(red: 0.01960784314, green: 0.06274509804, blue: 0.07843137255, alpha: 1), opacity: 0.25, offSet: CGSize(width: 0, height: 5), radius: 5, scale: true, shouldFollowPath: false)
         
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.shouldRecalculateChart = false
+        
+        if let graphView = self.graphView {
+            graphView.contentOffset.x = graphView.contentSize.width - graphView.layer.frame.size.width
+            graphView.contentOffset.y = 0
+        }
     }
     
     func getSelectedDisplayOption() -> ChartDisplayOptions {
@@ -42,6 +53,7 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     
     // MARK: - FIXME
     func setChart(forData data: ChartDTO) {
+        
         self.graphView?.removeFromSuperview()
         
         self.chartTitleLabel.text = data.chartTitle

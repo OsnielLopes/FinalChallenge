@@ -26,12 +26,12 @@ class MindfullnessTimeFactory {
         var plots: [ChartPlot] = []
         
         var shouldContinue = true
-        let workingDate = to
+        var workingDate = to
         while true {
             var isLast = false
             var fromDate = Calendar.current.date(byAdding: stridingType, value: -1 * striding, to: workingDate)!
             
-            if fromDate < from {
+            if fromDate <= from {
                 fromDate = from
                 isLast = true
             }
@@ -50,7 +50,7 @@ class MindfullnessTimeFactory {
                     completion(MindfullnessTimeDTO(values: plots), nil)
                 }
             })
-            
+            workingDate = fromDate
             if isLast {
                 break
             }

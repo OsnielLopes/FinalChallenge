@@ -271,6 +271,7 @@
 		BD3E3C712187804000539ADB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		BD3E3C722187804000539ADB /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
 		BD3E3C7E2187812900539ADB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BD457FFB21A0938A0031B032 /* FinalChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalChallenge.entitlements; sourceTree = "<group>"; };
 		BD4E0E7A2179159700DEA2F5 /* Breathing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Breathing.storyboard; sourceTree = "<group>"; };
 		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
@@ -570,6 +571,7 @@
 		49AE2B172163DD4F00055136 /* FinalChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				BD457FFB21A0938A0031B032 /* FinalChallenge.entitlements */,
 				49AE2B182163DD4F00055136 /* AppDelegate.swift */,
 				49AE2B212163DD5200055136 /* LaunchScreen.storyboard */,
 				454DF7A821655D200091E792 /* Resources */,
@@ -1190,6 +1192,11 @@
 				TargetAttributes = {
 					49AE2B142163DD4F00055136 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 					BD974A492167F01800612838 = {
 						CreatedOnToolsVersion = 10.0;

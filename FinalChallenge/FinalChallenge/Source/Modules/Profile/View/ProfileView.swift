@@ -103,7 +103,11 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
                 return UITableViewCell()
             }
             self.userProfileCell = userProfileCell
-            self.presenter.fetchStatistics()
+            
+            if userProfileCell.shouldRecalculateStats {
+                self.presenter.fetchStatistics()
+            }
+            
             return userProfileCell
         case 1:
             guard let emotionsChartCell = tableView.dequeueReusableCell(withIdentifier: self.chartCell, for: indexPath) as? ChartCell else {
@@ -111,7 +115,11 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             }
             self.inputedMoodsCell = emotionsChartCell
             self.inputedMoodsCell!.profileView = self
-            self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
+            
+            if emotionsChartCell.shouldRecalculateChart {
+                self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
+            }
+            
             return emotionsChartCell
         case 2:
             guard let mindfullnessChartCell = tableView.dequeueReusableCell(withIdentifier: self.chartCell, for: indexPath) as? ChartCell else {
@@ -119,7 +127,11 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             }
             self.midnfullnesTimeCell = mindfullnessChartCell
             self.midnfullnesTimeCell!.profileView = self
-            self.presenter.fetchMindfullnessTime(withOption: mindfullnessChartCell.getSelectedDisplayOption())
+            
+            if mindfullnessChartCell.shouldRecalculateChart {
+                self.presenter.fetchMindfullnessTime(withOption: mindfullnessChartCell.getSelectedDisplayOption())
+            }
+            
             return mindfullnessChartCell
         default:
             break
