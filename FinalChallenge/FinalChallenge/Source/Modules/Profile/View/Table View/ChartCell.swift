@@ -139,11 +139,19 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     
     // MARK: - FIXME
     private func setChart(for data: MindfullnessTimeDTO) {
-        let linePlot = LinePlot(identifier: "LinePlot")
-        linePlot.lineStyle = .smooth
-        linePlot.animationDuration = 0.5
-        linePlot.adaptAnimationType = .easeOut
-        linePlot.lineColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
+        
+        if data.values.count > 1 {
+            let linePlot = LinePlot(identifier: "LinePlot")
+            linePlot.lineStyle = .smooth
+            linePlot.animationDuration = 0.5
+            linePlot.adaptAnimationType = .easeOut
+            linePlot.lineColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
+            self.graphView!.addPlot(plot: linePlot)
+        } else {
+            let pointPlot = DotPlot.init(identifier: "DotPlot")
+            pointPlot.dataPointFillColor = #colorLiteral(red: 0.1843137255, green: 0.6588235294, blue: 0.831372549, alpha: 1)
+            self.graphView!.addPlot(plot: pointPlot)
+        }
         
         let referenceLines = ReferenceLines()
         referenceLines.referenceLinePosition = .right
@@ -151,7 +159,6 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         referenceLines.dataPointLabelFont = UIFont.italicSystemFont(ofSize: 10)
         
         self.graphView!.addReferenceLines(referenceLines: referenceLines)
-        self.graphView!.addPlot(plot: linePlot)
     }
     
     // MARK: - FIXME
