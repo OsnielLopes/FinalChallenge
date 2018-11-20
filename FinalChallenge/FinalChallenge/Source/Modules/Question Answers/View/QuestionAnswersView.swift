@@ -50,7 +50,7 @@ class QuestionAnswersView: UIViewController, QuestionAnswersPresenterOutputProto
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.presenter.numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,7 +65,7 @@ class QuestionAnswersView: UIViewController, QuestionAnswersPresenterOutputProto
             
             return cell
         } else if let answer = entity as? Answer {
-            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: self.questionReuseIdentifier) as? AnswerCell else {
+            guard let cell = self.tableView.dequeueReusableCell(withIdentifier: self.answerReuseIdentifier) as? AnswerCell else {
                 return UITableViewCell()
             }
             cell.setAnswer(answer)

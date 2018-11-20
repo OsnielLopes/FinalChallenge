@@ -933,7 +933,6 @@
 				49AE2B132163DD4F00055136 /* Resources */,
 				459BB046217674CF0065630F /* ShellScript */,
 				0FB95A037A88AA29005B8E95 /* [CP] Embed Pods Frameworks */,
-				0B83458AEF4A025213A55375 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -952,8 +951,6 @@
 				BD974A462167F01800612838 /* Sources */,
 				BD974A472167F01800612838 /* Frameworks */,
 				BD974A482167F01800612838 /* Resources */,
-				39D58E2D7C8F614567E3EBFE /* [CP] Embed Pods Frameworks */,
-				2CE9AD8E3378790AA9E65861 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1041,25 +1038,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B83458AEF4A025213A55375 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0FB95A037A88AA29005B8E95 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1080,44 +1058,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2CE9AD8E3378790AA9E65861 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		39D58E2D7C8F614567E3EBFE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		459BB046217674CF0065630F /* ShellScript */ = {
@@ -1468,13 +1408,13 @@
 				CODE_SIGN_ENTITLEMENTS = FinalChallenge/FinalChallenge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1488,13 +1428,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FinalChallenge/FinalChallenge.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
