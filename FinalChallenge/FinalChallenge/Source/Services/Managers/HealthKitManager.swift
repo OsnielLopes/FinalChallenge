@@ -48,7 +48,7 @@ class HealthKitManager {
         healthStore.execute(query)
     }
     
-    func retrieveMindfullness(from: Date, to: Date, completion: @escaping (TimeInterval?, DataAccessError?) -> ()) {
+    func retrieveMindfullness(from: Date, to: Date, completion: @escaping ([HKSample]?, DataAccessError?) -> ()) {
         if !self.isHealthDatAvailable() {
             completion(nil, DataAccessError(message: "You didn't grant access to your health data"))
         }
@@ -58,12 +58,8 @@ class HealthKitManager {
                 completion(nil, DataAccessError(message: err!.localizedDescription))
                 return
             }
-            completion(hksamples.map(self.calculateTime).reduce(0, { $0 + $1 }), nil)
+            completion(hksamples, nil)
         })
-    }
-    
-    private func calculateTime(sample: HKSample) -> TimeInterval {
-        return sample.endDate.timeIntervalSince(sample.startDate)
     }
     
 }
