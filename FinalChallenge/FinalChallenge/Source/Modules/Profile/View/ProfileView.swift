@@ -117,7 +117,10 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             }
             self.inputedMoodsCell = emotionsChartCell
             self.inputedMoodsCell!.profileView = self
-            self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
+            
+            if self.inputedMoodsCell!.shouldRecalculateChart {
+                self.presenter.fetchInputedEmotions(withOption: emotionsChartCell.getSelectedDisplayOption())
+            }
             
             return emotionsChartCell
         case 2:
@@ -126,7 +129,10 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
             }
             self.midnfullnesTimeCell = mindfullnessChartCell
             self.midnfullnesTimeCell!.profileView = self
-            self.presenter.fetchMindfullnessTime(withOption: mindfullnessChartCell.getSelectedDisplayOption())
+            
+            if self.midnfullnesTimeCell!.shouldRecalculateChart {
+                self.presenter.fetchMindfullnessTime(withOption: mindfullnessChartCell.getSelectedDisplayOption())
+            }
             
             return mindfullnessChartCell
         default:
@@ -151,6 +157,10 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     func fetchInputedEmotions(with option: ChartDisplayOptions) {
         self.presenter.fetchInputedEmotions(withOption: option)
+    }
+    
+    func fetchMindfullnessTime(with option: ChartDisplayOptions) {
+        self.presenter.fetchMindfullnessTime(withOption: option)
     }
 
 	// MARK: - Private Methods

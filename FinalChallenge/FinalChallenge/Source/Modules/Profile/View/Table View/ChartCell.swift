@@ -48,15 +48,18 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         }
     }
     
+    func setChartContentOffset() {
+        if let graphView = self.graphView {
+            graphView.contentOffset.x = graphView.contentSize.width - graphView.layer.frame.size.width
+            graphView.contentOffset.y = 0
+        }
+    }
+    
     // MARK: - FIXME
     func setChart(forData data: ChartDTO) {
         DispatchQueue.main.async {
             
             self.chartTitleLabel.text = data.chartTitle
-            
-            if !self.shouldRecalculateChart {
-                return
-            }
             
             if data.values.count == 0 {
                 self.noDataLabel.isHidden = false
@@ -89,13 +92,6 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
             }
             
             self.chartView!.addSubview(self.graphView!)
-        }
-    }
-    
-    func setChartContentOffset() {
-        if let graphView = self.graphView {
-            graphView.contentOffset.x = graphView.contentSize.width - graphView.layer.frame.size.width
-            graphView.contentOffset.y = 0
         }
     }
     
@@ -176,7 +172,11 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         return self.data!.values.count
     }
     @IBAction func didChangeSegmentControl(_ sender: UISegmentedControl) {
-        self.profileView.fetchInputedEmotions(with: self.getSelectedDisplayOption())
+        if self.data is EmotionChartDTO {
+            self.profileView.fetchInputedEmotions(with: self.getSelectedDisplayOption())
+        } else if self.data is MindfullnessTimeDTO {
+            self.profileView.fetchMindfullnessTime(with: self.getSelectedDisplayOption())
+        }
     }
     
 }
