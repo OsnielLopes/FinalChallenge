@@ -17,7 +17,11 @@
                         <label width="1" alignment="left" text="Salvar humor" textAlignment="center" id="8z3-bU-kRq">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <picker height="100" alignment="left" style="stack" indicatorMode="shownWhileFocused" id="uQF-I9-PdQ"/>
+                        <picker height="100" alignment="left" style="stack" indicatorMode="shownWhileFocused" id="uQF-I9-PdQ">
+                            <connections>
+                                <action selector="didSelect:" destination="AgC-eL-Hgc" id="Ttu-Q8-oJS"/>
+                            </connections>
+                        </picker>
                         <button width="1" alignment="left" title="Salvar" id="6a4-TO-2sk">
                             <connections>
                                 <action selector="didTapSave" destination="AgC-eL-Hgc" id="cxR-tn-pA8"/>

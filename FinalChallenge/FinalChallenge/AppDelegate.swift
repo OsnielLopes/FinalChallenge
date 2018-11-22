@@ -9,10 +9,11 @@
 import UIKit
 import Fabric
 import Crashlytics
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -28,6 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let router = MainRouter()
         router.presentAsRoot(window: self.window!)
         self.window?.makeKeyAndVisible()
+        
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
         
         return true
     }
@@ -52,6 +59,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    //MARK: - WCSessionDelegate
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        if message.keys.contains("getMoods") {
+            MoodDAO.shared.fetchMoodTypes { (moods, error) -> (Void) in
+                if moods != nil {
+                    session.sendMessage(["moods": moods as Any], replyHandler: nil, errorHandler: nil)
+                }
+            }
+        }
     }
 
 

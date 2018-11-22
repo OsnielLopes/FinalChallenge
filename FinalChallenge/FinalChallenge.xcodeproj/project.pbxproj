@@ -33,6 +33,10 @@
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
+		497AFE2921A5D36E00A72A73 /* MoodType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF1216BE6EF001F16EA /* MoodType+CoreDataProperties.swift */; };
+		497AFE2A21A5D38F00A72A73 /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */; };
+		497AFE2D21A5D3DD00A72A73 /* MoodPickerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497AFE2B21A5D3D300A72A73 /* MoodPickerItem.swift */; };
+		497AFE2E21A5DBB400A72A73 /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
@@ -214,6 +218,7 @@
 		4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewController.swift; sourceTree = "<group>"; };
 		494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
+		497AFE2B21A5D3D300A72A73 /* MoodPickerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerItem.swift; sourceTree = "<group>"; };
 		49AB023821752D79002B8140 /* QuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -596,6 +601,7 @@
 			isa = PBXGroup;
 			children = (
 				49D59FE4219B374C002A1C96 /* InterfaceController.swift */,
+				497AFE2B21A5D3D300A72A73 /* MoodPickerItem.swift */,
 				49D59FE6219B374C002A1C96 /* ExtensionDelegate.swift */,
 				49D59FE8219B374C002A1C96 /* NotificationController.swift */,
 				49D59FEA219B374D002A1C96 /* Assets.xcassets */,
@@ -1452,9 +1458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497AFE2921A5D36E00A72A73 /* MoodType+CoreDataProperties.swift in Sources */,
 				49D59FE9219B374C002A1C96 /* NotificationController.swift in Sources */,
+				497AFE2E21A5DBB400A72A73 /* MoodInput+CoreDataClass.swift in Sources */,
+				497AFE2A21A5D38F00A72A73 /* MoodType+CoreDataClass.swift in Sources */,
 				49D59FE7219B374C002A1C96 /* ExtensionDelegate.swift in Sources */,
 				49D59FE5219B374C002A1C96 /* InterfaceController.swift in Sources */,
+				497AFE2D21A5D3DD00A72A73 /* MoodPickerItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
