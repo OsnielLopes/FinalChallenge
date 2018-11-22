@@ -54,6 +54,10 @@ class MainRouter: NSObject, MainRouterProtocol {
     private func generateTabBarViewControllers() -> [UIViewController] {
         var viewControllers: [UIViewController] = []
         
+        let profileRouter = ProfileRouter()
+        profileRouter.view.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "Profile Icon Deselected"), selectedImage: UIImage(named: "Profile Icon Selected"))
+        viewControllers.append(profileRouter.view)
+        
         let daySummaryViewRouter = DaySummaryRouter()
         daySummaryViewRouter.view.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "Calendar Icon Deselected"), selectedImage: UIImage(named: "Calendar Icon Selected"))
         viewControllers.append(daySummaryViewRouter.view)

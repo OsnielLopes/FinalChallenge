@@ -97,16 +97,12 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func item(at indexPath: Int) -> Any {
-        
-//        self.entries.forEach({
-//            print(($0 as! MoodInput).moodType!.typeText!)
-//        })
-        
         return self.entries[indexPath - (self.shouldShowAddButton() ? 1 : 0)]
     }
     
     func shouldShowAddButton() -> Bool {
-        return Calendar.current.isDateInToday(self.currentDate)
+        return true
+//        return Calendar.current.isDateInToday(self.currentDate)
     }
     
     func shouldDisplayLine(for index: Int) -> Bool {
