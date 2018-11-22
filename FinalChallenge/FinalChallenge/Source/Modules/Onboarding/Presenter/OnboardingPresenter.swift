@@ -16,6 +16,9 @@ class OnboardingPresenter: NSObject, OnboardingPresenterInputProtocol, Onboardin
     var router: OnboardingRouterProtocol!
 
     // MARK: - OnboardingPresenterInputProtocol
+    func getTutorialPages() -> [OnboardingPageView] {
+        return self.router.getPages()
+    }
 
     // MARK: - OnboardingPresenterInteractorOutputProtocol
 

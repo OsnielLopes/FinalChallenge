@@ -36,6 +36,10 @@ class MainRouter: NSObject, MainRouterProtocol {
     func presentAsRoot(window: UIWindow) {
         window.rootViewController = self.view
     }
+    
+    func present(with viewController: UIViewController) {
+        viewController.present(self.view, animated: true, completion: nil)
+    }
 
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> MainView {

@@ -131,6 +131,9 @@
 		BDFD4AD021A5E596004DC188 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ACA21A5E596004DC188 /* OnboardingProtocols.swift */; };
 		BDFD4AD121A5E596004DC188 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ACB21A5E596004DC188 /* OnboardingInteractor.swift */; };
 		BDFD4AD221A5E596004DC188 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ACC21A5E596004DC188 /* OnboardingView.swift */; };
+		BDFD4ADB21A726DB004DC188 /* Onboarding1thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ADA21A726DB004DC188 /* Onboarding1thView.swift */; };
+		BDFD4ADD21A726EB004DC188 /* Onboarding2thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ADC21A726EB004DC188 /* Onboarding2thView.swift */; };
+		BDFD4AE021A7289A004DC188 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -278,6 +281,9 @@
 		BDFD4ACA21A5E596004DC188 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
 		BDFD4ACB21A5E596004DC188 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		BDFD4ACC21A5E596004DC188 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BDFD4ADA21A726DB004DC188 /* Onboarding1thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1thView.swift; sourceTree = "<group>"; };
+		BDFD4ADC21A726EB004DC188 /* Onboarding2thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2thView.swift; sourceTree = "<group>"; };
+		BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6C0D3FE9A09DAE3E9ADCF /* Pods-FinalChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -940,6 +946,8 @@
 			children = (
 				BDFD4AC721A5E596004DC188 /* Onboarding.storyboard */,
 				BDFD4ACC21A5E596004DC188 /* OnboardingView.swift */,
+				BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */,
+				BDFD4ADE21A726F1004DC188 /* Pages */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -966,6 +974,15 @@
 				BDFD4ACB21A5E596004DC188 /* OnboardingInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BDFD4ADE21A726F1004DC188 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD4ADA21A726DB004DC188 /* Onboarding1thView.swift */,
+				BDFD4ADC21A726EB004DC188 /* Onboarding2thView.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 		F84F77F27EDB0EC1035497DF /* Frameworks */ = {
@@ -1214,6 +1231,7 @@
 				BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */,
 				BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
+				BDFD4ADD21A726EB004DC188 /* Onboarding2thView.swift in Sources */,
 				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
 				BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */,
@@ -1268,6 +1286,7 @@
 				BD974A39216681F200612838 /* QuestionDAO.swift in Sources */,
 				BD974A3F2167CDF900612838 /* DissertativeQuestionDAO.swift in Sources */,
 				458F8FF02190A1E6009F31A8 /* AnswerQuestionRouter.swift in Sources */,
+				BDFD4AE021A7289A004DC188 /* OnboardingPageView.swift in Sources */,
 				BD290C04216BE6EF001F16EA /* RadioboxAnswer+CoreDataClass.swift in Sources */,
 				BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */,
 				491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */,
@@ -1283,6 +1302,7 @@
 				BDAF3AC3218B82D900EFD2A9 /* QuestionAnswersRouter.swift in Sources */,
 				BDFD4AD221A5E596004DC188 /* OnboardingView.swift in Sources */,
 				BDAF3ACC218B87C000EFD2A9 /* QuestionTextCell.swift in Sources */,
+				BDFD4ADB21A726DB004DC188 /* Onboarding1thView.swift in Sources */,
 				4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */,
 				BDFD4AD121A5E596004DC188 /* OnboardingInteractor.swift in Sources */,
 				49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */,

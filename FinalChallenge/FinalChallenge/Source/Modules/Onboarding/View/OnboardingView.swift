@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnboardingView: UIViewController, OnboardingPresenterOutputProtocol {
+class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
 
 	// MARK: - Viper Module Properties
 	var presenter: OnboardingPresenterInputProtocol!
@@ -22,4 +22,16 @@ class OnboardingView: UIViewController, OnboardingPresenterOutputProtocol {
 
 	// MARK: - Private Methods
 
+}
+
+extension OnboardingView: UIPageViewControllerDataSource {
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        return nil
+    }
+    
 }
