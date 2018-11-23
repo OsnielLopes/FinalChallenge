@@ -16,6 +16,9 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
 	// MARK: - Override methods
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setViewControllers([self.presenter.firstView()], direction: .forward, animated: true, completion: nil)
+        self.dataSource = self
     }
 
     // MARK: - OnboardingPresenterOutputProtocol
@@ -27,11 +30,11 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
 extension OnboardingView: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        return nil
+        return self.presenter.page(before: viewController as! OnboardingPageView)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        return nil
+        return self.presenter.page(after: viewController as! OnboardingPageView)
     }
     
 }

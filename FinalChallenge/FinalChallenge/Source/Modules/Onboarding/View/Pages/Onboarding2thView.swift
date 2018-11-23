@@ -9,22 +9,24 @@
 import UIKit
 
 class Onboarding2thView: OnboardingPageView {
-
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var addButton: UIView!
+    @IBOutlet weak var moodButton: UIView!
+    @IBOutlet weak var questionButton: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.addButton.layer.cornerRadius = self.addButton.frame.width / 2
+        self.addButton.clipsToBounds = true
+        
+        self.moodButton.layer.cornerRadius = self.moodButton.frame.width / 2
+        self.moodButton.clipsToBounds = true
+        
+        self.questionButton.layer.cornerRadius = self.questionButton.frame.width / 2
+        self.questionButton.clipsToBounds = true
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

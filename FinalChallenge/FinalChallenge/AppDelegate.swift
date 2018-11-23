@@ -31,7 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
-        let router = MainRouter()
+//        let router = MainRouter()
+//        router.presentAsRoot(window: self.window!)
+//        self.window?.makeKeyAndVisible()
+        
+        let router = OnboardingRouter()
         router.presentAsRoot(window: self.window!)
         self.window?.makeKeyAndVisible()
         

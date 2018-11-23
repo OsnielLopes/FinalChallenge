@@ -56,18 +56,20 @@ class OnboardingRouter: NSObject, OnboardingRouterProtocol {
         return currentIndex + 1 >= self.pages.count ? nil : self.pages[currentIndex + 1]
     }
     
-    func firstView() -> OnboardingPageView? {
+    func firstView() -> OnboardingPageView {
         return self.pages[0]
     }
     
-    func askPermissionForHealthKit() {
-        fatalError()
+    func askPermissionForHealthKit(with completion: @escaping () -> (Bool)) {
     }
     
-    func askPermissionForCameraUsage() {
-        fatalError()
+    func askPermissionForCameraRollUsage(with completion: @escaping () -> (Bool)) {
     }
     
+    func presentAsRoot(window: UIWindow) {
+        window.rootViewController = self.view
+    }
+
     func didFinishOnboarding() {
         self.view.dismiss(animated: true, completion: nil)
         MainRouter().present(with: self.view)
