@@ -1,5 +1,5 @@
 //
-//  Onboarding7thView.swift
+//  Onboarding8thView.swift
 //  FinalChallenge
 //
 //  Created by Guilherme Paciulli on 26/11/18.
@@ -9,22 +9,35 @@
 import UIKit
 
 class Onboarding7thView: OnboardingPageView {
-
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var userBackground: UIImageView!
+    
+    @IBOutlet var changeImageGesture: UITapGestureRecognizer!
+    @IBOutlet var changeBackgroundImageGesture: UITapGestureRecognizer!
+    
+    @IBOutlet weak var startReflectingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.userImage.layer.cornerRadius = self.userImage.frame.width / 2
+        self.userImage.clipsToBounds = true
+        
+        self.startReflectingButton.layer.cornerRadius = self.startReflectingButton.frame.width / 10
+        self.startReflectingButton.clipsToBounds = true        
+        
+        self.username.setBottomBorder(with: #colorLiteral(red: 0.01960784314, green: 0.06274509804, blue: 0.07843137255, alpha: 1), and: 1.0)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTapChangeBackgroundImage(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func didTapChangeImage(_ sender: Any) {
+    }
+    
+    @IBAction func didClickToStartReflecting(_ sender: Any) {
+    }
 }

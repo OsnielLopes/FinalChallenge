@@ -11,9 +11,20 @@ import UIKit
 class OnboardingPageView: UIViewController {
     
     var pageViewController: UIPageViewController!
+    
+    var background: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setUpBackground()
+    }
+    
+    private func setUpBackground() {
+        self.background = UIImageView.init(frame: self.view.frame)
+        self.background.image = UIImage(named: "bgCloud")
+        self.background.contentMode = .scaleAspectFill
+        self.view.addSubview(self.background)
+        self.background.layer.zPosition = -1
     }
 
 }

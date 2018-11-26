@@ -172,10 +172,10 @@
 		BDFD4AE021A7289A004DC188 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */; };
 		BDFD4AE221AC4186004DC188 /* Onboarding4thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE121AC4186004DC188 /* Onboarding4thView.swift */; };
 		BDFD4AE421AC5B29004DC188 /* Onboarding2thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */; };
-		BDFD4AE621AC5B3C004DC188 /* Onboarding5thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE521AC5B3C004DC188 /* Onboarding5thView.swift */; };
-		BDFD4AE821AC5B6F004DC188 /* Onboarding6thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE721AC5B6F004DC188 /* Onboarding6thView.swift */; };
-		BDFD4AEA21AC5B81004DC188 /* Onboarding7thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE921AC5B81004DC188 /* Onboarding7thView.swift */; };
-		BDFD4AEC21AC5B91004DC188 /* Onboarding8thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */; };
+		BDFD4AE821AC5B6F004DC188 /* Onboarding5thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE721AC5B6F004DC188 /* Onboarding5thView.swift */; };
+		BDFD4AEA21AC5B81004DC188 /* Onboarding6thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE921AC5B81004DC188 /* Onboarding6thView.swift */; };
+		BDFD4AEC21AC5B91004DC188 /* Onboarding7thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AEB21AC5B91004DC188 /* Onboarding7thView.swift */; };
+		BDFD4AEE21AC6FA9004DC188 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -365,10 +365,10 @@
 		BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		BDFD4AE121AC4186004DC188 /* Onboarding4thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4thView.swift; sourceTree = "<group>"; };
 		BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2thView.swift; sourceTree = "<group>"; };
-		BDFD4AE521AC5B3C004DC188 /* Onboarding5thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding5thView.swift; sourceTree = "<group>"; };
-		BDFD4AE721AC5B6F004DC188 /* Onboarding6thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding6thView.swift; sourceTree = "<group>"; };
-		BDFD4AE921AC5B81004DC188 /* Onboarding7thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding7thView.swift; sourceTree = "<group>"; };
-		BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding8thView.swift; sourceTree = "<group>"; };
+		BDFD4AE721AC5B6F004DC188 /* Onboarding5thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding5thView.swift; sourceTree = "<group>"; };
+		BDFD4AE921AC5B81004DC188 /* Onboarding6thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding6thView.swift; sourceTree = "<group>"; };
+		BDFD4AEB21AC5B91004DC188 /* Onboarding7thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding7thView.swift; sourceTree = "<group>"; };
+		BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6C0D3FE9A09DAE3E9ADCF /* Pods-FinalChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -566,6 +566,7 @@
 				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
 				491511EE216FBFF6007C0E09 /* UIView+Extension.swift */,
 				450ED4C42177ABA700195CAE /* Constants.swift */,
+				BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1217,10 +1218,9 @@
 				BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */,
 				BDFD4ADC21A726EB004DC188 /* Onboarding3thView.swift */,
 				BDFD4AE121AC4186004DC188 /* Onboarding4thView.swift */,
-				BDFD4AE521AC5B3C004DC188 /* Onboarding5thView.swift */,
-				BDFD4AE721AC5B6F004DC188 /* Onboarding6thView.swift */,
-				BDFD4AE921AC5B81004DC188 /* Onboarding7thView.swift */,
-				BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */,
+				BDFD4AE721AC5B6F004DC188 /* Onboarding5thView.swift */,
+				BDFD4AE921AC5B81004DC188 /* Onboarding6thView.swift */,
+				BDFD4AEB21AC5B91004DC188 /* Onboarding7thView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -1447,14 +1447,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD81C422193416F00880601 /* ProfileRouter.swift in Sources */,
-				BDFD4AE821AC5B6F004DC188 /* Onboarding6thView.swift in Sources */,
+				BDFD4AE821AC5B6F004DC188 /* Onboarding5thView.swift in Sources */,
 				BDD81C4E219394ED00880601 /* ChartCell.swift in Sources */,
 				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BDAF3AC2218B82D900EFD2A9 /* QuestionAnswersPresenter.swift in Sources */,
 				BD3E3C7F2187812900539ADB /* MainView.swift in Sources */,
 				BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
 				BD3E3C782187804100539ADB /* MainProtocols.swift in Sources */,
-				BDFD4AEC21AC5B91004DC188 /* Onboarding8thView.swift in Sources */,
+				BDFD4AEC21AC5B91004DC188 /* Onboarding7thView.swift in Sources */,
 				491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */,
 				453953F921766D0F00CF71EC /* DailyQuestionInteractor.swift in Sources */,
 				BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */,
@@ -1463,9 +1463,9 @@
 				453953F821766D0F00CF71EC /* DailyQuestionProtocols.swift in Sources */,
 				BD3635E6218A19FF00E4A6EA /* QuestionsHistoricRouter.swift in Sources */,
 				BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
+				BDFD4AEE21AC6FA9004DC188 /* UITextField+Extension.swift in Sources */,
 				BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */,
 				BD96930E219B3E3A005D6D26 /* GraphPointAnimation.swift in Sources */,
-				BDFD4AE621AC5B3C004DC188 /* Onboarding5thView.swift in Sources */,
 				450ED4C52177ABA700195CAE /* Constants.swift in Sources */,
 				BDFD4ACE21A5E596004DC188 /* OnboardingPresenter.swift in Sources */,
 				BD969312219B3E3A005D6D26 /* DotPlot.swift in Sources */,
@@ -1546,7 +1546,7 @@
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
 				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
-				BDFD4AEA21AC5B81004DC188 /* Onboarding7thView.swift in Sources */,
+				BDFD4AEA21AC5B81004DC188 /* Onboarding6thView.swift in Sources */,
 				BDFD4AD021A5E596004DC188 /* OnboardingProtocols.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */,
