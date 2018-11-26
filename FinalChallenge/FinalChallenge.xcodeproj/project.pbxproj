@@ -157,6 +157,10 @@
 		BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */; };
 		BDE4683A2180F91E002BDE93 /* DaySummaryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */; };
 		BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */; };
+		BDE84942219C76B700603B97 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84941219C76B700603B97 /* UserDAO.swift */; };
+		BDE84945219C7B0100603B97 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84943219C7B0100603B97 /* User+CoreDataClass.swift */; };
+		BDE84946219C7B0100603B97 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84944219C7B0100603B97 /* User+CoreDataProperties.swift */; };
+		BDE84948219C97BB00603B97 /* StatisticsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84947219C97BB00603B97 /* StatisticsFactory.swift */; };
 		BDFD4ACD21A5E596004DC188 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDFD4AC721A5E596004DC188 /* Onboarding.storyboard */; };
 		BDFD4ACE21A5E596004DC188 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AC821A5E596004DC188 /* OnboardingPresenter.swift */; };
 		BDFD4ACF21A5E596004DC188 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AC921A5E596004DC188 /* OnboardingRouter.swift */; };
@@ -164,12 +168,14 @@
 		BDFD4AD121A5E596004DC188 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ACB21A5E596004DC188 /* OnboardingInteractor.swift */; };
 		BDFD4AD221A5E596004DC188 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ACC21A5E596004DC188 /* OnboardingView.swift */; };
 		BDFD4ADB21A726DB004DC188 /* Onboarding1thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ADA21A726DB004DC188 /* Onboarding1thView.swift */; };
-		BDFD4ADD21A726EB004DC188 /* Onboarding2thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ADC21A726EB004DC188 /* Onboarding2thView.swift */; };
+		BDFD4ADD21A726EB004DC188 /* Onboarding3thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ADC21A726EB004DC188 /* Onboarding3thView.swift */; };
 		BDFD4AE021A7289A004DC188 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */; };
-		BDE84942219C76B700603B97 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84941219C76B700603B97 /* UserDAO.swift */; };
-		BDE84945219C7B0100603B97 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84943219C7B0100603B97 /* User+CoreDataClass.swift */; };
-		BDE84946219C7B0100603B97 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84944219C7B0100603B97 /* User+CoreDataProperties.swift */; };
-		BDE84948219C97BB00603B97 /* StatisticsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE84947219C97BB00603B97 /* StatisticsFactory.swift */; };
+		BDFD4AE221AC4186004DC188 /* Onboarding4thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE121AC4186004DC188 /* Onboarding4thView.swift */; };
+		BDFD4AE421AC5B29004DC188 /* Onboarding2thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */; };
+		BDFD4AE621AC5B3C004DC188 /* Onboarding5thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE521AC5B3C004DC188 /* Onboarding5thView.swift */; };
+		BDFD4AE821AC5B6F004DC188 /* Onboarding6thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE721AC5B6F004DC188 /* Onboarding6thView.swift */; };
+		BDFD4AEA21AC5B81004DC188 /* Onboarding7thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE921AC5B81004DC188 /* Onboarding7thView.swift */; };
+		BDFD4AEC21AC5B91004DC188 /* Onboarding8thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -344,6 +350,10 @@
 		BDE468352180F8CF002BDE93 /* DaySummaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryPresenter.swift; sourceTree = "<group>"; };
 		BDE468392180F91E002BDE93 /* DaySummaryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryInteractor.swift; sourceTree = "<group>"; };
 		BDE4683D2180F94B002BDE93 /* DaySummaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySummaryRouter.swift; sourceTree = "<group>"; };
+		BDE84941219C76B700603B97 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		BDE84943219C7B0100603B97 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDE84944219C7B0100603B97 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDE84947219C97BB00603B97 /* StatisticsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsFactory.swift; sourceTree = "<group>"; };
 		BDFD4AC721A5E596004DC188 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BDFD4AC821A5E596004DC188 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		BDFD4AC921A5E596004DC188 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
@@ -351,12 +361,14 @@
 		BDFD4ACB21A5E596004DC188 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		BDFD4ACC21A5E596004DC188 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BDFD4ADA21A726DB004DC188 /* Onboarding1thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1thView.swift; sourceTree = "<group>"; };
-		BDFD4ADC21A726EB004DC188 /* Onboarding2thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2thView.swift; sourceTree = "<group>"; };
+		BDFD4ADC21A726EB004DC188 /* Onboarding3thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3thView.swift; sourceTree = "<group>"; };
 		BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
-		BDE84941219C76B700603B97 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
-		BDE84943219C7B0100603B97 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BDE84944219C7B0100603B97 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BDE84947219C97BB00603B97 /* StatisticsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsFactory.swift; sourceTree = "<group>"; };
+		BDFD4AE121AC4186004DC188 /* Onboarding4thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding4thView.swift; sourceTree = "<group>"; };
+		BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2thView.swift; sourceTree = "<group>"; };
+		BDFD4AE521AC5B3C004DC188 /* Onboarding5thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding5thView.swift; sourceTree = "<group>"; };
+		BDFD4AE721AC5B6F004DC188 /* Onboarding6thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding6thView.swift; sourceTree = "<group>"; };
+		BDFD4AE921AC5B81004DC188 /* Onboarding7thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding7thView.swift; sourceTree = "<group>"; };
+		BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding8thView.swift; sourceTree = "<group>"; };
 		C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6C0D3FE9A09DAE3E9ADCF /* Pods-FinalChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1142,6 +1154,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BDE84949219C97C200603B97 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BDE84947219C97BB00603B97 /* StatisticsFactory.swift */,
+				BD693C0E219F633000C3E5F5 /* MindfullnessTimeFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		BDFD4AD321A5E59A004DC188 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -1193,18 +1214,15 @@
 			isa = PBXGroup;
 			children = (
 				BDFD4ADA21A726DB004DC188 /* Onboarding1thView.swift */,
-				BDFD4ADC21A726EB004DC188 /* Onboarding2thView.swift */,
+				BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */,
+				BDFD4ADC21A726EB004DC188 /* Onboarding3thView.swift */,
+				BDFD4AE121AC4186004DC188 /* Onboarding4thView.swift */,
+				BDFD4AE521AC5B3C004DC188 /* Onboarding5thView.swift */,
+				BDFD4AE721AC5B6F004DC188 /* Onboarding6thView.swift */,
+				BDFD4AE921AC5B81004DC188 /* Onboarding7thView.swift */,
+				BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */,
 			);
 			path = Pages;
-			sourceTree = "<group>";
-		};
-		BDE84949219C97C200603B97 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				BDE84947219C97BB00603B97 /* StatisticsFactory.swift */,
-				BD693C0E219F633000C3E5F5 /* MindfullnessTimeFactory.swift */,
-			);
-			path = Factories;
 			sourceTree = "<group>";
 		};
 		F84F77F27EDB0EC1035497DF /* Frameworks */ = {
@@ -1429,12 +1447,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD81C422193416F00880601 /* ProfileRouter.swift in Sources */,
+				BDFD4AE821AC5B6F004DC188 /* Onboarding6thView.swift in Sources */,
 				BDD81C4E219394ED00880601 /* ChartCell.swift in Sources */,
 				BD974A452167DE4F00612838 /* CheckboxQuestionDAO.swift in Sources */,
 				BDAF3AC2218B82D900EFD2A9 /* QuestionAnswersPresenter.swift in Sources */,
 				BD3E3C7F2187812900539ADB /* MainView.swift in Sources */,
 				BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
 				BD3E3C782187804100539ADB /* MainProtocols.swift in Sources */,
+				BDFD4AEC21AC5B91004DC188 /* Onboarding8thView.swift in Sources */,
 				491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */,
 				453953F921766D0F00CF71EC /* DailyQuestionInteractor.swift in Sources */,
 				BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */,
@@ -1445,6 +1465,7 @@
 				BD290C22216BE6EF001F16EA /* Category+CoreDataProperties.swift in Sources */,
 				BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */,
 				BD96930E219B3E3A005D6D26 /* GraphPointAnimation.swift in Sources */,
+				BDFD4AE621AC5B3C004DC188 /* Onboarding5thView.swift in Sources */,
 				450ED4C52177ABA700195CAE /* Constants.swift in Sources */,
 				BDFD4ACE21A5E596004DC188 /* OnboardingPresenter.swift in Sources */,
 				BD969312219B3E3A005D6D26 /* DotPlot.swift in Sources */,
@@ -1461,7 +1482,7 @@
 				BD3E3C5B2183AE0900539ADB /* BreathingRouter.swift in Sources */,
 				BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */,
 				BD290C37216D1B60001F16EA /* AuthorDAO.swift in Sources */,
-				BDFD4ADD21A726EB004DC188 /* Onboarding2thView.swift in Sources */,
+				BDFD4ADD21A726EB004DC188 /* Onboarding3thView.swift in Sources */,
 				494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */,
 				BD969307219B3E3A005D6D26 /* FillDrawingLayer.swift in Sources */,
 				BDE468362180F8CF002BDE93 /* DaySummaryPresenter.swift in Sources */,
@@ -1481,6 +1502,7 @@
 				BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
 				BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */,
 				BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
+				BDFD4AE421AC5B29004DC188 /* Onboarding2thView.swift in Sources */,
 				453953F721766D0F00CF71EC /* DailyQuestionRouter.swift in Sources */,
 				BD290C1C216BE6EF001F16EA /* DissertationAnswer+CoreDataClass.swift in Sources */,
 				BDAF3AC5218B82D900EFD2A9 /* QuestionAnswersInteractor.swift in Sources */,
@@ -1512,6 +1534,7 @@
 				458F8FF32190A1E6009F31A8 /* AnswerQuestionView.swift in Sources */,
 				BD290C02216BE6EF001F16EA /* Author+CoreDataProperties.swift in Sources */,
 				BD693C07219E5B7800C3E5F5 /* HealthKitManager.swift in Sources */,
+				BDFD4AE221AC4186004DC188 /* Onboarding4thView.swift in Sources */,
 				BD969311219B3E3A005D6D26 /* LinePlot.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
@@ -1523,6 +1546,7 @@
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
 				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
 				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
+				BDFD4AEA21AC5B81004DC188 /* Onboarding7thView.swift in Sources */,
 				BDFD4AD021A5E596004DC188 /* OnboardingProtocols.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */,

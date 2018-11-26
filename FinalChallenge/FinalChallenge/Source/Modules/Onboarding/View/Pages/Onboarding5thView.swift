@@ -1,5 +1,5 @@
 //
-//  Onboarding2thView.swift
+//  Onboarding5thView.swift
 //  FinalChallenge
 //
 //  Created by Guilherme Paciulli on 26/11/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Onboarding2thView: OnboardingPageView {
+class Onboarding5thView: OnboardingPageView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
