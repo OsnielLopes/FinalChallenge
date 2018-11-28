@@ -38,7 +38,7 @@ class OnboardingRouter: NSObject, OnboardingRouterProtocol {
 		self.view = view
         
         self.pages = []
-        for i in 1...7 {
+        for i in 7...7 {
             self.pages.append(self.pageFromStoryboard(with: "Onboarding\(i)thView"))
         }
         

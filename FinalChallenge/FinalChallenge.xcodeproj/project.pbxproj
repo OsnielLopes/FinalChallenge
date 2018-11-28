@@ -29,7 +29,7 @@
 		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
-		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		4943FDD82165355600FE2045 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
@@ -176,6 +176,7 @@
 		BDFD4AEA21AC5B81004DC188 /* Onboarding6thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE921AC5B81004DC188 /* Onboarding6thView.swift */; };
 		BDFD4AEC21AC5B91004DC188 /* Onboarding7thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AEB21AC5B91004DC188 /* Onboarding7thView.swift */; };
 		BDFD4AEE21AC6FA9004DC188 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */; };
+		BDFD4AF021AD9B10004DC188 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AEF21AD9B10004DC188 /* UIViewController+Extension.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -369,6 +370,7 @@
 		BDFD4AE921AC5B81004DC188 /* Onboarding6thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding6thView.swift; sourceTree = "<group>"; };
 		BDFD4AEB21AC5B91004DC188 /* Onboarding7thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding7thView.swift; sourceTree = "<group>"; };
 		BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		BDFD4AEF21AD9B10004DC188 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6C0D3FE9A09DAE3E9ADCF /* Pods-FinalChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -567,6 +569,7 @@
 				491511EE216FBFF6007C0E09 /* UIView+Extension.swift */,
 				450ED4C42177ABA700195CAE /* Constants.swift */,
 				BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */,
+				BDFD4AEF21AD9B10004DC188 /* UIViewController+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1364,13 +1367,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1550,6 +1557,7 @@
 				BDFD4AD021A5E596004DC188 /* OnboardingProtocols.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */,
+				BDFD4AF021AD9B10004DC188 /* UIViewController+Extension.swift in Sources */,
 				BD693C0F219F633000C3E5F5 /* MindfullnessTimeFactory.swift in Sources */,
 				BD969306219B3E3A005D6D26 /* LineDrawingLayer.swift in Sources */,
 				BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
@@ -1574,7 +1582,7 @@
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */,
-				4943FDD82165355600FE2045 /* (null) in Sources */,
+				4943FDD82165355600FE2045 /* BuildFile in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				BDE84948219C97BB00603B97 /* StatisticsFactory.swift in Sources */,

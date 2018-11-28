@@ -1,25 +1,33 @@
 PODS:
   - Crashlytics (3.11.0):
     - Fabric (~> 1.8.0)
+  - CropViewController (2.3.8)
   - Fabric (1.8.0)
   - Hero (1.4.0)
+  - IQKeyboardManager (6.2.0)
 
 DEPENDENCIES:
   - Crashlytics
+  - CropViewController
   - Fabric
   - Hero
+  - IQKeyboardManager
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Crashlytics
+    - CropViewController
     - Fabric
     - Hero
+    - IQKeyboardManager
 
 SPEC CHECKSUMS:
   Crashlytics: 1448070c1d2731ab71ea7c3faf84ac0f69657287
+  CropViewController: 7be882b7d3fb3faef48a41924e80f689e9df2514
   Fabric: 4ac1cdfef3004ccd83ce0959b91eda8a6e37df72
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
 
-PODFILE CHECKSUM: b119b5ddb69c8462e08397354bb612c05a9daec1
+PODFILE CHECKSUM: 887dfc3ed3a6f70a6b312e98b9cf5d4a6ece73d7
 
 COCOAPODS: 1.5.3
