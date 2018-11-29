@@ -35,7 +35,11 @@ class Onboarding7thView: OnboardingPageView {
         self.hideKeyboardWhenTappedAround()
         
         self.picker.delegate = self
-        
+    }
+    
+    @objc override func dismissKeyboard() {
+        view.endEditing(true)
+//        self.pageViewController.didUpdateUsername(with: self.username.text)
     }
     
     @IBAction func didTapChangeBackgroundImage(_ sender: Any) {
@@ -49,6 +53,7 @@ class Onboarding7thView: OnboardingPageView {
     }
     
     @IBAction func didClickToStartReflecting(_ sender: Any) {
+        self.pageViewController.didFinishOnBoarding()
     }
     
     private func openCameraLibrary() {
@@ -81,6 +86,13 @@ class Onboarding7thView: OnboardingPageView {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func setUser(_ user: User) {
+        self.username.text = user.name
+        self.bg.image = user.getbackgroundImage() ?? self.bg.image!
+        self.userImage.image = user.getProfileIcon() ?? self.userImage.image!
+    }
+    
 }
 
 extension Onboarding7thView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -115,8 +127,10 @@ extension Onboarding7thView: CropViewControllerDelegate {
         switch self.pickingImage {
         case .profile:
             self.userImage.image = image
+            self.pageViewController.didUpdateAvatar(image)
         case .background:
             self.bg.image = image
+            self.pageViewController.didUpdateCover(image)
         }
         cropViewController.dismiss(animated: true)
     }

@@ -60,12 +60,6 @@ class OnboardingRouter: NSObject, OnboardingRouterProtocol {
         return self.pages[0]
     }
     
-    func askPermissionForHealthKit(with completion: @escaping () -> (Bool)) {
-    }
-    
-    func askPermissionForCameraRollUsage(with completion: @escaping () -> (Bool)) {
-    }
-    
     func presentAsRoot(window: UIWindow) {
         window.rootViewController = self.view
     }

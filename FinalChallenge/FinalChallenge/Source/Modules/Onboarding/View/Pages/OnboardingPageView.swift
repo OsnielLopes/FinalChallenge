@@ -10,7 +10,7 @@ import UIKit
 
 class OnboardingPageView: UIViewController {
     
-    var pageViewController: UIPageViewController!
+    var pageViewController: OnboardingView!
     
     var background: UIImageView!
 

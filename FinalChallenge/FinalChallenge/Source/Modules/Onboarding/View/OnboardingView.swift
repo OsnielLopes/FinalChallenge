@@ -19,6 +19,8 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
         
         self.setViewControllers([self.presenter.firstView()], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
+        
+        self.presenter.createUserIfNecessary()
     }
 
     // MARK: - OnboardingPresenterOutputProtocol
@@ -32,11 +34,30 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
     }
     
     func didFetchUser(_ user: User) {
+        self.presenter.userView().setUser(user)
     }
     
     func didUpdateUser(_ user: User) {
+        self.presenter.userView().setUser(user)
     }
-
+    
+    // MARK: - Public Methods
+    func didFinishOnBoarding() {
+        self.presenter.didFinishOnboarding()
+    }
+    
+    func didUpdateUsername(with name: String) {
+        self.presenter.setUserName(name)
+    }
+    
+    func didUpdateAvatar(_ image: UIImage) {
+        self.presenter.setUserAvatar(image)
+    }
+    
+    func didUpdateCover(_ image: UIImage) {
+        self.presenter.setUserCover(image)
+    }
+    
 	// MARK: - Private Methods
 
 }

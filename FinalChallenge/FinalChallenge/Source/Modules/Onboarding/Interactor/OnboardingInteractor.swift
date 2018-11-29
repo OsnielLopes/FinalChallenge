@@ -22,8 +22,9 @@ class OnboardingInteractor: NSObject, OnboardingInteractorInputProtocol {
         UserDAO.shared.fetch(completion: { user, err in
             if let user = user {
                 self.user = user
+                self.output.handleSuccessUpdatedUser(with: self.user)
             } else if err?.message == "User not created" {
-                UserDAO.shared.create(name: "User", profilePicture: nil, backgroundImage: nil, completion: { user, err in
+                UserDAO.shared.create(completion: { user, err in
                     guard let user = user, err == nil else {
                         self.output.handleFailureCreatedUser(with: "There was an error creating the user")
                         return

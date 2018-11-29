@@ -31,10 +31,26 @@ class OnboardingPresenter: NSObject, OnboardingPresenterInputProtocol, Onboardin
     func firstView() -> OnboardingPageView {
         return self.router.firstView()
     }
+    
+    func userView() -> Onboarding7thView {
+        return self.router.userView()
+    }
+    
+    func setUserAvatar(_ image: UIImage) {
+        self.interactor.setUserAvatar(image)
+    }
+    
+    func setUserCover(_ image: UIImage) {
+        self.interactor.setUserCover(image)
+    }
+    
+    func setUserName(_ name: String) {
+        self.interactor.setUserName(name)
+    }
 
     // MARK: - OnboardingPresenterInteractorOutputProtocol
     
-    func createUserIfNecessary(_ user: User) {
+    func createUserIfNecessary() {
         self.view.showLoading(true)
         self.interactor.createUserIfNecessary()
     }

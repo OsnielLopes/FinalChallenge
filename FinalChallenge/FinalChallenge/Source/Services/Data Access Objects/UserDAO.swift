@@ -17,9 +17,12 @@ class UserDAO {
     
     private(set) var sampleBackgroundImage: UIImage
     
+    private(set) var sampleUsername: String
+    
     private init() {
         self.sampleProfilePicture = UIImage(named: "user-placeholder")!
         self.sampleBackgroundImage = UIImage(named: "bg1")!
+        self.sampleUsername = "User"
     }
     
     func fetch(completion: @escaping (User?, DataAccessError?) -> ()) {
@@ -34,10 +37,10 @@ class UserDAO {
         }
     }
     
-    func create(name: String, profilePicture: UIImage?, backgroundImage: UIImage?, completion: @escaping (User?, DataAccessError?) -> ()) {
+    func create(name: String? = nil, profilePicture: UIImage? = nil, backgroundImage: UIImage? = nil, completion: @escaping (User?, DataAccessError?) -> ()) {
         if let newUser = CoreDataManager.shared.create(type: User.self) {
             
-            newUser.name = name
+            newUser.name = name ?? self.sampleUsername
             
             if let profilePicture = profilePicture {
                 newUser.set(profileIcon: profilePicture)

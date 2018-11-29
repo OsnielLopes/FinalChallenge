@@ -33,11 +33,12 @@ protocol OnboardingPresenterInputProtocol: class {
     func page(before view: UIViewController) -> OnboardingPageView?
     func page(after view: UIViewController) -> OnboardingPageView?
     func firstView() -> OnboardingPageView
+    func userView() -> Onboarding7thView
     
-    func createUserIfNecessary(_ user: User)
-//    func setUserAvatar(_ image: UIImage)
-//    func setUserCover(_ image: UIImage)
-//    func setUserName(_ name: String)
+    func createUserIfNecessary()
+    func setUserAvatar(_ image: UIImage)
+    func setUserCover(_ image: UIImage)
+    func setUserName(_ name: String)
 
     func didFinishOnboarding()
 }

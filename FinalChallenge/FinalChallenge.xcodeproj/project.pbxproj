@@ -29,7 +29,7 @@
 		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
-		4943FDD82165355600FE2045 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
@@ -1184,7 +1184,6 @@
 			children = (
 				BDFD4AC721A5E596004DC188 /* Onboarding.storyboard */,
 				BDFD4ACC21A5E596004DC188 /* OnboardingView.swift */,
-				BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */,
 				BDFD4ADE21A726F1004DC188 /* Pages */,
 			);
 			path = View;
@@ -1217,6 +1216,7 @@
 		BDFD4ADE21A726F1004DC188 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				BDFD4ADF21A7289A004DC188 /* OnboardingPageView.swift */,
 				BDFD4ADA21A726DB004DC188 /* Onboarding1thView.swift */,
 				BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */,
 				BDFD4ADC21A726EB004DC188 /* Onboarding3thView.swift */,
@@ -1582,7 +1582,7 @@
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */,
-				4943FDD82165355600FE2045 /* BuildFile in Sources */,
+				4943FDD82165355600FE2045 /* (null) in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				BDE84948219C97BB00603B97 /* StatisticsFactory.swift in Sources */,

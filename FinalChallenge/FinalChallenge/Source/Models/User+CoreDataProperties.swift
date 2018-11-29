@@ -26,16 +26,22 @@ extension User {
         self.profileIcon = NSData(data: profileIcon.jpegData(compressionQuality: 1)!)
     }
     
-    func getProfileIcon() -> UIImage {
-        return UIImage(data: self.profileIcon! as Data)!
+    func getProfileIcon() -> UIImage? {
+        guard let profileImg = self.profileIcon else {
+            return nil
+        }
+        return UIImage(data:profileImg as Data)!
     }
     
     func set(backgroundImage: UIImage) {
         self.backgroundImage = NSData(data: backgroundImage.jpegData(compressionQuality: 1)!)
     }
     
-    func getbackgroundImage() -> UIImage {
-        return UIImage(data: self.backgroundImage! as Data)!
+    func getbackgroundImage() -> UIImage? {
+        guard let bg = self.backgroundImage else {
+            return nil
+        }
+        return UIImage(data: bg as Data)!
     }
     
 }
