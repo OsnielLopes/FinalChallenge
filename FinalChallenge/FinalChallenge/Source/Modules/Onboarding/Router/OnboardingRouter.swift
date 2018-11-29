@@ -74,6 +74,11 @@ class OnboardingRouter: NSObject, OnboardingRouterProtocol {
         self.view.dismiss(animated: true, completion: nil)
         MainRouter().present(with: self.view)
     }
+    
+    func userView() -> Onboarding7thView {
+        return self.pages.last as! Onboarding7thView
+    }
+    
 
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> OnboardingView {

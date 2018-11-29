@@ -14,18 +14,18 @@ protocol OnboardingRouterProtocol: class {
     func page(before view: OnboardingPageView) -> OnboardingPageView?
     func page(after view: OnboardingPageView) -> OnboardingPageView?
     func firstView() -> OnboardingPageView
+    func userView() -> Onboarding7thView
     func presentAsRoot(window: UIWindow)
-
-    
-//    func askPermissionForHealthKit(with completion: @escaping () -> (Bool))
-//    func askPermissionForCameraRollUsage(with completion: @escaping () -> (Bool))
     
     func didFinishOnboarding()
 }
 
 // MARK: - Interactor
 protocol OnboardingInteractorInputProtocol {
-//    func saveUser(withName name: String, withAvatar avatar: UIImage, andCover cover: UIImage)
+    func createUserIfNecessary()
+    func setUserAvatar(_ image: UIImage)
+    func setUserCover(_ image: UIImage)
+    func setUserName(_ name: String)
 }
 
 // MARK: - Presenter
@@ -34,6 +34,7 @@ protocol OnboardingPresenterInputProtocol: class {
     func page(after view: UIViewController) -> OnboardingPageView?
     func firstView() -> OnboardingPageView
     
+    func createUserIfNecessary(_ user: User)
 //    func setUserAvatar(_ image: UIImage)
 //    func setUserCover(_ image: UIImage)
 //    func setUserName(_ name: String)
@@ -42,12 +43,20 @@ protocol OnboardingPresenterInputProtocol: class {
 }
 
 protocol OnboardingInteractorOutputProtocol: class {
-//    func handleSuccessSavedUser(with result: User)
-//    func handleFailure(with message: String)
+    
+    func handleSuccessUpdatedUser(with result: User)
+    func handleFailureUpdatedUser(with message: String)
+
+    func handleSuccessCreatedUser(with result: User)
+    func handleFailureCreatedUser(with message: String)
+
 }
 
 // MARK: - View
 protocol OnboardingPresenterOutputProtocol: class {
-//    func showLoading(_ loading: Bool)
-//    func showError(_ message: String)
+    func showLoading(_ loading: Bool)
+    func showError(_ message: String)
+    
+    func didFetchUser(_ user: User)
+    func didUpdateUser(_ user: User)
 }

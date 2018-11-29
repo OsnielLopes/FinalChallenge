@@ -22,6 +22,20 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
     }
 
     // MARK: - OnboardingPresenterOutputProtocol
+    
+    func showLoading(_ loading: Bool) {
+        // FIXME Implement loading on view
+    }
+    
+    func showError(_ message: String) {
+        // FIXME Implement error display on view
+    }
+    
+    func didFetchUser(_ user: User) {
+    }
+    
+    func didUpdateUser(_ user: User) {
+    }
 
 	// MARK: - Private Methods
 

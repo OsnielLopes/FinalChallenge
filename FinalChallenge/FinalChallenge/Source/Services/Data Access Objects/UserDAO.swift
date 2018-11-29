@@ -13,9 +13,9 @@ class UserDAO {
     
     static let shared = UserDAO()
 
-    private var sampleProfilePicture: UIImage
+    private(set) var sampleProfilePicture: UIImage
     
-    private var sampleBackgroundImage: UIImage
+    private(set) var sampleBackgroundImage: UIImage
     
     private init() {
         self.sampleProfilePicture = UIImage(named: "user-placeholder")!
@@ -23,8 +23,12 @@ class UserDAO {
     }
     
     func fetch(completion: @escaping (User?, DataAccessError?) -> ()) {
-        if let user = CoreDataManager.shared.fetch(User.self)?.first {
-            completion(user, nil)
+        if let all = CoreDataManager.shared.fetch(User.self) {
+            if let user = all.first {
+                completion(user, nil)
+            } else {
+                completion(nil, DataAccessError(message: "User not created"))
+            }
         } else {
             completion(nil, DataAccessError(message: "Error when fetching users"))
         }
@@ -34,8 +38,14 @@ class UserDAO {
         if let newUser = CoreDataManager.shared.create(type: User.self) {
             
             newUser.name = name
-            newUser.set(profileIcon: profilePicture ?? self.sampleProfilePicture)
-            newUser.set(backgroundImage: backgroundImage ?? self.sampleBackgroundImage)
+            
+            if let profilePicture = profilePicture {
+                newUser.set(profileIcon: profilePicture)
+            }
+            
+            if let backgroundImage = backgroundImage {
+                newUser.set(backgroundImage: backgroundImage)
+            }
             
             CoreDataManager.shared.saveContext()
             

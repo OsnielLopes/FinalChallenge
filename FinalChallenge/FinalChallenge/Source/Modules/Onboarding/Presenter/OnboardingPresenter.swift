@@ -33,6 +33,31 @@ class OnboardingPresenter: NSObject, OnboardingPresenterInputProtocol, Onboardin
     }
 
     // MARK: - OnboardingPresenterInteractorOutputProtocol
+    
+    func createUserIfNecessary(_ user: User) {
+        self.view.showLoading(true)
+        self.interactor.createUserIfNecessary()
+    }
+    
+    func handleSuccessUpdatedUser(with result: User) {
+        self.view.showLoading(false)
+        self.view.didUpdateUser(result)
+    }
+    
+    func handleFailureUpdatedUser(with message: String) {
+        self.view.showLoading(false)
+        self.view.showError(message)
+    }
+    
+    func handleSuccessCreatedUser(with result: User) {
+        self.view.showLoading(false)
+        self.view.didFetchUser(result)
+    }
+    
+    func handleFailureCreatedUser(with message: String) {
+        self.view.showLoading(false)
+        self.view.showError(message)
+    }
 
 	// MARK: - Private Methods
 
