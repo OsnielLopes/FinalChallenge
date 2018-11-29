@@ -348,10 +348,10 @@
             </objects>
             <point key="canvasLocation" x="4023" y="206"/>
         </scene>
-        <!--Onboarding 7th View-->
+        <!--Onboarding 8th View-->
         <scene sceneID="LEc-QW-1YA">
             <objects>
-                <viewController storyboardIdentifier="Onboarding7thView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="747-1Q-4PR" customClass="Onboarding7thView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding7thView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="747-1Q-4PR" customClass="Onboarding8thView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9hr-iU-sJY"/>
                         <viewControllerLayoutGuide type="bottom" id="H1L-TJ-zOK"/>

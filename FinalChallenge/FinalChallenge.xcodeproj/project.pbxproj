@@ -132,6 +132,7 @@
 		BD974A552167F03B00612838 /* DissertativeQuestionDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */; };
 		BD974A752167F4F700612838 /* CategoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A742167F4F700612838 /* CategoryDAO.swift */; };
 		BD974A792167F86900612838 /* CategoryDAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD974A782167F86900612838 /* CategoryDAOTests.swift */; };
+		BDA6B55021B0514900755112 /* Onboarding7thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA6B54F21B0514900755112 /* Onboarding7thView.swift */; };
 		BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */; };
 		BDAF3AC1218B82D900EFD2A9 /* QuestionAnswers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAF3ABB218B82D900EFD2A9 /* QuestionAnswers.storyboard */; };
 		BDAF3AC2218B82D900EFD2A9 /* QuestionAnswersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ABC218B82D900EFD2A9 /* QuestionAnswersPresenter.swift */; };
@@ -174,7 +175,7 @@
 		BDFD4AE421AC5B29004DC188 /* Onboarding2thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */; };
 		BDFD4AE821AC5B6F004DC188 /* Onboarding5thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE721AC5B6F004DC188 /* Onboarding5thView.swift */; };
 		BDFD4AEA21AC5B81004DC188 /* Onboarding6thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AE921AC5B81004DC188 /* Onboarding6thView.swift */; };
-		BDFD4AEC21AC5B91004DC188 /* Onboarding7thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AEB21AC5B91004DC188 /* Onboarding7thView.swift */; };
+		BDFD4AEC21AC5B91004DC188 /* Onboarding8thView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */; };
 		BDFD4AEE21AC6FA9004DC188 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */; };
 		BDFD4AF021AD9B10004DC188 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD4AEF21AD9B10004DC188 /* UIViewController+Extension.swift */; };
 		E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */; };
@@ -326,6 +327,7 @@
 		BD974A542167F03B00612838 /* DissertativeQuestionDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DissertativeQuestionDAOTests.swift; sourceTree = "<group>"; };
 		BD974A742167F4F700612838 /* CategoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAO.swift; sourceTree = "<group>"; };
 		BD974A782167F86900612838 /* CategoryDAOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDAOTests.swift; sourceTree = "<group>"; };
+		BDA6B54F21B0514900755112 /* Onboarding7thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding7thView.swift; sourceTree = "<group>"; };
 		BDA84B8F217657D500F75D05 /* InsertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTableViewCell.swift; sourceTree = "<group>"; };
 		BDAF3ABB218B82D900EFD2A9 /* QuestionAnswers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionAnswers.storyboard; sourceTree = "<group>"; };
 		BDAF3ABC218B82D900EFD2A9 /* QuestionAnswersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswersPresenter.swift; sourceTree = "<group>"; };
@@ -368,7 +370,7 @@
 		BDFD4AE321AC5B29004DC188 /* Onboarding2thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2thView.swift; sourceTree = "<group>"; };
 		BDFD4AE721AC5B6F004DC188 /* Onboarding5thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding5thView.swift; sourceTree = "<group>"; };
 		BDFD4AE921AC5B81004DC188 /* Onboarding6thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding6thView.swift; sourceTree = "<group>"; };
-		BDFD4AEB21AC5B91004DC188 /* Onboarding7thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding7thView.swift; sourceTree = "<group>"; };
+		BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding8thView.swift; sourceTree = "<group>"; };
 		BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BDFD4AEF21AD9B10004DC188 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1223,7 +1225,8 @@
 				BDFD4AE121AC4186004DC188 /* Onboarding4thView.swift */,
 				BDFD4AE721AC5B6F004DC188 /* Onboarding5thView.swift */,
 				BDFD4AE921AC5B81004DC188 /* Onboarding6thView.swift */,
-				BDFD4AEB21AC5B91004DC188 /* Onboarding7thView.swift */,
+				BDA6B54F21B0514900755112 /* Onboarding7thView.swift */,
+				BDFD4AEB21AC5B91004DC188 /* Onboarding8thView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -1461,7 +1464,7 @@
 				BD3E3C7F2187812900539ADB /* MainView.swift in Sources */,
 				BD290C10216BE6EF001F16EA /* RadioboxQuestion+CoreDataClass.swift in Sources */,
 				BD3E3C782187804100539ADB /* MainProtocols.swift in Sources */,
-				BDFD4AEC21AC5B91004DC188 /* Onboarding7thView.swift in Sources */,
+				BDFD4AEC21AC5B91004DC188 /* Onboarding8thView.swift in Sources */,
 				491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */,
 				453953F921766D0F00CF71EC /* DailyQuestionInteractor.swift in Sources */,
 				BD290C42216D2FDD001F16EA /* AnswerDAO.swift in Sources */,
@@ -1507,6 +1510,7 @@
 				BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */,
 				4539540921766DBF00CF71EC /* DailyQuestionCollectionViewCell.swift in Sources */,
 				BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
+				BDA6B55021B0514900755112 /* Onboarding7thView.swift in Sources */,
 				BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */,
 				BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
 				BDFD4AE421AC5B29004DC188 /* Onboarding2thView.swift in Sources */,

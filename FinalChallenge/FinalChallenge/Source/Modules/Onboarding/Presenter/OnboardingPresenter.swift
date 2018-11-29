@@ -32,7 +32,7 @@ class OnboardingPresenter: NSObject, OnboardingPresenterInputProtocol, Onboardin
         return self.router.firstView()
     }
     
-    func userView() -> Onboarding7thView {
+    func userView() -> Onboarding8thView {
         return self.router.userView()
     }
     

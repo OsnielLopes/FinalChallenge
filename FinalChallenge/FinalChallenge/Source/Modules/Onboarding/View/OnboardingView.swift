@@ -20,7 +20,6 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
         self.setViewControllers([self.presenter.firstView()], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
         
-        self.presenter.createUserIfNecessary()
     }
 
     // MARK: - OnboardingPresenterOutputProtocol
@@ -42,6 +41,10 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
     }
     
     // MARK: - Public Methods
+    func createUserIfNecessary() {
+        self.presenter.createUserIfNecessary()
+    }
+    
     func didFinishOnBoarding() {
         self.presenter.didFinishOnboarding()
     }
