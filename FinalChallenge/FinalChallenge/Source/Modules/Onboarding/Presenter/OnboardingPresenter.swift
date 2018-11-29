@@ -36,15 +36,15 @@ class OnboardingPresenter: NSObject, OnboardingPresenterInputProtocol, Onboardin
         return self.router.userView()
     }
     
-    func setUserAvatar(_ image: UIImage) {
+    func setUserAvatar(_ image: UIImage?) {
         self.interactor.setUserAvatar(image)
     }
     
-    func setUserCover(_ image: UIImage) {
+    func setUserCover(_ image: UIImage?) {
         self.interactor.setUserCover(image)
     }
     
-    func setUserName(_ name: String) {
+    func setUserName(_ name: String?) {
         self.interactor.setUserName(name)
     }
 
@@ -74,7 +74,5 @@ class OnboardingPresenter: NSObject, OnboardingPresenterInputProtocol, Onboardin
         self.view.showLoading(false)
         self.view.showError(message)
     }
-
-	// MARK: - Private Methods
 
 }

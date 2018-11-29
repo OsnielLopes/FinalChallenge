@@ -40,7 +40,7 @@ class UserDAO {
     func create(name: String? = nil, profilePicture: UIImage? = nil, backgroundImage: UIImage? = nil, completion: @escaping (User?, DataAccessError?) -> ()) {
         if let newUser = CoreDataManager.shared.create(type: User.self) {
             
-            newUser.name = name ?? self.sampleUsername
+            newUser.name = name
             
             if let profilePicture = profilePicture {
                 newUser.set(profileIcon: profilePicture)

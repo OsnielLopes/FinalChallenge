@@ -46,15 +46,15 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
         self.presenter.didFinishOnboarding()
     }
     
-    func didUpdateUsername(with name: String) {
+    func didUpdateUsername(with name: String?) {
         self.presenter.setUserName(name)
     }
     
-    func didUpdateAvatar(_ image: UIImage) {
+    func didUpdateAvatar(_ image: UIImage?) {
         self.presenter.setUserAvatar(image)
     }
     
-    func didUpdateCover(_ image: UIImage) {
+    func didUpdateCover(_ image: UIImage?) {
         self.presenter.setUserCover(image)
     }
     

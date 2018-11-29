@@ -35,11 +35,7 @@ class Onboarding7thView: OnboardingPageView {
         self.hideKeyboardWhenTappedAround()
         
         self.picker.delegate = self
-    }
-    
-    @objc override func dismissKeyboard() {
-        view.endEditing(true)
-//        self.pageViewController.didUpdateUsername(with: self.username.text)
+        self.username.delegate = self
     }
     
     @IBAction func didTapChangeBackgroundImage(_ sender: Any) {
@@ -88,7 +84,7 @@ class Onboarding7thView: OnboardingPageView {
     }
     
     func setUser(_ user: User) {
-        self.username.text = user.name
+        self.username.text = user.name ?? nil
         self.bg.image = user.getbackgroundImage() ?? self.bg.image!
         self.userImage.image = user.getProfileIcon() ?? self.userImage.image!
     }
@@ -133,6 +129,14 @@ extension Onboarding7thView: CropViewControllerDelegate {
             self.pageViewController.didUpdateCover(image)
         }
         cropViewController.dismiss(animated: true)
+    }
+    
+}
+
+extension Onboarding7thView: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.pageViewController.didUpdateUsername(with: self.username.text)
     }
     
 }

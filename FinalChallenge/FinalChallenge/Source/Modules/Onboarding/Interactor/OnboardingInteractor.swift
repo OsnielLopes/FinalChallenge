@@ -38,7 +38,7 @@ class OnboardingInteractor: NSObject, OnboardingInteractorInputProtocol {
         })
     }
     
-    func setUserAvatar(_ image: UIImage) {
+    func setUserAvatar(_ image: UIImage?) {
         UserDAO.shared.update(user: self.user, profilePicture: image, completion: { user, err in
             guard let user = user, err == nil else {
                 self.output.handleFailureUpdatedUser(with: "There was an error setting the user's avatar")
@@ -49,7 +49,7 @@ class OnboardingInteractor: NSObject, OnboardingInteractorInputProtocol {
         })
     }
     
-    func setUserCover(_ image: UIImage) {
+    func setUserCover(_ image: UIImage?) {
         UserDAO.shared.update(user: self.user, backgroundImage: image, completion: { user, err in
             guard let user = user, err == nil else {
                 self.output.handleFailureUpdatedUser(with: "There was an error setting the user's background picture")
@@ -60,7 +60,7 @@ class OnboardingInteractor: NSObject, OnboardingInteractorInputProtocol {
         })
     }
     
-    func setUserName(_ name: String) {
+    func setUserName(_ name: String?) {
         UserDAO.shared.update(user: self.user, name: name, completion: { user, err in
             guard let user = user, err == nil else {
                 self.output.handleFailureUpdatedUser(with: "There was an error setting the user's name")

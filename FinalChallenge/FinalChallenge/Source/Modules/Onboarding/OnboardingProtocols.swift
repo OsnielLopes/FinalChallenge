@@ -23,9 +23,9 @@ protocol OnboardingRouterProtocol: class {
 // MARK: - Interactor
 protocol OnboardingInteractorInputProtocol {
     func createUserIfNecessary()
-    func setUserAvatar(_ image: UIImage)
-    func setUserCover(_ image: UIImage)
-    func setUserName(_ name: String)
+    func setUserAvatar(_ image: UIImage?)
+    func setUserCover(_ image: UIImage?)
+    func setUserName(_ name: String?)
 }
 
 // MARK: - Presenter
@@ -36,9 +36,9 @@ protocol OnboardingPresenterInputProtocol: class {
     func userView() -> Onboarding7thView
     
     func createUserIfNecessary()
-    func setUserAvatar(_ image: UIImage)
-    func setUserCover(_ image: UIImage)
-    func setUserName(_ name: String)
+    func setUserAvatar(_ image: UIImage?)
+    func setUserCover(_ image: UIImage?)
+    func setUserName(_ name: String?)
 
     func didFinishOnboarding()
 }
