@@ -303,15 +303,69 @@
                             <constraint firstItem="FbX-dr-Z1N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Yyo-z6-mhb" secondAttribute="bottom" constant="20" id="pBq-sg-yrr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileImage" destination="Yyo-z6-mhb" id="GiV-wm-L49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NN4-Sb-tP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3196" y="206"/>
+            <point key="canvasLocation" x="2964" y="206"/>
         </scene>
         <!--Onboarding 6th View-->
+        <scene sceneID="8Ju-eO-WrE">
+            <objects>
+                <viewController storyboardIdentifier="Onboarding6thView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hps-hn-biH" customClass="Onboarding6thView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b0V-Sw-YTc"/>
+                        <viewControllerLayoutGuide type="bottom" id="qUu-JR-7MW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nff-f0-xwP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order to create a report with your mindfullness we need access to your health data." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpO-5Q-Hbk">
+                                <rect key="frame" x="75" y="120" width="225" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="color-black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkP-nh-Kvm">
+                                <rect key="frame" x="56.5" y="493.5" width="262.5" height="43.5"/>
+                                <color key="backgroundColor" name="color-yellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WkP-nh-Kvm" secondAttribute="height" multiplier="12:2" id="2G8-Mf-vj1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Allow access to your health data ">
+                                    <color key="titleColor" name="color-white"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressToAllowAccess:" destination="hps-hn-biH" eventType="touchUpInside" id="8bJ-Zp-sVd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WkP-nh-Kvm" firstAttribute="width" secondItem="nff-f0-xwP" secondAttribute="width" multiplier="0.7" id="3sr-Rd-QI6"/>
+                            <constraint firstItem="WkP-nh-Kvm" firstAttribute="centerX" secondItem="nff-f0-xwP" secondAttribute="centerX" id="5Lm-Vp-I3m"/>
+                            <constraint firstItem="RpO-5Q-Hbk" firstAttribute="leading" secondItem="nff-f0-xwP" secondAttribute="leading" constant="75" id="5SC-Vq-Iic"/>
+                            <constraint firstAttribute="trailing" secondItem="RpO-5Q-Hbk" secondAttribute="trailing" constant="75" id="WhZ-g1-Prf"/>
+                            <constraint firstItem="qUu-JR-7MW" firstAttribute="top" secondItem="WkP-nh-Kvm" secondAttribute="bottom" constant="130" id="l51-h5-e9b"/>
+                            <constraint firstItem="RpO-5Q-Hbk" firstAttribute="top" secondItem="b0V-Sw-YTc" secondAttribute="bottom" constant="100" id="qcl-S5-gf2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="healthDataButton" destination="WkP-nh-Kvm" id="NJl-3J-2Pz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Lc-8l-Ja4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3836" y="205.54722638680661"/>
+        </scene>
+        <!--Onboarding 7th View-->
         <scene sceneID="1rM-y0-Pva">
             <objects>
-                <viewController storyboardIdentifier="Onboarding6thView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fFv-In-bXb" customClass="Onboarding6thView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding7thView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fFv-In-bXb" customClass="Onboarding7thView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XEO-bu-mCX"/>
                         <viewControllerLayoutGuide type="bottom" id="VU4-HS-qyN"/>
@@ -320,7 +374,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now let me know a little bit about yourself..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMy-tD-7RN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now let us know a little bit about yourself..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMy-tD-7RN">
                                 <rect key="frame" x="20" y="170" width="305" height="69.5"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="29"/>
                                 <color key="textColor" name="color-black"/>
@@ -346,12 +400,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2j-qi-P1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4023" y="206"/>
+            <point key="canvasLocation" x="4642" y="206"/>
         </scene>
         <!--Onboarding 8th View-->
         <scene sceneID="LEc-QW-1YA">
             <objects>
-                <viewController storyboardIdentifier="Onboarding7thView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="747-1Q-4PR" customClass="Onboarding8thView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding8thView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="747-1Q-4PR" customClass="Onboarding8thView" customModule="FinalChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9hr-iU-sJY"/>
                         <viewControllerLayoutGuide type="bottom" id="H1L-TJ-zOK"/>
@@ -378,7 +432,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wMN-XL-0q0" secondAttribute="height" multiplier="5:1" id="kEK-y1-oST"/>
                                 </constraints>
-                                <state key="normal" title="Start reflecting">
+                                <state key="normal" title="Got to app">
                                     <color key="titleColor" name="color-white"/>
                                 </state>
                                 <connections>
@@ -461,7 +515,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5215" y="241"/>
+            <point key="canvasLocation" x="5442" y="206"/>
         </scene>
     </scenes>
     <resources>

@@ -45,9 +45,6 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        // MARK: - TEMPORARY
-        HealthKitManager.shared.askForPermission(completion: { _, _ in })
     }
 
     // MARK: - ProfilePresenterOutputProtocol

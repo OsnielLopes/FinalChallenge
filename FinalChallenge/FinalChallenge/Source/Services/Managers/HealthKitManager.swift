@@ -21,7 +21,7 @@ class HealthKitManager {
     
     private init() {}
     
-    func isHealthDatAvailable() -> Bool {
+    func isHealthDataAvailable() -> Bool {
         return UserDefaults.standard.bool(forKey: self.healthDataAvailableKey)
     }
     
@@ -49,7 +49,7 @@ class HealthKitManager {
     }
     
     func retrieveMindfullness(from: Date, to: Date, completion: @escaping ([HKSample]?, DataAccessError?) -> ()) {
-        if !self.isHealthDatAvailable() {
+        if !self.isHealthDataAvailable() {
             completion(nil, DataAccessError(message: "You didn't grant access to your health data"))
         }
         

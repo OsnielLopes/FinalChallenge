@@ -9,9 +9,14 @@
 import UIKit
 
 class Onboarding5thView: OnboardingPageView {
-
+    
+    @IBOutlet weak var profileImage: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.width / 2
+        self.profileImage.clipsToBounds = true
     }
 
 }

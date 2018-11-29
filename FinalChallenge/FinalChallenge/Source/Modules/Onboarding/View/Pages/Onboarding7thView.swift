@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Onboarding8thView: OnboardingPageView {
+class Onboarding7thView: OnboardingPageView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
