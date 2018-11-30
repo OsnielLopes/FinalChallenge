@@ -13,11 +13,11 @@ import CoreData
 
 class RadioboxQuestionDAOTests: XCTestCase {
     
-    var questions: [RadioboxQuestion]!
+    var questions: [FinalChallenge.RadioboxQuestion]!
     
-    var category: Category!
+    var category: FinalChallenge.Category!
     
-    var author: Author!
+    var author: FinalChallenge.Author!
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle(for: type(of: self))] )!
@@ -47,13 +47,13 @@ class RadioboxQuestionDAOTests: XCTestCase {
         auth.name = "System"
         self.author = auth
         
-        let cat = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! Category
+        let cat = NSEntityDescription.insertNewObject(forEntityName: "Category", into: self.mockPersistantContainer.viewContext) as! FinalChallenge.Category
         cat.name = "Família"
         self.category = cat
         
         self.questions = []
         for i in 0...5 {
-            let c = NSEntityDescription.insertNewObject(forEntityName: "RadioboxQuestion", into: self.mockPersistantContainer.viewContext) as! RadioboxQuestion
+            let c = NSEntityDescription.insertNewObject(forEntityName: "RadioboxQuestion", into: self.mockPersistantContainer.viewContext) as! FinalChallenge.RadioboxQuestion
             c.category = cat
             c.questionAuthor = auth
             c.questionText = "How are you? \(i)"

@@ -9,6 +9,8 @@ target 'FinalChallenge' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'Hero'
+  pod 'CropViewController'
+  pod 'IQKeyboardManager'
 
   target 'FinalChallengeTests' do
     inherit! :search_paths

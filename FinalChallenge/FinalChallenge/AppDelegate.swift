@@ -9,6 +9,7 @@
 import UIKit
 import Fabric
 import Crashlytics
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        IQKeyboardManager.shared().isEnabled = true
         
         Fabric.with([Crashlytics.self])
         
@@ -25,7 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(true, forKey: Project.UserSettings.appHasBeenUsed.rawValue)
         }
         
-        let router = MainRouter()
+//        let router = MainRouter()
+//        router.presentAsRoot(window: self.window!)
+//        self.window?.makeKeyAndVisible()
+        
+        let router = OnboardingRouter()
         router.presentAsRoot(window: self.window!)
         self.window?.makeKeyAndVisible()
         

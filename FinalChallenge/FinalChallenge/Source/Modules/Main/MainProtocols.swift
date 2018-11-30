@@ -12,6 +12,7 @@ import UIKit
 // MARK: - Router
 protocol MainRouterProtocol: class {
     func presentAsRoot(window: UIWindow)
+    func present(with viewController: UIViewController)
 }
 
 // MARK: - Interactor
