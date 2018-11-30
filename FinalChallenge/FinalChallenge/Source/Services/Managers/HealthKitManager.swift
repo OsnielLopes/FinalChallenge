@@ -21,16 +21,20 @@ class HealthKitManager {
     
     private init() {}
     
-    func isHealthDataAvailable() -> Bool {
-        return UserDefaults.standard.bool(forKey: self.healthDataAvailableKey)
+    func isHealthDataAvailable() -> Bool? {
+        if let isAvailable = UserDefaults.standard.object(forKey: self.healthDataAvailableKey) as? Bool{
+            return isAvailable
+        }
+        return nil
     }
     
     func askForPermission(completion: @escaping (Bool, DataAccessError?) -> ()) {
-        let typesToRead = Set([HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!])
-        let typesToShare = Set([HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.mindfulSession)!])
+        let type = Set([HKObjectType.categoryType(forIdentifier: .mindfulSession)!])
         
-        self.healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
-            UserDefaults.standard.set(success, forKey: self.healthDataAvailableKey)
+        self.healthStore.requestAuthorization(toShare: type, read: type) { (success, error) in
+            let status = self.healthStore.authorizationStatus(for: type.first!) == .sharingAuthorized
+            
+            UserDefaults.standard.set(status, forKey: self.healthDataAvailableKey)
             completion(success, error == nil ? nil : DataAccessError(message: "Error when requesting access to Health Kit"))
         }
     }
@@ -49,7 +53,7 @@ class HealthKitManager {
     }
     
     func retrieveMindfullness(from: Date, to: Date, completion: @escaping ([HKSample]?, DataAccessError?) -> ()) {
-        if !self.isHealthDataAvailable() {
+        if !(self.isHealthDataAvailable() ?? false) {
             completion(nil, DataAccessError(message: "You didn't grant access to your health data"))
         }
         

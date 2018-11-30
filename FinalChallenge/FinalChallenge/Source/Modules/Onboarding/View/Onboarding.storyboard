@@ -336,7 +336,7 @@
                                     <constraint firstAttribute="width" secondItem="WkP-nh-Kvm" secondAttribute="height" multiplier="12:2" id="2G8-Mf-vj1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Allow access to your health data ">
+                                <state key="normal" title="Allow access to your health data">
                                     <color key="titleColor" name="color-white"/>
                                 </state>
                                 <connections>
