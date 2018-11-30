@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         if Project.watchDebugging {
-            if !WCSessionManager.shared.isSuported() {
+            if !WCSessionManager.shared.isSupported() {
                 print("WCSession not supported on this iPhone")
             }
         }

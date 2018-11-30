@@ -54,7 +54,6 @@
 		49D59FE9219B374C002A1C96 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D59FE8219B374C002A1C96 /* NotificationController.swift */; };
 		49D59FEB219B374D002A1C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D59FEA219B374D002A1C96 /* Assets.xcassets */; };
 		49D59FF0219B374D002A1C96 /* Watch-App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 49D59FD3219B3749002A1C96 /* Watch-App.app */; };
-		49DBD5EF21A09622009A692B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DBD5EE21A09622009A692B /* HealthKit.framework */; };
 		BD290BF8216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE0216BE6EF001F16EA /* CheckboxAnswer+CoreDataClass.swift */; };
 		BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE1216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift */; };
 		BD290BFC216BE6EF001F16EA /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
@@ -159,6 +158,7 @@
 		BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */; };
 		BDAF3ACC218B87C000EFD2A9 /* QuestionTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */; };
 		BDAF3ACE218B998800EFD2A9 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */; };
+		BDCA25B221B1AE4800E8C3FE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCA25B121B1AE4800E8C3FE /* HealthKit.framework */; };
 		BDD81C402193416F00880601 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD81C3A2193416F00880601 /* Profile.storyboard */; };
 		BDD81C412193416F00880601 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3B2193416F00880601 /* ProfilePresenter.swift */; };
 		BDD81C422193416F00880601 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD81C3C2193416F00880601 /* ProfileRouter.swift */; };
@@ -299,7 +299,6 @@
 		49D59FEC219B374D002A1C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49D59FED219B374D002A1C96 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		49DBD5ED21A09622009A692B /* FinalChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FinalChallenge.entitlements; sourceTree = "<group>"; };
-		49DBD5EE21A09622009A692B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		6DDAC83CB4181DD96AB7A321 /* Pods-FinalChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE46AC79888A3658A26CABE /* Pods-FinalChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -408,6 +407,7 @@
 		BDAF3AC0218B82D900EFD2A9 /* QuestionAnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswersView.swift; sourceTree = "<group>"; };
 		BDAF3ACB218B87C000EFD2A9 /* QuestionTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTextCell.swift; sourceTree = "<group>"; };
 		BDAF3ACD218B998800EFD2A9 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		BDCA25B121B1AE4800E8C3FE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		BDD81C3A2193416F00880601 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		BDD81C3B2193416F00880601 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		BDD81C3C2193416F00880601 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
@@ -454,7 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9774ADDB7B6E55F99338776 /* Pods_FinalChallenge.framework in Frameworks */,
-				49DBD5EF21A09622009A692B /* HealthKit.framework in Frameworks */,
+				BDCA25B221B1AE4800E8C3FE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1350,7 +1350,7 @@
 		F84F77F27EDB0EC1035497DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				49DBD5EE21A09622009A692B /* HealthKit.framework */,
+				BDCA25B121B1AE4800E8C3FE /* HealthKit.framework */,
 				C58FAB0F5CF029BA433B64C5 /* Pods_FinalChallenge.framework */,
 				7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */,
 			);
@@ -1371,7 +1371,6 @@
 				459BB046217674CF0065630F /* ShellScript */,
 				0FB95A037A88AA29005B8E95 /* [CP] Embed Pods Frameworks */,
 				49D59FF8219B374D002A1C96 /* Embed Watch Content */,
-				F9FC06E19CA3DEABB5B5DEC8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1426,8 +1425,6 @@
 				BD974A462167F01800612838 /* Sources */,
 				BD974A472167F01800612838 /* Frameworks */,
 				BD974A482167F01800612838 /* Resources */,
-				A9083B82EF085AAF5DBE6FDC /* [CP] Embed Pods Frameworks */,
-				3E1B6070B7B0136B6E9B6E7A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1568,25 +1565,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3E1B6070B7B0136B6E9B6E7A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		459BB046217674CF0065630F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1647,44 +1625,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A9083B82EF085AAF5DBE6FDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallengeTests/Pods-FinalChallengeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9FC06E19CA3DEABB5B5DEC8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalChallenge/Pods-FinalChallenge-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2061,9 +2001,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FinalChallenge/FinalChallenge.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2071,6 +2012,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.br.mackmobile.FinalChallenge AppStore";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2082,8 +2024,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FinalChallenge/FinalChallenge.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2091,6 +2034,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.br.mackmobile.FinalChallenge AppStore";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2102,7 +2046,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				IBSC_MODULE = Watch_App_Extension;
 				INFOPLIST_FILE = "Watch-App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.watchkitapp;
@@ -2121,7 +2065,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				IBSC_MODULE = Watch_App_Extension;
 				INFOPLIST_FILE = "Watch-App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.watchkitapp;
@@ -2139,7 +2083,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = "Watch-App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2161,7 +2105,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = "Watch-App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

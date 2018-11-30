@@ -8,9 +8,9 @@
 
 import WatchConnectivity
 
-class WSManager: NSObject, WCSessionDelegate {
+class WCSessionManager: NSObject, WCSessionDelegate {
     
-    public static let shared = WSManager()
+    public static let shared = WCSessionManager()
     public var recievedMessage: (([String : Any]) -> Void)?
     
     override private init() {
@@ -22,6 +22,10 @@ class WSManager: NSObject, WCSessionDelegate {
                 WCSession.default.activate()
             }
         }
+    }
+    
+    func isSupported() -> Bool {
+        return false
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
