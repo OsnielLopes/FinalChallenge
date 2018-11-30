@@ -17,7 +17,11 @@ class QuestionAnswersPresenter: NSObject, QuestionAnswersPresenterInputProtocol,
 
     // MARK: - Properties
     var question: Question
-    var answers: [Answer] = []
+    var answers: [Answer] = [] {
+        didSet {
+            print(answers)
+        }
+    }
     
     // MARK: - Constructors
     init(question: Question) {
