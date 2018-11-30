@@ -10,5 +10,15 @@ import Foundation
 import WatchKit
 
 class MoodPickerItem: WKPickerItem {
-    var mood: MoodType!
+    
+    init(mood: MoodType) {
+        super.init()
+        self.title = mood.typeText
+        self.contentImage = WKImage(imageName: mood.typeIcon!)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
 }

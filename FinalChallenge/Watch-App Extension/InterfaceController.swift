@@ -9,24 +9,23 @@
 import WatchKit
 import WatchConnectivity
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+class InterfaceController: WKInterfaceController {
     
-    var selectedMood: MoodType!
-    var messages: [[String: Any]] = [[:]]
-    var session: WCSession!
+    var selectedMoodIndex: Int!
+    var moods: [MoodType]! {
+        didSet {
+            self.picker.setItems(moods.map({ (mood) -> MoodPickerItem in
+                return MoodPickerItem(mood: mood)
+            }))
+        }
+    }
+    var session: WCSession = WCSession.default
+    var messagesToSent: [Int] = []
     
     @IBOutlet weak var picker: WKInterfacePicker!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        if WCSession.isSupported() {
-            session = WCSession.default
-            session.delegate = self
-            session.activate()
-            messages.append(["getMoods" : true])
-        }
-        
     }
     
     override func willActivate() {
@@ -39,38 +38,16 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
+    //MARK - IBActions
+    
     @IBAction func didSelect(_ value: Int) {
-        
+        selectedMoodIndex = value
     }
     
     @IBAction func didTapSave() {
-        
-        self.presentAlert(withTitle: "Humor inserido com sucesso!", message: nil, preferredStyle: .alert, actions: [WKAlertAction(title: "Ok", style: .default, handler: {
-            self.dismiss()
-        })])
-        print("Opa aqui a gente tem que implementar a rotina pra salvar o humor selecionado")
+        WSManager.shared.sendMood(selectedMoodIndex)
     }
-    
-    //MARK: - WCSessionDelegate
-    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        for message in messages {
-            session.sendMessage(message, replyHandler: { (dict) in
-                guard let moods = dict["moods"] as? [MoodType] else { fatalError("Impossible to get the moods from received dictionary")}
-                var items: [MoodPickerItem] = []
-                for mood in moods {
-                    let item = MoodPickerItem()
-                    item.contentImage = WKImage(imageName: mood.typeIcon!)
-                    item.title = mood.typeText
-                    items.append(item)
-                }
-                self.picker.setItems(items)
-                self.picker.focus()
-            }) { (error) in
-                fatalError(error.localizedDescription)
-            }
-        }
-        
-    }
+
+
     
 }

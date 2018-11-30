@@ -37,6 +37,11 @@
 		497AFE2A21A5D38F00A72A73 /* MoodType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BF0216BE6EF001F16EA /* MoodType+CoreDataClass.swift */; };
 		497AFE2D21A5D3DD00A72A73 /* MoodPickerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497AFE2B21A5D3D300A72A73 /* MoodPickerItem.swift */; };
 		497AFE2E21A5DBB400A72A73 /* MoodInput+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD290BE2216BE6EF001F16EA /* MoodInput+CoreDataClass.swift */; };
+		497AFE3021A8619F00A72A73 /* WCSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497AFE2F21A8619F00A72A73 /* WCSessionManager.swift */; };
+		497AFE3121A8632000A72A73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450ED4C42177ABA700195CAE /* Constants.swift */; };
+		497AFE3321ADA20700A72A73 /* WCUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497AFE3221ADA20700A72A73 /* WCUtils.swift */; };
+		497AFE3421ADA28300A72A73 /* WCUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497AFE3221ADA20700A72A73 /* WCUtils.swift */; };
+		497AFE3621B0684400A72A73 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497AFE3521B0684400A72A73 /* WSManager.swift */; };
 		49AE2B192163DD4F00055136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2B182163DD4F00055136 /* AppDelegate.swift */; };
 		49AE2B1E2163DD4F00055136 /* OnlyCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B1C2163DD4F00055136 /* OnlyCalendar.storyboard */; };
 		49AE2B232163DD5200055136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AE2B212163DD5200055136 /* LaunchScreen.storyboard */; };
@@ -219,6 +224,9 @@
 		494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewController.swift; sourceTree = "<group>"; };
 		494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
 		497AFE2B21A5D3D300A72A73 /* MoodPickerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPickerItem.swift; sourceTree = "<group>"; };
+		497AFE2F21A8619F00A72A73 /* WCSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionManager.swift; sourceTree = "<group>"; };
+		497AFE3221ADA20700A72A73 /* WCUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCUtils.swift; sourceTree = "<group>"; };
+		497AFE3521B0684400A72A73 /* WSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
 		49AB023821752D79002B8140 /* QuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
 		49AE2B152163DD4F00055136 /* FinalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE2B182163DD4F00055136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -536,6 +544,7 @@
 				491511F0216FC045007C0E09 /* RoundedUIButton.swift */,
 				491511EE216FBFF6007C0E09 /* UIView+Extension.swift */,
 				450ED4C42177ABA700195CAE /* Constants.swift */,
+				497AFE3221ADA20700A72A73 /* WCUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -607,6 +616,7 @@
 				49D59FEA219B374D002A1C96 /* Assets.xcassets */,
 				49D59FEC219B374D002A1C96 /* Info.plist */,
 				49D59FED219B374D002A1C96 /* PushNotificationPayload.apns */,
+				497AFE3521B0684400A72A73 /* WSManager.swift */,
 			);
 			path = "Watch-App Extension";
 			sourceTree = "<group>";
@@ -755,6 +765,7 @@
 			children = (
 				49AB023821752D79002B8140 /* QuestionsManager.swift */,
 				BD974A262163FD4600612838 /* CoreDataManager.swift */,
+				497AFE2F21A8619F00A72A73 /* WCSessionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1393,6 +1404,7 @@
 				BD290C00216BE6EF001F16EA /* Author+CoreDataClass.swift in Sources */,
 				BDE4683E2180F94B002BDE93 /* DaySummaryRouter.swift in Sources */,
 				4539540921766DBF00CF71EC /* DailyQuestionCollectionViewCell.swift in Sources */,
+				497AFE3021A8619F00A72A73 /* WCSessionManager.swift in Sources */,
 				BD290BFE216BE6EF001F16EA /* MoodInput+CoreDataProperties.swift in Sources */,
 				BDE468332180F777002BDE93 /* DaySummaryProtocols.swift in Sources */,
 				BD290BFA216BE6EF001F16EA /* CheckboxAnswer+CoreDataProperties.swift in Sources */,
@@ -1423,6 +1435,7 @@
 				BD290C46216D32E3001F16EA /* CheckboxAnswer.swift in Sources */,
 				BD290C24216BE6EF001F16EA /* Question+CoreDataClass.swift in Sources */,
 				BD290C0A216BE6EF001F16EA /* CheckboxQuestion+CoreDataProperties.swift in Sources */,
+				497AFE3321ADA20700A72A73 /* WCUtils.swift in Sources */,
 				BD290C54216E9DA4001F16EA /* DailySummaryViewController.swift in Sources */,
 				BD290C6721752978001F16EA /* MoodInputTableViewCell.swift in Sources */,
 				BD290C12216BE6EF001F16EA /* RadioboxQuestion+CoreDataProperties.swift in Sources */,
@@ -1463,8 +1476,11 @@
 				497AFE2E21A5DBB400A72A73 /* MoodInput+CoreDataClass.swift in Sources */,
 				497AFE2A21A5D38F00A72A73 /* MoodType+CoreDataClass.swift in Sources */,
 				49D59FE7219B374C002A1C96 /* ExtensionDelegate.swift in Sources */,
+				497AFE3621B0684400A72A73 /* WSManager.swift in Sources */,
 				49D59FE5219B374C002A1C96 /* InterfaceController.swift in Sources */,
 				497AFE2D21A5D3DD00A72A73 /* MoodPickerItem.swift in Sources */,
+				497AFE3421ADA28300A72A73 /* WCUtils.swift in Sources */,
+				497AFE3121A8632000A72A73 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

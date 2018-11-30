@@ -145,6 +145,8 @@ enum Project {
     
     // MARK: - Categories
     
+    // MARK: - Debugging
+    static let watchDebugging = true
 }
 
 // MARK: - Representable Protocols
