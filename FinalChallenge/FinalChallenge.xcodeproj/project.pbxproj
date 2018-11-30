@@ -29,7 +29,7 @@
 		491511EF216FBFF6007C0E09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511EE216FBFF6007C0E09 /* UIView+Extension.swift */; };
 		491511F1216FC045007C0E09 /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491511F0216FC045007C0E09 /* RoundedUIButton.swift */; };
 		4918AE4D586309C414224CF9 /* Pods_FinalChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7235B64486FAA02A01091F47 /* Pods_FinalChallengeTests.framework */; };
-		4943FDD82165355600FE2045 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		4943FDD82165355600FE2045 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		4943FDDA21669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4943FDD921669EFB00FE2045 /* MonthUICollectionViewFlowLayout.swift */; };
 		494AABC8217E39500090D4E6 /* MonthCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC7217E39500090D4E6 /* MonthCollectionViewController.swift */; };
 		494AABCA217E39EB0090D4E6 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AABC9217E39EB0090D4E6 /* MonthCollectionViewCell.swift */; };
@@ -1766,7 +1766,7 @@
 				4539541521766E6A00CF71EC /* BaseRoundedCardCollectionViewCell.swift in Sources */,
 				BD290C6421752919001F16EA /* AnswerTableViewCell.swift in Sources */,
 				BDAF3AC6218B82D900EFD2A9 /* QuestionAnswersView.swift in Sources */,
-				4943FDD82165355600FE2045 /* BuildFile in Sources */,
+				4943FDD82165355600FE2045 /* (null) in Sources */,
 				BD3E3C2621824B8A00539ADB /* QuestionsManager.swift in Sources */,
 				BDA84B90217657D500F75D05 /* InsertTableViewCell.swift in Sources */,
 				BDE84948219C97BB00603B97 /* StatisticsFactory.swift in Sources */,
@@ -2001,8 +2001,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FinalChallenge/FinalChallenge.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
@@ -2012,7 +2012,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "com.br.mackmobile.FinalChallenge AppStore";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2024,8 +2024,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FinalChallenge/FinalChallenge.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				INFOPLIST_FILE = FinalChallenge/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2034,7 +2034,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "com.br.mackmobile.FinalChallenge AppStore";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2045,12 +2045,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				IBSC_MODULE = Watch_App_Extension;
 				INFOPLIST_FILE = "Watch-App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -2064,12 +2066,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				IBSC_MODULE = Watch_App_Extension;
 				INFOPLIST_FILE = "Watch-App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -2082,8 +2086,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				INFOPLIST_FILE = "Watch-App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2092,6 +2097,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -2104,8 +2110,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				INFOPLIST_FILE = "Watch-App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2114,6 +2121,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.FinalChallenge.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -2127,8 +2135,9 @@
 			baseConfigurationReference = 6DDAC83CB4181DD96AB7A321 /* Pods-FinalChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = KUPWLV72XW;
 				INFOPLIST_FILE = FinalChallengeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2137,6 +2146,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.FinalChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalChallenge.app/FinalChallenge";
@@ -2148,8 +2158,9 @@
 			baseConfigurationReference = 1CE024013127B10F73C6BDFA /* Pods-FinalChallengeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = KUPWLV72XW;
 				INFOPLIST_FILE = FinalChallengeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2158,6 +2169,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.FinalChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalChallenge.app/FinalChallenge";

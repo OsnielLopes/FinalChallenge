@@ -72,6 +72,10 @@ class OnboardingRouter: NSObject, OnboardingRouterProtocol {
         return self.pages.last as! Onboarding8thView
     }
     
+    func getHealthKitView() -> Onboarding6thView {
+        return self.pages.filter({ $0 is Onboarding6thView }).first! as! Onboarding6thView
+    }
+    
 
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> OnboardingView {

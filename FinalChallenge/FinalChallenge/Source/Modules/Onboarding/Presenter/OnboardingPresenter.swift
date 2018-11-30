@@ -25,6 +25,10 @@ class OnboardingPresenter: NSObject, OnboardingPresenterInputProtocol, Onboardin
     }
     
     func didFinishOnboarding() {
+        guard let _ = HealthKitManager.shared.isHealthDataAvailable() else {
+            self.view.goToHealthKitView(self.router.getHealthKitView())
+            return
+        }
         self.router.didFinishOnboarding()
     }
     
@@ -47,7 +51,7 @@ class OnboardingPresenter: NSObject, OnboardingPresenterInputProtocol, Onboardin
     func setUserName(_ name: String?) {
         self.interactor.setUserName(name)
     }
-
+    
     // MARK: - OnboardingPresenterInteractorOutputProtocol
     
     func createUserIfNecessary() {

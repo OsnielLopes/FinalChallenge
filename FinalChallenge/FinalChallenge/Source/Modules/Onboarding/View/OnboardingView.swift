@@ -40,6 +40,10 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
         self.presenter.userView().setUser(user)
     }
     
+    func goToHealthKitView(_ view: Onboarding6thView) {
+        self.setViewControllers([view], direction: .reverse, animated: true, completion: nil)
+    }
+    
     // MARK: - Public Methods
     func createUserIfNecessary() {
         self.presenter.createUserIfNecessary()

@@ -17,6 +17,8 @@ protocol OnboardingRouterProtocol: class {
     func userView() -> Onboarding8thView
     func presentAsRoot(window: UIWindow)
     
+    func getHealthKitView() -> Onboarding6thView
+    
     func didFinishOnboarding()
 }
 
@@ -60,4 +62,6 @@ protocol OnboardingPresenterOutputProtocol: class {
     
     func didFetchUser(_ user: User)
     func didUpdateUser(_ user: User)
+    
+    func goToHealthKitView(_ view: Onboarding6thView)
 }
