@@ -13,12 +13,14 @@ import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         IQKeyboardManager.shared().isEnabled = true
+        
+        print("Watch App Debugging is \(Project.watchDebugging ? "activated" : "desactivated")")
         
         Fabric.with([Crashlytics.self])
         
@@ -36,6 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         router.presentAsRoot(window: self.window!)
         self.window?.makeKeyAndVisible()
         
+        if Project.watchDebugging {
+            if !WCSessionManager.shared.isSuported() {
+                print("WCSession not supported on this iPhone")
+            }
+        }
         return true
     }
 
@@ -60,7 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 
