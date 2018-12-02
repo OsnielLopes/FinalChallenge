@@ -12,16 +12,28 @@ class WSManager: NSObject, WCSessionDelegate {
     
     public static let shared = WSManager()
     public var recievedMessage: (([String : Any]) -> Void)?
-    
+    private var validSession: WCSession? {
+        
+        // paired - the user has to have their device paired to the watch
+        // watchAppInstalled - the user must have your watch app installed
+        
+        // Note: if the device is paired, but your watch app is not installed
+        // consider prompting the user to install it for a better experience
+        
+        if let session = self.session, (session.isPaired && session.isWatchAppInstalled) {
+            return session
+        }
+        return nil
+    }
+    private let session: WCSession? = WCSession.isSupported() ? WCSession.default : nil
+
     override private init() {
         super.init()
-        
-        if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            if WCSession.default.activationState != .activated {
-                WCSession.default.activate()
-            }
-        }
+    }
+    
+    func startSession() {
+        self.validSession?.delegate = self
+        self.validSession?.activate()
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
@@ -34,9 +46,9 @@ class WSManager: NSObject, WCSessionDelegate {
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let recievedMessage = self.recievedMessage {
             recievedMessage(message)
+            print(message)
         }
     }
-
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         

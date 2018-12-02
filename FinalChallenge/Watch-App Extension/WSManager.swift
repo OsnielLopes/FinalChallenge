@@ -11,16 +11,17 @@ import WatchConnectivity
 class WSManager: NSObject, WCSessionDelegate {
     
     public static let shared = WSManager()
+    
     public var recievedMessage: (([String : Any]) -> Void)?
+    private let session: WCSession? = WCSession.isSupported() ? WCSession.default : nil
     
     override private init() {
         super.init()
-        
-        if WCSession.isSupported() {
-            let defaultSession = WCSession.default
-            defaultSession.delegate = self
-            defaultSession.activate()
-        }
+    }
+    
+    func startSession() {
+        self.session?.delegate = self
+        self.session?.activate()
     }
     
     // Recieve message

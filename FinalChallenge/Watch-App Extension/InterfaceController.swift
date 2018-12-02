@@ -11,41 +11,35 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     
-    var selectedMoodIndex: Int!
-    var moods: [MoodType]! {
-        didSet {
-            self.picker.setItems(moods.map({ (mood) -> MoodPickerItem in
-                return MoodPickerItem(mood: mood)
-            }))
-        }
-    }
-    var session: WCSession = WCSession.default
-    var messagesToSent: [Int] = []
-    
+    var selectedMoodIndex: Int = 5
+    var session: WCSession!
+//    var messagesToSent: [Int] = []
+//
     @IBOutlet weak var picker: WKInterfacePicker!
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-    }
-    
+//
+//    override func awake(withContext context: Any?) {
+//        super.awake(withContext: context)
+//    }
+//
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        WSManager.shared.startSession()
     }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-    
-    //MARK - IBActions
-    
+//
+//    override func didDeactivate() {
+//        // This method is called when watch view controller is no longer visible
+//        super.didDeactivate()
+//    }
+//
+    //MARK - IBActionss
     @IBAction func didSelect(_ value: Int) {
-        selectedMoodIndex = value
+//        selectedMoodIndex = value
     }
-    
+
     @IBAction func didTapSave() {
-        WSManager.shared.sendMood(selectedMoodIndex)
+        WSManager.shared.sendMood(self.selectedMoodIndex)
     }
 
 

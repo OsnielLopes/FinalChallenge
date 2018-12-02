@@ -31,11 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         router.presentAsRoot(window: self.window!)
         self.window?.makeKeyAndVisible()
         
-        if Project.watchDebugging {
-            if !WCSessionManager.shared.isSuported() {
-                print("WCSession not supported on this iPhone")
-            }
-        }
+        WSManager.shared.startSession()
+        
         return true
     }
 
