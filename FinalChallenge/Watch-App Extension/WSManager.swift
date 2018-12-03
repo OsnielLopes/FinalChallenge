@@ -32,7 +32,7 @@ class WSManager: NSObject, WCSessionDelegate {
     }
     
     // send message
-    func sendMood(_ mood: Int) {
+    func sendMood(_ mood: String) {
         if WCSession.default.isReachable {
             let message = ["Mood": mood]
             WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)

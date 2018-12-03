@@ -11,21 +11,7 @@ import WatchConnectivity
 class WSManager: NSObject, WCSessionDelegate {
     
     public static let shared = WSManager()
-    public var recievedMessage: (([String : Any]) -> Void)?
-    private var validSession: WCSession? /*{
-
-        // paired - the user has to have their device paired to the watch
-        // watchAppInstalled - the user must have your watch app installed
-
-        // Note: if the device is paired, but your watch app is not installed
-        // consider prompting the user to install it for a better experience
-
-        if let session = self.session, (session.isPaired && session.isWatchAppInstalled) {
-            return session
-        }
-        return nil
-    }*/
-//    private let session: WCSession? = WCSession.isSupported() ? WCSession.default : nil
+    private var validSession: WCSession?
 
     override private init() {
         super.init()
@@ -47,14 +33,24 @@ class WSManager: NSObject, WCSessionDelegate {
     
     // Recieve message
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        if let recievedMessage = self.recievedMessage {
-            recievedMessage(message)
-            print(message)
+        if message.keys.contains("Mood") {
+            let moodString = message["Mood"] as! String
+            MoodDAO.shared.fetchAll { (moods, error) -> (Void) in
+                guard let moods = moods else { return }
+                let mood = moods.first(where: { (mood) -> Bool in
+                    return mood.moodType?.typeIcon == moodString
+                })
+                guard let moodType = mood?.moodType else { return }
+                MoodDAO.shared.insertMood(moodType: moodType, date: Date(), completion: { (mood, error) -> (Void) in
+                    guard error != nil else { return }
+                    print("TODO: enviar mensagem para o NotificationCenter avisando que o mood foi criado")
+                })
+            }
         }
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("olá")
+        print("WatchConnectivity ")
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
