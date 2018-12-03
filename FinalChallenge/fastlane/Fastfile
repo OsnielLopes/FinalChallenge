@@ -16,7 +16,7 @@ update_fastlane
 default_platform(:ios)
 
     app_identifier = "com.br.mackmobile.FinalChallenge"
-    app_name = "Finding Yourself"
+    app_name = "Tottum"
 
     scheme = "FinalChallenge"
     username = "anacarolinadsantoss@gmail.com"
