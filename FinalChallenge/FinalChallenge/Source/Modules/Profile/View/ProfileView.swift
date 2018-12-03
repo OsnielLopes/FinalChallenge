@@ -34,6 +34,8 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
         self.tableView.dataSource = self
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         self.tableView.reloadData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadData), name: .mood, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -151,6 +153,13 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     }
     
     // MARK: - Public methods
+    
+    @objc func reloadData() {
+        DispatchQueue.main.async {
+            self.presenter.fetchStatistics()
+            self.presenter.fetchInputedEmotions(withOption: self.inputedMoodsCell?.getSelectedDisplayOption() ?? .week)
+        }
+    }
     
     func fetchInputedEmotions(with option: ChartDisplayOptions) {
         self.presenter.fetchInputedEmotions(withOption: option)

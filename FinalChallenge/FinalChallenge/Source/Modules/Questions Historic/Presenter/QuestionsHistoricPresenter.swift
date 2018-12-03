@@ -50,6 +50,8 @@ class QuestionsHistoricPresenter: NSObject, QuestionsHistoricPresenterInputProto
     // MARK: - QuestionsHistoricPresenterInteractorOutputProtocol
     
     func handleSuccessFetchedQuestion(with results: [Question]) {
+        self.questions = []
+        self.view.didFetchQuestions()
         self.questions = results
         self.orderQuestions()
         self.view.showLoading(false)

@@ -97,7 +97,7 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
     
     // MARK: - FIXME
     private func setChart(forData data: EmotionChartDTO) {
-        
+                
         if data.values.count > 1 {
             let linePlot = LinePlot(identifier: "LinePlot")
             linePlot.lineStyle = .smooth
@@ -131,6 +131,8 @@ class ChartCell: UITableViewCell, ScrollableGraphViewDataSource {
         }
         
         self.graphView!.addReferenceLines(referenceLines: referenceLines)
+        
+        self.graphView!.reload()
     }
     
     // MARK: - FIXME

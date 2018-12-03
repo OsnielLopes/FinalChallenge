@@ -42,7 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         WCSessionManager.shared.startSession()
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> c659455428728281b171c0baad313f7e9ca91063
         return true
     }
 
