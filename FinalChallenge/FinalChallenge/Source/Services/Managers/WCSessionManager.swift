@@ -10,17 +10,18 @@ import WatchConnectivity
 
 class WCSessionManager: NSObject, WCSessionDelegate {
     
-    public static let shared = WCSessionManager()
-    public var recievedMessage: (([String : Any]) -> Void)?
-    
+    public static let shared = WSManager()
+    private var validSession: WCSession?
+
     override private init() {
         super.init()
-        
+    }
+    
+    func startSession() {
         if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            if WCSession.default.activationState != .activated {
-                WCSession.default.activate()
-            }
+            self.validSession = WCSession.default
+            self.validSession?.delegate = self
+            self.validSession?.activate()
         }
     }
     
@@ -36,14 +37,23 @@ class WCSessionManager: NSObject, WCSessionDelegate {
     
     // Recieve message
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        if let recievedMessage = self.recievedMessage {
-            recievedMessage(message)
+        if message.keys.contains("Mood") {
+            let moodString = message["Mood"] as! String
+            MoodDAO.shared.fetchMoodTypes { (moods, error) -> (Void) in
+                guard let moods = moods else { return }
+                guard let mood = moods.first(where: { (mood) -> Bool in
+                    return mood.typeIcon == moodString
+                }) else {return}
+                MoodDAO.shared.insertMood(moodType: mood, date: Date(), completion: { (mood, error) -> (Void) in
+                    guard error == nil else { return }
+                    NotificationCenter.default.post(name: .mood, object: self)
+                })
+            }
         }
     }
-
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+        print("WatchConnectivity ")
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {

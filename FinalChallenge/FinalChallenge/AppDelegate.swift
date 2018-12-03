@@ -41,11 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         }
         
-        if Project.watchDebugging {
-            if !WCSessionManager.shared.isSupported() {
-                print("WCSession not supported on this iPhone")
-            }
-        }
+        WSManager.shared.startSession()
+        
         return true
     }
 

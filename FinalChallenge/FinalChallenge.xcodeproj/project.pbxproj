@@ -119,6 +119,7 @@
 		BD4E0E7D2179192100DEA2F5 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD4E0E7C2179192100DEA2F5 /* giphy.gif */; };
 		BD4E0E802179197A00DEA2F5 /* FunnyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */; };
 		BD4E0E8321791A1500DEA2F5 /* BreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */; };
+		BD5F7A3421B5B03D00140F16 /* NSNotification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F7A3321B5B03D00140F16 /* NSNotification+Extension.swift */; };
 		BD693C07219E5B7800C3E5F5 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693C06219E5B7800C3E5F5 /* HealthKitManager.swift */; };
 		BD693C0D219F62A200C3E5F5 /* EmotionChartDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693C0C219F62A100C3E5F5 /* EmotionChartDTO.swift */; };
 		BD693C0F219F633000C3E5F5 /* MindfullnessTimeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD693C0E219F633000C3E5F5 /* MindfullnessTimeFactory.swift */; };
@@ -365,6 +366,7 @@
 		BD4E0E7C2179192100DEA2F5 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
 		BD4E0E7F2179197A00DEA2F5 /* FunnyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyGif.swift; sourceTree = "<group>"; };
 		BD4E0E8221791A1500DEA2F5 /* BreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingViewController.swift; sourceTree = "<group>"; };
+		BD5F7A3321B5B03D00140F16 /* NSNotification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extension.swift"; sourceTree = "<group>"; };
 		BD693C06219E5B7800C3E5F5 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		BD693C0C219F62A100C3E5F5 /* EmotionChartDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionChartDTO.swift; sourceTree = "<group>"; };
 		BD693C0E219F633000C3E5F5 /* MindfullnessTimeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfullnessTimeFactory.swift; sourceTree = "<group>"; };
@@ -658,6 +660,7 @@
 				BDFD4AED21AC6FA9004DC188 /* UITextField+Extension.swift */,
 				BDFD4AEF21AD9B10004DC188 /* UIViewController+Extension.swift */,
 				497AFE3221ADA20700A72A73 /* WCUtils.swift */,
+				BD5F7A3321B5B03D00140F16 /* NSNotification+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1727,6 +1730,7 @@
 				BDFD4AE221AC4186004DC188 /* Onboarding4thView.swift in Sources */,
 				BD969311219B3E3A005D6D26 /* LinePlot.swift in Sources */,
 				4539541421766E6A00CF71EC /* CenterAndZoomFlowLayout.swift in Sources */,
+				BD5F7A3421B5B03D00140F16 /* NSNotification+Extension.swift in Sources */,
 				BD290C0E216BE6EF001F16EA /* Answer+CoreDataProperties.swift in Sources */,
 				BDD81C452193416F00880601 /* ProfileView.swift in Sources */,
 				BD290C1E216BE6EF001F16EA /* DissertationAnswer+CoreDataProperties.swift in Sources */,
