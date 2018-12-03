@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         }
         
-        WSManager.shared.startSession()
+        WCSessionManager.shared.startSession()
         
         return true
     }
