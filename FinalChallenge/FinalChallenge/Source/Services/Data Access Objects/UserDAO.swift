@@ -22,7 +22,7 @@ class UserDAO {
     private init() {
         self.sampleProfilePicture = UIImage(named: "user-placeholder")!
         self.sampleBackgroundImage = UIImage(named: "bg1")!
-        self.sampleUsername = "User"
+        self.sampleUsername = "Vous"
     }
     
     func fetch(completion: @escaping (User?, DataAccessError?) -> ()) {

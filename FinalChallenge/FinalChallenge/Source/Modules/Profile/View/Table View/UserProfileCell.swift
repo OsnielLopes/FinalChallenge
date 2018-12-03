@@ -43,9 +43,9 @@ class UserProfileCell: UITableViewCell {
     }
     
     func setStatistics(_ stats: StatisticsDTO) {
-        self.userProfileImage.image = stats.user.getProfileIcon()
-        self.usernameLabel.text = stats.user.name!
-        self.backgroundImage.image = stats.user.getbackgroundImage()
+        self.userProfileImage.image = stats.user.getProfileIcon(withPlaceholder: true)
+        self.usernameLabel.text = stats.user.getUsername(withPlaceholder: true)
+        self.backgroundImage.image = stats.user.getbackgroundImage(withPlaceholder: true)
         self.daysInRowLabel.text = "\(stats.daysInARow)"
         self.questionsAnsweredLabel.text = "\(stats.questionsAnswered)"
         self.moodsInputedLabel.text = "\(stats.moodsInputed)"

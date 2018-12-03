@@ -86,9 +86,9 @@ class Onboarding8thView: OnboardingPageView {
     }
     
     func setUser(_ user: User) {
-        self.username.text = user.name ?? nil
-        self.bg.image = user.getbackgroundImage() ?? self.bg.image!
-        self.userImage.image = user.getProfileIcon() ?? self.userImage.image!
+        self.username.text = user.getUsername(withPlaceholder: false) ?? nil
+        self.bg.image = user.getbackgroundImage(withPlaceholder: false) ?? self.bg.image!
+        self.userImage.image = user.getProfileIcon(withPlaceholder: false) ?? self.userImage.image!
     }
     
 }

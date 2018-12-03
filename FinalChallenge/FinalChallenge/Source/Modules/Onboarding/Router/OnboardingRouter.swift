@@ -64,6 +64,7 @@ class OnboardingRouter: NSObject, OnboardingRouterProtocol {
     }
 
     func didFinishOnboarding() {
+        UserDefaults.standard.set(true, forKey: Project.UserSettings.onboardingWasCompleted.rawValue)
         self.view.dismiss(animated: true, completion: nil)
         MainRouter().present(with: self.view)
     }

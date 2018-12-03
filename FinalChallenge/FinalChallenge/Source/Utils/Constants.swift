@@ -141,6 +141,7 @@ enum Project {
         case appHasBeenUsed = "appHasAlreadyBeenUsed"
         case appHasBeenUsedToday = "appHasAlreadyBeenUsedToday"
         case todayQuestions = "todayQuestions"
+        case onboardingWasCompleted = "onboardingWasCompleted"
     }
     
     // MARK: - Categories

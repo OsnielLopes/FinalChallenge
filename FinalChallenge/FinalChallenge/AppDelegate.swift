@@ -30,13 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(true, forKey: Project.UserSettings.appHasBeenUsed.rawValue)
         }
         
-//        let router = MainRouter()
-//        router.presentAsRoot(window: self.window!)
-//        self.window?.makeKeyAndVisible()
-        
-        let router = OnboardingRouter()
-        router.presentAsRoot(window: self.window!)
-        self.window?.makeKeyAndVisible()
+        if !UserDefaults.standard.bool(forKey: Project.UserSettings.onboardingWasCompleted.rawValue) {
+            let router = OnboardingRouter()
+            router.presentAsRoot(window: self.window!)
+            self.window?.makeKeyAndVisible()
+        } else {
+            let router = MainRouter()
+            router.presentAsRoot(window: self.window!)
+            self.window?.makeKeyAndVisible()
+
+        }
         
         if Project.watchDebugging {
             if !WCSessionManager.shared.isSupported() {
