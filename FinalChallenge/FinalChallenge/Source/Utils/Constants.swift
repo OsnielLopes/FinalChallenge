@@ -53,7 +53,7 @@ enum Project {
     enum Localizable {
         
         enum Question: String, LocalizeRepresentable, CaseIterable {
-            static let author = "System"
+            static let author = "Nous"
             
             case q01 = "question.01"
             case q02 = "question.02"
@@ -79,6 +79,7 @@ enum Project {
             case q22 = "question.22"
             case q23 = "question.23"
             case q24 = "question.24"
+            case q25 = "question.25"
             case q26 = "question.26"
             case q27 = "question.27"
             case q28 = "question.28"
@@ -88,6 +89,7 @@ enum Project {
             case q32 = "question.32"
             case q33 = "question.33"
             case q34 = "question.34"
+            case q35 = "question.35"
             case q36 = "question.36"
             case q37 = "question.37"
             case q38 = "question.38"
@@ -125,12 +127,29 @@ enum Project {
             case q70 = "question.70"
             case q71 = "question.71"
             case q72 = "question.72"
-            case q73 = "question.73"
             
             var category: String {
                 switch self {
+                case .q01, .q02, .q03, .q04, .q05, . q06, .q07, .q08:
+                    return "Past, present and future"
+                case .q09, .q10, .q11, .q12, .q13, .q14:
+                    return "Perspectives"
+                case .q15, .q16, .q17, .q18, .q19, .q20, .q21, .q22:
+                    return "The self"
+                case .q23, .q24, .q25, .q26, .q27, .q28, .q29, .q30, .q31, .q32:
+                    return "Relationships"
+                case .q33, .q34, .q35, .q36:
+                    return "Health"
+                case .q37, .q38, .q39, .q40, .q41:
+                    return "Goals"
+                case .q42, .q43, .q44, .q45, .q46, .q47:
+                    return "The act"
+                case .q48, .q49, .q50, .q51, .q52, .q53, .q54, .q55, .q56:
+                    return "Ideals"
+                case .q57, .q58, .q59, .q60, .q61, .q62, .q63:
+                    return "Journey"
                 default:
-                    return "Default"
+                    return "Self love"
                 }
             }
         }

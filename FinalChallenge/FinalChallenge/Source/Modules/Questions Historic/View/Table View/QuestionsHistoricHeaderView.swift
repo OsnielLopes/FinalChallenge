@@ -13,7 +13,7 @@ class QuestionsHistoricHeaderView: UIView {
     @IBOutlet weak var categoryTitleLabel: UILabel!
     
     func setCategory(_ category: Category) {
-        self.categoryTitleLabel.text = "Sobre "+category.name!
+        self.categoryTitleLabel.text = "About "+category.name!
     }
 
 }

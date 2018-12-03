@@ -6,74 +6,94 @@
   Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 */
 
+// Past, present and future
 "question.01" = "Am I using my time wisely?";
-"question.02" = "Am I taking anything for granted?";
-"question.03" = "Am I employing a healthy perspective?";
-"question.04" = "Am I living true to myself?";
-"question.05" = "Am I waking up in the morning ready to take on the day?";
-"question.06" = "Am I thinking negative thoughts before I fall asleep?";
-"question.07" = "Am I putting enough effort into my relationships?";
-"question.08" = "Am I taking care of myself physically?";
-"question.09" = "Am I letting matters that are out of my control stress me out?";
-"question.10" = "Am I achieving the goals that I’ve set for myself?";
-"question.11" = "Who am I really?";
-"question.12" = "What worries me most about the future?";
-"question.13" = "If this were the last day of my life, would I want to do what I am about to do today?";
-"question.14" = "What am I really scared of?";
-"question.15" = "Am I holding on to something I need to let go of?";
-"question.16" = "If not now, then when?";
-"question.17" = "What matters most in my life?";
-"question.18" = "What am I doing about the things that matter most in my life?";
-"question.19" = "Have I done anything lately worth remembering?";
-"question.20" = "Have I made someone smile today?";
-"question.21" = "What have I given up on?";
-"question.22" = "When did I last push the boundaries of my comfort zone?";
-"question.23" = "If I had to instill one piece of advice in a newborn baby’s mind, what advice would I give?";
-"question.24" = "What small act of kindness was I once shown that I will never forget?";
-"question.26" = "What do I need to change about myself?";
-"question.27" = "Is it more important to love or be loved?";
-"question.28" = "How many of my friends would I trust with my life?";
-"question.29" = "Who has had the greatest impact on my life?";
-"question.30" = "Would I break the law to save a loved one?";
-"question.31" = "Would I steal to feed a starving child?";
-"question.32" = "What do I want most in life?";
-"question.33" = "What is life calling of me?";
-"question.34" = "Which is worse: failing or never trying?";
-"question.36" = "What’s the one thing I’d like others to remember about me at the end of my life?";
-"question.37" = "Does it really matter what others think about me?";
-"question.38" = "To what degree have I actually controlled the course my life has taken?";
-"question.39" = "When it’s all said and done, what will I have said more than I’ve done?";
-"question.40" = "My favorite way to spend the day is...";
-"question.41" = "If I could talk to my younger self, the one thing I would say is...";
-"question.42" = "The two moments I’ll never forget in my life are... Describe them in great detail, and what makes them so unforgettable.";
-"question.43" = "What are the 10 things that make me smile?";
-"question.44" = "The words I’d like to live by are...";
-"question.45" = "I couldn’t imagine living without...";
-"question.46" = "When I’m in pain (physical or emotional) the kindest thing I can do for myself is...";
-"question.47" = "Who are the people in my life that genuinely support me and that I can genuinely trust? (What about making time to hang out with them?)";
-"question.48" = "What does unconditional love look like for me?";
-"question.49" = "What would I do if I loved myself unconditionally? How can I act on these things whether I do or don’t?";
-"question.50" = "I really wish others knew this about me...";
-"question.51" = "What is enough for me?";
-"question.52" = "If my body could talk, it would say...";
-"question.53" = "In which compassionate way I’ve supported a friend recently. How I can do the same for myself?";
-"question.54" = "What do I love about life?";
-"question.55" = "When work felt real to me, necessary and satisfying, paid or unpaid, professional or domestic, physical or mental?";
-"question.56" = "What do I have to say about my first love (whether a person, place or thing)?";
-"question.57" = "How would I describe myself using 10 words?";
-"question.58" = "What’s surprised me the most about my life or life in general?";
-"question.59" = "What can I learn from my biggest mistakes?";
-"question.60" = "I feel most energized when...";
-"question.61" = "What are the questions I urgently need answers?";
-"question.62" = "What inspires me (from books to websites to quotes to people to paintings to stores to the stars)?";
-"question.63" = "What’s one topic I need to learn more about to help me live a more fulfilling life?";
-"question.64" = "I feel happiest in my skin when...";
-"question.65" = "What would I like to say no to?";
-"question.66" = "What would I like to say yes to?";
-"question.67" = "What are the words that I need to hear?";
-"question.68" = "What are my definitions of success?";
-"question.69" = "What type of friend do I want to be?";
-"question.70" = "Do I engage in activities to escape my reality?";
-"question.71" = "Do I believe every thought I think?";
-"question.72" = "What is the best advice I've ever received?";
-"question.73" = "What is currently worrying me?";
+"question.02" = "Am I waking up in the morning ready to take on the day?";
+"question.03" = "What worries me most about the future?";
+"question.04" = "If this were the last day of my life, would I want to do what I am about to do today?";
+"question.05" = "If not now, then when?";
+"question.06" = "Have I done anything lately worth remembering?";
+"question.07" = "What do I have to say about my first love (whether a person, place or thing)?";
+"question.08" = "What’s surprised me the most about my life or life in general?";
+
+// Perspectives
+"question.09" = "Am I taking anything for granted?";
+"question.10" = "Am I employing a healthy perspective?";
+"question.11" = "Am I thinking negative thoughts before I fall asleep?";
+"question.12" = "What is enough for me?";
+"question.13" = "When work felt real to me, necessary and satisfying, paid or unpaid, professional or domestic, physical or mental?";
+"question.14" = "Do I engage in activities to escape my reality?";
+
+// The self
+"question.15" = "Am I living true to myself?";
+"question.16" = "Who am I really?";
+"question.17" = "What am I really scared of?";
+"question.18" = "What do I need to change about myself?";
+"question.19" = "Do I believe every thought I think?";
+"question.20" = "Do I believe every thought I think?";
+"question.21" = "What is currently worrying me?";
+"question.22" = "How would I describe myself using 10 words?";
+
+// Relationships
+"question.23" = "Am I putting enough effort into my relationships?";
+"question.24" = "Have I made someone smile today?";
+"question.25" = "Is it more important to love or be loved?";
+"question.26" = "How many of my friends would I trust with my life?";
+"question.27" = "Who has had the greatest impact on my life?";
+"question.28" = "Who are the people in my life that genuinely support me and that I can genuinely trust? (What about making time to hang out with them?)";
+"question.29" = "What does unconditional love look like for me?";
+"question.30" = "In which compassionate way I’ve supported a friend recently. How I can do the same for myself?";
+"question.31" = "What type of friend do I want to be?";
+"question.32" = "I really wish others knew this about me...";
+
+// Health
+"question.33" = "Am I taking care of myself physically?";
+"question.34" = "Am I letting matters that are out of my control stress me out?";
+"question.35" = "If my body could talk, it would say...";
+"question.36" = "I feel most energized when...";
+
+// Goals
+"question.37" = "What have I given up on?";
+"question.38" = "What do I want most in life?";
+"question.39" = "What inspires me (from books to websites to quotes to people to paintings to stores to the stars)?";
+"question.40" = "What are my definitions of success?";
+"question.41" = "What are the questions I urgently need answers?";
+
+// The act
+"question.42" = "Am I achieving the goals that I’ve set for myself?";
+"question.43" = "Am I holding on to something I need to let go of?";
+"question.44" = "When did I last push the boundaries of my comfort zone?";
+"question.45" = "What are the words that I need to hear?";
+"question.46" = "What small act of kindness was I once shown that I will never forget?";
+"question.47" = "What’s one topic I need to learn more about to help me live a more fulfilling life?";
+
+// Ideals
+"question.48" = "What matters most in my life?";
+"question.49" = "What am I doing about the things that matter most in my life?";
+"question.50" = "If I had to instill one piece of advice in a newborn baby’s mind, what advice would I give?";
+"question.51" = "Which is worse: failing or never trying?";
+"question.52" = "Would I break the law to save a loved one?";
+"question.53" = "Would I steal to feed a starving child?";
+"question.54" = "If I could talk to my younger self, the one thing I would say is...";
+"question.55" = "Does it really matter what others think about me?";
+"question.56" = "What is the best advice I've ever received?";
+
+// Journey
+"question.57" = "What is life calling of me?";
+"question.58" = "What’s the one thing I’d like others to remember about me at the end of my life?";
+"question.59" = "To what degree have I actually controlled the course my life has taken?";
+"question.60" = "When it’s all said and done, what will I have said more than I’ve done?";
+"question.61" = "The two moments I’ll never forget in my life are... Describe them in great detail, and what makes them so unforgettable.";
+"question.62" = "What do I love about life?";
+"question.63" = "What can I learn from my biggest mistakes?";
+
+// Self love
+"question.64" = "My favorite way to spend the day is...";
+"question.65" = "What are the 10 things that make me smile?";
+"question.66" = "The words I’d like to live by are...";
+"question.67" = "I couldn’t imagine living without...";
+"question.68" = "When I’m in pain (physical or emotional) the kindest thing I can do for myself is...";
+"question.69" = "What would I do if I loved myself unconditionally? How can I act on these things whether I do or don’t?";
+"question.70" = "What would I like to say no to?";
+"question.71" = "What would I like to say yes to?";
+"question.72" = "I feel happiest in my skin when...";

@@ -27,6 +27,11 @@ class CategoryDAO {
     
     func create(name: String, completion: @escaping (Category?, DataAccessError?) -> (Void)) {
         
+        if let existsCategory = CoreDataManager.shared.fetch(Category.self)?.filter({ $0.name == name }).first {
+            completion(existsCategory, nil)
+            return
+        }
+        
         if let newCategory = CoreDataManager.shared.create(type: Category.self) {
 
             newCategory.name = name

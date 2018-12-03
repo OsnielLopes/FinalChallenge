@@ -32,7 +32,7 @@ class QuestionsHistoricCell: UITableViewCell {
         self.cardView.hero.id = "\(question.objectID)cardView"
 
         self.questionTextLabel.text = question.questionText
-        self.questionAuthorLabel.text = "Por " + question.questionAuthor!.name!
+        self.questionAuthorLabel.text = "By " + question.questionAuthor!.name!
     }
 
 }

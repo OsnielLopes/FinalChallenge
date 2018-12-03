@@ -16,8 +16,9 @@ class QuestionsManager {
     
     func createAllQuestions() {
         AuthorDAO.shared.create(authorName: Project.Localizable.Question.author) { (author, error) -> (Void) in
+            
             for question in Project.Localizable.Question.allCases {
-                CategoryDAO.shared.create(name: Project.Localizable.Question.author, completion: { (category, error) -> (Void) in
+                CategoryDAO.shared.create(name: question.category, completion: { (category, error) -> (Void) in
                     
                     guard let aCategory = category, let aAuthor = author else {
                         fatalError("Error creating questions on CoreData")
