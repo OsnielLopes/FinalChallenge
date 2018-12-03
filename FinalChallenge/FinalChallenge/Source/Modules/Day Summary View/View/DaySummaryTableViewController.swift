@@ -20,6 +20,13 @@ class DaySummaryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadData), name: .mood, object: nil)
+    }
+    
+    @objc func reloadData() {
+        DispatchQueue.main.async {
+            self.dailySummaryParentViewController.loadTodayEntries()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

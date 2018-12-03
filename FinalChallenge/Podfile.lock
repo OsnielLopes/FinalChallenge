@@ -9,6 +9,12 @@ DEPENDENCIES:
   - Fabric
   - Hero
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
+    - Hero
+
 SPEC CHECKSUMS:
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
@@ -16,4 +22,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b119b5ddb69c8462e08397354bb612c05a9daec1
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

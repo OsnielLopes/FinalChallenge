@@ -11,7 +11,7 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     
-    var selectedMoodIndex: Int = -1
+    var selectedMoodIndex: Int = 0
     var session: WCSession!
 
     @IBOutlet weak var picker: WKInterfacePicker!
@@ -27,6 +27,7 @@ class InterfaceController: WKInterfaceController {
             pickerItems.append(item)
         }
         picker.setItems(pickerItems)
+        picker.focus()
         
         WSManager.shared.startSession()
     }
@@ -37,7 +38,7 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func didTapSave() {
-        WSManager.shared.sendMood("mood\(self.selectedMoodIndex)-icon")
+        WSManager.shared.sendMood("mood\(self.selectedMoodIndex+1)-icon")
     }
 
 

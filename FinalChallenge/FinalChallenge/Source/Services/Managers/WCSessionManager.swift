@@ -35,15 +35,14 @@ class WSManager: NSObject, WCSessionDelegate {
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if message.keys.contains("Mood") {
             let moodString = message["Mood"] as! String
-            MoodDAO.shared.fetchAll { (moods, error) -> (Void) in
+            MoodDAO.shared.fetchMoodTypes { (moods, error) -> (Void) in
                 guard let moods = moods else { return }
-                let mood = moods.first(where: { (mood) -> Bool in
-                    return mood.moodType?.typeIcon == moodString
-                })
-                guard let moodType = mood?.moodType else { return }
-                MoodDAO.shared.insertMood(moodType: moodType, date: Date(), completion: { (mood, error) -> (Void) in
-                    guard error != nil else { return }
-                    print("TODO: enviar mensagem para o NotificationCenter avisando que o mood foi criado")
+                guard let mood = moods.first(where: { (mood) -> Bool in
+                    return mood.typeIcon == moodString
+                }) else {return}
+                MoodDAO.shared.insertMood(moodType: mood, date: Date(), completion: { (mood, error) -> (Void) in
+                    guard error == nil else { return }
+                    NotificationCenter.default.post(name: .mood, object: self)
                 })
             }
         }
