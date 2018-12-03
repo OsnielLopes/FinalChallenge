@@ -63,6 +63,8 @@ class DailyQuestionRouter: NSObject, DailyQuestionRouterProtocol {
 		let storyboard = UIStoryboard(name: self.storyBoardName, bundle: nil)
 		let viewController = storyboard.instantiateViewController(withIdentifier: self.viewIdentifier)
 
+        (viewController as! DailyQuestionView).shouldReloadDailyQuestions = true
+        
 		return viewController as! DailyQuestionView
 	}
     

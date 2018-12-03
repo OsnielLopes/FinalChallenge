@@ -19,6 +19,10 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     
 	// MARK: - Viper Module Properties
 	var presenter: DailyQuestionPresenterInputProtocol!
+    
+    var shouldReloadDailyQuestions = true
+    
+    var currentCard: DailyQuestionCollectionViewCell?
 
 	// MARK: - Override methods
 	override func viewDidLoad() {
@@ -26,10 +30,25 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.presenter.loadDailyQuestions()
+        if self.shouldReloadDailyQuestions {
+            self.presenter.loadDailyQuestions()
+        }
         
         self.prepareViewController()
         self.prepareButtons()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let currentCard = self.currentCard, let currentIndexPath = self.dailyQuestionCollectionView.indexPath(for: currentCard) {
+            self.dailyQuestionCollectionView.scrollToItem(at: currentIndexPath, at: [.centeredHorizontally, .centeredVertically], animated: true)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.currentCard = self.dailyQuestionCollectionView.visibleCells.first(where: { $0.frame.minY < 0 }) as? DailyQuestionCollectionViewCell
     }
     
     // MARK: - DailyQuestionPresenterOutputProtocol
@@ -77,6 +96,11 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
     
     // MARK: - CollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.shouldReloadDailyQuestions = false
+        if let selectedCell = self.dailyQuestionCollectionView.cellForItem(at: indexPath) as? DailyQuestionCollectionViewCell {
+            selectedCell.cornerView.hero.id = "openedQuestion"
+        }
+        
         self.presenter.didSelectItem(at: indexPath.row)
     }
     
@@ -93,8 +117,7 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
         for button in self.viewButtons {
             button.layer.cornerRadius = button.frame.width/2
             button.layer.masksToBounds = true
-            
-            //FIXME: colocar sombra (?)
+            button.dropShadow(color: #colorLiteral(red: 0.01960784314, green: 0.06274509804, blue: 0.07843137255, alpha: 1), opacity: 0.3, offSet: CGSize(width: 0, height: 2), radius: 2, scale: true)
         }
     }
 
