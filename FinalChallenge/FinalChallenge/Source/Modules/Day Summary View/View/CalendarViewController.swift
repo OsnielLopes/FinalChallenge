@@ -46,7 +46,7 @@ class CalendarViewController: UIViewController {
     var distanceBetweenCurrentAndNextMonth: CGFloat = 0
     var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "pt_BR")
+        dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.dateFormat = "MMMM"
         return dateFormatter
     }()

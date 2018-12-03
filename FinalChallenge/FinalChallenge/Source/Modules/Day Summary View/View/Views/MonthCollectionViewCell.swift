@@ -17,7 +17,7 @@ class MonthCollectionViewCell: UICollectionViewCell {
     var day: Date! {
         didSet {
             let dateFormatter = DateFormatter()
-            dateFormatter.locale = Locale(identifier: "pt_BR")
+            dateFormatter.locale = Locale(identifier: "en_US")
             dateFormatter.dateFormat = "d"
             label.text = day != nil ? dateFormatter.string(from: day) : ""
         }
