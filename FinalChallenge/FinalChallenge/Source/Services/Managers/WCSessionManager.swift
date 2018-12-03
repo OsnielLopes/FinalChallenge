@@ -10,7 +10,7 @@ import WatchConnectivity
 
 class WCSessionManager: NSObject, WCSessionDelegate {
     
-    public static let shared = WSManager()
+    public static let shared = WCSessionManager()
     private var validSession: WCSession?
 
     override private init() {
