@@ -6,6 +6,8 @@
 //  Copyright © 2018 Osniel Lopes Teixeira. All rights reserved.
 //
 
+import AVKit
+import AVFoundation
 import UIKit
 
 class Onboarding1thView: OnboardingPageView {

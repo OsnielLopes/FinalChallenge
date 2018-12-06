@@ -40,7 +40,7 @@ class OnboardingView: UIPageViewController, OnboardingPresenterOutputProtocol {
         self.presenter.userView().setUser(user)
     }
     
-    func goToHealthKitView(_ view: Onboarding6thView) {
+    func goToHealthKitView(_ view: Onboarding4thView) {
         self.setViewControllers([view], direction: .reverse, animated: true, completion: nil)
     }
     

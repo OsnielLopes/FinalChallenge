@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Onboarding6thView: OnboardingPageView {
+class Onboarding4thView: OnboardingPageView {
     
     @IBOutlet weak var healthDataButton: UIButton!
     

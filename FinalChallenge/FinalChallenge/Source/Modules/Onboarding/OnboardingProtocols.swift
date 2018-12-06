@@ -14,10 +14,10 @@ protocol OnboardingRouterProtocol: class {
     func page(before view: OnboardingPageView) -> OnboardingPageView?
     func page(after view: OnboardingPageView) -> OnboardingPageView?
     func firstView() -> OnboardingPageView
-    func userView() -> Onboarding8thView
+    func userView() -> Onboarding5thView
     func presentAsRoot(window: UIWindow)
     
-    func getHealthKitView() -> Onboarding6thView
+    func getHealthKitView() -> Onboarding4thView
     
     func didFinishOnboarding()
 }
@@ -35,7 +35,7 @@ protocol OnboardingPresenterInputProtocol: class {
     func page(before view: UIViewController) -> OnboardingPageView?
     func page(after view: UIViewController) -> OnboardingPageView?
     func firstView() -> OnboardingPageView
-    func userView() -> Onboarding8thView
+    func userView() -> Onboarding5thView
     
     func createUserIfNecessary()
     func setUserAvatar(_ image: UIImage?)
@@ -63,5 +63,5 @@ protocol OnboardingPresenterOutputProtocol: class {
     func didFetchUser(_ user: User)
     func didUpdateUser(_ user: User)
     
-    func goToHealthKitView(_ view: Onboarding6thView)
+    func goToHealthKitView(_ view: Onboarding4thView)
 }
