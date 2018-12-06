@@ -43,6 +43,11 @@ class DailyQuestionView: UIViewController, DailyQuestionPresenterOutputProtocol,
         
         if let currentCard = self.currentCard, let currentIndexPath = self.dailyQuestionCollectionView.indexPath(for: currentCard) {
             self.dailyQuestionCollectionView.scrollToItem(at: currentIndexPath, at: [.centeredHorizontally, .centeredVertically], animated: true)
+            let question: Question = self.presenter.item(at: currentIndexPath.row)
+            if let dissertativeAnswer = self.presenter.currentAnswer(for: question) as? DissertationAnswer {
+                currentCard.questionAnswerLabel.isHidden = false
+                currentCard.questionAnswerLabel.text = dissertativeAnswer.text
+            }
         }
     }
     

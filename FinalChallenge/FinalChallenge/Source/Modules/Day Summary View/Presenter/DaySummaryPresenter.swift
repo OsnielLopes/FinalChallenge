@@ -101,8 +101,8 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func shouldShowAddButton() -> Bool {
-        return true
-//        return Calendar.current.isDateInToday(self.currentDate)
+//        return true
+        return Calendar.current.isDateInToday(self.currentDate)
     }
     
     func shouldDisplayLine(for index: Int) -> Bool {
@@ -113,7 +113,7 @@ class DaySummaryPresenter: NSObject, DaySummaryPresenterInputProtocol, DaySummar
     }
     
     func didTapInsert(mood index: Int) {
-        self.interactor.add(moodType: self.moodTypes[index], toDate: self.currentDate)
+        self.interactor.add(moodType: self.moodTypes[index], toDate: Calendar.current.isDateInToday(self.currentDate) ? Date() : self.currentDate)
     }
     
     func didTapInsertQuestion() {
