@@ -38,7 +38,7 @@ class OnboardingRouter: NSObject, OnboardingRouterProtocol {
 		self.view = view
         
         self.pages = []
-        for i in 1...8 {
+        for i in 1...5 {
             self.pages.append(self.pageFromStoryboard(with: "Onboarding\(i)thView"))
         }
         
@@ -69,12 +69,12 @@ class OnboardingRouter: NSObject, OnboardingRouterProtocol {
         MainRouter().present(with: self.view)
     }
     
-    func userView() -> Onboarding8thView {
-        return self.pages.last as! Onboarding8thView
+    func userView() -> Onboarding5thView {
+        return self.pages.last as! Onboarding5thView
     }
     
-    func getHealthKitView() -> Onboarding6thView {
-        return self.pages.filter({ $0 is Onboarding6thView }).first! as! Onboarding6thView
+    func getHealthKitView() -> Onboarding4thView {
+        return self.pages.filter({ $0 is Onboarding4thView }).first! as! Onboarding4thView
     }
     
 

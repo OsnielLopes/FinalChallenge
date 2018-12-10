@@ -10,7 +10,7 @@ import UIKit
 import Photos
 import CropViewController
 
-class Onboarding8thView: OnboardingPageView {
+class Onboarding5thView: OnboardingPageView {
     
     // MARK: - IBOutlets
     @IBOutlet weak var userImage: UIImageView!
@@ -87,13 +87,13 @@ class Onboarding8thView: OnboardingPageView {
     
     func setUser(_ user: User) {
         self.username.text = user.getUsername(withPlaceholder: false) ?? nil
-        self.bg.image = user.getbackgroundImage(withPlaceholder: false) ?? self.bg.image!
+        self.bg.image = user.getbackgroundImage(withPlaceholder: false) ?? nil
         self.userImage.image = user.getProfileIcon(withPlaceholder: false) ?? self.userImage.image!
     }
     
 }
 
-extension Onboarding8thView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension Onboarding5thView: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
@@ -103,7 +103,7 @@ extension Onboarding8thView: UIImagePickerControllerDelegate, UINavigationContro
                 cropViewController.aspectRatioLockDimensionSwapEnabled = true
                 cropViewController.aspectRatioPickerButtonHidden = true
                 cropViewController.resetAspectRatioEnabled = false
-                cropViewController.customAspectRatio = CGSize.init(width: 4272, height: 2848)
+                cropViewController.customAspectRatio = CGSize.init(width: 15, height: 8)
             }
             cropViewController.delegate = self
             self.picker.dismiss(animated: true)
@@ -119,7 +119,7 @@ extension Onboarding8thView: UIImagePickerControllerDelegate, UINavigationContro
     
 }
 
-extension Onboarding8thView: CropViewControllerDelegate {
+extension Onboarding5thView: CropViewControllerDelegate {
     
     func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         switch self.pickingImage {
@@ -135,7 +135,7 @@ extension Onboarding8thView: CropViewControllerDelegate {
     
 }
 
-extension Onboarding8thView: UITextFieldDelegate {
+extension Onboarding5thView: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.pageViewController.didUpdateUsername(with: self.username.text)
