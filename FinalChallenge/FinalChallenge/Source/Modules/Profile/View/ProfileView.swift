@@ -40,9 +40,15 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+                
         self.inputedMoodsCell?.setChartContentOffset()
         self.guessedMoodsCell?.setChartContentOffset()
         self.midnfullnesTimeCell?.setChartContentOffset()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
