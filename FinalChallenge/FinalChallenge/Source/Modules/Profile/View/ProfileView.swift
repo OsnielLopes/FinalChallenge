@@ -40,7 +40,10 @@ class ProfileView: UIViewController, ProfilePresenterOutputProtocol, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-                
+        
+        self.presenter.fetchStatistics()
+        self.presenter.fetchInputedEmotions(withOption: .week)
+        
         self.inputedMoodsCell?.setChartContentOffset()
         self.guessedMoodsCell?.setChartContentOffset()
         self.midnfullnesTimeCell?.setChartContentOffset()

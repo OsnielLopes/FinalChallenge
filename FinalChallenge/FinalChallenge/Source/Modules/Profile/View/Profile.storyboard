@@ -229,7 +229,7 @@
                             <constraint firstItem="AeK-cm-STF" firstAttribute="leading" secondItem="Kfx-69-uOU" secondAttribute="leading" id="3mF-9E-ZWM"/>
                             <constraint firstItem="AeK-cm-STF" firstAttribute="top" secondItem="Kfx-69-uOU" secondAttribute="top" id="DRD-ER-adx"/>
                             <constraint firstAttribute="trailing" secondItem="AeK-cm-STF" secondAttribute="trailing" id="idR-f1-LXr"/>
-                            <constraint firstAttribute="bottom" secondItem="AeK-cm-STF" secondAttribute="bottomMargin" constant="8" id="lTz-cc-j4S"/>
+                            <constraint firstItem="BNe-TL-DUh" firstAttribute="bottom" secondItem="AeK-cm-STF" secondAttribute="baseline" id="lTz-cc-j4S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BNe-TL-DUh"/>
                     </view>
